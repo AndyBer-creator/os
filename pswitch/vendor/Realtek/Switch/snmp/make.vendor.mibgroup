@@ -1,0 +1,70 @@
+
+ifndef BLD_CUSTOM_PRIVATEMIB_PATH
+BLD_CUSTOM_PRIVATEMIB_PATH 	= $(SYS_APP_SNMPVENDORDIR)/private-mib
+endif
+
+#eg, if compile example.c, then add:
+#ifdef CONFIG_PRIVATE_MIB
+#mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/example.o
+#mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/example.lo
+#mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/example.c
+#mib_module_list_ft +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/example.ft
+#endif
+
+
+ifdef CONFIG_PRIVATE_MIB    
+#.o
+#mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/demo-mib/sysDemoMib.o
+ifdef CONFIG_SYS_MIB_POE_CONF
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/poe-mib/PoeMib.o
+endif
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysHW-mib/sysHWMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysPortCtrl-mib/sysPortCtrlMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/dhcpSnooping-mib/dhcpSnoopingMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysMonitor-mib/sysMonitorMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysDeviceMgmt-mib/sysDeviceMgmtMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/snmptrapMgmt-mib/snmptrapMgmtMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/staticVlanCtrl-mib/staticVlanCtrlMib.o
+mib_module_list_o +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/L2Switch-mib/L2SwitchMib.o
+#.lo
+#mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/demo-mib/sysDemoMib.lo
+ifdef CONFIG_SYS_MIB_POE_CONF
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/poe-mib/PoeMib.lo
+endif
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysHW-mib/sysHWMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysPortCtrl-mib/sysPortCtrlMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/dhcpSnooping-mib/dhcpSnoopingMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysMonitor-mib/sysMonitorMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysDeviceMgmt-mib/sysDeviceMgmtMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/snmptrapMgmt-mib/snmptrapMgmtMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/staticVlanCtrl-mib/staticVlanCtrlMib.lo
+mib_module_list_lo +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/L2Switch-mib/L2SwitchMib.lo
+#.c
+#mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/demo-mib/sysDemoMib.c
+ifdef CONFIG_SYS_MIB_POE_CONF
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/poe-mib/PoeMib.c
+endif
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysHW-mib/sysHWMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysPortCtrl-mib/sysPortCtrlMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/dhcpSnooping-mib/dhcpSnoopingMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysMonitor-mib/sysMonitorMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysDeviceMgmt-mib/sysDeviceMgmtMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/snmptrapMgmt-mib/snmptrapMgmtMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/staticVlanCtrl-mib/staticVlanCtrlMib.c
+mib_module_list_c +=  $(BLD_CUSTOM_PRIVATEMIB_PATH)/L2Switch-mib/L2SwitchMib.c
+#.ft
+#mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/demo-mib/sysDemoMib.ft
+ifdef CONFIG_SYS_MIB_POE_CONF
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/poe-mib/PoeMib.ft
+endif
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysHW-mib/sysHWMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysPortCtrl-mib/sysPortCtrlMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/dhcpSnooping-mib/dhcpSnoopingMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysMonitor-mib/sysMonitorMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/sysDeviceMgmt-mib/sysDeviceMgmtMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/snmptrapMgmt-mib/snmptrapMgmtMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/staticVlanCtrl-mib/staticVlanCtrlMib.ft
+mib_module_list_ft += $(BLD_CUSTOM_PRIVATEMIB_PATH)/L2Switch-mib/L2SwitchMib.ft
+endif
+
+

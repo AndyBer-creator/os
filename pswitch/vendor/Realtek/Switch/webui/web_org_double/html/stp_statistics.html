@@ -1,0 +1,157 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadMainFrame();
+
+var data;
+var time;
+var interval;
+var type = 2;
+
+function reload()
+{
+  mainFrame.render();
+}
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    if (urlParamGetByName('time').length == 0)
+      time = 0;
+    else
+      time = str2int(urlParamGetByName('time'));
+<!--#ifdef CONFIG_SYS_PROTO_STP_MSTP-->
+    type = 3;
+<!--#endif-->
+
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    var urlFinal = urlParamAppend(url('get_stpStats'), 'time', time);
+    dataGet(urlFinal).fetch({
+      success: function(model, resp){
+        logoutCheck(resp);
+        data=resp.data;
+        that.$el.html( that.template(resp) );
+
+        PagePostInit();
+      }
+    });
+  },
+  events: {
+    'click #btnView':'view',
+    'click #btnClear':'clear',
+    'click #btnRefresh':'refresh',
+    'change #selectRate':'selectRate'
+  },
+  view:function(e){
+    if (GetTableMultiSelectNum() == 0)
+    {
+      ShowStatusWarning(lang('common','tipNoEntrySelected'));
+      return;
+    }
+    else if (GetTableMultiSelectNum() > 1)
+    {
+      ShowStatusWarning(lang('common','tipOnlyOneCanbeEdited'));
+      return;
+    }
+    OpenDialog(urlParamAppend('stp_statisticsIntf.html', 'port', GetTableSelectVal()));
+  },
+  refresh:function(e){
+    this.render();
+  },
+  clear:function(e){
+    if (!CheckTableEdit())
+      return;
+    $('#portList').val(urlGetPortList('port', GetTableMultiSelectVals('port')));
+    dataSet(url('set_stpStatsIntfClear'), formDataGet('setform'));
+  },
+  selectRate: function(e) {
+    time = GetSelectVal('selectRate');
+    clearInterval(interval);
+
+    if (0 != time)
+      interval = setInterval(reload, time * 1000);
+  }
+});
+
+mainFrame = new mainView();
+
+}
+</script>
+</head>
+<body id="main_body" onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+<div id="dialog_container"></div>
+
+<script id="main_content" type="text/template">
+<form id="setform">
+<%= InputHidden('portList','') %>
+
+<%= TableHead(lang('stp','txtStpIntfStatsTable')) %>
+
+<%= TableRefreshSelect('selectRate', time) %>
+
+<table class="dataTable" cellspacing="0" cellpadding="0">
+<thead>
+  <tr>
+    <th rowspan=2><%= TableCheckboxAll() %></th>
+    <th rowspan=2><%= lang('port','lblEntryNo') %></th>
+    <th rowspan=2><%= lang('port','lblPort') %></th>
+    <th colspan=<%= type %>><%= lang('stp','lblRxCnt') %></th>
+    <th colspan=<%= type %>><%= lang('stp','lblTxCnt') %></th>
+    <%= TableLastTh(2) %>
+  </tr>
+  <tr>
+    <th><%= lang('stp','lblConfigBpdu') %></th>
+    <th><%= lang('stp','lblTcnBpdu') %></th>
+<!--#ifdef CONFIG_SYS_PROTO_STP_MSTP-->
+    <th><%= lang('stp','lblMstpBpdu') %></th>
+<!--#endif-->
+    <th><%= lang('stp','lblConfigBpdu') %></th>
+    <th><%= lang('stp','lblTcnBpdu') %></th>
+<!--#ifdef CONFIG_SYS_PROTO_STP_MSTP-->
+    <th><%= lang('stp','lblMstpBpdu') %></th>
+<!--#endif-->
+  </tr>
+
+</thead>
+<tbody>
+  <% _.each(data.ports, function(port, idx) { %>
+  <tr>
+    <td class="StringCell"><%= TableCheckbox(idx) %></td>
+    <td class="NumberCell"><%= getPortEntry(idx) %></td>
+    <td class="StringCell"><%= getPortId(idx) %></td>
+      <td class="NumberCell"><%= port.configBpduRx %></td>
+      <td class="NumberCell"><%= port.tcnBpduRx %></td>
+<!--#ifdef CONFIG_SYS_PROTO_STP_MSTP-->
+      <td class="NumberCell"><%= port.mstpBpduRx %></td>
+<!--#endif-->
+      <td class="NumberCell"><%= port.configBpduTx %></td>
+      <td class="NumberCell"><%= port.tcnBpduTx %></td>
+<!--#ifdef CONFIG_SYS_PROTO_STP_MSTP-->
+      <td class="NumberCell"><%= port.mstpBpduTx %></td>
+<!--#endif-->
+    <%= TableLastTd() %>
+  </tr>
+  <% }); %>
+</tbody>
+</table>
+<%= TableFoot(ButtonGroup(ButtonClear('btnClear'),ButtonRefresh('btnRefresh'),ButtonShort(lang('stp','btnStatsIntfView'),'btnView'))) %>
+</form>
+</script>
+</body>
+</html>

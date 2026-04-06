@@ -1,0 +1,92 @@
+{
+  "data":
+  {
+    "mac":
+    [
+      { "name":"None", "val":"None"},
+      { "name":"mac1", "val":"mac1"},
+      { "name":"mac2", "val":"mac2"},
+      { "name":"mac3", "val":"mac3"},
+      { "name":"mac4", "val":"mac4"}
+    ],
+    "ipv4":
+    [
+      { "name":"None", "val":"None"},
+      { "name":"ipv41", "val":"ipv41"},
+      { "name":"ipv42", "val":"ipv42"},
+      { "name":"ipv43", "val":"ipv43"},
+      { "name":"ipv44", "val":"ipv44"}
+    ],
+    "ipv6":
+    [
+      { "name":"None", "val":"None"},
+      { "name":"ipv61", "val":"ipv61"},
+      { "name":"ipv62", "val":"ipv62"},
+      { "name":"ipv63", "val":"ipv63"},
+      { "name":"ipv64", "val":"ipv64"}
+    ],
+    "ports":
+    [
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"mac1", "ipv4":"", "ipv6":"" },
+      { "mac":"mac3", "ipv4":"", "ipv6":"ipv61" },
+      { "mac":"", "ipv4":"ipv41", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" },
+      { "mac":"", "ipv4":"", "ipv6":"" }
+    ]
+  }
+}

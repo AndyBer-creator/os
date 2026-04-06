@@ -1,0 +1,498 @@
+{
+  "data":
+  {
+    "title":"GS8393-52",
+    "priv":15,
+    "defVlan":1,
+    "ports":
+    [
+      { "port":"GE1" },
+      { "port":"GE2" },
+      { "port":"GE3" },
+      { "port":"GE4" },
+      { "port":"GE5" },
+      { "port":"GE6" },
+      { "port":"GE7" },
+      { "port":"GE8" },
+      { "port":"GE9" },
+      { "port":"GE10" },
+      { "port":"GE11" },
+      { "port":"GE12" },
+      { "port":"GE13" },
+      { "port":"GE14" },
+      { "port":"GE15" },
+      { "port":"GE16" },
+      { "port":"GE17" },
+      { "port":"GE18" },
+      { "port":"GE19" },
+      { "port":"GE20" },
+      { "port":"GE21" },
+      { "port":"GE22" },
+      { "port":"GE23" },
+      { "port":"GE24" },
+      { "port":"GE25" },
+      { "port":"GE26" },
+      { "port":"GE27" },
+      { "port":"GE28" },
+      { "port":"GE29" },
+      { "port":"GE30" },
+      { "port":"GE31" },
+      { "port":"GE32" },
+      { "port":"GE33" },
+      { "port":"GE34" },
+      { "port":"GE35" },
+      { "port":"GE36" },
+      { "port":"GE37" },
+      { "port":"GE38" },
+      { "port":"GE39" },
+      { "port":"GE40" },
+      { "port":"GE41" },
+      { "port":"GE42" },
+      { "port":"GE43" },
+      { "port":"GE44" },
+      { "port":"GE45" },
+      { "port":"GE46" },
+      { "port":"GE47" },
+      { "port":"GE48" },
+      { "port":"GE49" },
+      { "port":"GE50" },
+      { "port":"GE51" },
+      { "port":"GE52" },
+      { "port":"LAG1" },
+      { "port":"LAG2" },
+      { "port":"LAG3" },
+      { "port":"LAG4" },
+      { "port":"LAG5" },
+      { "port":"LAG6" },
+      { "port":"LAG7" },
+      { "port":"LAG8" }
+    ],
+    "lags":
+    [
+      { "lag":"1" },
+      { "lag":"2" },
+      { "lag":"3" },
+      { "lag":"4" },
+      { "lag":"5" },
+      { "lag":"6" },
+      { "lag":"7" },
+      { "lag":"8" }
+    ],
+    "menuTree":
+    [
+      {
+        "name":"lang('menu','fld1Status')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1StatusInfo')","url":"html/status_sysinfo.html"},
+          {"name":"lang('menu','doc1StatusSyslog')","url":"html/status_syslog.html"},
+          {
+            "name":"lang('menu','fld2StatusPort')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2StatusPortCnt')","url":"html/status_port_cnt.html"},
+              {"name":"lang('menu','doc2StatusPortErrDisable')","url":"html/status_port_errDisable.html"},
+              {"name":"lang('menu','doc2StatusPortBwUtiliz')","url":"html/status_port_bwutilz.html"}
+            ]
+          },
+          {"name":"lang('menu','doc1StatusLAG')","url":"html/status_lag.html"},
+          {"name":"lang('menu','doc1StatusMac')","url":"html/status_mac.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Network')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1NetworkIPAddr')","url":"html/network_ip.html"},
+          {"name":"lang('menu','doc1NetworkDNS')","url":"html/network_dns.html"},
+          {"name":"lang('menu','doc1NetworkDNSHosts')","url":"html/network_dnsHosts.html"},
+          {"name":"lang('menu','doc1NetworkTimeSys')","url":"html/network_time_sys.html"},
+          {"name":"lang('menu','doc1NetworkTimeSched')","url":"html/network_time_sched.html"},
+          {"name":"lang('menu','doc1NetworkTimeSchedRec')","url":"html/network_time_schedRec.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Port')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1PortSetting')","url":"html/port_port.html"},
+          {"name":"lang('menu','doc1PortErrDisable')","url":"html/port_errDisable.html"},
+          {
+            "name":"lang('menu','fld2PortLAG')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2PortLAGMgmt')","url":"html/port_lag_mgmt.html"},
+              {"name":"lang('menu','doc2PortLAGPort')","url":"html/port_lag_port.html"},
+              {"name":"lang('menu','doc2PortLACP')","url":"html/port_lag_lacp.html"}
+            ]
+          },
+          {"name":"lang('menu','doc1PortEEE')","url":"html/port_eee.html"},
+          {"name":"lang('menu','doc1PortJumbo')","url":"html/port_jumbo.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Poe')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1PoePort')","url":"html/poe_port.html"},
+          {"name":"lang('menu','doc1PoePortTimer')","url":"html/poe_port_timer.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Vlan')",
+        "leaves":
+        [
+          {
+            "name":"lang('menu','fld2Vlan')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc1VlanCreate')","url":"html/vlan_vlan_create.html"},
+              {"name":"lang('menu','doc1VlanVLANConf')","url":"html/vlan_vlan_configuration.html"},
+              {"name":"lang('menu','doc1VlanMembership')","url":"html/vlan_vlan_membership.html"},
+              {"name":"lang('menu','doc1VlanPort')","url":"html/vlan_vlan_port.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2VlanVoice')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2VlanVoiceProp')","url":"html/vlan_voice_prop.html"},
+              {"name":"lang('menu','doc2VlanVoiceOUI')","url":"html/vlan_voice_oui.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2VlanProtocol')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc1VlanProtoGroup')","url":"html/vlan_protocol_group.html"},
+              {"name":"lang('menu','doc1VlanProtoPort')","url":"html/vlan_protocol_binding.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2VlanMac')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc1VlanMacGroup')","url":"html/vlan_mac_group.html"},
+              {"name":"lang('menu','doc1VlanMacGroupMapping')","url":"html/vlan_mac_binding.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2VlanSurveillance')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2VlanSurveillanceProp')","url":"html/vlan_surveillance_prop.html"},
+              {"name":"lang('menu','doc2VlanSurveillanceOUI')","url":"html/vlan_surveillance_oui.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2VlanGVRP')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2VlanGVRPProperty')","url":"html/vlan_gvrp_property.html"},
+              {"name":"lang('menu','doc2VlanGVRPMembership')","url":"html/vlan_gvrp_members.html"},
+              {"name":"lang('menu','doc2VlanGVRPStatistics')","url":"html/vlan_gvrp_statistics.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Mac')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1MacDynamic')","url":"html/mac_dynamic.html"},
+          {"name":"lang('menu','doc1MacStatic')","url":"html/mac_static.html"},
+          {"name":"lang('menu','doc1MacFilter')","url":"html/mac_filter.html"},
+          {"name":"lang('menu','doc1MacPsecure')","url":"html/mac_psecure.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1STP')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1StpGlobal')","url":"html/stp_global.html"},
+          {"name":"lang('menu','doc1StpIntf')","url":"html/stp_intf.html"},
+          {"name":"lang('menu','doc1StpMstInstance')","url":"html/stp_msti.html"},
+          {"name":"lang('menu','doc1StpMstIntf')","url":"html/stp_mstiIntf.html"},
+          {"name":"lang('menu','doc1StpStatistics')","url":"html/stp_statistics.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Discov')",
+        "leaves":
+        [
+          {
+            "name":"lang('menu','fld2DiscovLLDP')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2DiscovLLDPProp')","url":"html/discovery_lldp_prop.html"},
+              {"name":"lang('menu','doc2DiscovLLDPPort')","url":"html/discovery_lldp_port.html"},
+              {"name":"lang('menu','doc2DiscovLLDPMedPolicy')","url":"html/discovery_lldp_medPolicy.html"},
+              {"name":"lang('menu','doc2DiscovLLDPMedPort')","url":"html/discovery_lldp_medPort.html"},
+              {"name":"lang('menu','doc2DiscovLLDPOverloading')","url":"html/discovery_lldp_overloading.html"},
+              {"name":"lang('menu','doc2DiscovLLDPLocalInfo')","url":"html/discovery_lldp_localInfo.html"},
+              {"name":"lang('menu','doc2DiscovLLDPNeighbor')","url":"html/discovery_lldp_neighborInfo.html"},
+              {"name":"lang('menu','doc2DiscovLLDPStatistics')","url":"html/discovery_lldp_statistic.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Mcast')",
+        "leaves":
+        [
+          {
+          	"name":"lang('menu','fld2McastGeneral')",
+          	"leaves":
+          	[
+          		{"name":"lang('menu','doc2McastGeneralProperty')","url":"html/mcast_general_prop.html"},
+          		{"name":"lang('menu','doc2McastGeneralGroupAddr')","url":"html/mcast_general_group.html"},
+          		{"name":"lang('menu','doc2McastGeneralRouterPort')","url":"html/mcast_general_router.html"},
+          		{"name":"lang('menu','doc2McastGeneralForwardAll')","url":"html/mcast_general_fwdAll.html"},
+          		{"name":"lang('menu','doc2McastGeneralThrottling')","url":"html/mcast_general_throt.html"},
+          		{"name":"lang('menu','doc2McastIGMPGeneralFilterProfile')","url":"html/mcast_general_profiles.html"},
+          		{"name":"lang('menu','doc2McastIGMPGeneralFilterBinding')","url":"html/mcast_general_filter.html"}
+          	]
+          },
+
+          {
+            "name":"lang('menu','fld2McastIGMP')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2McastIGMPProperty')","url":"html/mcast_igmp_prop.html"},
+              {"name":"lang('menu','doc2McastIGMPQuerier')","url":"html/mcast_igmp_querier.html"},
+              {"name":"lang('menu','doc2McastIGMPStatistics')","url":"html/mcast_igmp_statistics.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2McastMLD')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2McastMLDProperty')","url":"html/mcast_mld_prop.html"},
+              {"name":"lang('menu','doc2McastMLDStatistics')","url":"html/mcast_mld_statistics.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2McastMVR')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2McastMVRProperty')","url":"html/mcast_mvr_prop.html"},
+              {"name":"lang('menu','doc2McastMVRPortSetting')","url":"html/mcast_mvr_port.html"},
+              {"name":"lang('menu','doc2McastMVRGroupAddress')","url":"html/mcast_mvr_group.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1IPConfig')",
+        "leaves":
+        [
+          {
+            "name":"lang('menu','fld2IPv4')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2IPv4Intf')","url":"html/ipconf_ipv4_intf.html"},
+              {"name":"lang('menu','doc2IPv4Route')","url":"html/ipconf_ipv4_route.html"},
+              {"name":"lang('menu','doc2IPv4Arp')","url":"html/ipconf_ipv4_arp.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2IPv6')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2IPv6Intf')","url":"html/ipconf_ipv6_intf.html"},
+              {"name":"lang('menu','doc2IPv6Addr')","url":"html/ipconf_ipv6_addr.html"},
+              {"name":"lang('menu','doc2IPv6Route')","url":"html/ipconf_ipv6_route.html"},
+              {"name":"lang('menu','doc2IPv6Neigh')","url":"html/ipconf_ipv6_neigh.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Sec')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1SecRadius')","url":"html/sec_radius.html"},
+          {"name":"lang('menu','doc1SecTacplus')","url":"html/sec_tacplus.html"},
+          {
+            "name":"lang('menu','fld2SecAAA')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecAAALoginList')","url":"html/sec_aaa_login.html"},
+              {"name":"lang('menu','doc2SecAAALoginAuthen')","url":"html/sec_aaa_loginAuth.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2SecMgmtAccess')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecMgmtVLAN')","url":"html/sec_mgmt_vlan.html"},
+              {"name":"lang('menu','doc2SecMgmtService')","url":"html/sec_mgmt_method.html"},
+              {"name":"lang('menu','doc2SecMgmtACL')","url":"html/sec_mgmt_acl.html"},
+              {"name":"lang('menu','doc2SecMgmtACE')","url":"html/sec_mgmt_aclAce.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2SecAuthmgr')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecAuthmgrProp')","url":"html/sec_authmgr_prop.html"},
+              {"name":"lang('menu','doc2SecAuthmgrPort')","url":"html/sec_authmgr_port.html"},
+              {"name":"lang('menu','doc2SecAuthmgrMacLocal')","url":"html/sec_authmgr_macAcct.html"},
+              {"name":"lang('menu','doc2SecAuthmgrWebLocal')","url":"html/sec_authmgr_webAcct.html"},
+              {"name":"lang('menu','doc2SecAuthmgrSess')","url":"html/sec_authmgr_sess.html"}
+            ]
+          },
+          {"name":"lang('menu','doc1SecPort')","url":"html/sec_port.html"},
+          {"name":"lang('menu','doc1SecProtected')","url":"html/sec_protect.html"},
+          {"name":"lang('menu','doc1SecStorm')","url":"html/sec_stromControl.html"},
+          {
+            "name":"lang('menu','fld2SecDos')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecDosProp')","url":"html/sec_dos_prop.html"},
+              {"name":"lang('menu','doc2SecDosPort')","url":"html/sec_dos_port.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2SecDAI')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecDAI')","url":"html/sec_dai_prop.html"},
+              {"name":"lang('menu','doc2SecDAIStatistic')","url":"html/sec_dai_statistics.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2SecDS')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecDS')","url":"html/sec_ds_prop.html"},
+              {"name":"lang('menu','doc2SecDSStatistic')","url":"html/sec_ds_statistics.html"},
+              {"name":"lang('menu','doc2SecDSOpt82Global')","url":"html/sec_ds_option82Prop.html"},
+              {"name":"lang('menu','doc2SecDSOpt82Circuit')","url":"html/sec_ds_option82CID.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2SecISG')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecISGPort')","url":"html/sec_ipsg_prop.html"},
+              {"name":"lang('menu','doc2SecISGBind')","url":"html/sec_ipsg_binding.html"},
+              {"name":"lang('menu','doc2SecISGDatabase')","url":"html/sec_ipsg_database.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Acl')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1AclMAC')","url":"html/acl_acl.html?type=1"},
+          {"name":"lang('menu','doc1AclMACAce')","url":"html/acl_mac_ace.html"},
+          {"name":"lang('menu','doc1AclIPv4')","url":"html/acl_acl.html?type=2"},
+          {"name":"lang('menu','doc1AclIPv4Ace')","url":"html/acl_ip_ace.html?type=2"},
+          {"name":"lang('menu','doc1AclIPv6')","url":"html/acl_acl.html?type=3"},
+          {"name":"lang('menu','doc1AclIPv6Ace')","url":"html/acl_ip_ace.html?type=3"},
+          {"name":"lang('menu','doc1AclBind')","url":"html/acl_binding.html"}
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Qos')",
+        "leaves":
+        [
+          {
+            "name":"lang('menu','fld2QosGeneral')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2QosGeneralProp')","url":"html/qos_prop.html"},
+              {"name":"lang('menu','doc2QosGeneralQueue')","url":"html/qos_queue.html"},
+              {"name":"lang('menu','doc2QosGeneralCoS')","url":"html/qos_mapCos.html"},
+              {"name":"lang('menu','doc2QosGeneralDSCP')","url":"html/qos_mapDscp.html"},
+              {"name":"lang('menu','doc2QosGeneralIPP')","url":"html/qos_mapIpp.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2QosRate')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2QosRateBwctl')","url":"html/qos_rate_ctrl.html"},
+              {"name":"lang('menu','doc2QosRateEgressQueue')","url":"html/qos_rate_egressQue.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Diag')",
+        "leaves":
+        [
+          {
+            "name":"lang('menu','fld2DiagLog')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2DiagLogProp')","url":"html/diag_log_global.html"},
+              {"name":"lang('menu','doc2DiagLogRemote')","url":"html/diag_log_remote.html"}
+            ]
+          },
+          {"name":"lang('menu','doc1DiagMirror')","url":"html/diag_mirror.html"},
+          {"name":"lang('menu','doc1DiagPing')","url":"html/diag_ping.html"},
+          {"name":"lang('menu','doc1DiagTraceRoute')","url":"html/diag_traceroute.html"},
+          {"name":"lang('menu','doc1DiagCopper')","url":"html/diag_copper.html"},
+          {"name":"lang('menu','doc1DiagFiber')","url":"html/diag_optical.html"},
+          {
+            "name":"lang('menu','fld2SecUDLD')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2SecUDLDProp')","url":"html/diag_udld_prop.html"},
+              {"name":"lang('menu','doc2SecUDLDNeighbors')","url":"html/diag_udld_neighbor.html"}
+            ]
+          }
+        ]
+      },
+      {
+        "name":"lang('menu','fld1Mgmt')",
+        "leaves":
+        [
+          {"name":"lang('menu','doc1MgmtAccount')","url":"html/mgmt_acct.html"},
+          {
+            "name":"lang('menu','fld2MgmtFirmware')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2MgmtUpgradeBackup')","url":"html/mgmt_img_action.html"},
+              {"name":"lang('menu','doc2MgmtActiveImg')","url":"html/mgmt_img_act.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2MgmtConfig')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2MgmtUpgradeBackup')","url":"html/mgmt_cfg_action.html"},
+              {"name":"lang('menu','doc2MgmtConfigSave')","url":"html/mgmt_cfg_save.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2MgmtSNMP')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2MgmtSNMPView')","url":"html/mgmt_snmp_view.html"},
+              {"name":"lang('menu','doc2MgmtSNMPGroup')","url":"html/mgmt_snmp_group.html"},
+              {"name":"lang('menu','doc2MgmtSNMPCommunity')","url":"html/mgmt_snmp_community.html"},
+              {"name":"lang('menu','doc2MgmtSNMPUser')","url":"html/mgmt_snmp_user.html"},
+              {"name":"lang('menu','doc2MgmtSNMPEngine')","url":"html/mgmt_snmp_engineID.html"},
+              {"name":"lang('menu','doc2MgmtSNMPTrapEvent')","url":"html/mgmt_snmp_trapEvent.html"},
+              {"name":"lang('menu','doc2MgmtSNMPNotify')","url":"html/mgmt_snmp_notify.html"}
+            ]
+          },
+          {
+            "name":"lang('menu','fld2MgmtRMON')",
+            "leaves":
+            [
+              {"name":"lang('menu','doc2MgmtRMONStatistic')","url":"html/mgmt_rmon_statistics.html"},
+              {"name":"lang('menu','doc2MgmtRMONHistory')","url":"html/mgmt_rmon_history.html"},
+              {"name":"lang('menu','doc2MgmtRMONEvent')","url":"html/mgmt_rmon_event.html"},
+              {"name":"lang('menu','doc2MgmtRMONAlarm')","url":"html/mgmt_rmon_alarm.html"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

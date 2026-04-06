@@ -1,0 +1,92 @@
+AlarmLog-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   IpAddress, Integer32, Unsigned32  FROM SNMPv2-SMI
+   TruthValue, DisplayString,
+   TEXTUAL-CONVENTION, MacAddress                 FROM SNMPv2-TC 
+   RTLLog                                         FROM REALTEK-MIB;
+   
+sysLogMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "The enterprise ID was originally assigned to company Limitied."
+   REVISION     "revision"
+   DESCRIPTION
+      "system Demo MIB module"
+   ::= { RTLLog 1 }
+
+syslogType     OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "log type ."
+   ::= { sysLogMib 1 }
+   
+syslogTime     OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "current time ."
+   ::= { sysLogMib 2 }
+   
+sysalarmLog	            OBJECT IDENTIFIER ::= { sysLogMib 3 } 
+sysOpeateLog               OBJECT IDENTIFIER ::= { sysLogMib 4 }
+
+sysCPUbusy NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "cpu is busy"
+    ::= { sysalarmLog 1 }
+   
+sysMemoryHigh NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "High memory usage"
+    ::= { sysalarmLog 2 }
+
+stromCtrldesc OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "storm ctrl type desc."
+   ::= { sysalarmLog 3 }
+   
+stromCtrlWarming NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "storm ctrl warming"
+    ::= { sysalarmLog 4 }
+	
+sysReboot NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "systerm reboot"
+    ::= { sysOpeateLog 1 }
+	
+sysupgrade NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "systerm upgrade image"
+    ::= { sysOpeateLog 2 }
+	
+sysMgmtConfigdesc OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "storm ctrl type desc."
+   ::= { sysOpeateLog 3 }
+   
+sysmgmtConfig NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "systerm Management configuration;eg:cmd、web、mib"
+    ::= { sysOpeateLog 4 }
+END
+
+            

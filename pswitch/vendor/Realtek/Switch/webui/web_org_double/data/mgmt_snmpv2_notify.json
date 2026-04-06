@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "hasCom":true,
+    "notifies":
+    [
+      { "idx":0,"recvIp":"192.168.1.88", "snmpVer":"lang('snmp','lblSNMPv1')", "notifyType":"lang('snmp','lblTraps')","secStr":"public"},
+      { "idx":1,"recvIp":"192.168.1.89", "snmpVer":"lang('snmp','lblSNMPv2')", "notifyType":"lang('snmp','lblTraps')","secStr":"comm2"},
+      { "idx":2,"recvIp":"192.168.1.90", "snmpVer":"lang('snmp','lblSNMPv1')", "notifyType":"lang('snmp','lblTraps')","secStr":"comm1"},
+      { "idx":3,"recvIp":"www.aa.bb.cc", "snmpVer":"lang('snmp','lblSNMPv2')", "notifyType":"lang('snmp','lblInforms')","secStr":"private" }
+    ]
+  }
+}

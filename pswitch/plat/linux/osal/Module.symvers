@@ -1,0 +1,6 @@
+0x0ee49dd9	kal_register_netevent_notifier	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL
+0x6f5cecac	osal_timer_stop	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL
+0xfde685c2	osal_timer_start	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL
+0xb2ee8831	osal_timer_init	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL
+0xb6f3cc2b	osal_time_sysUptime_get	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL
+0xb9a47ba9	osal_timer_refresh	/compile/realtek/pswitch/plat/linux/osal/osal	EXPORT_SYMBOL

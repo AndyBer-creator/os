@@ -1,0 +1,167 @@
+soc_init.o: soc_init.S \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/mips-generic.h \
+ preloader/platform/current/lplr_sram.H
+soc_init_c_start.o: soc_init_c_start.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_spare.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h
+soc_init_parameters.o: soc_init_parameters.c \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/DRAM_GEN2_SAMSUNG_K4B1G0846G_838x_DEMO_300MHZ.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/NOR_SPI_F_MXIC_MX25L25635F_32MB_4BCMD_DIO.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/NOR_SPI_F_MXIC_MX25L12835F_DIO.h
+lplr_cpu.o: preloader/platform/current/cpu/lplr_cpu.S \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/mips-generic.h
+lplr_cache.o: preloader/platform/current/cpu/lplr_cache.S \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/mips-generic.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ preloader/platform/current/cpu/lplr_cpu_dep_cache.H
+plr_platform.o: preloader/platform/current/plr_platform.S \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/mips-generic.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/addrspace.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/cacheops.h
+plr_uart.o: preloader/platform/current/plr_uart.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_switch.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_type.h
+plr_pll.o: preloader/platform/current/plr_pll.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/cpu_utils.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h
+plr_pll_gen3.o: preloader/platform/current/plr_pll_gen3.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h
+plr_pll_gen3_comp.o: preloader/platform/current/plr_pll_gen3_comp.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h
+plr_dram_gen2.o: preloader/platform/current/dram/plr_dram_gen2.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/dram/plr_dram_gen2.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h \
+ preloader/platform/current/dram/plr_plat_dep.h \
+ preloader/platform/current/dram/concur_test.h
+plr_memctl_ddr1.o: preloader/platform/current/dram/plr_memctl_ddr1.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/dram/plr_dram_gen2.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h
+plr_memctl_ddr2.o: preloader/platform/current/dram/plr_memctl_ddr2.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/dram/plr_dram_gen2.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h
+plr_memctl_ddr3.o: preloader/platform/current/dram/plr_memctl_ddr3.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/dram/plr_dram_gen2.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h
+plr_plat_dep.o: preloader/platform/current/plr_plat_dep.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/bspchip.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h
+plr_concur_test.o: preloader/platform/current/plr_concur_test.c \
+ preloader/platform/current/dram/concur_test.h \
+ preloader/platform/current/concur_cpu.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h
+plr_concur_cpu.o: preloader/platform/current/plr_concur_cpu.c \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ preloader/platform/current/dram/plr_plat_dep.h \
+ preloader/platform/current/dram/concur_test.h \
+ preloader/platform/current/concur_cpu.h
+plr_memctl_cali_dram.o: \
+ preloader/platform/current/dram/plr_memctl_cali_dram.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ preloader/platform/current/dram/plr_dram_gen2.h \
+ preloader/platform/current/dram/plr_dram_gen2_memctl.h \
+ preloader/platform/current/dram/plr_plat_dep.h
+plr_tutils_printf.o: preloader/plr_tutils_printf.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stdarg.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h
+plr_spare.o: preloader/plr_spare.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_spare.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h
+plr_tutils.o: preloader/plr_tutils.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h
+plr_memctl_dram.o: preloader/plr_memctl_dram.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/memctl.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h

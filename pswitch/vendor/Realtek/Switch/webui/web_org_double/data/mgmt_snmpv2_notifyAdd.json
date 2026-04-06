@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+    "maxlen_srvHost":256,
+    "hasCom":true,
+    "sec_comms":["public","private","test","test1"]
+  }
+}

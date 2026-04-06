@@ -1,0 +1,24 @@
+{
+  "data":
+  {
+    "instances":
+    [
+      { "vlans": "6-4094", "pri":32768, "bridgeId":"32768-00:11:22:33:44:55", "rootBridgeId":"300-00:aa:bb:cc:dd:ee", "rootPort":"GE12", "rootCost":200000, "remainingHop":20},
+      { "vlans": "1-5", "pri":32768, "bridgeId":"32768-00:11:22:33:44:55", "rootBridgeId":"300-00:aa:bb:cc:dd:ee", "rootPort":"GE12", "rootCost":200000, "remainingHop":20},
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 },
+      { "vlans": "", "pri":32768, "remainingHop":20 }
+    ]
+  }
+}

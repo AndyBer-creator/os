@@ -1,0 +1,8 @@
+interface eth0 {
+ send ia-na 1;
+ request domain-name-servers,domain-name;
+ script "/etc/dhcp6c-script";
+};
+
+id-assoc na 1 {
+};

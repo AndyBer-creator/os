@@ -1,0 +1,21 @@
+{
+  "data":
+  {
+    "ippool":,
+    "section":0,
+    "min_section":0,
+    "max_section":7,
+    "dflt_section":0,
+    "addrstart":,
+    "addrend":,
+    "gateway":,
+    "mask":255.255.255.0,
+	"dnsPristat":0,
+	"dnsPri":,
+	"dnsSecstat":0,
+	"dnsSec":,
+	"leasedays":0,
+	"leasehours":0,
+	"leaseminutes":0
+  }
+}

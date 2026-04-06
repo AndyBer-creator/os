@@ -1,0 +1,221 @@
+Device-mgmt-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	                  FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   NetworkAddress, IpAddress                                          FROM RFC1155-SMI
+   DisplayString, TruthValue                                          FROM SNMPv2-TC ;
+   
+sysDeviceMgmtMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system Demo MIB module"
+   ::= { RTLDevice 6 }
+   	
+deviceipTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF deviceipEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "device is ip address table."
+       ::= { sysDeviceMgmtMib 1 }
+
+   deviceipEntry OBJECT-TYPE
+       SYNTAX      deviceipEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "device is ip address table entry."
+       INDEX    { ipIfIndex }
+       ::= { deviceipTable 1 }
+
+   deviceipEntry ::= SEQUENCE {
+       ipIfIndex    Integer32,
+       ipAddress    IpAddress,
+       ipNetMask    IpAddress
+   }
+   
+	ipIfIndex   OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "unit index, start from 1 "
+	::= { deviceipEntry 1 }
+
+	ipAddress      OBJECT-TYPE
+	SYNTAX         IpAddress
+	MAX-ACCESS     read-only
+	STATUS         current
+	DESCRIPTION
+		"ip address "
+	::= { deviceipEntry 2 }
+	
+	ipNetMask      OBJECT-TYPE
+	SYNTAX         IpAddress
+	MAX-ACCESS     read-only
+	STATUS         current
+	DESCRIPTION
+		"ip address mask"
+	::= { deviceipEntry 3 }
+
+systemConfigControl         OBJECT IDENTIFIER ::= { sysDeviceMgmtMib 2 }
+
+   systemReboot OBJECT-TYPE
+   SYNTAX      TruthValue
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "This object allows the user to restart the Switch
+       (i.e)the entire switch will operationally go down and
+       start again.  Setting  a value of 'true' causes the switch
+       to be restarted.
+       
+       when you exe this function ,you can save the configuration first.
+	
+       Once the switch is restarted, the value of this object reverts
+       to 'false'."
+   DEFVAL { false }
+   ::= { systemConfigControl 1 }
+   
+systemFileOperation    OBJECT IDENTIFIER ::= { sysDeviceMgmtMib 3 }
+ 
+	tftpServer     OBJECT-TYPE
+	SYNTAX         IpAddress
+	MAX-ACCESS     read-write
+	STATUS         current
+	DESCRIPTION
+		"tftp server ip address "
+	::= { systemFileOperation 1 }
+	
+   FileName OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "upgrade image file name"
+   ::= { systemFileOperation 2 }
+   
+   imgupgrade     OBJECT-TYPE
+   SYNTAX      INTEGER {
+                upgradeinit(0),
+                upgrading(1),
+                upgradesucceeded(2),
+				upgradefail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "start upgrade image file"
+   DEFVAL { 0 }
+   ::= { systemFileOperation 3 }
+   
+   download     OBJECT-TYPE
+   SYNTAX      INTEGER {
+                download(0),
+                downloading(1),
+                downloadsucceeded(2),
+				downloadfail(3),
+				downloadrunconfig(4),
+				downloadflashconfig(5),
+				downloadcloneconfig(6)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "start download config file"
+   DEFVAL { 0 }
+   ::= { systemFileOperation 4 }
+   
+   upload     OBJECT-TYPE
+   SYNTAX      INTEGER {
+                uploadinit(0),
+                uploading(1),
+                uploadsucceeded(2),
+				uploadfail(3),
+				uploadrunconfig(4),
+				uploadflashconfig(5),
+				uploadcloneconfig(6)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "start upload config file"
+   DEFVAL { 0 }
+   ::= { systemFileOperation 5 }
+
+systemConfigFile     OBJECT IDENTIFIER ::= { sysDeviceMgmtMib 4 }
+   
+   systemBuildRunConfig OBJECT-TYPE
+   SYNTAX      INTEGER {
+				Init(0),
+				BuildConfiguration(1),
+				Succeeded(2),
+				Fail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "Build Configuration file"
+   ::= { systemConfigFile 1 }
+   
+  systemBuildCloneConfig OBJECT-TYPE
+   SYNTAX      INTEGER {
+				Init(0),
+				BuildConfiguration(1),
+				Succeeded(2),
+				Fail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "Build Configuration clonw file"
+   ::= { systemConfigFile 2 }  
+   
+   systemRuntoFlashConfig OBJECT-TYPE
+   SYNTAX      INTEGER {
+				Init(0),
+                flashSave(1),
+				Succeeded(2),
+				Fail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "config file save flash "
+   ::= { systemConfigFile 3 } 
+
+   systemFlashToRunConfig OBJECT-TYPE
+   SYNTAX      INTEGER {
+				Init(0),
+				FlashtoRunconfig(1),
+				Succeeded(2),
+				Fail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "Build Configuration clonw file"
+   ::= { systemConfigFile 4 } 
+   
+   systemCloneToRunConfig OBJECT-TYPE
+   SYNTAX      INTEGER {
+				Init(0),
+				ClonetoRunconfig(1),
+				Succeeded(2),
+				Fail(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "Build Configuration clonw file"
+   ::= { systemConfigFile 5 } 
+   
+END
+
+            

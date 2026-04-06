@@ -1,0 +1,242 @@
+
+#ifndef __BOARD_VENDOR_H__
+#define __BOARD_VENDOR_H__
+
+#include <hwp/hw_profile.h>
+
+#define UNIT_ID_0    0
+#define UNIT_ID_1    1
+#define UNIT_ID_2    2
+
+typedef enum sys_board_conf_phyPort_e
+{
+    PHY_PORT_0 = 0,
+    PHY_PORT_1,
+    PHY_PORT_2,
+    PHY_PORT_3,
+    PHY_PORT_4,
+    PHY_PORT_5,
+    PHY_PORT_6,
+    PHY_PORT_7,
+    PHY_PORT_8,
+    PHY_PORT_9,
+    PHY_PORT_10,
+    PHY_PORT_11,
+    PHY_PORT_12,
+    PHY_PORT_13,
+    PHY_PORT_14,
+    PHY_PORT_15,
+    PHY_PORT_16,
+    PHY_PORT_17,
+    PHY_PORT_18,
+    PHY_PORT_19,
+    PHY_PORT_20,
+    PHY_PORT_21,
+    PHY_PORT_22,
+    PHY_PORT_23,
+    PHY_PORT_24,
+    PHY_PORT_25,
+    PHY_PORT_26,
+    PHY_PORT_27,
+    PHY_PORT_28,
+    PHY_PORT_29,
+    PHY_PORT_30,
+    PHY_PORT_31,
+    PHY_PORT_32,
+    PHY_PORT_33,
+    PHY_PORT_34,
+    PHY_PORT_35,
+    PHY_PORT_36,
+    PHY_PORT_37,
+    PHY_PORT_38,
+    PHY_PORT_39,
+    PHY_PORT_40,
+    PHY_PORT_41,
+    PHY_PORT_42,
+    PHY_PORT_43,
+    PHY_PORT_44,
+    PHY_PORT_45,
+    PHY_PORT_46,
+    PHY_PORT_47,
+    PHY_PORT_48,
+    PHY_PORT_49,
+    PHY_PORT_50,
+    PHY_PORT_51,
+    PHY_PORT_52,
+    PHY_PORT_53,
+    PHY_PORT_54,
+    PHY_PORT_55,
+    PHY_PORT_56,
+} sys_board_conf_phyPort_t;
+
+typedef enum sys_board_conf_usrPort_e
+{
+    USR_PORT_1 = 1,
+    USR_PORT_2,
+    USR_PORT_3,
+    USR_PORT_4,
+    USR_PORT_5,
+    USR_PORT_6,
+    USR_PORT_7,
+    USR_PORT_8,
+    USR_PORT_9,
+    USR_PORT_10,
+    USR_PORT_11,
+    USR_PORT_12,
+    USR_PORT_13,
+    USR_PORT_14,
+    USR_PORT_15,
+    USR_PORT_16,
+    USR_PORT_17,
+    USR_PORT_18,
+    USR_PORT_19,
+    USR_PORT_20,
+    USR_PORT_21,
+    USR_PORT_22,
+    USR_PORT_23,
+    USR_PORT_24,
+    USR_PORT_25,
+    USR_PORT_26,
+    USR_PORT_27,
+    USR_PORT_28,
+    USR_PORT_29,
+    USR_PORT_30,
+    USR_PORT_31,
+    USR_PORT_32,
+    USR_PORT_33,
+    USR_PORT_34,
+    USR_PORT_35,
+    USR_PORT_36,
+    USR_PORT_37,
+    USR_PORT_38,
+    USR_PORT_39,
+    USR_PORT_40,
+    USR_PORT_41,
+    USR_PORT_42,
+    USR_PORT_43,
+    USR_PORT_44,
+    USR_PORT_45,
+    USR_PORT_46,
+    USR_PORT_47,
+    USR_PORT_48,
+    USR_PORT_49,
+    USR_PORT_50,
+    USR_PORT_51,
+    USR_PORT_52,
+    USR_PORT_53,
+    USR_PORT_54,
+} sys_board_conf_usrPort_t;
+
+typedef enum sys_board_conf_poePort_e
+{
+    POE_PORT_0 = 0,
+    POE_PORT_1,
+    POE_PORT_2,
+    POE_PORT_3,
+    POE_PORT_4,
+    POE_PORT_5,
+    POE_PORT_6,
+    POE_PORT_7,
+    POE_PORT_8,
+    POE_PORT_9,
+    POE_PORT_10,
+    POE_PORT_11,
+    POE_PORT_12,
+    POE_PORT_13,
+    POE_PORT_14,
+    POE_PORT_15,
+    POE_PORT_16,
+    POE_PORT_17,
+    POE_PORT_18,
+    POE_PORT_19,
+    POE_PORT_20,
+    POE_PORT_21,
+    POE_PORT_22,
+    POE_PORT_23,
+    POE_PORT_24,
+    POE_PORT_25,
+    POE_PORT_26,
+    POE_PORT_27,
+    POE_PORT_28,
+    POE_PORT_29,
+    POE_PORT_30,
+    POE_PORT_31,
+    POE_PORT_32,
+    POE_PORT_33,
+    POE_PORT_34,
+    POE_PORT_35,
+    POE_PORT_36,
+    POE_PORT_37,
+    POE_PORT_38,
+    POE_PORT_39,
+    POE_PORT_40,
+    POE_PORT_41,
+    POE_PORT_42,
+    POE_PORT_43,
+    POE_PORT_44,
+    POE_PORT_45,
+    POE_PORT_46,
+    POE_PORT_47,
+} sys_board_conf_poePort_t;
+
+#define SYS_BOARD_NAME_LEN  32
+#define SYS_CHIP_NAME_LEN   16
+
+typedef enum sys_boardModel_Id_e
+{
+    SYS_BM_START = 0,
+#ifdef CONFIG_SYS_RTL8380
+    SYS_BM_8380_8GE_2GEF = HWP_RTL8380M_INTPHY_2FIB_1G_DEMO,
+    SYS_BM_8380_8GE_2GEF_POE = HWP_RTL8380M_INTPHY_2FIB_1G_POE,
+    SYS_BM_8380_8GE_2GEF_POE_BT = HWP_RTL8380M_INTPHY_2FIB_1G_POE_BT,
+    SYS_BM_8382_24GE_4GEC = HWP_RTL8382M_8218B_INTPHY_8218B_8214FC_DEMO,
+    SYS_BM_8382_24GE_4GEC_POE = HWP_RTL8382M_8218B_INTPHY_8218B_8214FC_POE,
+    SYS_BM_8382_16GE_2GE = HWP_RTL8382M_8218B_INTPHY_8214FC_YFD,
+    SYS_BM_8382_16GE_2GE_POE = HWP_RTL8382M_8218B_INTPHY_8214FC_POE,
+    SYS_BM_8380_4GE_2GEF_YFD = HWP_RTL8380M_INTPHY_4PORT_2FIB_1G_YFD,
+    SYS_BM_8380_4GE_2GEF_POE = HWP_RTL8380M_INTPHY_4PORT_2FIB_1G_POE,
+    SYS_BM_8380_4GE_2GEF_POE_BT = HWP_RTL8380M_INTPHY_4PORT_2FIB_1G_POE_BT,
+    SYS_BM_8382_10GE_4GF = HWP_RTL8382M_INTPHY_8218B_8214FC_YFD,
+    SYS_BM_8382_10GE_4GF_POE = HWP_RTL8382M_INTPHY_8218B_8214FC_POE,
+    SYS_BM_8382_10GE_4GF_POE_BT = HWP_RTL8382M_INTPHY_8218B_8214FC_POE_BT,
+#endif
+#ifdef CONFIG_SYS_RTL9300
+    SYS_BM_9301_24GE_4XGEF = HWP_RTL9301_3x8218D_4XGE,
+    SYS_BM_9301_24GE_4XGEF_YFD = HWP_RTL9301_3x8218D_4XGE_YFD,
+    SYS_BM_9301_24GE_4XGEF_POE = HWP_RTL9301_3x8218D_4XGE_POE,
+    SYS_BM_9303_8QXGE = HWP_RTL9303_8XGE,
+    SYS_BM_9303_8X2_5GE = HWP_RTL9303_8x8226,
+#endif
+#ifdef CONFIG_SYS_RTL9310
+    SYS_BM_9311_48GE_6XGEF = HWP_RTL9311_6x8218D_6XGE, 
+    SYS_BM_9311_48GE_6XGEF_YFD = HWP_RTL9311_6x8218D_6XGE_YFD, 
+    SYS_BM_9311_48GE_6XGEF_POE = HWP_RTL9311_6x8218D_6XGE_POE, 
+    SYS_BM_9311_48GE_6XGEF_DEMO = HWP_RTL9311_6x8218D_6XGE_DEMO, 
+    SYS_BM_9313_12XGEF = HWP_RTL9313_12XGE, 
+    SYS_BM_9313_2_5GE_4XGEF = HWP_RTL9313_8x8226B_4XGE,
+    SYS_BM_9313_24_2_5GE_6XGEF_DEMO = HWP_RTL9313_24X2P5G_6XGE,
+#endif
+    SYS_BM_END
+} sys_boardModel_Id_t;
+
+typedef enum sys_boardPoe_chip_e
+{
+    SYS_POE_CHIP_NONE = 0,
+    SYS_POE_CHIP_END
+} sys_boardPoe_chip_t;
+
+typedef struct sys_board_conf_s
+{
+    sys_boardModel_Id_t   boardModelId;
+    char                  boardName[SYS_BOARD_NAME_LEN];
+    char                  chipName[SYS_CHIP_NAME_LEN];
+    uint8                 oidLen;
+    const uint32          *pOidAry;
+    char                  boardDescp[CAPA_SYS_DESC_LEN];
+    sys_boardPoe_chip_t   poe;
+} sys_board_conf_t;
+
+extern int32 board_vendor_init(void);
+
+#endif 
+

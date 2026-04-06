@@ -1,0 +1,1 @@
+cmd_networking/lib.a := rm -f networking/lib.a; rtk-ms-2.0.0-linux-ar  rcs networking/lib.a networking/arp.o networking/hostname.o networking/ifconfig.o networking/interface.o networking/netstat.o networking/ping.o networking/route.o networking/telnet.o networking/tftp.o networking/traceroute.o

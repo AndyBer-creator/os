@@ -1,0 +1,35 @@
+{
+  "data":
+  {
+    "name":"cccc",
+    "binding": false,
+    "maxPri":2147483647,
+    "minPri":1,
+    "acls":
+    [
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"dddd", "val":"dddd" },
+      { "name":"eeee", "val":"eeee" }
+    ],
+    "aces":
+    [
+      { "pri":1, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"test", "tsisOn":1 },
+      { "pri":2, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"test", "tsisOn":1 },
+      { "pri":3, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"test", "tsisOn":1 },
+      { "pri":4, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"test2", "tsisOn":0 },
+      { "pri":5, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"test2", "tsisOn":0 },
+      { "pri":6, "action": 0, "smac":"22:33:44:55:66:77", "smask":"ff:ff:ff:ff:ff:ff",  "dmac":"22:33:44:55:66:77", "dmask":"ff:ff:ff:ff:ff:ff" , "vlan":3, "dot1p":3, "dot1pmask":6, "eth":"0x3333", "tsname":"", "tsisOn":"" }
+    ],
+    "ranges":
+    [
+      { "name":"None", "val":"" },
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"test", "val":"test" },
+      { "name":"test2", "val":"test2" }
+    ]
+  }
+}

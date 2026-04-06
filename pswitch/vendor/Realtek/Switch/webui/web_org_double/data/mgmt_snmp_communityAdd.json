@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+    "maxlen_commStr":20,
+    "views":["view1","view2","view3","all"],
+    "grps":["g1","g2","g3"]
+  }
+}

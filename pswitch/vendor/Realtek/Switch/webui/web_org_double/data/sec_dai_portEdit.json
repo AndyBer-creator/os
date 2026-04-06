@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "trusted":false,
+    "verifySmac":false,
+    "verifyDmac":false,
+    "verifyIP":false,
+    "verifyIPAllowZero":false,
+    "rate":0,
+    "defRate":0,
+    "minRate":0,
+    "maxRate":50
+  }
+}

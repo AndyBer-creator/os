@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "status":false,
+    "verifySrcMac":false,
+    "curEntry":15,
+    "defEntry":0,
+    "minEntry":0,
+    "maxEntry":50
+  }
+}

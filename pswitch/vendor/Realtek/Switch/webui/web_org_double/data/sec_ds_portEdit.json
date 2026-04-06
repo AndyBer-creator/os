@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "trusted":false,
+    "verifyChaddr":false,
+    "rate":0,
+    "defRate":0,
+    "minRate":0,
+    "maxRate":300
+  }
+}

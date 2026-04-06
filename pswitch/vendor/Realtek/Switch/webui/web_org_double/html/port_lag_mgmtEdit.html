@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadDialog();
+
+var selVal;
+var data;
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    selVal = urlParamGetByName('lag');
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    var urlFinal = urlParamAppend(url('get_portLAGMgmtEdit'), 'lag', selVal)
+    dataGet(urlFinal).fetch({
+      success: function(model, resp){
+        logoutCheck(resp, top);
+        that.$el.html( that.template(resp) );
+        data = resp.data;
+        PagePostInit();
+      }
+    });
+  },
+  events: {
+    'change #selLag':'selLag',
+    'click #btnApply':'applyClick',
+    'click #btnClose':'closeClick',
+    'change #notMbrs':'mbrSelected',
+    'change #lagMbrs':'mbrSelected',
+    'click #btnAdd':'mbrSelected',
+    'click #btnRem':'mbrSelected',
+    'blur input':'checkValid'
+  },
+  checkValid:function(){
+    clearAllErrMsg();
+    var valid = true;
+    valid &= validString('lagname',false,false,true);
+    return valid;
+  },
+  selLag:function(e){
+    selVal = e.currentTarget.value;
+    this.render();
+  },
+  closeClick: function() {
+    CloseDialog();
+  },
+  applyClick: function() {
+   if (this.checkValid()){
+      MultiSelectApplySelect('lagMbrs');
+      dataSet(url('set_portLAGMgmtEdit'), formDataGet('setform'));
+      MultiSelectDeselectAll('lagMbrs', 'notMbrs');
+   }
+  },
+  mbrSelected: function(e) {
+    MultiSelectTransferUpdate(e.currentTarget.id, 'btnAdd', 'btnRem', 'notMbrs', 'lagMbrs');
+  }
+});
+
+mainFrame = new mainView();
+
+EnterKeyEvent('applyClick');
+}
+</script>
+</head>
+<body onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+
+<script id="main_content" type="text/template">
+<form id="setform">
+<%= DialogHead(lang('lag','titEditLAGGroup')) %>
+<table>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tr>
+      <th><%= LabelLeft('LAG') %></th>
+      <td class="formContentTD">
+        <%= selVal %>
+        <%= InputHidden('selLag',selVal) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblName')) %></th>
+      <td class="formContentTD">
+        <%= InputText('lagname', data.lagname, data.maxlen_lagname) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('lag','lblType')) %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('lagType', data.lagType, ['static',lang('lag','lblStatic')], ['lacp',lang('lag','lblLACP')]) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblMbrPorts')) %></th>
+      <td class="formContentTD">
+        <table>
+        <thead>
+        <tr>
+          <td class='ctrlSpacing'><%= LabelTopMulti(lang('common','lblAvailablePort')) %></td>
+          <td class='ctrlSpacing'></td>
+          <td class='ctrlSpacing right'><%= LabelTopMulti(lang('common','lblSelPort')) %></td>
+        </tr>
+        </thead >
+        <tbody >
+        <tr>
+          <td rowspan="2">
+            <select name="notMbrs" id="notMbrs" style="WIDTH: 90px" multiple size="8">
+            <% _.each(data.notMbrs, function(port, index) { %>
+              <option value=<%= port.port %>><%= port.port %></option>
+            <% }); %>
+            </select>
+          </td>
+          <td class=right>
+            <%= ButtonTransferDisabled('btnAdd', 'btnRem') %>
+          </td>
+          <td rowspan="2" class=right>
+            <select name="lagMbrs" id="lagMbrs" style="WIDTH: 90px" multiple size="8">
+            <% _.each(data.lagMbrs, function(port, index) { %>
+              <option value=<%= port.port %>><%= port.port %></option>
+            <% }); %>
+            </select>
+          </td>
+        </tr>
+        </tbody >
+        </table>
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+<%= DialogFoot(ButtonGroupApplyClose('btnApply', 'btnClose')) %>
+
+</form>
+</script>
+
+</body>
+</html>

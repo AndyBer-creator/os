@@ -1,0 +1,33 @@
+{
+  "data":
+  {
+    "type":"static",
+    "staticIp":"192.168.1.1",
+    "staticMask":"255.255.255.0",
+    "adminGw":"192.168.1.1",
+    "dns1":"168.95.1.1",
+    "dns2":"168.95.192.1",
+    "ip":"192.168.1.1",
+    "operGw":"192.168.1.1",
+
+    "ipv6AutoAddr":true,
+    "dhcpv6":true,
+    "staticIpv6":"2002::1:2",
+    "staticIpv6Gateway":"2002::1:2",
+    "prefix":128,
+    "ipv6Dns1":"2001:b000:168::1",
+    "ipv6Dns2":"2001:b000:168::2",
+    "linkLocalAddr":"fe80::dcad:beff:feef:102/64",
+    "currIpv6": [ "fe80::dcad:beff:feef:102/64", "2002::1:99/64"],
+    "currIpv6Gw": ["fe80::20e:2eff:fef1:4b3c",  "2002::100"],
+    "stateless":true,
+    "minRefreshTime":86400,
+    "min_minRefreshTime":600,
+    "max_minRefreshTime":4294967294,
+    "dflt_minRefreshTime":86400,
+    "refreshTime":86400,
+    "min_refreshTime":86400,
+    "max_refreshTime":4294967294,
+    "dflt_refreshTime":86400
+  }
+}

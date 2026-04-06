@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "host_maxlen":256,
+    "udp_min":0,
+    "udp_max":65536,
+    "udp_dflt":514,
+    "facility_min":0,
+    "facility_max":7,
+    "facility":7,
+    "remote_sev":5
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "data":
+  {
+    "type":"ram",
+    "logs":
+    [
+      { "idx":1,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":2,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":3,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":4,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":5,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":6,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":7,  "time":"1980-01-01 00:00", "sev":"Alert",  "desc":"logging test" },
+      { "idx":8,  "time":"1980-01-01 00:00", "sev":"Debug",  "desc":"logging test" },
+      { "idx":9,  "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" },
+      { "idx":10, "time":"1980-01-01 00:00", "sev":"Notice", "desc":"logging test" }
+    ]
+  }
+}

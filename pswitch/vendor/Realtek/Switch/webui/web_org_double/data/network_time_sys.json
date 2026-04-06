@@ -1,0 +1,25 @@
+{
+  "data":
+  {
+    "isv4":true,
+    "srvHost":"192.168.1.100",
+    "port":123,
+    "defPort":123,
+    "time":"1381577640",
+    "timeStr":"2014-08-13 17:47:43 UTC+8",
+    "sntp":0,
+    "timezone":120,
+    "dlsType":2,
+    "dlsOffset":60,
+    "dlsStaticSecS":"1357990440",
+    "dlsStaticSecE":"1381577640",
+    "dlsRecDayS":3,
+    "dlsRecWeekS":3,
+    "dlsRecMonthS":3,
+    "dlsRecTimeS":"19:22",
+    "dlsRecDayE":4,
+    "dlsRecWeekE":5,
+    "dlsRecMonthE":11,
+    "dlsRecTimeE":"12:44"
+  }
+}

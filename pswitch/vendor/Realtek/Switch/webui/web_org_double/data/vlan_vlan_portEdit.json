@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "mode":0,
+    "pvid":1,
+    "accFrameType":2,
+    "ingressFilter":true,
+    "uplink":true,
+    "tpid":"0x9100",
+    "tpids":
+    [
+      { "name":"0x8100", "val":"0x8100" },
+      { "name":"0x88a8", "val":"0x88a8" },
+      { "name":"0x9100", "val":"0x9100" },
+      { "name":"0x9200", "val":"0x9200" }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "entries":
+    [
+      { "intf":"VLAN1", "vlan": 1, "ipv6":"2001:1::1001", "mac":"00:00:00:00:11:CC", "static":1, "router":1 },
+      { "intf":"VLAN1", "vlan": 1, "ipv6":"2001:1::1002", "mac":"00:00:00:00:11:FF", "static":0, "router":0 },
+      { "intf":"VLAN1", "vlan": 1, "ipv6":"2001:1::1003", "mac":"00:00:00:00:11:EE", "static":0, "router":1 },
+      { "intf":"VLAN100", "vlan": 100, "ipv6":"2001:100::1001", "mac":"00:00:00:00:CC:C0", "static":1, "router":1 },
+      { "intf":"VLAN100", "vlan": 100, "ipv6":"2001:100::1002", "mac":"00:00:00:00:CC:0E", "static":0, "router":0 },
+      { "intf":"VLAN100", "vlan": 100, "ipv6":"2001:100::1003", "mac":"00:00:00:00:BB:E0", "static":0, "router":0 }
+    ]
+  }
+}

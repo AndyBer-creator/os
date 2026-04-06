@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "queues":
+    [
+      { "qid":1, "type":"wrr", "weight":1 },
+      { "qid":2, "type":"wrr", "weight":2 },
+      { "qid":3, "type":"wrr", "weight":3 },
+      { "qid":4, "type":"sp", "weight":4 },
+      { "qid":5, "type":"sp", "weight":5 },
+      { "qid":6, "type":"sp", "weight":9 },
+      { "qid":7, "type":"sp", "weight":13 },
+      { "qid":8, "type":"sp", "weight":15 }
+    ]
+  }
+}

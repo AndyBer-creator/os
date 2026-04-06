@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/ksi/ksi.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o /compile/realtek/pswitch/plat/linux/ksi/ksi.o /compile/realtek/pswitch/plat/linux/ksi/ksi_core_lkm.o /compile/realtek/pswitch/plat/linux/ksi/ksi_core_export.o 

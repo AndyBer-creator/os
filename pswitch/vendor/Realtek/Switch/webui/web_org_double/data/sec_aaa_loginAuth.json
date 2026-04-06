@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "lists":
+    [
+      { "list":"default","methods":["lang('aaa','lblMethodLocal')"] },
+      { "list":"authList1","methods":["lang('aaa','lblMethodTacplus')","lang('aaa','lblMethodLocal')"] },
+      { "list":"authList2","methods":["lang('aaa','lblMethodRadius')","lang('aaa','lblMethodTacplus')","lang('aaa','lblMethodLocal')","lang('aaa','lblMethodEnable')"] },
+      { "list":"authList3","methods":["lang('aaa','lblMethodRadius')","lang('aaa','lblMethodTacplus')","lang('aaa','lblMethodLocal')"] }
+    ],
+    "lines":
+    [
+      { "name":"lang('line','lblConsole')","val":0,"list":"default" },
+      { "name":"lang('line','lblTelnet')","val":1,"list":"default" },
+      { "name":"lang('line','lblSsh')","val":2,"list":"authList2" },
+      { "name":"lang('line','lblHttp')","val":3,"list":"authList1" },
+      { "name":"lang('line','lblHttps')","val":4,"list":"authList3" }
+    ]
+  }
+}

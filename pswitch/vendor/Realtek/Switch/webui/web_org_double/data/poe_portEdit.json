@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "portEnable":true,
+    "portPowerLimit":15
+    "portPowerLimit_min":1,
+    "portPowerLimit_max":30,
+    "portPowerLimit_dflt":15,
+    "portWatchDog":False,
+  }
+}
+

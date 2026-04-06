@@ -1,0 +1,33 @@
+/compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/src/obj/diag_util.o /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/src/obj/diag_util.d : diag_util.c \
+ /compile/realtek/kernel/uClinux/../../sdk/include/common/rt_type.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/rt_autoconf.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/sdk_autoconf.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/type.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/common/util/rt_bitop.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/debug/rt_log.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/error.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/osal/print.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/common/rt_error.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/diag_util.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/common/util/rt_util.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/common/util.h \
+ /compile/realtek/kernel/uClinux/../../sdk/system/include/osal/lib.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/switch.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/chipdef.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/chip.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/hal/phy/phydef.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/port.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/sds.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/phy.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/time.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/diag.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/allreg.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/allmem.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/trunk.h \
+ /compile/realtek/kernel/uClinux/../../sdk/include/rtk/l3.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/flag/cmd_flag.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/flag/cmd_flag_phy.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/flag/cmd_flag_common.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/flag/cmd_flag_rtl8380.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/diag_om.h \
+ /compile/realtek/kernel/uClinux/../../sdk/src/app/diag_v2/include/diag_str.h

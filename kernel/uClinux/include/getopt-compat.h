@@ -1,0 +1,1 @@
+/compile/realtek/kernel/uClinux/lib/libldap/include/getopt-compat.h

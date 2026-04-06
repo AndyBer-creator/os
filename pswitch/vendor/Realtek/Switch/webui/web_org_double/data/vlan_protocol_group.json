@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "groups":
+    [
+      { "gid":1, "frameType": 0, "protocolvalue": "ABCD" },
+      { "gid":3, "frameType": 1, "protocolvalue": "1111" },
+      { "gid":6, "frameType": 4, "protocolvalue": "2222" },
+      { "gid":7, "frameType": 0, "protocolvalue": "3333" }
+    ],
+    "gid": [
+      { "name":"2", "val":2 },
+      { "name":"4", "val":4 },
+      { "name":"5", "val":5 },
+      { "name":"8", "val":8 }
+    ]
+  }
+}

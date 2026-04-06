@@ -1,0 +1,79 @@
+StaticvlanMgmt-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	                  FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   DisplayString, RowStatus,                                          FROM SNMPv2-TC ;
+   
+staticVlanCtrlMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system interfece control MIB module"
+   ::= { RTLDevice 8 }
+
+staticvlanObjects       OBJECT IDENTIFIER ::= { staticVlanCtrlMib 1 }
+
+   staticVlanTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF staticVlanEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of SNMP target information to be used
+            in the generation of SNMP messages."
+       ::= { staticvlanObjects 1 }
+
+   staticVlanEntry OBJECT-TYPE
+       SYNTAX      staticVlanEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           ""
+       INDEX { staticvlanName }
+       ::= { staticVlanTable 1 }
+
+   staticVlanEntry ::= SEQUENCE {
+       staticvlanName           DisplayString,
+	   staticVlanEgressPorts    DisplayString,
+	   staticVlanUntagPorts     DisplayString,
+       staticvlanRowStatus      RowStatus
+   }
+
+   staticvlanName OBJECT-TYPE
+       SYNTAX      DisplayString
+       MAX-ACCESS  read-create
+       STATUS      current
+       DESCRIPTION
+           "."
+       ::= { staticVlanEntry 1 }
+
+	staticVlanEgressPorts   OBJECT-TYPE
+	SYNTAX          DisplayString
+	MAX-ACCESS      read-create
+	STATUS          current
+	DESCRIPTION
+		""
+	::= { staticVlanEntry 2 }
+	
+	staticVlanUntagPorts   OBJECT-TYPE
+	SYNTAX          DisplayString
+	MAX-ACCESS      read-create
+	STATUS          current
+	DESCRIPTION
+		"VLAN naming. 
+		eg vlan002,vlantest..."
+	::= { staticVlanEntry 3 }
+	
+   staticvlanRowStatus OBJECT-TYPE
+       SYNTAX      RowStatus
+       MAX-ACCESS  read-create
+       STATUS      current
+       DESCRIPTION
+		""
+       ::= { staticVlanEntry 4 }
+	   
+END

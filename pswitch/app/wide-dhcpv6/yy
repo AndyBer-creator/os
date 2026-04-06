@@ -1,0 +1,1370 @@
+cfparse.c:/* All symbols defined below should begin with yy or YY, to avoid
+cfparse.c:extern void yywarn __P((char *, ...))
+cfparse.c:extern void yyerror __P((char *, ...))
+cfparse.c:		yywarn("can't allocate memory"); \
+cfparse.c:		yywarn("can't allocate memory"); \
+cfparse.c:extern int yylex __P((void));
+cfparse.c:   enum yytokentype {
+cfparse.c:# define yystype YYSTYPE /* obsolescent; will be withdrawn */
+cfparse.c:typedef YYTYPE_UINT8 yytype_uint8;
+cfparse.c:typedef unsigned char yytype_uint8;
+cfparse.c:typedef YYTYPE_INT8 yytype_int8;
+cfparse.c:typedef signed char yytype_int8;
+cfparse.c:typedef short int yytype_int8;
+cfparse.c:typedef YYTYPE_UINT16 yytype_uint16;
+cfparse.c:typedef unsigned short int yytype_uint16;
+cfparse.c:typedef YYTYPE_INT16 yytype_int16;
+cfparse.c:typedef short int yytype_int16;
+cfparse.c:YYID (int yyi)
+cfparse.c:YYID (yyi)
+cfparse.c:    int yyi;
+cfparse.c:  return yyi;
+cfparse.c:#if ! defined yyoverflow || YYERROR_VERBOSE
+cfparse.c:#endif /* ! defined yyoverflow || YYERROR_VERBOSE */
+cfparse.c:#if (! defined yyoverflow \
+cfparse.c:union yyalloc
+cfparse.c:  yytype_int16 yyss_alloc;
+cfparse.c:  YYSTYPE yyvs_alloc;
+cfparse.c:# define YYSTACK_GAP_MAXIMUM (sizeof (union yyalloc) - 1)
+cfparse.c:     ((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \
+cfparse.c:	  YYSIZE_T yyi;				\
+cfparse.c:	  for (yyi = 0; yyi < (Count); yyi++)	\
+cfparse.c:	    (To)[yyi] = (From)[yyi];		\
+cfparse.c:	YYSIZE_T yynewbytes;						\
+cfparse.c:	YYCOPY (&yyptr->Stack_alloc, Stack, yysize);			\
+cfparse.c:	Stack = &yyptr->Stack_alloc;					\
+cfparse.c:	yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
+cfparse.c:	yyptr += yynewbytes / sizeof (*yyptr);				\
+cfparse.c:  ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
+cfparse.c:static const yytype_uint8 yytranslate[] =
+cfparse.c:static const yytype_uint16 yyprhs[] =
+cfparse.c:static const yytype_int8 yyrhs[] =
+cfparse.c:static const yytype_uint16 yyrline[] =
+cfparse.c:static const char *const yytname[] =
+cfparse.c:static const yytype_uint16 yytoknum[] =
+cfparse.c:static const yytype_uint8 yyr1[] =
+cfparse.c:static const yytype_uint8 yyr2[] =
+cfparse.c:static const yytype_uint8 yydefact[] =
+cfparse.c:static const yytype_int16 yydefgoto[] =
+cfparse.c:static const yytype_int16 yypact[] =
+cfparse.c:static const yytype_int16 yypgoto[] =
+cfparse.c:static const yytype_uint8 yytable[] =
+cfparse.c:static const yytype_int16 yycheck[] =
+cfparse.c:static const yytype_uint8 yystos[] =
+cfparse.c:#define yyerrok		(yyerrstatus = 0)
+cfparse.c:#define yyclearin	(yychar = YYEMPTY)
+cfparse.c:#define YYACCEPT	goto yyacceptlab
+cfparse.c:#define YYABORT		goto yyabortlab
+cfparse.c:#define YYERROR		goto yyerrorlab
+cfparse.c:/* Like YYERROR except do call yyerror.  This remains here temporarily
+cfparse.c:#define YYFAIL		goto yyerrlab
+cfparse.c:#define YYRECOVERING()  (!!yyerrstatus)
+cfparse.c:  if (yychar == YYEMPTY && yylen == 1)				\
+cfparse.c:      yychar = (Token);						\
+cfparse.c:      yylval = (Value);						\
+cfparse.c:      yytoken = YYTRANSLATE (yychar);				\
+cfparse.c:      goto yybackup;						\
+cfparse.c:      yyerror (YY_("syntax error: cannot back up")); \
+cfparse.c:/* YYLEX -- calling `yylex' with the right arguments.  */
+cfparse.c:# define YYLEX yylex (YYLEX_PARAM)
+cfparse.c:# define YYLEX yylex ()
+cfparse.c:  if (yydebug)					\
+cfparse.c:  if (yydebug)								  \
+cfparse.c:      yy_symbol_print (stderr,						  \
+cfparse.c:yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)
+cfparse.c:yy_symbol_value_print (yyoutput, yytype, yyvaluep)
+cfparse.c:    FILE *yyoutput;
+cfparse.c:    int yytype;
+cfparse.c:    YYSTYPE const * const yyvaluep;
+cfparse.c:  if (!yyvaluep)
+cfparse.c:  if (yytype < YYNTOKENS)
+cfparse.c:    YYPRINT (yyoutput, yytoknum[yytype], *yyvaluep);
+cfparse.c:  YYUSE (yyoutput);
+cfparse.c:  switch (yytype)
+cfparse.c:yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)
+cfparse.c:yy_symbol_print (yyoutput, yytype, yyvaluep)
+cfparse.c:    FILE *yyoutput;
+cfparse.c:    int yytype;
+cfparse.c:    YYSTYPE const * const yyvaluep;
+cfparse.c:  if (yytype < YYNTOKENS)
+cfparse.c:    YYFPRINTF (yyoutput, "token %s (", yytname[yytype]);
+cfparse.c:    YYFPRINTF (yyoutput, "nterm %s (", yytname[yytype]);
+cfparse.c:  yy_symbol_value_print (yyoutput, yytype, yyvaluep);
+cfparse.c:  YYFPRINTF (yyoutput, ")");
+cfparse.c:| yy_stack_print -- Print the state stack from its BOTTOM up to its |
+cfparse.c:yy_stack_print (yytype_int16 *yybottom, yytype_int16 *yytop)
+cfparse.c:yy_stack_print (yybottom, yytop)
+cfparse.c:    yytype_int16 *yybottom;
+cfparse.c:    yytype_int16 *yytop;
+cfparse.c:  for (; yybottom <= yytop; yybottom++)
+cfparse.c:      int yybot = *yybottom;
+cfparse.c:      YYFPRINTF (stderr, " %d", yybot);
+cfparse.c:  if (yydebug)							\
+cfparse.c:    yy_stack_print ((Bottom), (Top));				\
+cfparse.c:yy_reduce_print (YYSTYPE *yyvsp, int yyrule)
+cfparse.c:yy_reduce_print (yyvsp, yyrule)
+cfparse.c:    YYSTYPE *yyvsp;
+cfparse.c:    int yyrule;
+cfparse.c:  int yynrhs = yyr2[yyrule];
+cfparse.c:  int yyi;
+cfparse.c:  unsigned long int yylno = yyrline[yyrule];
+cfparse.c:	     yyrule - 1, yylno);
+cfparse.c:  for (yyi = 0; yyi < yynrhs; yyi++)
+cfparse.c:      YYFPRINTF (stderr, "   $%d = ", yyi + 1);
+cfparse.c:      yy_symbol_print (stderr, yyrhs[yyprhs[yyrule] + yyi],
+cfparse.c:		       &(yyvsp[(yyi + 1) - (yynrhs)])
+cfparse.c:  if (yydebug)				\
+cfparse.c:    yy_reduce_print (yyvsp, Rule); \
+cfparse.c:int yydebug;
+cfparse.c:# ifndef yystrlen
+cfparse.c:#   define yystrlen strlen
+cfparse.c:yystrlen (const char *yystr)
+cfparse.c:yystrlen (yystr)
+cfparse.c:    const char *yystr;
+cfparse.c:  YYSIZE_T yylen;
+cfparse.c:  for (yylen = 0; yystr[yylen]; yylen++)
+cfparse.c:  return yylen;
+cfparse.c:# ifndef yystpcpy
+cfparse.c:#   define yystpcpy stpcpy
+cfparse.c:yystpcpy (char *yydest, const char *yysrc)
+cfparse.c:yystpcpy (yydest, yysrc)
+cfparse.c:    char *yydest;
+cfparse.c:    const char *yysrc;
+cfparse.c:  char *yyd = yydest;
+cfparse.c:  const char *yys = yysrc;
+cfparse.c:  while ((*yyd++ = *yys++) != '\0')
+cfparse.c:  return yyd - 1;
+cfparse.c:# ifndef yytnamerr
+cfparse.c:   quotes and backslashes, so that it's suitable for yyerror.  The
+cfparse.c:   backslash-backslash).  YYSTR is taken from yytname.  If YYRES is
+cfparse.c:yytnamerr (char *yyres, const char *yystr)
+cfparse.c:  if (*yystr == '"')
+cfparse.c:      YYSIZE_T yyn = 0;
+cfparse.c:      char const *yyp = yystr;
+cfparse.c:	switch (*++yyp)
+cfparse.c:	    if (*++yyp != '\\')
+cfparse.c:	    if (yyres)
+cfparse.c:	      yyres[yyn] = *yyp;
+cfparse.c:	    yyn++;
+cfparse.c:	    if (yyres)
+cfparse.c:	      yyres[yyn] = '\0';
+cfparse.c:	    return yyn;
+cfparse.c:  if (! yyres)
+cfparse.c:    return yystrlen (yystr);
+cfparse.c:  return yystpcpy (yyres, yystr) - yyres;
+cfparse.c:yysyntax_error (char *yyresult, int yystate, int yychar)
+cfparse.c:  int yyn = yypact[yystate];
+cfparse.c:  if (! (YYPACT_NINF < yyn && yyn <= YYLAST))
+cfparse.c:      int yytype = YYTRANSLATE (yychar);
+cfparse.c:      YYSIZE_T yysize0 = yytnamerr (0, yytname[yytype]);
+cfparse.c:      YYSIZE_T yysize = yysize0;
+cfparse.c:      YYSIZE_T yysize1;
+cfparse.c:      int yysize_overflow = 0;
+cfparse.c:      char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+cfparse.c:      int yyx;
+cfparse.c:      char *yyfmt;
+cfparse.c:      char const *yyf;
+cfparse.c:      static char const yyunexpected[] = "syntax error, unexpected %s";
+cfparse.c:      static char const yyexpecting[] = ", expecting %s";
+cfparse.c:      static char const yyor[] = " or %s";
+cfparse.c:      char yyformat[sizeof yyunexpected
+cfparse.c:		    + sizeof yyexpecting - 1
+cfparse.c:		       * (sizeof yyor - 1))];
+cfparse.c:      char const *yyprefix = yyexpecting;
+cfparse.c:      int yyxbegin = yyn < 0 ? -yyn : 0;
+cfparse.c:      /* Stay within bounds of both yycheck and yytname.  */
+cfparse.c:      int yychecklim = YYLAST - yyn + 1;
+cfparse.c:      int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
+cfparse.c:      int yycount = 1;
+cfparse.c:      yyarg[0] = yytname[yytype];
+cfparse.c:      yyfmt = yystpcpy (yyformat, yyunexpected);
+cfparse.c:      for (yyx = yyxbegin; yyx < yyxend; ++yyx)
+cfparse.c:	if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR)
+cfparse.c:	    if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
+cfparse.c:		yycount = 1;
+cfparse.c:		yysize = yysize0;
+cfparse.c:		yyformat[sizeof yyunexpected - 1] = '\0';
+cfparse.c:	    yyarg[yycount++] = yytname[yyx];
+cfparse.c:	    yysize1 = yysize + yytnamerr (0, yytname[yyx]);
+cfparse.c:	    yysize_overflow |= (yysize1 < yysize);
+cfparse.c:	    yysize = yysize1;
+cfparse.c:	    yyfmt = yystpcpy (yyfmt, yyprefix);
+cfparse.c:	    yyprefix = yyor;
+cfparse.c:      yyf = YY_(yyformat);
+cfparse.c:      yysize1 = yysize + yystrlen (yyf);
+cfparse.c:      yysize_overflow |= (yysize1 < yysize);
+cfparse.c:      yysize = yysize1;
+cfparse.c:      if (yysize_overflow)
+cfparse.c:      if (yyresult)
+cfparse.c:	  char *yyp = yyresult;
+cfparse.c:	  int yyi = 0;
+cfparse.c:	  while ((*yyp = *yyf) != '\0')
+cfparse.c:	      if (*yyp == '%' && yyf[1] == 's' && yyi < yycount)
+cfparse.c:		  yyp += yytnamerr (yyp, yyarg[yyi++]);
+cfparse.c:		  yyf += 2;
+cfparse.c:		  yyp++;
+cfparse.c:		  yyf++;
+cfparse.c:      return yysize;
+cfparse.c:yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep)
+cfparse.c:yydestruct (yymsg, yytype, yyvaluep)
+cfparse.c:    const char *yymsg;
+cfparse.c:    int yytype;
+cfparse.c:    YYSTYPE *yyvaluep;
+cfparse.c:  YYUSE (yyvaluep);
+cfparse.c:  if (!yymsg)
+cfparse.c:    yymsg = "Deleting";
+cfparse.c:  YY_SYMBOL_PRINT (yymsg, yytype, yyvaluep, yylocationp);
+cfparse.c:  switch (yytype)
+cfparse.c:int yyparse (void *YYPARSE_PARAM);
+cfparse.c:int yyparse ();
+cfparse.c:int yyparse (void);
+cfparse.c:int yyparse ();
+cfparse.c:int yychar;
+cfparse.c:YYSTYPE yylval;
+cfparse.c:int yynerrs;
+cfparse.c:| yyparse or yypush_parse.  |
+cfparse.c:yyparse (void *YYPARSE_PARAM)
+cfparse.c:yyparse (YYPARSE_PARAM)
+cfparse.c:yyparse (void)
+cfparse.c:yyparse ()
+cfparse.c:    int yystate;
+cfparse.c:    int yyerrstatus;
+cfparse.c:       `yyss': related to states.
+cfparse.c:       `yyvs': related to semantic values.
+cfparse.c:       Refer to the stacks thru separate pointers, to allow yyoverflow
+cfparse.c:    yytype_int16 yyssa[YYINITDEPTH];
+cfparse.c:    yytype_int16 *yyss;
+cfparse.c:    yytype_int16 *yyssp;
+cfparse.c:    YYSTYPE yyvsa[YYINITDEPTH];
+cfparse.c:    YYSTYPE *yyvs;
+cfparse.c:    YYSTYPE *yyvsp;
+cfparse.c:    YYSIZE_T yystacksize;
+cfparse.c:  int yyn;
+cfparse.c:  int yyresult;
+cfparse.c:  int yytoken;
+cfparse.c:  YYSTYPE yyval;
+cfparse.c:  char yymsgbuf[128];
+cfparse.c:  char *yymsg = yymsgbuf;
+cfparse.c:  YYSIZE_T yymsg_alloc = sizeof yymsgbuf;
+cfparse.c:#define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N))
+cfparse.c:  int yylen = 0;
+cfparse.c:  yytoken = 0;
+cfparse.c:  yyss = yyssa;
+cfparse.c:  yyvs = yyvsa;
+cfparse.c:  yystacksize = YYINITDEPTH;
+cfparse.c:  yystate = 0;
+cfparse.c:  yyerrstatus = 0;
+cfparse.c:  yynerrs = 0;
+cfparse.c:  yychar = YYEMPTY; /* Cause a token to be read.  */
+cfparse.c:  yyssp = yyss;
+cfparse.c:  yyvsp = yyvs;
+cfparse.c:  goto yysetstate;
+cfparse.c:| yynewstate -- Push a new state, which is found in yystate.  |
+cfparse.c: yynewstate:
+cfparse.c:  yyssp++;
+cfparse.c: yysetstate:
+cfparse.c:  *yyssp = yystate;
+cfparse.c:  if (yyss + yystacksize - 1 <= yyssp)
+cfparse.c:      YYSIZE_T yysize = yyssp - yyss + 1;
+cfparse.c:#ifdef yyoverflow
+cfparse.c:	YYSTYPE *yyvs1 = yyvs;
+cfparse.c:	yytype_int16 *yyss1 = yyss;
+cfparse.c:	   be undefined if yyoverflow is a macro.  */
+cfparse.c:	yyoverflow (YY_("memory exhausted"),
+cfparse.c:		    &yyss1, yysize * sizeof (*yyssp),
+cfparse.c:		    &yyvs1, yysize * sizeof (*yyvsp),
+cfparse.c:		    &yystacksize);
+cfparse.c:	yyss = yyss1;
+cfparse.c:	yyvs = yyvs1;
+cfparse.c:#else /* no yyoverflow */
+cfparse.c:      goto yyexhaustedlab;
+cfparse.c:      if (YYMAXDEPTH <= yystacksize)
+cfparse.c:	goto yyexhaustedlab;
+cfparse.c:      yystacksize *= 2;
+cfparse.c:      if (YYMAXDEPTH < yystacksize)
+cfparse.c:	yystacksize = YYMAXDEPTH;
+cfparse.c:	yytype_int16 *yyss1 = yyss;
+cfparse.c:	union yyalloc *yyptr =
+cfparse.c:	  (union yyalloc *) YYSTACK_ALLOC (YYSTACK_BYTES (yystacksize));
+cfparse.c:	if (! yyptr)
+cfparse.c:	  goto yyexhaustedlab;
+cfparse.c:	YYSTACK_RELOCATE (yyss_alloc, yyss);
+cfparse.c:	YYSTACK_RELOCATE (yyvs_alloc, yyvs);
+cfparse.c:	if (yyss1 != yyssa)
+cfparse.c:	  YYSTACK_FREE (yyss1);
+cfparse.c:#endif /* no yyoverflow */
+cfparse.c:      yyssp = yyss + yysize - 1;
+cfparse.c:      yyvsp = yyvs + yysize - 1;
+cfparse.c:		  (unsigned long int) yystacksize));
+cfparse.c:      if (yyss + yystacksize - 1 <= yyssp)
+cfparse.c:  YYDPRINTF ((stderr, "Entering state %d\n", yystate));
+cfparse.c:  if (yystate == YYFINAL)
+cfparse.c:  goto yybackup;
+cfparse.c:| yybackup.  |
+cfparse.c:yybackup:
+cfparse.c:  yyn = yypact[yystate];
+cfparse.c:  if (yyn == YYPACT_NINF)
+cfparse.c:    goto yydefault;
+cfparse.c:  if (yychar == YYEMPTY)
+cfparse.c:      yychar = YYLEX;
+cfparse.c:  if (yychar <= YYEOF)
+cfparse.c:      yychar = yytoken = YYEOF;
+cfparse.c:      yytoken = YYTRANSLATE (yychar);
+cfparse.c:      YY_SYMBOL_PRINT ("Next token is", yytoken, &yylval, &yylloc);
+cfparse.c:  yyn += yytoken;
+cfparse.c:  if (yyn < 0 || YYLAST < yyn || yycheck[yyn] != yytoken)
+cfparse.c:    goto yydefault;
+cfparse.c:  yyn = yytable[yyn];
+cfparse.c:  if (yyn <= 0)
+cfparse.c:      if (yyn == 0 || yyn == YYTABLE_NINF)
+cfparse.c:	goto yyerrlab;
+cfparse.c:      yyn = -yyn;
+cfparse.c:      goto yyreduce;
+cfparse.c:  if (yyerrstatus)
+cfparse.c:    yyerrstatus--;
+cfparse.c:  YY_SYMBOL_PRINT ("Shifting", yytoken, &yylval, &yylloc);
+cfparse.c:  yychar = YYEMPTY;
+cfparse.c:  yystate = yyn;
+cfparse.c:  *++yyvsp = yylval;
+cfparse.c:  goto yynewstate;
+cfparse.c:| yydefault -- do the default action for the current state.  |
+cfparse.c:yydefault:
+cfparse.c:  yyn = yydefact[yystate];
+cfparse.c:  if (yyn == 0)
+cfparse.c:    goto yyerrlab;
+cfparse.c:  goto yyreduce;
+cfparse.c:| yyreduce -- Do a reduction.  |
+cfparse.c:yyreduce:
+cfparse.c:  /* yyn is the number of a rule to reduce with.  */
+cfparse.c:  yylen = yyr2[yyn];
+cfparse.c:  yyval = yyvsp[1-yylen];
+cfparse.c:  YY_REDUCE_PRINT (yyn);
+cfparse.c:  switch (yyn)
+cfparse.c:		MAKE_NAMELIST(ifl, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:		MAKE_NAMELIST(host, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:				cf_dns_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_dns_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_dns_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:			MAKE_CFLIST(l, CFLISTENT_GENERIC, (yyvsp[(3) - (4)].str), NULL);
+cfparse.c:				cf_ntp_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_ntp_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_ntp_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:				cf_sip_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_sip_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_sip_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:			MAKE_CFLIST(l, CFLISTENT_GENERIC, (yyvsp[(3) - (4)].str), NULL);
+cfparse.c:				cf_nis_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_nis_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_nis_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:			MAKE_CFLIST(l, CFLISTENT_GENERIC, (yyvsp[(3) - (4)].str), NULL);
+cfparse.c:				cf_nisp_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_nisp_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_nisp_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:			MAKE_CFLIST(l, CFLISTENT_GENERIC, (yyvsp[(3) - (4)].str), NULL);
+cfparse.c:				cf_bcmcs_list = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_bcmcs_list->tail->next = (yyvsp[(3) - (4)].list);
+cfparse.c:				cf_bcmcs_list->tail = (yyvsp[(3) - (4)].list)->tail;
+cfparse.c:			MAKE_CFLIST(l, CFLISTENT_GENERIC, (yyvsp[(3) - (4)].str), NULL);
+cfparse.c:				cf_refreshtime = (yyvsp[(3) - (4)].num);
+cfparse.c:					yyerror("refresh time is out of range");
+cfparse.c:					yyerror("refresh time is too small "
+cfparse.c:				yywarn("multiple refresh times (ignored)");
+cfparse.c:			MAKE_NAMELIST(iapd, (yyvsp[(3) - (7)].str), (yyvsp[(5) - (7)].list));
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			MAKE_NAMELIST(iapd, zero, (yyvsp[(4) - (6)].list));
+cfparse.c:			MAKE_NAMELIST(iana, (yyvsp[(3) - (7)].str), (yyvsp[(5) - (7)].list));
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			MAKE_NAMELIST(iana, zero, (yyvsp[(4) - (6)].list));
+cfparse.c:		MAKE_NAMELIST(authinfo, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:		MAKE_NAMELIST(key, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:		if (cfswitch_buffer((yyvsp[(2) - (3)].str))) {
+cfparse.c:			free((yyvsp[(2) - (3)].str));
+cfparse.c:		free((yyvsp[(2) - (3)].str));
+cfparse.c:		MAKE_NAMELIST(pool, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:		if (inet_pton(AF_INET6, (yyvsp[(1) - (1)].str), &a0) != 1) {
+cfparse.c:			yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (1)].str));
+cfparse.c:			free((yyvsp[(1) - (1)].str));
+cfparse.c:			yywarn("can't allocate memory");
+cfparse.c:		(yyval.list) = l;
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:			MAKE_CFLIST(l, DECL_SEND, NULL, (yyvsp[(2) - (3)].list));
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_REQUEST, NULL, (yyvsp[(2) - (3)].list));
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_ALLOW, NULL, (yyvsp[(2) - (3)].list));
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_DUID, (yyvsp[(2) - (3)].str), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_ADDRESS, (yyvsp[(2) - (3)].prefix),NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_PREFIX, (yyvsp[(2) - (3)].prefix), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_SCRIPT, (yyvsp[(2) - (3)].str), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_DELAYEDKEY, (yyvsp[(2) - (3)].str), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_RANGE, (yyvsp[(2) - (3)].range), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			MAKE_CFLIST(l, DECL_ADDRESSPOOL, (yyvsp[(2) - (3)].pool), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = (yyvsp[(1) - (1)].list);
+cfparse.c:			(yyvsp[(1) - (3)].list)->next = (yyvsp[(3) - (3)].list);
+cfparse.c:			(yyvsp[(1) - (3)].list)->tail = (yyvsp[(3) - (3)].list)->tail;
+cfparse.c:			(yyval.list) = (yyvsp[(1) - (3)].list);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->ptr = (yyvsp[(2) - (2)].str);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (2)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (2)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(1) - (3)].str), &range0.min) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (3)].str));
+cfparse.c:				free((yyvsp[(1) - (3)].str));
+cfparse.c:				free((yyvsp[(3) - (3)].str));
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(3) - (3)].str), &range0.max) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(3) - (3)].str));
+cfparse.c:				free((yyvsp[(1) - (3)].str));
+cfparse.c:				free((yyvsp[(3) - (3)].str));
+cfparse.c:			free((yyvsp[(1) - (3)].str));
+cfparse.c:			free((yyvsp[(3) - (3)].str));
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			(yyval.range) = range;
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(1) - (2)].str), &pconf0.addr) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (2)].str));
+cfparse.c:				free((yyvsp[(1) - (2)].str));
+cfparse.c:			free((yyvsp[(1) - (2)].str));
+cfparse.c:			if ((yyvsp[(2) - (2)].num) < 0)
+cfparse.c:				pconf0.pltime = (u_int32_t)(yyvsp[(2) - (2)].num);
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			(yyval.prefix) = pconf;
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(1) - (3)].str), &pconf0.addr) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (3)].str));
+cfparse.c:				free((yyvsp[(1) - (3)].str));
+cfparse.c:			free((yyvsp[(1) - (3)].str));
+cfparse.c:			if ((yyvsp[(2) - (3)].num) < 0)
+cfparse.c:				pconf0.pltime = (u_int32_t)(yyvsp[(2) - (3)].num);
+cfparse.c:			if ((yyvsp[(3) - (3)].num) < 0)
+cfparse.c:				pconf0.vltime = (u_int32_t)(yyvsp[(3) - (3)].num);
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			(yyval.prefix) = pconf;
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(1) - (4)].str), &pconf0.addr) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (4)].str));
+cfparse.c:				free((yyvsp[(1) - (4)].str));
+cfparse.c:			free((yyvsp[(1) - (4)].str));
+cfparse.c:			pconf0.plen = (yyvsp[(3) - (4)].num);
+cfparse.c:			if ((yyvsp[(4) - (4)].num) < 0)
+cfparse.c:				pconf0.pltime = (u_int32_t)(yyvsp[(4) - (4)].num);
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			(yyval.prefix) = pconf;
+cfparse.c:			if (inet_pton(AF_INET6, (yyvsp[(1) - (5)].str), &pconf0.addr) != 1) {
+cfparse.c:				yywarn("invalid IPv6 address: %s", (yyvsp[(1) - (5)].str));
+cfparse.c:				free((yyvsp[(1) - (5)].str));
+cfparse.c:			free((yyvsp[(1) - (5)].str));
+cfparse.c:			pconf0.plen = (yyvsp[(3) - (5)].num);
+cfparse.c:			if ((yyvsp[(4) - (5)].num) < 0)
+cfparse.c:				pconf0.pltime = (u_int32_t)(yyvsp[(4) - (5)].num);
+cfparse.c:			if ((yyvsp[(5) - (5)].num) < 0)
+cfparse.c:				pconf0.vltime = (u_int32_t)(yyvsp[(5) - (5)].num);
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:			(yyval.prefix) = pconf;
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:				free((yyvsp[(1) - (2)].str));
+cfparse.c:			if ((pool->name = strdup((yyvsp[(1) - (2)].str))) == NULL) {
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:				free((yyvsp[(1) - (2)].str));
+cfparse.c:			free((yyvsp[(1) - (2)].str));
+cfparse.c:			if ((yyvsp[(2) - (2)].num) < 0)
+cfparse.c:				pool->pltime = (u_int32_t)(yyvsp[(2) - (2)].num);
+cfparse.c:			(yyval.pool) = pool;
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:				free((yyvsp[(1) - (3)].str));
+cfparse.c:			if ((pool->name = strdup((yyvsp[(1) - (3)].str))) == NULL) {
+cfparse.c:				yywarn("can't allocate memory");
+cfparse.c:				free((yyvsp[(1) - (3)].str));
+cfparse.c:			free((yyvsp[(1) - (3)].str));
+cfparse.c:			if ((yyvsp[(2) - (3)].num) < 0)
+cfparse.c:				pool->pltime = (u_int32_t)(yyvsp[(2) - (3)].num);
+cfparse.c:			if ((yyvsp[(3) - (3)].num) < 0)
+cfparse.c:				pool->vltime = (u_int32_t)(yyvsp[(3) - (3)].num);
+cfparse.c:			(yyval.pool) = pool;
+cfparse.c:			(yyval.num) = -1;
+cfparse.c:			(yyval.num) = (yyvsp[(1) - (1)].num);
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:    { (yyval.list) = (yyvsp[(1) - (1)].list); }
+cfparse.c:			MAKE_CFLIST(l, IACONF_PREFIX, (yyvsp[(2) - (3)].prefix), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:		MAKE_CFLIST(ifl, IACONF_PIF, (yyvsp[(2) - (6)].str), (yyvsp[(4) - (6)].list));
+cfparse.c:		(yyval.list) = ifl;
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:			MAKE_CFLIST(l, IACONF_ADDR, (yyvsp[(2) - (3)].prefix), NULL);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->ptr = (yyvsp[(2) - (3)].str);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:    { (yyval.num) = DHCP6_AUTHPROTO_DELAYED; }
+cfparse.c:    { (yyval.num) = DHCP6_AUTHPROTO_RECONFIG; }
+cfparse.c:    { (yyval.num) = DHCP6_AUTHALG_HMACMD5; }
+cfparse.c:    { (yyval.num) = DHCP6_AUTHRDM_MONOCOUNTER; }
+cfparse.c:    { (yyval.list) = NULL; }
+cfparse.c:			if ((head = (yyvsp[(1) - (2)].list)) == NULL) {
+cfparse.c:				(yyvsp[(2) - (2)].list)->next = NULL;
+cfparse.c:				(yyvsp[(2) - (2)].list)->tail = (yyvsp[(2) - (2)].list);
+cfparse.c:				head = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail->next = (yyvsp[(2) - (2)].list);
+cfparse.c:				head->tail = (yyvsp[(2) - (2)].list)->tail;
+cfparse.c:			(yyval.list) = head;
+cfparse.c:			l->ptr = (yyvsp[(2) - (3)].str);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->num = (yyvsp[(2) - (3)].num);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->ptr = (yyvsp[(2) - (3)].str);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:			l->ptr = (yyvsp[(2) - (3)].str);
+cfparse.c:			(yyval.list) = l;
+cfparse.c:  YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
+cfparse.c:  YYPOPSTACK (yylen);
+cfparse.c:  yylen = 0;
+cfparse.c:  YY_STACK_PRINT (yyss, yyssp);
+cfparse.c:  *++yyvsp = yyval;
+cfparse.c:  yyn = yyr1[yyn];
+cfparse.c:  yystate = yypgoto[yyn - YYNTOKENS] + *yyssp;
+cfparse.c:  if (0 <= yystate && yystate <= YYLAST && yycheck[yystate] == *yyssp)
+cfparse.c:    yystate = yytable[yystate];
+cfparse.c:    yystate = yydefgoto[yyn - YYNTOKENS];
+cfparse.c:  goto yynewstate;
+cfparse.c:| yyerrlab -- here on detecting error |
+cfparse.c:yyerrlab:
+cfparse.c:  if (!yyerrstatus)
+cfparse.c:      ++yynerrs;
+cfparse.c:      yyerror (YY_("syntax error"));
+cfparse.c:	YYSIZE_T yysize = yysyntax_error (0, yystate, yychar);
+cfparse.c:	if (yymsg_alloc < yysize && yymsg_alloc < YYSTACK_ALLOC_MAXIMUM)
+cfparse.c:	    YYSIZE_T yyalloc = 2 * yysize;
+cfparse.c:	    if (! (yysize <= yyalloc && yyalloc <= YYSTACK_ALLOC_MAXIMUM))
+cfparse.c:	      yyalloc = YYSTACK_ALLOC_MAXIMUM;
+cfparse.c:	    if (yymsg != yymsgbuf)
+cfparse.c:	      YYSTACK_FREE (yymsg);
+cfparse.c:	    yymsg = (char *) YYSTACK_ALLOC (yyalloc);
+cfparse.c:	    if (yymsg)
+cfparse.c:	      yymsg_alloc = yyalloc;
+cfparse.c:		yymsg = yymsgbuf;
+cfparse.c:		yymsg_alloc = sizeof yymsgbuf;
+cfparse.c:	if (0 < yysize && yysize <= yymsg_alloc)
+cfparse.c:	    (void) yysyntax_error (yymsg, yystate, yychar);
+cfparse.c:	    yyerror (yymsg);
+cfparse.c:	    yyerror (YY_("syntax error"));
+cfparse.c:	    if (yysize != 0)
+cfparse.c:	      goto yyexhaustedlab;
+cfparse.c:  if (yyerrstatus == 3)
+cfparse.c:      if (yychar <= YYEOF)
+cfparse.c:	  if (yychar == YYEOF)
+cfparse.c:	  yydestruct ("Error: discarding",
+cfparse.c:		      yytoken, &yylval);
+cfparse.c:	  yychar = YYEMPTY;
+cfparse.c:  goto yyerrlab1;
+cfparse.c:| yyerrorlab -- error raised explicitly by YYERROR.  |
+cfparse.c:yyerrorlab:
+cfparse.c:     YYERROR and the label yyerrorlab therefore never appears in user
+cfparse.c:     goto yyerrorlab;
+cfparse.c:  YYPOPSTACK (yylen);
+cfparse.c:  yylen = 0;
+cfparse.c:  YY_STACK_PRINT (yyss, yyssp);
+cfparse.c:  yystate = *yyssp;
+cfparse.c:  goto yyerrlab1;
+cfparse.c:| yyerrlab1 -- common code for both syntax error and YYERROR.  |
+cfparse.c:yyerrlab1:
+cfparse.c:  yyerrstatus = 3;	/* Each real token shifted decrements this.  */
+cfparse.c:      yyn = yypact[yystate];
+cfparse.c:      if (yyn != YYPACT_NINF)
+cfparse.c:	  yyn += YYTERROR;
+cfparse.c:	  if (0 <= yyn && yyn <= YYLAST && yycheck[yyn] == YYTERROR)
+cfparse.c:	      yyn = yytable[yyn];
+cfparse.c:	      if (0 < yyn)
+cfparse.c:      if (yyssp == yyss)
+cfparse.c:      yydestruct ("Error: popping",
+cfparse.c:		  yystos[yystate], yyvsp);
+cfparse.c:      yystate = *yyssp;
+cfparse.c:      YY_STACK_PRINT (yyss, yyssp);
+cfparse.c:  *++yyvsp = yylval;
+cfparse.c:  YY_SYMBOL_PRINT ("Shifting", yystos[yyn], yyvsp, yylsp);
+cfparse.c:  yystate = yyn;
+cfparse.c:  goto yynewstate;
+cfparse.c:| yyacceptlab -- YYACCEPT comes here.  |
+cfparse.c:yyacceptlab:
+cfparse.c:  yyresult = 0;
+cfparse.c:  goto yyreturn;
+cfparse.c:| yyabortlab -- YYABORT comes here.  |
+cfparse.c:yyabortlab:
+cfparse.c:  yyresult = 1;
+cfparse.c:  goto yyreturn;
+cfparse.c:#if !defined(yyoverflow) || YYERROR_VERBOSE
+cfparse.c:| yyexhaustedlab -- memory exhaustion comes here.  |
+cfparse.c:yyexhaustedlab:
+cfparse.c:  yyerror (YY_("memory exhausted"));
+cfparse.c:  yyresult = 2;
+cfparse.c:yyreturn:
+cfparse.c:  if (yychar != YYEMPTY)
+cfparse.c:     yydestruct ("Cleanup: discarding lookahead",
+cfparse.c:		 yytoken, &yylval);
+cfparse.c:  YYPOPSTACK (yylen);
+cfparse.c:  YY_STACK_PRINT (yyss, yyssp);
+cfparse.c:  while (yyssp != yyss)
+cfparse.c:      yydestruct ("Cleanup: popping",
+cfparse.c:		  yystos[*yyssp], yyvsp);
+cfparse.c:#ifndef yyoverflow
+cfparse.c:  if (yyss != yyssa)
+cfparse.c:    YYSTACK_FREE (yyss);
+cfparse.c:  if (yymsg != yymsgbuf)
+cfparse.c:    YYSTACK_FREE (yymsg);
+cfparse.c:  return YYID (yyresult);
+cfparse.c:			yywarn("duplicated name: %s (ignored)",
+Binary file cfparse.o matches
+cfparse.y:extern void yywarn __P((char *, ...))
+cfparse.y:extern void yyerror __P((char *, ...))
+cfparse.y:		yywarn("can't allocate memory"); \
+cfparse.y:		yywarn("can't allocate memory"); \
+cfparse.y:extern int yylex __P((void));
+cfparse.y:					yyerror("refresh time is out of range");
+cfparse.y:					yyerror("refresh time is too small "
+cfparse.y:				yywarn("multiple refresh times (ignored)");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:			yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:			yywarn("can't allocate memory");
+cfparse.y:				yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:				yywarn("invalid IPv6 address: %s", $3);
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("invalid IPv6 address: %s", $1);
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:				yywarn("can't allocate memory");
+cfparse.y:			yywarn("duplicated name: %s (ignored)",
+cftoken.c:#line 3 "lex.yy.c"
+cftoken.c:#define yyconst const
+cftoken.c:#define yyconst
+cftoken.c:#define BEGIN (yy_start) = 1 + 2 *
+cftoken.c:#define YY_START (((yy_start) - 1) / 2)
+cftoken.c:#define YY_NEW_FILE yyrestart(yyin  )
+cftoken.c:#define YY_STATE_BUF_SIZE   ((YY_BUF_SIZE + 2) * sizeof(yy_state_type))
+cftoken.c:typedef struct yy_buffer_state *YY_BUFFER_STATE;
+cftoken.c:extern int yyleng;
+cftoken.c:extern FILE *yyin, *yyout;
+cftoken.c:#define yyless(n) \
+cftoken.c:		/* Undo effects of setting up yytext. */ \
+cftoken.c:        int yyless_macro_arg = (n); \
+cftoken.c:        YY_LESS_LINENO(yyless_macro_arg);\
+cftoken.c:		*yy_cp = (yy_hold_char); \
+cftoken.c:		(yy_c_buf_p) = yy_cp = yy_bp + yyless_macro_arg - YY_MORE_ADJ; \
+cftoken.c:		YY_DO_BEFORE_ACTION; /* set up yytext again */ \
+cftoken.c:#define unput(c) yyunput( c, (yytext_ptr)  )
+cftoken.c:typedef size_t yy_size_t;
+cftoken.c:struct yy_buffer_state
+cftoken.c:	FILE *yy_input_file;
+cftoken.c:	char *yy_ch_buf;		/* input buffer */
+cftoken.c:	char *yy_buf_pos;		/* current position in input buffer */
+cftoken.c:	yy_size_t yy_buf_size;
+cftoken.c:	/* Number of characters read into yy_ch_buf, not including EOB
+cftoken.c:	int yy_n_chars;
+cftoken.c:	int yy_is_our_buffer;
+cftoken.c:	int yy_is_interactive;
+cftoken.c:	int yy_at_bol;
+cftoken.c:    int yy_bs_lineno; /**< The line count. */
+cftoken.c:    int yy_bs_column; /**< The column count. */
+cftoken.c:	int yy_fill_buffer;
+cftoken.c:	int yy_buffer_status;
+cftoken.c:	 * (via yyrestart()), so that the user can continue scanning by
+cftoken.c:	 * just pointing yyin at a new input file.
+cftoken.c:static size_t yy_buffer_stack_top = 0; /**< index of top of stack. */
+cftoken.c:static size_t yy_buffer_stack_max = 0; /**< capacity of stack. */
+cftoken.c:static YY_BUFFER_STATE * yy_buffer_stack = 0; /**< Stack as an array. */
+cftoken.c:#define YY_CURRENT_BUFFER ( (yy_buffer_stack) \
+cftoken.c:                          ? (yy_buffer_stack)[(yy_buffer_stack_top)] \
+cftoken.c:#define YY_CURRENT_BUFFER_LVALUE (yy_buffer_stack)[(yy_buffer_stack_top)]
+cftoken.c:/* yy_hold_char holds the character lost when yytext is formed. */
+cftoken.c:static char yy_hold_char;
+cftoken.c:static int yy_n_chars;		/* number of characters read into yy_ch_buf */
+cftoken.c:int yyleng;
+cftoken.c:static char *yy_c_buf_p = (char *) 0;
+cftoken.c:static int yy_init = 0;		/* whether we need to initialize */
+cftoken.c:static int yy_start = 0;	/* start state number */
+cftoken.c:/* Flag which is used to allow yywrap()'s to do buffer switches
+cftoken.c: * instead of setting up a fresh yyin.  A bit of a hack ...
+cftoken.c:static int yy_did_buffer_switch_on_eof;
+cftoken.c:void yyrestart (FILE *input_file  );
+cftoken.c:void yy_switch_to_buffer (YY_BUFFER_STATE new_buffer  );
+cftoken.c:YY_BUFFER_STATE yy_create_buffer (FILE *file,int size  );
+cftoken.c:void yy_delete_buffer (YY_BUFFER_STATE b  );
+cftoken.c:void yy_flush_buffer (YY_BUFFER_STATE b  );
+cftoken.c:void yypush_buffer_state (YY_BUFFER_STATE new_buffer  );
+cftoken.c:void yypop_buffer_state (void );
+cftoken.c:static void yyensure_buffer_stack (void );
+cftoken.c:static void yy_load_buffer_state (void );
+cftoken.c:static void yy_init_buffer (YY_BUFFER_STATE b,FILE *file  );
+cftoken.c:#define YY_FLUSH_BUFFER yy_flush_buffer(YY_CURRENT_BUFFER )
+cftoken.c:YY_BUFFER_STATE yy_scan_buffer (char *base,yy_size_t size  );
+cftoken.c:YY_BUFFER_STATE yy_scan_string (yyconst char *yy_str  );
+cftoken.c:YY_BUFFER_STATE yy_scan_bytes (yyconst char *bytes,int len  );
+cftoken.c:void *yyalloc (yy_size_t  );
+cftoken.c:void *yyrealloc (void *,yy_size_t  );
+cftoken.c:void yyfree (void *  );
+cftoken.c:#define yy_new_buffer yy_create_buffer
+cftoken.c:#define yy_set_interactive(is_interactive) \
+cftoken.c:        yyensure_buffer_stack (); \
+cftoken.c:            yy_create_buffer(yyin,YY_BUF_SIZE ); \
+cftoken.c:	YY_CURRENT_BUFFER_LVALUE->yy_is_interactive = is_interactive; \
+cftoken.c:#define yy_set_bol(at_bol) \
+cftoken.c:        yyensure_buffer_stack (); \
+cftoken.c:            yy_create_buffer(yyin,YY_BUF_SIZE ); \
+cftoken.c:	YY_CURRENT_BUFFER_LVALUE->yy_at_bol = at_bol; \
+cftoken.c:#define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
+cftoken.c:FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;
+cftoken.c:typedef int yy_state_type;
+cftoken.c:extern int yylineno;
+cftoken.c:int yylineno = 1;
+cftoken.c:extern char *yytext;
+cftoken.c:#define yytext_ptr yytext
+cftoken.c:static yy_state_type yy_get_previous_state (void );
+cftoken.c:static yy_state_type yy_try_NUL_trans (yy_state_type current_state  );
+cftoken.c:static int yy_get_next_buffer (void );
+cftoken.c:static void yy_fatal_error (yyconst char msg[]  );
+cftoken.c: * corresponding action - sets up yytext.
+cftoken.c:	(yytext_ptr) = yy_bp; \
+cftoken.c:	yyleng = (size_t) (yy_cp - yy_bp); \
+cftoken.c:	(yy_hold_char) = *yy_cp; \
+cftoken.c:	*yy_cp = '\0'; \
+cftoken.c:	(yy_c_buf_p) = yy_cp;
+cftoken.c:struct yy_trans_info
+cftoken.c:	flex_int32_t yy_verify;
+cftoken.c:	flex_int32_t yy_nxt;
+cftoken.c:static yyconst flex_int16_t yy_accept[517] =
+cftoken.c:static yyconst flex_int32_t yy_ec[256] =
+cftoken.c:static yyconst flex_int32_t yy_meta[47] =
+cftoken.c:static yyconst flex_int16_t yy_base[533] =
+cftoken.c:static yyconst flex_int16_t yy_def[533] =
+cftoken.c:static yyconst flex_int16_t yy_nxt[819] =
+cftoken.c:static yyconst flex_int16_t yy_chk[819] =
+cftoken.c:static yy_state_type yy_last_accepting_state;
+cftoken.c:static char *yy_last_accepting_cpos;
+cftoken.c:extern int yy_flex_debug;
+cftoken.c:int yy_flex_debug = 0;
+cftoken.c:#define yymore() yymore_used_but_not_detected
+cftoken.c:char *yytext;
+cftoken.c:static int yy_first_time = 1;
+cftoken.c:static int yyerrorcount = 0;
+cftoken.c:extern int yyparse __P((void));
+cftoken.c:#define DP(str) if (cfdebug) cfdebug_print(str, yytext, yyleng)
+cftoken.c:#define DECHO if (cfdebug) cfdebug_print(NULL, yytext, yyleng);
+cftoken.c:#define DNOECHO if (cfdebug) cfdebug_print(NULL, "****", yyleng);
+cftoken.c:#line 912 "lex.yy.c"
+cftoken.c:static int yy_init_globals (void );
+cftoken.c:int yylex_destroy (void );
+cftoken.c:int yyget_debug (void );
+cftoken.c:void yyset_debug (int debug_flag  );
+cftoken.c:YY_EXTRA_TYPE yyget_extra (void );
+cftoken.c:void yyset_extra (YY_EXTRA_TYPE user_defined  );
+cftoken.c:FILE *yyget_in (void );
+cftoken.c:void yyset_in  (FILE * in_str  );
+cftoken.c:FILE *yyget_out (void );
+cftoken.c:void yyset_out  (FILE * out_str  );
+cftoken.c:int yyget_leng (void );
+cftoken.c:char *yyget_text (void );
+cftoken.c:int yyget_lineno (void );
+cftoken.c:void yyset_lineno (int line_number  );
+cftoken.c:extern "C" int yywrap (void );
+cftoken.c:extern int yywrap (void );
+cftoken.c:    static void yyunput (int c,char *buf_ptr  );
+cftoken.c:#ifndef yytext_ptr
+cftoken.c:static void yy_flex_strncpy (char *,yyconst char *,int );
+cftoken.c:static int yy_flex_strlen (yyconst char * );
+cftoken.c:static int yyinput (void );
+cftoken.c:#define ECHO do { if (fwrite( yytext, yyleng, 1, yyout )) {} } while (0)
+cftoken.c:	if ( YY_CURRENT_BUFFER_LVALUE->yy_is_interactive ) \
+cftoken.c:			     (c = getc( yyin )) != EOF && c != '\n'; ++n ) \
+cftoken.c:		if ( c == EOF && ferror( yyin ) ) \
+cftoken.c:		while ( (result = fread(buf, 1, max_size, yyin))==0 && ferror(yyin)) \
+cftoken.c:			clearerr(yyin); \
+cftoken.c:/* No semi-colon after return; correct usage is to write "yyterminate();" -
+cftoken.c:#ifndef yyterminate
+cftoken.c:#define yyterminate() return YY_NULL
+cftoken.c:#define YY_FATAL_ERROR(msg) yy_fatal_error( msg )
+cftoken.c:extern int yylex (void);
+cftoken.c:#define YY_DECL int yylex (void)
+cftoken.c:/* Code executed at the beginning of each rule, after yytext and yyleng
+cftoken.c:	register yy_state_type yy_current_state;
+cftoken.c:	register char *yy_cp, *yy_bp;
+cftoken.c:	register int yy_act;
+cftoken.c:	if (yy_first_time) {
+cftoken.c:		yy_first_time = 0;
+cftoken.c:#line 1119 "lex.yy.c"
+cftoken.c:	if ( !(yy_init) )
+cftoken.c:		(yy_init) = 1;
+cftoken.c:		if ( ! (yy_start) )
+cftoken.c:			(yy_start) = 1;	/* first start state */
+cftoken.c:		if ( ! yyin )
+cftoken.c:			yyin = stdin;
+cftoken.c:		if ( ! yyout )
+cftoken.c:			yyout = stdout;
+cftoken.c:			yyensure_buffer_stack ();
+cftoken.c:				yy_create_buffer(yyin,YY_BUF_SIZE );
+cftoken.c:		yy_load_buffer_state( );
+cftoken.c:		yy_cp = (yy_c_buf_p);
+cftoken.c:		/* Support of yytext. */
+cftoken.c:		*yy_cp = (yy_hold_char);
+cftoken.c:		/* yy_bp points to the position in yy_ch_buf of the start of
+cftoken.c:		yy_bp = yy_cp;
+cftoken.c:		yy_current_state = (yy_start);
+cftoken.c:yy_match:
+cftoken.c:			register YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
+cftoken.c:			if ( yy_accept[yy_current_state] )
+cftoken.c:				(yy_last_accepting_state) = yy_current_state;
+cftoken.c:				(yy_last_accepting_cpos) = yy_cp;
+cftoken.c:			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
+cftoken.c:				yy_current_state = (int) yy_def[yy_current_state];
+cftoken.c:				if ( yy_current_state >= 517 )
+cftoken.c:					yy_c = yy_meta[(unsigned int) yy_c];
+cftoken.c:			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
+cftoken.c:			++yy_cp;
+cftoken.c:		while ( yy_base[yy_current_state] != 772 );
+cftoken.c:yy_find_action:
+cftoken.c:		yy_act = yy_accept[yy_current_state];
+cftoken.c:		if ( yy_act == 0 )
+cftoken.c:			yy_cp = (yy_last_accepting_cpos);
+cftoken.c:			yy_current_state = (yy_last_accepting_state);
+cftoken.c:			yy_act = yy_accept[yy_current_state];
+cftoken.c:		switch ( yy_act )
+cftoken.c:			*yy_cp = (yy_hold_char);
+cftoken.c:			yy_cp = (yy_last_accepting_cpos);
+cftoken.c:			yy_current_state = (yy_last_accepting_state);
+cftoken.c:			goto yy_find_action;
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:{ DECHO; yylval.str = strdup(yytext); return(IAID); }
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:	yylval.str = strdup(yytext);
+cftoken.c:		yylval.str = strdup(yytext);
+cftoken.c:	yylval.num = strtoll(yytext, NULL, 10);
+cftoken.c:		yylval.str = strdup(yytext);
+cftoken.c:			yyterminate();
+cftoken.c:			yy_delete_buffer(YY_CURRENT_BUFFER);
+cftoken.c:			yy_switch_to_buffer(incstack[incstackp].state);
+cftoken.c:#line 1715 "lex.yy.c"
+cftoken.c:		int yy_amount_of_matched_text = (int) (yy_cp - (yytext_ptr)) - 1;
+cftoken.c:		*yy_cp = (yy_hold_char);
+cftoken.c:		if ( YY_CURRENT_BUFFER_LVALUE->yy_buffer_status == YY_BUFFER_NEW )
+cftoken.c:			 * just pointed yyin at a new source and called
+cftoken.c:			 * yylex().  If so, then we have to assure
+cftoken.c:			(yy_n_chars) = YY_CURRENT_BUFFER_LVALUE->yy_n_chars;
+cftoken.c:			YY_CURRENT_BUFFER_LVALUE->yy_input_file = yyin;
+cftoken.c:			YY_CURRENT_BUFFER_LVALUE->yy_buffer_status = YY_BUFFER_NORMAL;
+cftoken.c:		/* Note that here we test for yy_c_buf_p "<=" to the position
+cftoken.c:		 * of the first EOB in the buffer, since yy_c_buf_p will
+cftoken.c:		if ( (yy_c_buf_p) <= &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars)] )
+cftoken.c:			yy_state_type yy_next_state;
+cftoken.c:			(yy_c_buf_p) = (yytext_ptr) + yy_amount_of_matched_text;
+cftoken.c:			yy_current_state = yy_get_previous_state(  );
+cftoken.c:			 * yy_get_previous_state() go ahead and do it
+cftoken.c:			yy_next_state = yy_try_NUL_trans( yy_current_state );
+cftoken.c:			yy_bp = (yytext_ptr) + YY_MORE_ADJ;
+cftoken.c:			if ( yy_next_state )
+cftoken.c:				yy_cp = ++(yy_c_buf_p);
+cftoken.c:				yy_current_state = yy_next_state;
+cftoken.c:				goto yy_match;
+cftoken.c:				yy_cp = (yy_c_buf_p);
+cftoken.c:				goto yy_find_action;
+cftoken.c:		else switch ( yy_get_next_buffer(  ) )
+cftoken.c:				(yy_did_buffer_switch_on_eof) = 0;
+cftoken.c:				if ( yywrap( ) )
+cftoken.c:					 * yy_get_next_buffer() to have set up
+cftoken.c:					 * yytext, we can now set up
+cftoken.c:					 * yy_c_buf_p so that if some total
+cftoken.c:					(yy_c_buf_p) = (yytext_ptr) + YY_MORE_ADJ;
+cftoken.c:					yy_act = YY_STATE_EOF(YY_START);
+cftoken.c:					if ( ! (yy_did_buffer_switch_on_eof) )
+cftoken.c:				(yy_c_buf_p) =
+cftoken.c:					(yytext_ptr) + yy_amount_of_matched_text;
+cftoken.c:				yy_current_state = yy_get_previous_state(  );
+cftoken.c:				yy_cp = (yy_c_buf_p);
+cftoken.c:				yy_bp = (yytext_ptr) + YY_MORE_ADJ;
+cftoken.c:				goto yy_match;
+cftoken.c:				(yy_c_buf_p) =
+cftoken.c:				&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars)];
+cftoken.c:				yy_current_state = yy_get_previous_state(  );
+cftoken.c:				yy_cp = (yy_c_buf_p);
+cftoken.c:				yy_bp = (yytext_ptr) + YY_MORE_ADJ;
+cftoken.c:				goto yy_find_action;
+cftoken.c:} /* end of yylex */
+cftoken.c:/* yy_get_next_buffer - try to read in a new buffer
+cftoken.c:static int yy_get_next_buffer (void)
+cftoken.c:    	register char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
+cftoken.c:	register char *source = (yytext_ptr);
+cftoken.c:	if ( (yy_c_buf_p) > &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars) + 1] )
+cftoken.c:	if ( YY_CURRENT_BUFFER_LVALUE->yy_fill_buffer == 0 )
+cftoken.c:		if ( (yy_c_buf_p) - (yytext_ptr) - YY_MORE_ADJ == 1 )
+cftoken.c:	number_to_move = (int) ((yy_c_buf_p) - (yytext_ptr)) - 1;
+cftoken.c:	if ( YY_CURRENT_BUFFER_LVALUE->yy_buffer_status == YY_BUFFER_EOF_PENDING )
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_n_chars = (yy_n_chars) = 0;
+cftoken.c:			YY_CURRENT_BUFFER_LVALUE->yy_buf_size - number_to_move - 1;
+cftoken.c:			int yy_c_buf_p_offset =
+cftoken.c:				(int) ((yy_c_buf_p) - b->yy_ch_buf);
+cftoken.c:			if ( b->yy_is_our_buffer )
+cftoken.c:				int new_size = b->yy_buf_size * 2;
+cftoken.c:					b->yy_buf_size += b->yy_buf_size / 8;
+cftoken.c:					b->yy_buf_size *= 2;
+cftoken.c:				b->yy_ch_buf = (char *)
+cftoken.c:					yyrealloc((void *) b->yy_ch_buf,b->yy_buf_size + 2  );
+cftoken.c:				b->yy_ch_buf = 0;
+cftoken.c:			if ( ! b->yy_ch_buf )
+cftoken.c:			(yy_c_buf_p) = &b->yy_ch_buf[yy_c_buf_p_offset];
+cftoken.c:			num_to_read = YY_CURRENT_BUFFER_LVALUE->yy_buf_size -
+cftoken.c:		YY_INPUT( (&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move]),
+cftoken.c:			(yy_n_chars), (size_t) num_to_read );
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_n_chars = (yy_n_chars);
+cftoken.c:	if ( (yy_n_chars) == 0 )
+cftoken.c:			yyrestart(yyin  );
+cftoken.c:			YY_CURRENT_BUFFER_LVALUE->yy_buffer_status =
+cftoken.c:	if ((yy_size_t) ((yy_n_chars) + number_to_move) > YY_CURRENT_BUFFER_LVALUE->yy_buf_size) {
+cftoken.c:		yy_size_t new_size = (yy_n_chars) + number_to_move + ((yy_n_chars) >> 1);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_ch_buf = (char *) yyrealloc((void *) YY_CURRENT_BUFFER_LVALUE->yy_ch_buf,new_size  );
+cftoken.c:		if ( ! YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
+cftoken.c:			YY_FATAL_ERROR( "out of dynamic memory in yy_get_next_buffer()" );
+cftoken.c:	(yy_n_chars) += number_to_move;
+cftoken.c:	YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars)] = YY_END_OF_BUFFER_CHAR;
+cftoken.c:	YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars) + 1] = YY_END_OF_BUFFER_CHAR;
+cftoken.c:	(yytext_ptr) = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[0];
+cftoken.c:/* yy_get_previous_state - get the state just before the EOB char was reached */
+cftoken.c:    static yy_state_type yy_get_previous_state (void)
+cftoken.c:	register yy_state_type yy_current_state;
+cftoken.c:	register char *yy_cp;
+cftoken.c:	yy_current_state = (yy_start);
+cftoken.c:	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
+cftoken.c:		register YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
+cftoken.c:		if ( yy_accept[yy_current_state] )
+cftoken.c:			(yy_last_accepting_state) = yy_current_state;
+cftoken.c:			(yy_last_accepting_cpos) = yy_cp;
+cftoken.c:		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
+cftoken.c:			yy_current_state = (int) yy_def[yy_current_state];
+cftoken.c:			if ( yy_current_state >= 517 )
+cftoken.c:				yy_c = yy_meta[(unsigned int) yy_c];
+cftoken.c:		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
+cftoken.c:	return yy_current_state;
+cftoken.c:/* yy_try_NUL_trans - try to make a transition on the NUL character
+cftoken.c: *	next_state = yy_try_NUL_trans( current_state );
+cftoken.c:    static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )
+cftoken.c:	register int yy_is_jam;
+cftoken.c:    	register char *yy_cp = (yy_c_buf_p);
+cftoken.c:	register YY_CHAR yy_c = 1;
+cftoken.c:	if ( yy_accept[yy_current_state] )
+cftoken.c:		(yy_last_accepting_state) = yy_current_state;
+cftoken.c:		(yy_last_accepting_cpos) = yy_cp;
+cftoken.c:	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
+cftoken.c:		yy_current_state = (int) yy_def[yy_current_state];
+cftoken.c:		if ( yy_current_state >= 517 )
+cftoken.c:			yy_c = yy_meta[(unsigned int) yy_c];
+cftoken.c:	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
+cftoken.c:	yy_is_jam = (yy_current_state == 516);
+cftoken.c:	return yy_is_jam ? 0 : yy_current_state;
+cftoken.c:    static void yyunput (int c, register char * yy_bp )
+cftoken.c:	register char *yy_cp;
+cftoken.c:    yy_cp = (yy_c_buf_p);
+cftoken.c:	/* undo effects of setting up yytext */
+cftoken.c:	*yy_cp = (yy_hold_char);
+cftoken.c:	if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
+cftoken.c:		register int number_to_move = (yy_n_chars) + 2;
+cftoken.c:		register char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
+cftoken.c:					YY_CURRENT_BUFFER_LVALUE->yy_buf_size + 2];
+cftoken.c:				&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move];
+cftoken.c:		while ( source > YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
+cftoken.c:		yy_cp += (int) (dest - source);
+cftoken.c:		yy_bp += (int) (dest - source);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_n_chars =
+cftoken.c:			(yy_n_chars) = YY_CURRENT_BUFFER_LVALUE->yy_buf_size;
+cftoken.c:		if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
+cftoken.c:	*--yy_cp = (char) c;
+cftoken.c:	(yytext_ptr) = yy_bp;
+cftoken.c:	(yy_hold_char) = *yy_cp;
+cftoken.c:	(yy_c_buf_p) = yy_cp;
+cftoken.c:    static int yyinput (void)
+cftoken.c:	*(yy_c_buf_p) = (yy_hold_char);
+cftoken.c:	if ( *(yy_c_buf_p) == YY_END_OF_BUFFER_CHAR )
+cftoken.c:		/* yy_c_buf_p now points to the character we want to return.
+cftoken.c:		if ( (yy_c_buf_p) < &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars)] )
+cftoken.c:			*(yy_c_buf_p) = '\0';
+cftoken.c:			int offset = (yy_c_buf_p) - (yytext_ptr);
+cftoken.c:			++(yy_c_buf_p);
+cftoken.c:			switch ( yy_get_next_buffer(  ) )
+cftoken.c:					/* This happens because yy_g_n_b()
+cftoken.c:					yyrestart(yyin );
+cftoken.c:					if ( yywrap( ) )
+cftoken.c:					if ( ! (yy_did_buffer_switch_on_eof) )
+cftoken.c:					return yyinput();
+cftoken.c:					(yy_c_buf_p) = (yytext_ptr) + offset;
+cftoken.c:	c = *(unsigned char *) (yy_c_buf_p);	/* cast for 8-bit char's */
+cftoken.c:	*(yy_c_buf_p) = '\0';	/* preserve yytext */
+cftoken.c:	(yy_hold_char) = *++(yy_c_buf_p);
+cftoken.c:    void yyrestart  (FILE * input_file )
+cftoken.c:        yyensure_buffer_stack ();
+cftoken.c:            yy_create_buffer(yyin,YY_BUF_SIZE );
+cftoken.c:	yy_init_buffer(YY_CURRENT_BUFFER,input_file );
+cftoken.c:	yy_load_buffer_state( );
+cftoken.c:    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )
+cftoken.c:	 *		yypop_buffer_state();
+cftoken.c:	 *		yypush_buffer_state(new_buffer);
+cftoken.c:	yyensure_buffer_stack ();
+cftoken.c:		*(yy_c_buf_p) = (yy_hold_char);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_buf_pos = (yy_c_buf_p);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_n_chars = (yy_n_chars);
+cftoken.c:	yy_load_buffer_state( );
+cftoken.c:	 * EOF (yywrap()) processing, but the only time this flag
+cftoken.c:	 * is looked at is after yywrap() is called, so it's safe
+cftoken.c:	(yy_did_buffer_switch_on_eof) = 1;
+cftoken.c:static void yy_load_buffer_state  (void)
+cftoken.c:    	(yy_n_chars) = YY_CURRENT_BUFFER_LVALUE->yy_n_chars;
+cftoken.c:	(yytext_ptr) = (yy_c_buf_p) = YY_CURRENT_BUFFER_LVALUE->yy_buf_pos;
+cftoken.c:	yyin = YY_CURRENT_BUFFER_LVALUE->yy_input_file;
+cftoken.c:	(yy_hold_char) = *(yy_c_buf_p);
+cftoken.c:    YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )
+cftoken.c:	b = (YY_BUFFER_STATE) yyalloc(sizeof( struct yy_buffer_state )  );
+cftoken.c:		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
+cftoken.c:	b->yy_buf_size = size;
+cftoken.c:	/* yy_ch_buf has to be 2 characters longer than the size given because
+cftoken.c:	b->yy_ch_buf = (char *) yyalloc(b->yy_buf_size + 2  );
+cftoken.c:	if ( ! b->yy_ch_buf )
+cftoken.c:		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
+cftoken.c:	b->yy_is_our_buffer = 1;
+cftoken.c:	yy_init_buffer(b,file );
+cftoken.c: * @param b a buffer created with yy_create_buffer()
+cftoken.c:    void yy_delete_buffer (YY_BUFFER_STATE  b )
+cftoken.c:	if ( b->yy_is_our_buffer )
+cftoken.c:		yyfree((void *) b->yy_ch_buf  );
+cftoken.c:	yyfree((void *) b  );
+cftoken.c: * such as during a yyrestart() or at EOF.
+cftoken.c:    static void yy_init_buffer  (YY_BUFFER_STATE  b, FILE * file )
+cftoken.c:	yy_flush_buffer(b );
+cftoken.c:	b->yy_input_file = file;
+cftoken.c:	b->yy_fill_buffer = 1;
+cftoken.c:    /* If b is the current buffer, then yy_init_buffer was _probably_
+cftoken.c:     * called from yyrestart() or through yy_get_next_buffer.
+cftoken.c:        b->yy_bs_lineno = 1;
+cftoken.c:        b->yy_bs_column = 0;
+cftoken.c:        b->yy_is_interactive = file ? (isatty( fileno(file) ) > 0) : 0;
+cftoken.c:    void yy_flush_buffer (YY_BUFFER_STATE  b )
+cftoken.c:	b->yy_n_chars = 0;
+cftoken.c:	b->yy_ch_buf[0] = YY_END_OF_BUFFER_CHAR;
+cftoken.c:	b->yy_ch_buf[1] = YY_END_OF_BUFFER_CHAR;
+cftoken.c:	b->yy_buf_pos = &b->yy_ch_buf[0];
+cftoken.c:	b->yy_at_bol = 1;
+cftoken.c:	b->yy_buffer_status = YY_BUFFER_NEW;
+cftoken.c:		yy_load_buffer_state( );
+cftoken.c:void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
+cftoken.c:	yyensure_buffer_stack();
+cftoken.c:	/* This block is copied from yy_switch_to_buffer. */
+cftoken.c:		*(yy_c_buf_p) = (yy_hold_char);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_buf_pos = (yy_c_buf_p);
+cftoken.c:		YY_CURRENT_BUFFER_LVALUE->yy_n_chars = (yy_n_chars);
+cftoken.c:		(yy_buffer_stack_top)++;
+cftoken.c:	/* copied from yy_switch_to_buffer. */
+cftoken.c:	yy_load_buffer_state( );
+cftoken.c:	(yy_did_buffer_switch_on_eof) = 1;
+cftoken.c:void yypop_buffer_state (void)
+cftoken.c:	yy_delete_buffer(YY_CURRENT_BUFFER );
+cftoken.c:	if ((yy_buffer_stack_top) > 0)
+cftoken.c:		--(yy_buffer_stack_top);
+cftoken.c:		yy_load_buffer_state( );
+cftoken.c:		(yy_did_buffer_switch_on_eof) = 1;
+cftoken.c:static void yyensure_buffer_stack (void)
+cftoken.c:	if (!(yy_buffer_stack)) {
+cftoken.c:		(yy_buffer_stack) = (struct yy_buffer_state**)yyalloc
+cftoken.c:								(num_to_alloc * sizeof(struct yy_buffer_state*)
+cftoken.c:		if ( ! (yy_buffer_stack) )
+cftoken.c:			YY_FATAL_ERROR( "out of dynamic memory in yyensure_buffer_stack()" );
+cftoken.c:		memset((yy_buffer_stack), 0, num_to_alloc * sizeof(struct yy_buffer_state*));
+cftoken.c:		(yy_buffer_stack_max) = num_to_alloc;
+cftoken.c:		(yy_buffer_stack_top) = 0;
+cftoken.c:	if ((yy_buffer_stack_top) >= ((yy_buffer_stack_max)) - 1){
+cftoken.c:		num_to_alloc = (yy_buffer_stack_max) + grow_size;
+cftoken.c:		(yy_buffer_stack) = (struct yy_buffer_state**)yyrealloc
+cftoken.c:								((yy_buffer_stack),
+cftoken.c:								num_to_alloc * sizeof(struct yy_buffer_state*)
+cftoken.c:		if ( ! (yy_buffer_stack) )
+cftoken.c:			YY_FATAL_ERROR( "out of dynamic memory in yyensure_buffer_stack()" );
+cftoken.c:		memset((yy_buffer_stack) + (yy_buffer_stack_max), 0, grow_size * sizeof(struct yy_buffer_state*));
+cftoken.c:		(yy_buffer_stack_max) = num_to_alloc;
+cftoken.c:YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
+cftoken.c:	b = (YY_BUFFER_STATE) yyalloc(sizeof( struct yy_buffer_state )  );
+cftoken.c:		YY_FATAL_ERROR( "out of dynamic memory in yy_scan_buffer()" );
+cftoken.c:	b->yy_buf_size = size - 2;	/* "- 2" to take care of EOB's */
+cftoken.c:	b->yy_buf_pos = b->yy_ch_buf = base;
+cftoken.c:	b->yy_is_our_buffer = 0;
+cftoken.c:	b->yy_input_file = 0;
+cftoken.c:	b->yy_n_chars = b->yy_buf_size;
+cftoken.c:	b->yy_is_interactive = 0;
+cftoken.c:	b->yy_at_bol = 1;
+cftoken.c:	b->yy_fill_buffer = 0;
+cftoken.c:	b->yy_buffer_status = YY_BUFFER_NEW;
+cftoken.c:	yy_switch_to_buffer(b  );
+cftoken.c:/** Setup the input buffer state to scan a string. The next call to yylex() will
+cftoken.c: * @param yystr a NUL-terminated string to scan
+cftoken.c: *       yy_scan_bytes() instead.
+cftoken.c:YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )
+cftoken.c:	return yy_scan_bytes(yystr,strlen(yystr) );
+cftoken.c:/** Setup the input buffer state to scan the given bytes. The next call to yylex() will
+cftoken.c: * @param yybytes the byte buffer to scan
+cftoken.c: * @param _yybytes_len the number of bytes in the buffer pointed to by @a bytes.
+cftoken.c:YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
+cftoken.c:	yy_size_t n;
+cftoken.c:	n = _yybytes_len + 2;
+cftoken.c:	buf = (char *) yyalloc(n  );
+cftoken.c:		YY_FATAL_ERROR( "out of dynamic memory in yy_scan_bytes()" );
+cftoken.c:	for ( i = 0; i < _yybytes_len; ++i )
+cftoken.c:		buf[i] = yybytes[i];
+cftoken.c:	buf[_yybytes_len] = buf[_yybytes_len+1] = YY_END_OF_BUFFER_CHAR;
+cftoken.c:	b = yy_scan_buffer(buf,n );
+cftoken.c:		YY_FATAL_ERROR( "bad buffer in yy_scan_bytes()" );
+cftoken.c:	b->yy_is_our_buffer = 1;
+cftoken.c:static void yy_fatal_error (yyconst char* msg )
+cftoken.c:/* Redefine yyless() so it works in section 3 code. */
+cftoken.c:#undef yyless
+cftoken.c:#define yyless(n) \
+cftoken.c:		/* Undo effects of setting up yytext. */ \
+cftoken.c:        int yyless_macro_arg = (n); \
+cftoken.c:        YY_LESS_LINENO(yyless_macro_arg);\
+cftoken.c:		yytext[yyleng] = (yy_hold_char); \
+cftoken.c:		(yy_c_buf_p) = yytext + yyless_macro_arg; \
+cftoken.c:		(yy_hold_char) = *(yy_c_buf_p); \
+cftoken.c:		*(yy_c_buf_p) = '\0'; \
+cftoken.c:		yyleng = yyless_macro_arg; \
+cftoken.c:int yyget_lineno  (void)
+cftoken.c:    return yylineno;
+cftoken.c:FILE *yyget_in  (void)
+cftoken.c:        return yyin;
+cftoken.c:FILE *yyget_out  (void)
+cftoken.c:        return yyout;
+cftoken.c:int yyget_leng  (void)
+cftoken.c:        return yyleng;
+cftoken.c:char *yyget_text  (void)
+cftoken.c:        return yytext;
+cftoken.c:void yyset_lineno (int  line_number )
+cftoken.c:    yylineno = line_number;
+cftoken.c: * @see yy_switch_to_buffer
+cftoken.c:void yyset_in (FILE *  in_str )
+cftoken.c:        yyin = in_str ;
+cftoken.c:void yyset_out (FILE *  out_str )
+cftoken.c:        yyout = out_str ;
+cftoken.c:int yyget_debug  (void)
+cftoken.c:        return yy_flex_debug;
+cftoken.c:void yyset_debug (int  bdebug )
+cftoken.c:        yy_flex_debug = bdebug ;
+cftoken.c:static int yy_init_globals (void)
+cftoken.c:     * This function is called from yylex_destroy(), so don't allocate here.
+cftoken.c:    (yy_buffer_stack) = 0;
+cftoken.c:    (yy_buffer_stack_top) = 0;
+cftoken.c:    (yy_buffer_stack_max) = 0;
+cftoken.c:    (yy_c_buf_p) = (char *) 0;
+cftoken.c:    (yy_init) = 0;
+cftoken.c:    (yy_start) = 0;
+cftoken.c:    yyin = stdin;
+cftoken.c:    yyout = stdout;
+cftoken.c:    yyin = (FILE *) 0;
+cftoken.c:    yyout = (FILE *) 0;
+cftoken.c:     * yylex_init()
+cftoken.c:/* yylex_destroy is for both reentrant and non-reentrant scanners. */
+cftoken.c:int yylex_destroy  (void)
+cftoken.c:		yy_delete_buffer(YY_CURRENT_BUFFER  );
+cftoken.c:		yypop_buffer_state();
+cftoken.c:	yyfree((yy_buffer_stack) );
+cftoken.c:	(yy_buffer_stack) = NULL;
+cftoken.c:     * yylex() is called, initialization will occur. */
+cftoken.c:    yy_init_globals( );
+cftoken.c:#ifndef yytext_ptr
+cftoken.c:static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )
+cftoken.c:static int yy_flex_strlen (yyconst char * s )
+cftoken.c:void *yyalloc (yy_size_t  size )
+cftoken.c:void *yyrealloc  (void * ptr, yy_size_t  size )
+cftoken.c:void yyfree (void * ptr )
+cftoken.c:	free( (char *) ptr );	/* see yyrealloc() for (char *) cast */
+cftoken.c:#define YYTABLES_NAME "yytables"
+cftoken.c:		    "<%d>%s [%s] (%d)", yy_start, w, t, l);
+cftoken.c:		    "<%d>[%s] (%d)", yy_start, t, l);
+cftoken.c:yyerror0(int level, char *s, va_list ap)
+cftoken.c:yyerror(char *s, ...)
+cftoken.c:	yyerror0(LOG_ERR, s, ap);
+cftoken.c:	yyerrorcount++;
+cftoken.c:yywarn(char *s, ...)
+cftoken.c:	yyerror0(LOG_WARNING, s, ap);
+cftoken.c:	yy_switch_to_buffer(yy_create_buffer(fp,YY_BUF_SIZE));
+cftoken.c:	if ((yyin = fopen(configfilename, "r")) == NULL) {
+cftoken.c:	if (yyparse() || yyerrorcount) {
+cftoken.c:		if (yyerrorcount) {
+cftoken.c:			yyerror("fatal parse failure: exiting (%d errors)",
+cftoken.c:				yyerrorcount);
+cftoken.c:			yyerror("fatal parse failure: exiting");
+cftoken.l:static int yy_first_time = 1;
+cftoken.l:static int yyerrorcount = 0;
+cftoken.l:extern int yyparse __P((void));
+cftoken.l:#define DP(str) if (cfdebug) cfdebug_print(str, yytext, yyleng)
+cftoken.l:#define DECHO if (cfdebug) cfdebug_print(NULL, yytext, yyleng);
+cftoken.l:#define DNOECHO if (cfdebug) cfdebug_print(NULL, "****", yyleng);
+cftoken.l:	if (yy_first_time) {
+cftoken.l:		yy_first_time = 0;
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:<S_IA>{number} { DECHO; yylval.str = strdup(yytext); return(IAID); }
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:	yylval.str = strdup(yytext);
+cftoken.l:		yylval.str = strdup(yytext);
+cftoken.l:	yylval.num = strtoll(yytext, NULL, 10);
+cftoken.l:		yylval.str = strdup(yytext);
+cftoken.l:			yyterminate();
+cftoken.l:			yy_delete_buffer(YY_CURRENT_BUFFER);
+cftoken.l:			yy_switch_to_buffer(incstack[incstackp].state);
+cftoken.l:		    "<%d>%s [%s] (%d)", yy_start, w, t, l);
+cftoken.l:		    "<%d>[%s] (%d)", yy_start, t, l);
+cftoken.l:yyerror0(int level, char *s, va_list ap)
+cftoken.l:yyerror(char *s, ...)
+cftoken.l:	yyerror0(LOG_ERR, s, ap);
+cftoken.l:	yyerrorcount++;
+cftoken.l:yywarn(char *s, ...)
+cftoken.l:	yyerror0(LOG_WARNING, s, ap);
+cftoken.l:	yy_switch_to_buffer(yy_create_buffer(fp, YY_BUF_SIZE));
+cftoken.l:	if ((yyin = fopen(configfilename, "r")) == NULL) {
+cftoken.l:	if (yyparse() || yyerrorcount) {
+cftoken.l:		if (yyerrorcount) {
+cftoken.l:			yyerror("fatal parse failure: exiting (%d errors)",
+cftoken.l:				yyerrorcount);
+cftoken.l:			yyerror("fatal parse failure: exiting");
+Binary file cftoken.o matches
+config.log:configure:2682: checking for yywrap in -lfl
+config.log:| char yywrap ();
+config.log:| yywrap ();
+config.log:configure:2749: checking for yywrap in -ll
+config.log:| char yywrap ();
+config.log:| yywrap ();
+config.log:ac_cv_lib_fl_yywrap=no
+config.log:ac_cv_lib_l_yywrap=no
+configure:  echo "$as_me:$LINENO: checking for yywrap in -lfl" >&5
+configure:echo $ECHO_N "checking for yywrap in -lfl... $ECHO_C" >&6
+configure:if test "${ac_cv_lib_fl_yywrap+set}" = set; then
+configure:char yywrap ();
+configure:yywrap ();
+configure:  ac_cv_lib_fl_yywrap=yes
+configure:ac_cv_lib_fl_yywrap=yes
+configure:echo "$as_me:$LINENO: result: $ac_cv_lib_fl_yywrap" >&5
+configure:echo "${ECHO_T}$ac_cv_lib_fl_yywrap" >&6
+configure:if test $ac_cv_lib_fl_yywrap = yes; then
+configure:  echo "$as_me:$LINENO: checking for yywrap in -ll" >&5
+configure:echo $ECHO_N "checking for yywrap in -ll... $ECHO_C" >&6
+configure:if test "${ac_cv_lib_l_yywrap+set}" = set; then
+configure:char yywrap ();
+configure:yywrap ();
+configure:  ac_cv_lib_l_yywrap=yes
+configure:ac_cv_lib_l_yywrap=yes
+configure:echo "$as_me:$LINENO: result: $ac_cv_lib_l_yywrap" >&5
+configure:echo "${ECHO_T}$ac_cv_lib_l_yywrap" >&6
+configure:if test $ac_cv_lib_l_yywrap = yes; then
+configure:if test -f lex.yy.c; then
+configure:  ac_cv_prog_lex_root=lex.yy
+configure:elif test -f lexyy.c; then
+configure:  ac_cv_prog_lex_root=lexyy
+configure:echo "$as_me:$LINENO: checking whether yytext is a pointer" >&5
+configure:echo $ECHO_N "checking whether yytext is a pointer... $ECHO_C" >&6
+configure:if test "${ac_cv_prog_lex_yytext_pointer+set}" = set; then
+configure:  # POSIX says lex can declare yytext either as a pointer or an array; the
+configure:ac_cv_prog_lex_yytext_pointer=no
+configure:echo 'extern char *yytext;' >>$LEX_OUTPUT_ROOT.c
+configure:  ac_cv_prog_lex_yytext_pointer=yes
+configure:echo "$as_me:$LINENO: result: $ac_cv_prog_lex_yytext_pointer" >&5
+configure:echo "${ECHO_T}$ac_cv_prog_lex_yytext_pointer" >&6
+configure:if test $ac_cv_prog_lex_yytext_pointer = yes; then
+dhcp6c.conf.5:.Ar yyyy-mm-dd HH:MM ,
+dhcp6c.conf.5:.Ar yyyy
+Makefile:	mv lex.yy.c $@	
+Makefile.in:	mv lex.yy.c $@	
+y.tab.h:   enum yytokentype {
+y.tab.h:# define yystype YYSTYPE /* obsolescent; will be withdrawn */
+y.tab.h:extern YYSTYPE yylval;

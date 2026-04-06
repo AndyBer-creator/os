@@ -1,0 +1,34 @@
+{
+  "data":
+  {
+    "devPower":0,
+    "devTemp":0,
+    "ports":
+    [
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false},
+      { "portEnable":true, "portStatus":false, "portType":"AF", "portLevel":"N/A", "portPowerLimit":15, "portPower":"N/A", "portVoltage":"N/A", "portCurrent":"N/A", "portWatchDog":false}
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+#
+#create by fs.com
+
+MICROXML_INCLUDE_DIR = $(INSTALL_INCLUDE_DIR)
+
+MAKE_MICROXML_C_PUBLIC_HEAD = microxml.h
+ 
+MAKE_MICROXML_C_SOURCES = $(shell find . -name '*.c')
+
+LIB = libmicroxml.a
+
+CFLAGS+= -Os -Wall -Werror --std=gnu99 -g3
+OBJS = $(MAKE_MICROXML_C_SOURCES:.c=.o)
+
+all:$(LIB) install
+
+$(LIB): $(OBJS)
+	$(AR) -rcs $@ $(OBJS)
+	
+
+clean: 
+	rm -rf *.o *.a
+	
+install: 
+	cp $(MAKE_MICROXML_C_PUBLIC_HEAD)  $(MICROXML_INCLUDE_DIR) -rf
+	cp $(LIB)  $(INSTALL_LIB_DIR)/ -rf

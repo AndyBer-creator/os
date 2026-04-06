@@ -1,0 +1,153 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadMainFrame();
+
+var data;
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    dataGet(url('get_discoveryLldpStatistic')).fetch({
+      success: function(model, resp){
+        logoutCheck(resp);
+        data=resp.data;
+        that.$el.html( that.template(resp) );
+
+        PagePostInit();
+      }
+    });
+  },
+  events: {
+    'click #btnGlobalClear':'globalClear',
+    'click #btnPortClear':'portClear',
+    'click #btnFresh':'refresh'
+  },
+  globalClear:function(e){
+    dataSet(url('set_discoveryLldpStatisticGlobalClear'), formDataGet('setform'));
+  },
+  portClear:function(e){
+    if (GetTableMultiSelectNum() == 0)
+    {
+      //ShowStatusWarning("No entry selected");
+	  ShowStatusWarning(lang('common','tipNoEntrySelected'));
+      return ;
+    }
+    dataSet(url('set_discoveryLldpStatisticPortClear'), urlDataGen(GetTableMultiSelectVals('port')));
+  },
+  refresh:function(e){
+    dataSet(url('set_discoveryLldpStatisticRefresh'), formDataGet('setform'));
+  }
+});
+
+mainFrame = new mainView();
+
+EnterKeyEvent('refresh');
+}
+</script>
+</head>
+<body id="main_body" onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+<div id="dialog_container"></div>
+
+<script id="main_content" type="text/template">
+<form id="setform">
+
+<%= TableHead(lang('lldp','titLLDPGlobalStatististics')) %>
+<table>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tbody>
+    <tr>
+      <th><%= LabelLeft(lang('lldp','lblInsertions')) %></th>
+      <td class="formContentTD">
+        <%= data.insertions %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('lldp','lblDeletions')) %></th>
+      <td class="formContentTD">
+        <%= data.deletions %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('lldp','lblDrops')) %></th>
+      <td class="formContentTD">
+        <%= data.drops %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('lldp','lblAgeOuts')) %></th>
+      <td class="formContentTD">
+        <%= data.ageOuts %>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+  </td>
+</tr>
+</table>
+<%= ButtonGroup(ButtonClear('btnGlobalClear'),ButtonRefresh('btnFresh')) %>
+
+<%= TableHead(lang('lldp','lblLLDPStatisticsTable')) %>
+<table class="dataTable copy" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+  <th rowspan=2><%= TableCheckboxAll() %></th>
+  <th rowspan=2><%= lang('port','lblEntryNo') %></th>
+  <th rowspan=2><%= lang('port','lblPort') %></th>
+  <th><%= lang('lldp','lblTxFrames') %></th>
+  <th colspan=3><%= lang('lldp','lblRxFrames') %></th>
+  <th colspan=2><%= lang('lldp','lblRxTLVs') %></th>
+  <th rowspan=2><%= lang('lldp','lblNeighborInfoDeleteCnt') %></th>
+  <%= TableLastTh(2) %>
+</tr>
+<tr>
+  <th><%= lang('lldp','lblTotal') %></th>
+  <th><%= lang('lldp','lblTotal') %></th>
+  <th><%= lang('lldp','lblDiscarded') %></th>
+  <th><%= lang('lldp','lblErrors') %></th>
+  <th><%= lang('lldp','lblDiscarded') %></th>
+  <th><%= lang('lldp','lblUnrecognized') %></th>
+</tr>
+</thead>
+<tbody>
+  <% _.each(data.ports, function(port, idx) { %>
+  <tr>
+    <td class="StringCell"><%= TableCheckbox(idx) %></td>
+    <td class="NumberCell"><%= getPortEntry(idx) %></td>
+    <td class="StringCell"><%= getPortId(idx) %></td>
+    <td class="NumberCell"><%= port.txTotal %></td>
+    <td class="NumberCell"><%= port.rxTotal %></td>
+    <td class="NumberCell"><%= port.rxDiscard %></td>
+    <td class="NumberCell"><%= port.rxErr %></td>
+    <td class="NumberCell"><%= port.rxTlvDiscard %></td>
+    <td class="NumberCell"><%= port.rxTlvUnrecog %></td>
+    <td class="NumberCell"><%= port.neighborDelCnt %></td>
+    <%= TableLastTd() %>
+  </tr>
+  <% }); %>
+</tbody>
+</table>
+<%= TableFoot(ButtonGroup(ButtonClear('btnPortClear'),ButtonRefresh('btnFresh'))) %>
+</form>
+</script>
+</body>
+</html>

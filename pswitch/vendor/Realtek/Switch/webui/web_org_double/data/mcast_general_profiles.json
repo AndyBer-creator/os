@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "profiles":
+    [
+      { "idx":1, "startAddr":"239.255.1.1", "endAddr":"239.255.1.5", "act":"lang('mcast','lblAllow')"},
+      { "idx":10, "startAddr":"224.0.1.1", "endAddr":"224.0.1.10", "act":"lang('mcast','lblDeny')"}
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+
+#ifndef __SYS_SWDEF_AAA_H__
+#define __SYS_SWDEF_AAA_H__
+#define CAPA_AAA_PRIV_NUM              16
+#ifdef CONFIG_SYS_AAA
+#define CAPA_AAA_AUTHLIST_NUM          20
+#define CAPA_AAA_AUTHLIST_NAME_LEN     32
+#define CAPA_AAA_AUTHTYPE_PRI_NUM      6
+#endif
+#if defined(CONFIG_SYS_LIB_TACPLUS) || defined(CONFIG_SYS_LIB_RADIUS)
+#define CAPA_AAA_KEY_LEN               64
+#endif
+#ifdef CONFIG_SYS_LIB_TACPLUS
+#define CAPA_TACPLUS_HOST_NUM          DEFDB_VAL(DEF_TACPLUS_HOST_NUM)
+#define CAPA_TACPLUS_HOST_NUM_MAX      8
+#endif
+#ifdef CONFIG_SYS_LIB_RADIUS
+#define CAPA_RADIUS_HOST_NUM           DEFDB_VAL(DEF_RADIUS_HOST_NUM)
+#define CAPA_RADIUS_HOST_NUM_MAX       8
+#endif
+#define BOND_AAA_PRIV_MIN              0
+#define BOND_AAA_PRIV_MAX              15
+#ifdef CONFIG_SYS_LIB_TACPLUS
+#define BOND_TACPLUS_PRI_MIN           0
+#define BOND_TACPLUS_PRI_MAX           65535
+#define BOND_TACPLUS_TIMEOUT_MIN       1
+#define BOND_TACPLUS_TIMEOUT_MAX       30
+#endif
+#ifdef CONFIG_SYS_LIB_RADIUS
+#define BOND_RADIUS_PRI_MIN            0
+#define BOND_RADIUS_PRI_MAX            65535
+#define BOND_RADIUS_RETRY_MIN          1
+#define BOND_RADIUS_RETRY_MAX          10
+#define BOND_RADIUS_TIMEOUT_MIN        1
+#define BOND_RADIUS_TIMEOUT_MAX        30
+#endif
+#define DFLT_AAA_PRIV_USER             1
+#define DFLT_AAA_PRIV_ADMIN            15
+#ifdef CONFIG_SYS_AAA
+#define DFLT_AAA_LOGIN_AUTHLIST_NAME   "default"
+#define DFLT_AAA_LOGIN_AUTH_TYPE       SYS_AUTH_TYPE_LOCAL
+#define DFLT_AAA_ENABLE_AUTHLIST_NAME  "default"
+#define DFLT_AAA_ENABLE_AUTH_TYPE      SYS_AUTH_TYPE_ENABLE
+#endif
+#ifdef CONFIG_SYS_LIB_TACPLUS
+#define DFLT_TACPLUS_AUTHPORT          49
+#define DFLT_TACPLUS_TIMEOUT           DEFDB_VAL(DEF_TACPLUS_TIMEOUT)
+#endif
+#ifdef CONFIG_SYS_LIB_RADIUS
+#define DFLT_RADIUS_AUTHPORT           1812
+#define DFLT_RADIUS_ACCTPORT           1813
+#define DFLT_RADIUS_RETRY              DEFDB_VAL(DEF_RADIUS_RETRY)
+#define DFLT_RADIUS_TIMEOUT            DEFDB_VAL(DEF_RADIUS_TIMEOUT)
+#endif
+
+#endif 
+

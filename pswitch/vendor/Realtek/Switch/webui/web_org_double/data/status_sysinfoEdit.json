@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "hostname":"Switch",
+    "maxlen_hostname":256,
+    "location":"Hsin Chu",
+    "maxlen_location":256,
+    "contact":"Realtek",
+    "maxlen_contact":256
+  }
+}

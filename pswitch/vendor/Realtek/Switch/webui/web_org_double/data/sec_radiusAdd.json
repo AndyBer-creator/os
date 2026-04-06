@@ -1,0 +1,21 @@
+{
+  "data":
+  {
+    "maxlen_srvHost":256,
+    "min_pri":0,
+    "max_pri":65535,
+    "min_authPort":0,
+    "max_authPort":65535,
+    "dflt_authPort":1812,
+    "min_retry":1,
+    "max_retry":10,
+    "dflt_retry":3,
+    "min_timeout":1,
+    "max_timeout":30,
+    "dflt_timeout":3,
+    "min_dead":0,
+    "max_dead":2000,
+    "dflt_dead":0,
+    "maxlen_key":32
+  }
+}

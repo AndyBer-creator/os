@@ -1,0 +1,25 @@
+{
+  "data":
+  {
+    "mandotoryTlvSize":22,
+    "mandotoryStatus":"lang('lldp','lblTransmitted')",
+    "capSize":22,
+    "capStatus":"lang('lldp','lblTransmitted')",
+    "locationSize":22,
+    "locationStatus":"lang('lldp','lblTransmitted')",
+    "policySize":22,
+    "policyStatus":"lang('lldp','lblTransmitted')",
+    "powerSize":22,
+    "powerStatus":"lang('lldp','lblTransmitted')",
+    "dot3TlvSize":22,
+    "dot3TlvStatus":"lang('lldp','lblTransmitted')",
+    "optTlvSize":22,
+    "optTlvStatus":"lang('lldp','lblTransmitted')",
+    "inventSize":22,
+    "inventStatus":"lang('lldp','lblTransmitted')",
+    "dot1TlvSize":22,
+    "dot1TlvStatus":"lang('lldp','lblTransmitted')",
+    "totalBytesUsed":198,
+    "totalBytesLeft":1300
+  }
+}

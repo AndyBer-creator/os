@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "sessions":
+    [
+      { "state":"lang('common','txtEnabled')", "dstPort":"GE6", "ingressState":"", "sourceRxPort":"GE1,GE3,GE5,GE7,GE9-10,GE11,GE13,GE15,GE17,GE19,GE21-23,GE25,GE27,GE29,GE31,GE33,GE35,GE37,GE39,GE41,GE43,GE45,GE47,GE49,GE51,GE53,GE55", "sourceTxPort":"GE1,GE3,GE5,GE7,GE9-10,GE11,GE13,GE15,GE17,GE19,GE21-23,GE25,GE27,GE29,GE31,GE33,GE35,GE37,GE39,GE41,GE43,GE45,GE47,GE49,GE51,GE53,GE55"},
+      { "state":"lang('common','txtDisabled')", "dstPort":"GE2", "ingressState":"lang('mirror','lblMirrorIngressState')", "sourceRxPort":"GE1,GE3,GE5,GE7,GE9-10,GE11,GE13,GE15,GE17,GE19,GE21-23,GE25,GE27,GE29,GE31,GE33,GE35,GE37,GE39,GE41,GE43,GE45,GE47,GE49,GE51,GE53,GE55", "sourceTxPort":""},
+      { "state":"lang('common','txtDisabled')", "dstPort":"", "ingressState":"", "sourceRxPort":"", "sourceTxPort":""},
+      { "state":"lang('common','txtDisabled')", "dstPort":"", "ingressState":"", "sourceRxPort":"", "sourceTxPort":""}
+    ]
+  }
+}

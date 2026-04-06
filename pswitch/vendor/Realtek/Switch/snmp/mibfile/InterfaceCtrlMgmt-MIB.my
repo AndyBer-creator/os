@@ -1,0 +1,222 @@
+PortCtrlMgmt-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	            FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   DisplayString,                                                     FROM SNMPv2-TC ;
+   
+sysPortCtrlMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system interfece control MIB module"
+   ::= { RTLDevice 2 }
+   	
+portAttributeTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF portAttributeEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       ::= { sysPortCtrlMib 1 }
+
+   portAttributeEntry OBJECT-TYPE
+       SYNTAX      portAttributeEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       INDEX    { portindex }
+       ::= { portAttributeTable 1 }
+
+   portAttributeEntry ::= SEQUENCE {
+       portindex              Integer32,
+       portSpeed              Integer32,
+	   portDuplex             Integer32,
+	   portVlanMode           Integer32,
+	   portProtected          Integer32,
+	   portDescription        DisplayString
+   }
+   
+	portindex   	OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "unit index, start from 1 "
+	::= { portAttributeEntry 1 }
+
+	portSpeed       OBJECT-TYPE
+	SYNTAX          Integer32
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port current speed info. 
+		10 express: 10M; 
+		100 express: 100M;
+		1000 express: 1000M;
+		10000 express: 10GM;"
+	::= { portAttributeEntry 2 }
+	
+	portDuplex      OBJECT-TYPE
+	SYNTAX          Integer32
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port duplex info. 
+		1 express: auto mode; 
+		2 express: half mode;
+		3 express: full mode;"
+	::= { portAttributeEntry 3 }
+
+	portVlanMode      OBJECT-TYPE
+	SYNTAX          Integer32
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port vlan mode info. 
+		1 express: access; 
+		2 express: hybrid;
+		3 express: trunk;
+		4 express: tunnel"
+	::= { portAttributeEntry 4 } 
+	
+	portProtected   OBJECT-TYPE
+	SYNTAX          Integer32
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port protected info. 
+		1 express: protected; 
+		2 express: unprotected;"
+	::= { portAttributeEntry 5 }
+
+	portDescription     OBJECT-TYPE
+    SYNTAX          DisplayString
+    MAX-ACCESS      read-write
+    STATUS            current
+    DESCRIPTION
+	"port description <1-32>."
+    ::= { portAttributeEntry  6}
+	
+PortCtrlTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF PortCtrlEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       ::= { sysPortCtrlMib 2 }
+
+   PortCtrlEntry OBJECT-TYPE
+       SYNTAX      PortCtrlEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       INDEX    { portindex }
+       ::= { PortCtrlTable 1 }
+
+   PortCtrlEntry ::= SEQUENCE {
+	   portindex              Integer32,
+	   portLimitIngress       Integer32,
+	   portLimitegress        Integer32
+   }
+	
+	portindex   	OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "unit index, start from 1 "
+	::= { PortCtrlEntry 1 }
+	
+	portLimitIngress  OBJECT-TYPE
+	SYNTAX            Integer32
+	MAX-ACCESS        read-write
+	STATUS            current
+	DESCRIPTION
+		"interfece  port portLimitIngress info.
+		<16-1000000> kbps"
+	::= { PortCtrlEntry 2 }
+	
+	portLimitegress  OBJECT-TYPE
+	SYNTAX            Integer32
+	MAX-ACCESS        read-write
+	STATUS            current
+	DESCRIPTION
+		"interfece  port portLimitegress info.
+		<16-1000000> kbps"
+	::= { PortCtrlEntry 3 }
+
+PortStaticVlanTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF portStaticVlanlEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       ::= { sysPortCtrlMib 3 }
+
+   portStaticVlanlEntry OBJECT-TYPE
+       SYNTAX      portStaticVlanlEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface control info."
+       INDEX    { portindex }
+       ::= { PortStaticVlanTable 1 }
+
+   portStaticVlanlEntry ::= SEQUENCE {
+       portIndex               Integer32,
+	   vlanStaticEgressPort    DisplayString,
+	   vlanStaticUntaggedPort  DisplayString,
+	   vlanStaticRowStatus     Integer32
+   }
+	
+	portIndex   	OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "unit index, start from 1 "
+	::= { portStaticVlanlEntry 1 }
+	
+	vlanStaticEgressPort   OBJECT-TYPE
+	SYNTAX          DisplayString
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port vlan tag add/remove config. 
+		input vlan list eg(3,6-8) 
+		The range of VLAN ID is 1 to 4094"
+	::= { portStaticVlanlEntry 2 }
+	
+	vlanStaticUntaggedPort   OBJECT-TYPE
+	SYNTAX          DisplayString
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port vlan untag add/remove config. 
+		input vlan list eg(3,6-8) 
+		The range of VLAN ID is 1 to 4094"
+	::= { portStaticVlanlEntry 3 }
+	
+	vlanStaticRowStatus   OBJECT-TYPE
+	SYNTAX          Integer32{
+					init(0),
+					add(1),
+					remove(2),
+					}
+	MAX-ACCESS      read-write
+	STATUS          current
+	DESCRIPTION
+		"interfece  port vlan config status. 
+		status = 1 : add action
+		status = 2 : remove action
+		status = 0 : get action"
+	::= { portStaticVlanlEntry 8 }
+END
+

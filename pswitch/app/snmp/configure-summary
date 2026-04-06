@@ -1,0 +1,14 @@
+  SNMP Versions Supported:    1 2c 3
+  Building for:               linux
+  Net-SNMP Version:           5.7.1
+  Network transport support:  Callback Unix Alias TCP UDP TCPIPv6 UDPIPv6 IPv4Base SocketBase TCPBase UDPIPv4Base UDPBase IPv6Base
+  SNMPv3 Security Modules:     usm
+  Agent MIB code:             etherlike-mib Rmon default_modules =>  etherlike-mib/dot3StatsTable Rmon/rows Rmon/agutil Rmon/statistics Rmon/alarmTable Rmon/history Rmon/event snmpv3mibs mibII notification notification-log-mib target agent_mibs utilities
+  MYSQL Trap Logging:         unavailable
+  Embedded Perl support:      disabled
+  SNMP Perl modules:          disabled
+  SNMP Python modules:        disabled
+  Crypto support from:        internal
+  Authentication support:     MD5 SHA1
+  Encryption support:         DES AES
+  Local DNSSEC validation:    disabled

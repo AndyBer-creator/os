@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/ski/proto/macvlan/l2g_macvlan.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/plat/linux/ski/proto/macvlan/l2g_macvlan.ko /compile/realtek/pswitch/plat/linux/ski/proto/macvlan/l2g_macvlan.o /compile/realtek/pswitch/plat/linux/ski/proto/macvlan/l2g_macvlan.mod.o

@@ -1,0 +1,1 @@
+/compile/realtek/pswitch/vendor/Realtek/Switch/custom/defdb/defdb_data.h

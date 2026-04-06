@@ -1,0 +1,38 @@
+{
+  "data":
+  {
+    "bgImg":"switch_panel_48.png",
+    "logoImg":"logo_switch_panel.png",
+    "COPPER_LED_NOLINK":"Copper_LED.png",
+    "COPPER_LED_LINKUP_10M":"Copper_LED_linkup_10M.png",
+    "COPPER_LED_LINKUP_100M":"Copper_LED_linkup_100M.png",
+    "COPPER_LED_LINKUP_1000M":"Copper_LED_linkup_1000M.png",
+    "COPPER_RJ45_NOLINK_BOT":"RJ45_nolink_bot.png",
+    "COPPER_RJ45_NOLINK_TOP":"RJ45_nolink_top.png",
+    "COPPER_RJ45_LINKUP_BOT":"RJ45_linkup_bot.png",
+    "COPPER_RJ45_LINKUP_TOP":"RJ45_linkup_top.png",
+    "COPPER_RJ45_LINKUP_10M_BOT":"RJ45_linkup_bot.png",
+    "COPPER_RJ45_LINKUP_10M_TOP":"RJ45_linkup_top.png",
+    "COPPER_RJ45_LINKUP_100M_BOT":"RJ45_linkup_bot.png",
+    "COPPER_RJ45_LINKUP_100M_TOP":"RJ45_linkup_top.png",
+    "COPPER_RJ45_LINKUP_1000M_BOT":"RJ45_linkup_bot.png",
+    "COPPER_RJ45_LINKUP_1000M_TOP":"RJ45_linkup_top.png",
+    "FIBER_NOLINK":"Fiber.png",
+    "FIBER_LINKUP":"Fiber_linkup.png",
+    "FIBER_LED_NOLINK":"Copper_LED.png",
+    "FIBER_LED_LINKUP_10M":"Copper_LED_linkup_10M.png",
+    "FIBER_LED_LINKUP_100M":"Copper_LED_linkup_100M.png",
+    "FIBER_LED_LINKUP_1000M":"Copper_LED_linkup_1000M.png",
+    "layout":
+    [
+      { "portStart":1, "portEnd":48, "imgType":0, "imgWidth":6, "alignType":1, "oddYpos":63, "evenYpos":49, "baseXpos":80, "groupNum":8, "gapWidth":-1},
+      { "portStart":1, "portEnd":48, "imgType":1, "imgWidth":22, "alignType":1, "oddYpos":62, "evenYpos":41, "baseXpos":281, "groupNum":8, "gapWidth":5},
+      { "portStart":1, "portEnd":48, "imgType":5, "imgWidth":22, "alignType":1, "oddYpos":62, "evenYpos":41, "baseXpos":281, "groupNum":8, "gapWidth":5},
+      { "portStart":49, "portEnd":52, "imgType":0, "imgWidth":4, "alignType":1, "oddYpos":63, "evenYpos":49, "baseXpos":860, "groupNum":4, "gapWidth":-1},
+      { "portStart":49, "portEnd":52, "imgType":1, "imgWidth":22, "alignType":1, "oddYpos":62, "evenYpos":41, "baseXpos":880, "groupNum":4, "gapWidth":-1},
+      { "portStart":49, "portEnd":52, "imgType":5, "imgWidth":22, "alignType":1, "oddYpos":62, "evenYpos":41, "baseXpos":880, "groupNum":4, "gapWidth":-1},
+      { "portStart":51, "portEnd":52, "imgType":3, "imgWidth":30, "alignType":0, "oddYpos":62, "evenYpos":-1, "baseXpos":910, "groupNum":1, "gapWidth":10},
+      { "portStart":51, "portEnd":52, "imgType":5, "imgWidth":30, "alignType":0, "oddYpos":62, "evenYpos":-1, "baseXpos":915, "groupNum":1, "gapWidth":10}
+    ]
+  }
+}

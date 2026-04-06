@@ -1,0 +1,38 @@
+{
+  "data":
+  {
+    "globalStatus":true,
+    "ports":
+    [
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true},
+      { "state":true}
+    ]
+  }
+}

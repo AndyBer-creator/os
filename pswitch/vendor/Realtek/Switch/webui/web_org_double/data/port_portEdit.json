@@ -1,0 +1,37 @@
+{
+  "data":
+  {
+    "type":"lang('port','txtMediaCopper',[1000])",
+    "descp":"Port A",
+    "maxlen_descp":32,
+    "adminStatus":true,
+    "operStatus":"lang('port','txtUp')",
+    "adminAutoNego":true,
+    "operAutoNego":"lang('common','txtEnable')",
+    "adminSpeed":"1000",
+    "operSpeed":"100M",
+    "adminDuplex":"full",
+    "operDuplex":"lang('port','txtDuplexFull')",
+    "adminAdvertise":
+    {
+      "all":true,
+      "half10":false,
+      "full10":false,
+      "half100":false,
+      "full100":false,
+      "full1000":false
+    },
+    "operAdvertise":
+    [
+      {"cap":"lang('port','lblAdvSpeedHalf',[10])"},
+      {"cap":"lang('port','lblAdvSpeedFull',[100])"},
+      {"cap":"lang('port','lblAdvSpeedHalf',[10])"},
+      {"cap":"lang('port','lblAdvSpeedFull',[100])"}
+    ],
+    "adminBackPressure":true,
+    "adminFlowCtrl":"enable",
+    "operFlowCtrl":"lang('common','txtEnable')",
+    "protect":true,
+    "lagId":""
+  }
+}

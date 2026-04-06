@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "entries":
+    [
+      { "macAddr":"00:00:07:00:00:0D","vlan":1,"port":"GE9" },
+      { "macAddr":"00:00:00:11:00:22","vlan":2,"port":"GE2" },
+      { "macAddr":"00:00:00:11:00:0D","vlan":111,"port":"GE8" }    
+    ]
+  }
+}
+

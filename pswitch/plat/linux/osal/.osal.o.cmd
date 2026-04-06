@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/osal/osal.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o /compile/realtek/pswitch/plat/linux/osal/osal.o /compile/realtek/pswitch/plat/linux/osal/osal_lkm.o /compile/realtek/pswitch/plat/linux/osal/time.o /compile/realtek/pswitch/plat/linux/osal/timer.o 

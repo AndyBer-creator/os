@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/board/board.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o /compile/realtek/pswitch/plat/linux/board/board.o /compile/realtek/pswitch/plat/linux/board/board_vendor_lkm.o /compile/realtek/pswitch/plat/linux/board/vendor/board_vendor.o 

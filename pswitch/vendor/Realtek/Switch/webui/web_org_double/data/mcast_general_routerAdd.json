@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+  	"iptypes":["IPv4", "IPv6"],
+  	"avlVlans":[3,4,201,203],
+  	"avlv6Vlans":[3,300,800]
+  }
+}

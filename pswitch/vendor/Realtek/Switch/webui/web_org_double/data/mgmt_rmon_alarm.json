@@ -1,0 +1,38 @@
+{
+  "data":
+  {
+    "snmpEnable":false,
+    "hasEvent":true,
+  	"entries":
+    [
+      { "idx":1, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 1", "fallingThreshold":10, "fallingEvent":"event 10",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":2, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 2", "fallingThreshold":10, "fallingEvent":"event 12",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":3, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 3", "fallingThreshold":10, "fallingEvent":"event 13",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":4, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 6", "fallingThreshold":10, "fallingEvent":"event 16",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":5, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 8", "fallingThreshold":10, "fallingEvent":"event 18",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":6, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 7", "fallingThreshold":10, "fallingEvent":"event 22",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"},
+      { "idx":7, "intf":"GE1", "cntName":"Octects", "cntValue": 1800,
+        "sampleType":"Delta", "risingThreshold":1000,
+        "risingEvent":"event 9", "fallingThreshold":10, "fallingEvent":"event 26",
+        "startupAlarm":"Rising",  "interval":100, "owner":"Realtek"}
+    ]
+  }
+}

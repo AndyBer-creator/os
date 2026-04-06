@@ -1,0 +1,50 @@
+SYSTEM CONFIG FILE ::= BEGIN
+!
+!
+!
+system name "Switch"
+system location "Default"
+system contact "Default"
+system manufacturer "Default"
+system support "Default"
+username "admin" secret encrypted MjEyMzJmMjk3YTU3YTVhNzQzODk0YTBlNGE4MDFmYzM=
+clock timezone "" 8 minutes 0
+!
+!
+!
+spanning-tree
+!
+!
+!
+ip telnet
+!
+!
+!
+interface vlan1
+ ip address 192.168.0.1/24
+!
+interface gi1
+!
+interface gi2
+!
+interface gi3
+!
+interface gi4
+!
+interface gi5
+!
+interface gi6
+!
+interface gi7
+!
+interface gi8
+!
+interface gi9
+ spanning-tree
+!
+interface gi10
+ spanning-tree
+!
+!
+!
+

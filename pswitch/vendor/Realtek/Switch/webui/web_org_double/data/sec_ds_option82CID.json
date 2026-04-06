@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+  	"maxlen":63,
+    "entry":
+    [
+      { "port":1, "vlan":3, "cid":"!#$%&'()*+,-./:;<=>@[\\]^_`{|}~"},
+      { "port":2, "vlan":4095, "cid":"kkkk"},
+      { "port":3, "vlan":100, "cid":"aaaaaaa"}
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "data":
+  {
+    "groups":
+    [
+      { "name":"2", "val":2 },
+      { "name":"3", "val":3 },
+      { "name":"7", "val":7 },
+      { "name":"8", "val":8 }
+    ],
+    "bindings":
+    [
+      { "port":7, "gid":3, "vlan":666 },
+      { "port":8, "gid":6, "vlan":777 },
+      { "port":9, "gid":1, "vlan":888 },
+      { "port":10, "gid":7, "vlan":999 }
+    ],
+    "notMbrs":
+    [
+      { "port":"GE3" },
+      { "port":"GE4" },
+      { "port":"GE5" }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "data":
+  {
+    "mgmtvlan":9,
+    "adminVlans":
+    [
+      { "name":"VLAN 1", "val":1},
+      { "name":"VLAN 2", "val":2},
+      { "name":"VLAN 6", "val":6},
+      { "name":"VLAN 7", "val":7},
+      { "name":"VLAN 8", "val":8},
+      { "name":"VLAN 9", "val":9},
+      { "name":"VLAN 10", "val":10},
+      { "name":"VLAN 11", "val":11},
+      { "name":"VLAN 12", "val":12},
+      { "name":"VLAN 13", "val":13},
+      { "name":"VLAN 14", "val":14},
+      { "name":"VLAN 15", "val":15},
+      { "name":"VLAN 16", "val":16},
+      { "name":"VLAN 17", "val":17},
+      { "name":"VLAN 18", "val":18},
+      { "name":"VLAN 19", "val":19},
+      { "name":"VLAN 20", "val":20},
+      { "name":"VLAN 21", "val":21},
+      { "name":"VLAN 22", "val":22},
+      { "name":"VLAN 23", "val":23},
+      { "name":"VLAN 24", "val":24}
+    ]
+  }
+}

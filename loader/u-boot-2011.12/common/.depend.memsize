@@ -1,0 +1,9 @@
+memsize.o: memsize.c \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h

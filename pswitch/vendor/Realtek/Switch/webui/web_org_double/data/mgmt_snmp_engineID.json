@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "userDefState":true,
+    "engineId":"00112233445566778899",
+    "minlen_engineId":10,
+    "maxlen_engineId":64,
+    "maxlen_srvHost":256,
+    "engines":
+    [
+      { "srvHost":"192.168.1.99", "engineId":"000004da40819ee5df0a100"},
+      { "srvHost":"192.168.1.100", "engineId":"110004da40819ee5df0a100"},
+      { "srvHost":"test.aaa.bbb.ccc", "engineId":"220004da40819ee5df0a100"}
+    ]
+  }
+}

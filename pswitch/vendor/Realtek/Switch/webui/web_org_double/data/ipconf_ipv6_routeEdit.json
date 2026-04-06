@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "metric_min":1,
+    "metric_max":255,
+    "metric_dflt":1,
+    "route":
+    [
+        { "idx":28, "addr":"2001:10::", "plen":24, "type":2, "nextHop":"2033::3", "metric":4  },
+        { "idx":18, "addr":"2001:20::", "plen":24, "type":2, "nextHop":"2033::4", "metric":8  },
+        { "idx":13, "addr":"2001:30::", "plen":16, "type":2, "nextHop":"2033::5", "metric":16  },
+        { "idx":14, "addr":"2001:40::", "plen":16, "type":2, "nextHop":"2033::6", "metric":24  }
+    ]
+  }
+}

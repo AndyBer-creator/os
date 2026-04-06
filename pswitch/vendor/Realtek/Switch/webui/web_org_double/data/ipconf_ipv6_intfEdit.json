@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "intf":"VLAN100",
+    "autoconf":0,
+    "dadAttempt":30,
+    "dadAttempt_min":0,
+    "dadAttempt_max":600,
+    "dadAttempt_dflt":1,
+    "stateless":0,
+    "refresh":86400,
+    "refresh_min":86400,
+    "refresh_max":4294967294,
+    "refresh_dflt":86400,
+    "minrefresh":1200,
+    "minrefresh_min":600,
+    "minrefresh_max":4294967294,
+    "minrefresh_dflt":86400
+  }
+}

@@ -1,0 +1,14 @@
+PRODUCT_VERSION  := 1.0.0.9
+PLATFORM_NAME    := SWGP-42GSFP
+LOADER_VERSION   := 1.0.0.0
+PACKAGE_VERSION  := 1.0.0.9
+COPYRIGHT        := Copyright (C) 2025
+VENDOR_URL       := http://symanitron.ru
+
+export PRODUCT_VERSION
+export PLATFORM_NAME
+export LOADER_VERSION
+export PACKAGE_VERSION
+export COPYRIGHT
+export VENDOR_URL
+

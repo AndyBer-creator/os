@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "fwdAlls":
+    [
+      { "vid":1, "stMbrs":"GE1-3,GE10",  "fbMbrs":"GE12"},
+      { "vid":2,  "stMbrs":"GE1,GE3,GE5,GE7"},
+      { "vid":100, "fbMbrs":"GE12-18"}
+    ]
+  }
+}

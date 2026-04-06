@@ -1,0 +1,38 @@
+{
+  "data":
+  {
+    "name":"cccc",
+    "binding": false,
+    "maxPri":2147483647,
+    "minPri":1,
+    "acls":
+    [
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"dddd", "val":"dddd" },
+      { "name":"eeee", "val":"eeee" }
+    ],
+    "aces":
+    [
+      { "pri":1, "action": 0, "protocol":3, "sip":"2.2.2.2", "smask":"255.255.255.255",
+        "dip":"3.3.3.3", "dmask":"255.0.0.0" , "sports":123, "sporte":123, "dports":456, "dporte":789,
+        "tcpflag":"", "dscp":62, "ipp":"Any", "icmpType": "" , "icmpCode": "", "tsname":"test", "tsisOn":1 },
+      { "pri":2, "action": 0, "protocol":1, "sip":"2.2.2.2", "smask":"255.255.255.255",
+      "dip":"3.3.3.3", "dmask":"255.0.0.0" , "sports":123, "sporte":123, "dports":456, "dporte":789,
+      "tcpflag":"", "dscp":"Any", "ipp":3, "icmpType": 3 , "icmpCode": 5, "tsname":"test", "tsisOn":1 },
+      { "pri":3, "action": 0, "protocol":6, "sip":"2.2.2.2", "smask":"255.255.255.255",
+      "dip":"3.3.3.3", "dmask":"255.0.0.0" , "sports":123, "sporte":123, "dports":456, "dporte":789,
+      "tcpflag":"xx0x11", "dscp":"Any", "ipp":"Any", "icmpType": "", "icmpCode": "", "tsname":"test", "tsisOn":1 }
+    ],
+    "ranges":
+    [
+      { "name":"None", "val":"" },
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"test", "val":"test" },
+      { "name":"test2", "val":"test2" }
+    ]
+  }
+}

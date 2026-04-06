@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "stateDot1x":true,
+    "stateMac":true,
+    "stateWeb":true,
+    "mode":1,
+    "avlType":[1,3],
+    "selType":[2],
+    "selMethod":[1,0],
+    "guest":true,
+    "vlanAssign":2
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "maxlen":32,
+    "mgmtACLs":
+    [
+      { "name":"aaaa", "active": true, "acenum": 3 },
+      { "name":"bbbb", "active": false, "acenum": 3 },
+      { "name":"cccc", "active": false, "acenum": 3 },
+      { "name":"dddd", "active": false, "acenum": 3 },
+      { "name":"eeee", "active": false, "acenum": 3 }
+    ]
+  }
+}

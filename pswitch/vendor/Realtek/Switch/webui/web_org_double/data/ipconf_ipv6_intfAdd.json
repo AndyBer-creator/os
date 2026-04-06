@@ -1,0 +1,17 @@
+{
+  "data":
+  {
+    "vlan":[1, 2, 3, 4, 100, 200, 300, 400],
+    "autoconf_dflt":false,
+    "dadAttempt_min":0,
+    "dadAttempt_max":600,
+    "dadAttempt_dflt":1,
+    "stateless_dflt":false,
+    "refresh_min":86400,
+    "refresh_max":4294967294,
+    "refresh_dflt":86400,
+    "minrefresh_min":600,
+    "minrefresh_max":4294967294,
+    "minrefresh_dflt":86400
+  }
+}

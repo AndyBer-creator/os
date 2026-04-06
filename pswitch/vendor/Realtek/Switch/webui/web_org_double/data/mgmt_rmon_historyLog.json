@@ -1,0 +1,32 @@
+{
+  "data":
+  {
+  	"entries":
+    [
+      { "idx":1, "entryNum":47, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":48, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":48, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":3, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":4, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":5, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":11, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 },
+      { "entryNum":12, "bytesRec":8, "dropEvents":1, "pktsRec":2,
+        "bPktsRec":3, "mPktsRec":4, "CRCAlignErr":5, "undersizePkts":6, "oversizePkts":7,
+        "fragments":8, "jabbers":9, "collisions":10, "utilization":11 }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/vendor/Realtek/Switch/custom/module/custom.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/vendor/Realtek/Switch/custom/module/custom.ko /compile/realtek/pswitch/vendor/Realtek/Switch/custom/module/custom.o /compile/realtek/pswitch/vendor/Realtek/Switch/custom/module/custom.mod.o

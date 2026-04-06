@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "hosts":
+    [
+      { "host":"192.168.1.50", "udp_port":999, "facility":4, "remote_sev":"lang('log','txtNotice')" },
+      { "host":"192.168.1.100", "udp_port":514, "facility":4, "remote_sev":"lang('log','txtEmergency')" },
+      { "host":"192.168.1.150", "udp_port":33514, "facility":5, "remote_sev":"lang('log','txtWarning')" },
+      { "host":"192.168.1.200", "udp_port":44514, "facility":6, "remote_sev":"lang('log','txtInformational')" }
+    ]
+  }
+}

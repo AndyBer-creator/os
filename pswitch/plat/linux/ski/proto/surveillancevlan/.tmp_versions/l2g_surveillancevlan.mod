@@ -1,0 +1,2 @@
+/compile/realtek/pswitch/plat/linux/ski/proto/surveillancevlan/l2g_surveillancevlan.ko
+/compile/realtek/pswitch/plat/linux/ski/proto/surveillancevlan/../../../../../proto/surveillancevlan/proto_surveillancevlan.o /compile/realtek/pswitch/plat/linux/ski/proto/surveillancevlan/ski_surveillancevlan_lkm.o /compile/realtek/pswitch/plat/linux/ski/proto/surveillancevlan/ski_surveillancevlan_lkm_export.o /compile/realtek/pswitch/plat/linux/ski/proto/surveillancevlan/ski_surveillancevlan.o

@@ -1,0 +1,152 @@
+cmd_drivers/net/switch/rtcore/../../common/rt_chip.o := rtk-ms-2.0.0-linux-gcc -Wp,-MD,drivers/net/switch/rtcore/../../common/.rt_chip.o.d  -nostdinc -isystem /opt/toolchain/bin/../lib/gcc/mips-linux-uclibc/4.8.5/include -I./arch/mips/include -Iarch/mips/include/generated  -Iinclude -I./arch/mips/include/uapi -Iarch/mips/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -DVMLINUX_LOAD_ADDRESS=0x80000000 -DDATAOFFSET=0 -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -mno-check-zero-division -mabi=32 -G 0 -mno-abicalls -fno-pic -pipe -msoft-float -DGAS_HAS_SET_HARDFLOAT -Wa,-msoft-float -ffreestanding -EB -UMIPSEB -U_MIPSEB -U__MIPSEB -U__MIPSEB__ -UMIPSEL -U_MIPSEL -U__MIPSEL -U__MIPSEL__ -DMIPSEB -D_MIPSEB -D__MIPSEB -D__MIPSEB__ -march=mips32r2 -Wa,-mips32r2 -Wa,--trap -Iinclude/asm-mips -Iarch/mips/bsp/ -DRTL9300 -DRTK_UNIVERSAL_BSP -DRTK_LKM -I./arch/mips/include/asm/mach-generic -fno-delete-null-pointer-checks -I/compile/realtek/kernel/uClinux/../../sdk/include -I/compile/realtek/kernel/uClinux/../../sdk/system/include -I/compile/realtek/kernel/uClinux/../../sdk/system/linux -I/compile/realtek/kernel/uClinux/../../pswitch/plat -I/compile/realtek/kernel/uClinux/../../pswitch/plat/linux -I/compile/realtek/kernel/uClinux/../../pswitch/proto -O2 --param=allow-store-data-races=0 -Wframe-larger-than=4096 -fstack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -DCC_HAVE_ASM_GOTO -I/compile/realtek/kernel/uClinux/../../sdk/include -I/compile/realtek/kernel/uClinux/../../sdk/system/include -I/compile/realtek/kernel/uClinux/../../sdk/system/linux -URTK_UNIVERSAL_BSP -Werror -Wno-array-bounds -DRTK_LKM  -DMODULE -mlong-calls  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(rt_chip)"  -D"KBUILD_MODNAME=KBUILD_STR(rtcore)" -c -o drivers/net/switch/rtcore/../../common/.tmp_rt_chip.o drivers/net/switch/rtcore/../../common/rt_chip.c
+
+source_drivers/net/switch/rtcore/../../common/rt_chip.o := drivers/net/switch/rtcore/../../common/rt_chip.c
+
+deps_drivers/net/switch/rtcore/../../common/rt_chip.o := \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/common/rt_autoconf.h \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/common/sdk_autoconf.h \
+    $(wildcard include/config/sdk/rtl9310.h) \
+    $(wildcard include/config/sdk/rtl9300.h) \
+    $(wildcard include/config/sdk/rtl8390.h) \
+    $(wildcard include/config/sdk/rtl8380.h) \
+    $(wildcard include/config/sdk/rtl8208d.h) \
+    $(wildcard include/config/sdk/rtl8208g.h) \
+    $(wildcard include/config/sdk/rtl8208l.h) \
+    $(wildcard include/config/sdk/rtl8212b.h) \
+    $(wildcard include/config/sdk/rtl8214b.h) \
+    $(wildcard include/config/sdk/rtl8214fb.h) \
+    $(wildcard include/config/sdk/rtl8214fc.h) \
+    $(wildcard include/config/sdk/rtl8214c.h) \
+    $(wildcard include/config/sdk/rtl8214qf.h) \
+    $(wildcard include/config/sdk/rtl8218b.h) \
+    $(wildcard include/config/sdk/rtl8218d.h) \
+    $(wildcard include/config/sdk/rtl8218e.h) \
+    $(wildcard include/config/sdk/rtl8218fb.h) \
+    $(wildcard include/config/sdk/rtl8224qf.h) \
+    $(wildcard include/config/sdk/rtl8226.h) \
+    $(wildcard include/config/sdk/rtl8295r.h) \
+    $(wildcard include/config/sdk/rtl826x.h) \
+    $(wildcard include/config/sdk/rtl826xi.h) \
+    $(wildcard include/config/sdk/rtl825x.h) \
+    $(wildcard include/config/sdk/rtl825xi.h) \
+    $(wildcard include/config/sdk/rtl825xl.h) \
+    $(wildcard include/config/sdk/rtl8224.h) \
+    $(wildcard include/config/sdk/rtl826xb.h) \
+    $(wildcard include/config/sdk/rtl8231.h) \
+    $(wildcard include/config/sdk/phy/cust1.h) \
+    $(wildcard include/config/sdk/phy/cust2.h) \
+    $(wildcard include/config/sdk/phy/cust3.h) \
+    $(wildcard include/config/sdk/phy/cust4.h) \
+    $(wildcard include/config/sdk/phy/cust5.h) \
+    $(wildcard include/config/sdk/experimental/rtl8211fs.h) \
+    $(wildcard include/config/sdk/external/cpu.h) \
+    $(wildcard include/config/sdk/endian/little.h) \
+    $(wildcard include/config/sdk/kernel/linux.h) \
+    $(wildcard include/config/sdk/os/kernel/other.h) \
+    $(wildcard include/config/sdk/kernel/linux/kernel/mode.h) \
+    $(wildcard include/config/sdk/kernel/linux/user/mode.h) \
+    $(wildcard include/config/sdk/kernel/linux/module/loadable.h) \
+    $(wildcard include/config/sdk/driver/rtcore.h) \
+    $(wildcard include/config/sdk/driver/rtcore/in/linux/kernel.h) \
+    $(wildcard include/config/sdk/driver/nic.h) \
+    $(wildcard include/config/sdk/driver/extc/nic.h) \
+    $(wildcard include/config/sdk/driver/extc/pci.h) \
+    $(wildcard include/config/sdk/driver/gpio.h) \
+    $(wildcard include/config/sdk/driver/spi.h) \
+    $(wildcard include/config/sdk/driver/i2c.h) \
+    $(wildcard include/config/sdk/tc/drv.h) \
+    $(wildcard include/config/sdk/driver/watchdog.h) \
+    $(wildcard include/config/sdk/tc/tc1/time.h) \
+    $(wildcard include/config/sdk/uart1.h) \
+    $(wildcard include/config/sys/driver/jtag/intf/gpio.h) \
+    $(wildcard include/config/sdk/driver/nic/kernel/mode.h) \
+    $(wildcard include/config/sdk/driver/nic/user/mode.h) \
+    $(wildcard include/config/sdk/driver/nic/r9310.h) \
+    $(wildcard include/config/sdk/driver/nic/r9300.h) \
+    $(wildcard include/config/sdk/driver/nic/r8390.h) \
+    $(wildcard include/config/sdk/driver/nic/r8380.h) \
+    $(wildcard include/config/sdk/driver/l2ntfy.h) \
+    $(wildcard include/config/sdk/driver/l2ntfy/r9310.h) \
+    $(wildcard include/config/sdk/driver/l2ntfy/r9300.h) \
+    $(wildcard include/config/sdk/driver/l2ntfy/r8390.h) \
+    $(wildcard include/config/sdk/driver/i2c/r9310.h) \
+    $(wildcard include/config/sdk/driver/i2c/r9300.h) \
+    $(wildcard include/config/sdk/driver/i2c/r8390.h) \
+    $(wildcard include/config/sdk/driver/i2c/r8380.h) \
+    $(wildcard include/config/sdk/driver/rtk.h) \
+    $(wildcard include/config/sdk/driver/rtk/legacy/api.h) \
+    $(wildcard include/config/sdk/driver/rtk/customer.h) \
+    $(wildcard include/config/sdk/driver/mx.h) \
+    $(wildcard include/config/sdk/driver/rtdrv.h) \
+    $(wildcard include/config/sdk/driver/rtnic.h) \
+    $(wildcard include/config/sdk/driver/compile.h) \
+    $(wildcard include/config/sdk/app/diag.h) \
+    $(wildcard include/config/sdk/app/diag/dir/diag/v2.h) \
+    $(wildcard include/config/sdk/app/diag/ext.h) \
+    $(wildcard include/config/sdk/squt/cmd/opt.h) \
+    $(wildcard include/config/sdk/app/compile.h) \
+    $(wildcard include/config/sdk/debug.h) \
+    $(wildcard include/config/sdk/debug/log/type/level.h) \
+    $(wildcard include/config/sdk/debug/log/type/level/mask.h) \
+    $(wildcard include/config/sdk/debug/log/level.h) \
+    $(wildcard include/config/sdk/debug/log/mod/mask.h) \
+    $(wildcard include/config/sdk/dump/reg/with/name.h) \
+    $(wildcard include/config/sdk/dump/table/with/name.h) \
+    $(wildcard include/config/sdk/bsp/flash.h) \
+    $(wildcard include/config/flash/layout/type5.h) \
+    $(wildcard include/config/pswitch/sysinfo.h) \
+    $(wildcard include/config/bdinfo/mtd/index.h) \
+    $(wildcard include/config/dual/image.h) \
+    $(wildcard include/config/sdk/bsp/mtd.h) \
+    $(wildcard include/config/sdk/bsp/mtd/spi.h) \
+    $(wildcard include/config/sdk/bsp/mtd/nor.h) \
+    $(wildcard include/config/sdk/bsp/mtd/spim.h) \
+    $(wildcard include/config/sdk/bsp/mtd/norsf/g3.h) \
+    $(wildcard include/config/sdk/bsp/mtd/common.h) \
+    $(wildcard include/config/sdk/spi/dev/none.h) \
+    $(wildcard include/config/sdk/spi/dev/1.h) \
+    $(wildcard include/config/sdk/spi/dev/2.h) \
+    $(wildcard include/config/sdk/spi/dev/3.h) \
+    $(wildcard include/config/sdk/spi/dev/4.h) \
+    $(wildcard include/config/sdk/spi/dev/5.h) \
+    $(wildcard include/config/sdk/bsp/spi/nor/boot.h) \
+    $(wildcard include/config/sdk/bsp/spi/nand/boot.h) \
+    $(wildcard include/config/sdk/experimental.h) \
+    $(wildcard include/config/sdk/fpga/platform.h) \
+    $(wildcard include/config/sdk/driver/test.h) \
+    $(wildcard include/config/sdk/model/mode.h) \
+    $(wildcard include/config/sdk/linked/kmod.h) \
+    $(wildcard include/config/trunk/failover/handling.h) \
+    $(wildcard include/config/sdk/rx/thread.h) \
+    $(wildcard include/config/sdk/linkmon/polling/mode.h) \
+    $(wildcard include/config/sdk/linkmon/isr/mode.h) \
+    $(wildcard include/config/sdk/linkmon/mixed/mode.h) \
+    $(wildcard include/config/rise.h) \
+    $(wildcard include/config/sdk/hw/profile/probe/gpio.h) \
+    $(wildcard include/config/sdk/hw/profile/probe/uboot/env.h) \
+    $(wildcard include/config/sdk/os/version.h) \
+    $(wildcard include/config/sdk/compiler/version.h) \
+    $(wildcard include/config/sdk/libc/version.h) \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/common/error.h \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/common/type.h \
+    $(wildcard include/config/sdk/wordsize/64.h) \
+  /compile/realtek/kernel/uClinux/../../sdk/include/common/rt_type.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/common/util/rt_bitop.h \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/hwp/hw_profile.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/chip.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/hal/phy/phydef.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/rtk/port.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/chipdef.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/rtk/sds.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/rtk/phy.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/rtk/time.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/rtk/diag.h \
+  /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/allreg.h \
+    $(wildcard include/config/sdk/reg/dflt/val.h) \
+    $(wildcard include/config/sdk/reg/field/type.h) \
+  /compile/realtek/kernel/uClinux/../../sdk/include/hal/chipdef/allmem.h \
+  /compile/realtek/kernel/uClinux/../../sdk/system/include/common/rt_chip.h \
+
+drivers/net/switch/rtcore/../../common/rt_chip.o: $(deps_drivers/net/switch/rtcore/../../common/rt_chip.o)
+
+$(deps_drivers/net/switch/rtcore/../../common/rt_chip.o):

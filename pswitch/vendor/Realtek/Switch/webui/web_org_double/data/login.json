@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "https":false,
+    "httpsEnbl":true,
+    "copyrightYear": "2014",
+    "failReason": "lang('login', 'errLoginUserInvalid')",
+    "title":"GS8393-52"
+  }
+}

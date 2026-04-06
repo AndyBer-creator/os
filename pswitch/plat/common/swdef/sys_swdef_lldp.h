@@ -1,0 +1,48 @@
+
+#ifndef __SYS_SWDEF_LLDP_H__
+#define __SYS_SWDEF_LLDP_H__
+#ifdef CONFIG_SYS_PROTO_LLDP_MED
+#define CAPA_LLDP_MED_NETWORK_POLICY_NUM     32
+#define CAPA_LLDP_MED_COORDINATE_LEN         16
+#endif
+#define BOND_LLDP_HOLDTIME_MIN               2
+#define BOND_LLDP_HOLDTIME_MAX               10
+#define BOND_LLDP_TX_INTERVAL_MIN            5
+#define BOND_LLDP_TX_INTERVAL_MAX            32767
+#define BOND_LLDP_TX_DELAY_MIN               1
+#define BOND_LLDP_TX_DELAY_MAX               8191
+#define BOND_LLDP_REINIT_DELAY_MIN           1
+#define BOND_LLDP_REINIT_DELAY_MAX           10
+#ifdef CONFIG_SYS_PROTO_LLDP_MED
+#define BOND_LLDP_MED_FAST_REPEAT_COUNT_MIN  1
+#define BOND_LLDP_MED_FAST_REPEAT_COUNT_MAX  10
+#define BOND_LLDP_MED_NETWORK_POLICY_MIN     1
+#define BOND_LLDP_MED_NETWORK_POLICY_MAX     CAPA_LLDP_MED_NETWORK_POLICY_NUM
+#define BOND_LLDP_MED_NETWORK_POLICY_VID_MIN 0
+#define BOND_LLDP_MED_NETWORK_POLICY_VID_MAX 4095
+#define BOND_LLDP_MED_DSCP_PRI_MIN           0
+#define BOND_LLDP_MED_DSCP_PRI_MAX           63
+#define BOND_LLDP_MED_USER_PRI_MIN           0
+#define BOND_LLDP_MED_USER_PRI_MAX           7
+#define BOND_LLDP_MED_CIVIC_LEN_MIN          6
+#define BOND_LLDP_MED_CIVIC_LEN_MAX          160
+#define BOND_LLDP_MED_ELIN_LEN_MIN           10
+#define BOND_LLDP_MED_ELIN_LEN_MAX           25
+#endif
+#define DFLT_LLDP_EBL                           DEFDB_VAL(DEF_LLDP_EBL)
+#define DFLT_LLDP_PORT_STATE                    DEFDB_VAL(DEF_LLDP_PORT_STATUS)
+#define DFLT_LLDP_TX_INTERVAL                   30
+#define DFLT_LLDP_REINIT_DELAY                  2
+#define DFLT_LLDP_HOLDTIME_MUL                  4
+#define DFLT_LLDP_TX_DELAY                      2
+#define DFLT_LLDP_DISABLE_ACTION                DEFDB_VAL(DEF_LLDP_DISABLE_ACTION)
+#define DFLT_LLDP_PORT_PVID_TLV_EBL             DEFDB_VAL(DEF_LLDP_PORT_PVID_TLV_EBL)
+#ifdef CONFIG_SYS_PROTO_LLDP_MED
+#define DFLT_LLDP_MED_NETWORK_POLICY_AUTO       DISABLED   
+#define DFLT_LLDP_MED_PORT_EBL                  DEFDB_VAL(DEF_LLDP_PORT_MED_EBL)
+#define DFLT_LLDP_MED_FAST_RETRY                3
+#define DFLT_LLDP_MED_TLV_SEL                   (1 << LLDP_MED_CAPA_NETWORK_POLICY)
+#endif
+
+#endif 
+

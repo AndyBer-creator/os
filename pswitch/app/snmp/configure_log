@@ -1,0 +1,21 @@
+./configure --with-cc=mips-linux-uclibc-gcc --with-linkcc=mips-linux-uclibc-gcc --with-ar=mips-linux-uclibc-ar --host=mips-linux-uclibc --target=mips-linux-uclibc --with-default-snmp-version=2 --enable-ipv6 --disable-debugging --without-kmem-usage --disable-manuals --without-perl-modules --disable-embedded-perl --with-out-mib-modules="ucd_snmp disman/event disman/schedule host agent agentx hardware" --with-mib-modules="etherlike-mib Rmon"
+---------------------------------------------------------
+            Net-SNMP configuration summary:
+---------------------------------------------------------
+
+  SNMP Versions Supported:    1 2c 3
+  Building for:               linux
+  Net-SNMP Version:           5.7.1
+  Network transport support:  Callback Unix Alias TCP UDP IPv4Base SocketBase TCPBase UDPIPv4Base UDPBase
+  SNMPv3 Security Modules:     usm
+  Agent MIB code:             default_modules =>  snmpv3mibs mibII ucd_snmp notification notification-log-mib target agent_mibs agentx disman/event disman/schedule utilities host
+  MYSQL Trap Logging:         unavailable
+  Embedded Perl support:      enabled
+  SNMP Perl modules:          building -- embeddable
+  SNMP Python modules:        disabled
+  Crypto support from:        crypto
+  Authentication support:     MD5 SHA1
+  Encryption support:         DES AES
+  Local DNSSEC validation:    disabled
+
+---------------------------------------------------------

@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "cos":3,
+    "state":true,
+    "remarkCos":true,
+    "remarkDscp":true,
+    "remarkIpp":true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "maxlen_username":32,
+    "maxlen_password":32,
+    "min_reauth":300,
+    "max_reauth":4294967294,
+    "dflt_reauth":300,
+    "min_inact":60,
+    "max_inact":65535,
+    "dflt_inact":60
+  }
+}

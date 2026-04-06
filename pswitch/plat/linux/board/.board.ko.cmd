@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/board/board.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/plat/linux/board/board.ko /compile/realtek/pswitch/plat/linux/board/board.o /compile/realtek/pswitch/plat/linux/board/board.mod.o

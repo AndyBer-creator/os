@@ -1,0 +1,27 @@
+{
+  "data":
+  {
+    "hostname":"Switch",
+    "location":"Hsin Chu",
+    "contact":"Realtek",
+    "sysMac":"00:11:22:33:44:55",
+    "currIpv4":"192.168.1.1",
+    "currIpv6": [ "fe80::dcad:beff:feef:102/64", "2002::1:99/64"],
+    "loaderVer":"1.0.0.41234",
+    "loaderDate":"Apr 24 2013 - 14:21:33",
+    "fwVer":"3.1.0.51234",
+    "fwDate":"Apr 09 2014 - 11:44:39",
+    "sysObjID":"1.3.6.1.4.1.27282.3.2.10",
+    "sysUpTime":"lang('sys','txtSysUptimeArg',[1,7,59,35])",
+    "sysCurrTime":"15:03:01 DFL(UTC+8) Jan 18 2000",
+    "methods":
+    [
+      {"txt":"lang('line','lblTelnet')", "state":true},
+      {"txt":"lang('line','lblSsh')", "state":false},
+      {"txt":"lang('line','lblHttp')", "state":true},
+      {"txt":"lang('line','lblHttps')", "state":true},
+      {"txt":"lang('line','lblSnmp')", "state":true}
+    ],
+	"logo":"login"
+  }
+}

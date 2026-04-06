@@ -1,0 +1,1 @@
+/compile/realtek/kernel/uClinux/lib/libcrypt_old/crypt.h

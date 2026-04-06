@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "idx":4,
+    "community_maxlen":127,
+    "desc_maxlen":127,
+    "owner_maxlen":160
+  }
+}

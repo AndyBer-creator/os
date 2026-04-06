@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "groups":
+    [
+      { "idx":1, "vid":1, "addr":"224.0.1.1", "mbrPort":"GE1-3,GE10", "typeStatic":1, "type":"lang('mcast','lblStatic')"},
+      { "idx":10, "vid":2, "addr":"225.1.2.3", "mbrPort":"GE1,GE10,LAG1", "typeStatic":0, "type":"lang('mcast','lblDynamic')", "lifeTime":110},
+      { "idx":20, "vid":100, "addr":"ff12::1:ff72:1111", "mbrPort":"GE1-5,GE15", "typeStatic":1, "type":"lang('mcast','lblStatic')"},
+      { "idx":21, "vid":100, "addr":"ff02::1:ff72:71ac", "mbrPort":"GE4-8,GE15", "typeStatic":0,"type":"lang('mcast','lblDynamic')", "lifeTime":10}
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/ski/proto/lacp/l2g_lacp.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/plat/linux/ski/proto/lacp/l2g_lacp.ko /compile/realtek/pswitch/plat/linux/ski/proto/lacp/l2g_lacp.o /compile/realtek/pswitch/plat/linux/ski/proto/lacp/l2g_lacp.mod.o

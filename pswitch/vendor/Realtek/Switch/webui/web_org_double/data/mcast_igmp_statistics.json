@@ -1,0 +1,19 @@
+{
+  "data":
+  {
+    "totalRx":100,
+    "validRx":90,
+    "inValidRx":10,
+    "otherRx":0,
+    "leaveRx":10,
+    "reportRx":9,
+    "generalQryRx":11,
+    "SpecGrpQryRx":8,
+    "SpecGrpSrcQryRx":12,
+    "leaveTx":10,
+    "reportTx":9,
+    "generalQryTx":11,
+    "SpecGrpQryTx":8,
+    "SpecGrpSrcQryTx":12
+  }
+}

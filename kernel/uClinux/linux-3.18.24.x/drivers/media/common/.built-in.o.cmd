@@ -1,0 +1,1 @@
+cmd_drivers/media/common/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/media/common/built-in.o drivers/media/common/b2c2/built-in.o drivers/media/common/saa7146/built-in.o drivers/media/common/siano/built-in.o 

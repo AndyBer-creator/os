@@ -1,0 +1,41 @@
+{
+  "data":
+  {
+    "globalStatus":true,
+    "joinTime":200,
+    "leaveTime":600,
+    "leaveAllTime":10000,
+    "ports":
+    [
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblFixed')"},
+      { "state":true, "dynamicVlan":false, "Registration":"lang('gvrp','lblForbidden')"},
+      { "state":false, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"},
+      { "state":true, "dynamicVlan":true, "Registration":"lang('gvrp','lblNormal')"}
+    ]
+  }
+}

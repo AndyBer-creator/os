@@ -1,0 +1,7 @@
+soc_init_c_start.o: soc_init_c_start.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_spare.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h

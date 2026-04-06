@@ -1,0 +1,34 @@
+{
+  "data":
+  {
+    "adminStatus":true,
+    "operStatus":false,
+    "autoLearn":true,
+    "robust":2,
+    "operRobust":3,
+    "min_robust":1,
+    "max_robust":7,
+    "dflt_robust":2,
+    "interval":125,
+    "operInterval":125,
+    "min_interval":30,
+    "max_interval":18000,
+    "dflt_interval":125,
+    "maxRespInterval":10,
+    "operMaxRespInterval":10,
+    "min_maxRespInterval":5,
+    "max_maxRespInterval":20,
+    "dflt_maxRespInterval":10,
+    "lastMbrCnt":2,
+    "operLastMbrCnt":3,
+    "min_lastMbrCnt":1,
+    "max_lastMbrCnt":7,
+    "dflt_lastMbrCnt":2,
+    "lastMbrInterval":1,
+    "operLastMbrInterval":1,
+    "min_lastMbrInterval":1,
+    "max_lastMbrInterval":25,
+    "dflt_lastMbrInterval":1,
+    "immedLeave":true
+  }
+}

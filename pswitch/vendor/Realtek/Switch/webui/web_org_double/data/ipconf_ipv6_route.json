@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "route":
+    [
+      { "dip":"::", "plen":0, "type":0, "nextHop":"2001::1", "metric":1, "distance":1, "intf":"VLAN 1" },
+      { "dip":"2001:10::1", "plen":64, "type":1,"intf":"VLAN 10" },
+      { "dip":"2001:20::1", "plen":64, "type":1,"intf":"VLAN 20" },
+      { "dip":"2011:10::1", "plen":64, "type":2, "nextHop":"2001:10::3", "metric":1, "distance":1, "intf":"VLAN 10" },
+      { "dip":"2011:11::1", "plen":64, "type":2, "nextHop":"2001:10::4", "metric":2, "distance":1, "intf":"VLAN 10" }
+    ]
+  }
+}

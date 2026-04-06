@@ -1,0 +1,40 @@
+{
+  "data":
+  {
+    "chassisType":"lang('lldp','lblMacAddr')",
+    "chassisId":"68:bc:0c:72:71:ac",
+    "sysName":"switch7271ac",
+    "sysDescp":"48-Port 10/100 Managed Switch",
+    "supportCap":"lang('lldp','lblBridge')",
+    "enableCap":"lang('lldp','lblBridge')",
+    "portIdType":"lang('lldp','lblIntfName')",
+    "ports":
+    [
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"},
+      { "status":"lang('lldp', 'lblTxAndRx')", "medStatus":"lang('common', 'txtEnabled')"}
+    ] 
+  }
+}

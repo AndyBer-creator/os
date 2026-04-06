@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/ski/proto/authmgr/l2g_authmgr.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/plat/linux/ski/proto/authmgr/l2g_authmgr.ko /compile/realtek/pswitch/plat/linux/ski/proto/authmgr/l2g_authmgr.o /compile/realtek/pswitch/plat/linux/ski/proto/authmgr/l2g_authmgr.mod.o

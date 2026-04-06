@@ -1,0 +1,43 @@
+{
+  "data":
+  {
+    "cnts":
+    [
+      {
+        "type":"Receive Statistics",
+        "cnts":
+        [
+          {"name":"Join empty","val":1},
+          {"name":"Empty","val":2},
+          {"name":"Leave Empty","val":3},
+          {"name":"Join In","val":4},
+          {"name":"Leave In","val":5},
+          {"name":"Leave All","val":6}
+        ]
+      },
+      {
+        "type":"Transmit Statistics",
+        "cnts":
+        [
+          {"name":"Join Empty","val":7},
+          {"name":"Empty","val":8},
+          {"name":"Leave Empty","val":9},
+          {"name":"Join In","val":10},
+          {"name":"Leave In","val":11},
+          {"name":"Leave All","val":12}
+        ]
+      },
+      {
+        "type":"Error Statistics",
+        "cnts":
+        [
+          {"name":"Invalid Protocol ID","val":0},
+          {"name":"Invalid Attribute Type","val":8},
+          {"name":"Invalid Attribute Value","val":8},
+          {"name":"Invalid Attribute Length","val":8},
+          {"name":"Invalid Event","val":0}
+        ]
+      }
+    ]
+  }
+}

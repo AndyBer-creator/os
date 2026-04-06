@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "selIdx":0,
+    "actIdx":1,
+    "actVer":"3.0.5.12345",
+    "actName":"TestImage1",
+    "actSize":4860068,
+    "actTime":"2014-04-09 11:44:39 UTC",
+    "bakVer":"3.0.4.12300",
+    "bakName":"TestImage2",
+    "bakSize":4861234,
+    "bakTime":"2014-04-03 10:33:11 UTC"
+  }
+}

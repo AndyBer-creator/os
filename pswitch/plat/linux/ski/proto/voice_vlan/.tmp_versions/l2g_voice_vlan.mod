@@ -1,0 +1,2 @@
+/compile/realtek/pswitch/plat/linux/ski/proto/voice_vlan/l2g_voice_vlan.ko
+/compile/realtek/pswitch/plat/linux/ski/proto/voice_vlan/../../../../../proto/voice_vlan/proto_voice_vlan.o /compile/realtek/pswitch/plat/linux/ski/proto/voice_vlan/ski_voice_vlan_lkm.o /compile/realtek/pswitch/plat/linux/ski/proto/voice_vlan/ski_voice_vlan_lkm_export.o /compile/realtek/pswitch/plat/linux/ski/proto/voice_vlan/ski_voice_vlan.o

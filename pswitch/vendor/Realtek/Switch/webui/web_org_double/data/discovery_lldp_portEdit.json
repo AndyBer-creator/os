@@ -1,0 +1,35 @@
+{
+  "data":
+  {
+    "adminStatus":"txrx",
+    "snmpNotify":true,
+    "availTlvs":
+    [
+      { "val":0, "tlv":"lang('lldp','lblPortDescription')" },
+      { "val":1, "tlv":"lang('lldp','lblSysName')" },
+      { "val":2, "tlv":"lang('lldp','lblSysDescription')" },
+      { "val":3, "tlv":"lang('lldp','lblMACPHY')" },
+      { "val":4, "tlv":"lang('lldp','lblLinkAggregation')" },
+      { "val":5, "tlv":"lang('lldp','lblMaxFrameSize')" },
+      { "val":6, "tlv":"lang('lldp','lblMgmtIpAddr')" },
+      { "val":7, "tlv":"lang('lldp','lblPVIDTLV')" }
+    ],
+    "selTlvs":
+    [
+      { "val":6, "tlv":"lang('lldp','lblSysCapabilities')" }
+    ],
+    "avaVlans":
+    [
+      { "name":"VLAN 1", "id":1},
+      { "name":"VLAN 2", "id":2},
+      { "name":"VLAN 6", "id":6},
+      { "name":"VLAN 24", "id":24}
+    ],
+    "selVlans":
+    [
+      { "name":"VLAN 3", "id":3},
+      { "name":"VLAN 4", "id":4},
+      { "name":"VLAN 5", "id":5}
+    ]
+  }
+}

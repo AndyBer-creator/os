@@ -1,0 +1,19 @@
+{
+  "data":
+  {
+    "intf":
+    [
+      { "name":"VLAN1", "val":"VLAN1"},
+      { "name":"VLAN10", "val":"VLAN10"},
+      { "name":"VLAN20", "val":"VLAN20"},
+      { "name":"VLAN100", "val":"VLAN100"},
+      { "name":"VLAN200", "val":"VLAN200"}
+    ],
+    "addrs":
+    [
+      { "addrType":1, "addr":"2001::3", "plen":64, "dadStatus":1 },
+      { "addrType":3, "addr":"fe80::3", "plen":64, "dadStatus":1 },
+      { "addrType":4, "addr":"ff02::1", "plen":0, "dadStatus":1 }
+    ]
+  }
+}

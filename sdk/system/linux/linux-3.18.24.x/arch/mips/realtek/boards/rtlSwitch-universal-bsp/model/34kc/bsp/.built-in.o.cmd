@@ -1,0 +1,1 @@
+cmd_arch/mips/bsp/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o arch/mips/bsp/built-in.o arch/mips/bsp/prom.o arch/mips/bsp/setup.o arch/mips/bsp/irq.o arch/mips/bsp/timer.o arch/mips/bsp/serial.o arch/mips/bsp/chip_probe.o arch/mips/bsp/chip_probe_export.o arch/mips/bsp/init_l2cache.o arch/mips/bsp/rtk_util.o arch/mips/bsp/cevt-ext.o 

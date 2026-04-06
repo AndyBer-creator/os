@@ -1,0 +1,121 @@
+trap-mgmt-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	                  FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   NetworkAddress, IpAddress                                          FROM RFC1155-SMI
+   DisplayString, TruthValue,RowStatus                                FROM SNMPv2-TC;
+   
+snmptrapMgmtMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system Demo MIB module"
+   ::= { RTLDevice 10 }
+
+
+snmpvTrapConfigTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF trapconfigEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "snmp trap config table."
+       ::= { snmptrapMgmtMib 1 }
+
+   trapconfigEntry OBJECT-TYPE
+       SYNTAX      trapconfigEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "snmp trap config table entry."
+       INDEX    { hostindex }
+       ::= { snmpvTrapConfigTable 1 }
+
+   trapconfigEntry ::= SEQUENCE {
+       hostindex    Integer32,
+       hostIpAddr   DisplayString,
+	   version      Integer32,
+	   CommunityName  DisplayString,
+	   v3Securitylevel Integer32,
+	   udpPort         Integer32,
+	   trapStatus      Integer32
+   }
+
+	hostindex   OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "trap config index, start from 1, end of 8 "
+	::= { trapconfigEntry 1 }
+	
+	hostIpAddr     OBJECT-TYPE
+	SYNTAX         DisplayString
+	MAX-ACCESS     read-write
+	STATUS         current
+	DESCRIPTION
+		"tarp host ip address "
+	::= { trapconfigEntry 2 }
+	
+	version   OBJECT-TYPE
+	SYNTAX           Integer32{
+					init(0),
+					v1(1),
+					v2c(2),
+					v3(3) }
+	MAX-ACCESS       read-write
+	STATUS           current
+	DESCRIPTION
+	   "trap config version v1,v2c,v3 "
+	::= { trapconfigEntry 3 }
+	
+	CommunityName  OBJECT-TYPE
+    SYNTAX         DisplayString (SIZE(1..128))
+    MAX-ACCESS     read-write
+    STATUS         current
+    DESCRIPTION
+       "Community name (maximum length is 20 characters)"
+    ::= { trapconfigEntry 4 }
+	
+   v3Securitylevel OBJECT-TYPE
+   SYNTAX      Integer32{
+				init(0),
+				noauth(1),
+				auth(2),
+				priv(3),					 
+				}
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "config tarp Security level"
+   DEFVAL { 1 }
+   ::= { trapconfigEntry 5 }
+
+   udpPort OBJECT-TYPE
+   SYNTAX      Integer32
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "config tarp udp port"
+   DEFVAL { 162 }
+   ::= { trapconfigEntry 6 }
+   
+   trapStatus OBJECT-TYPE
+   SYNTAX      Integer32{
+				init(0),
+				active(1),
+				unactive(2)
+				}
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "tarp config status"
+   ::= { trapconfigEntry 7 }  
+
+END
+
+            

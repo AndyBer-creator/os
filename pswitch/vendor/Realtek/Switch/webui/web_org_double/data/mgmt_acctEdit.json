@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "password":"admin",
+    "priv":15,
+    "maxlen_userName":32,
+    "maxlen_password":32
+  }
+}

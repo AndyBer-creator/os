@@ -1,0 +1,32 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 },
+      { "configBpduRx":0, "tcnBpduRx":0, "mstpBpduRx":0, "configBpduTx":0, "tcnBpduTx":0, "mstpBpduTx":0 }
+    ]
+  }
+}

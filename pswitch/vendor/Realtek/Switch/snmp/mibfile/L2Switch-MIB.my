@@ -1,0 +1,71 @@
+L2Switch-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	                  FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   NetworkAddress, IpAddress                                          FROM RFC1155-SMI
+   DisplayString, TruthValue,RowStatus,MacAddress                     FROM SNMPv2-TC;
+   
+L2SwitchMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "l2 switch mac address MIB module"
+   ::= { RTLDevice 11 }
+
+L2MacAddrFilterObjects       OBJECT IDENTIFIER ::= { L2SwitchMib 1 }
+
+L2macAddrFilterTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF macAddrFilterEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "mac address filter table."
+       ::= { L2MacAddrFilterObjects 1 }
+
+   macAddrFilterEntry OBJECT-TYPE
+       SYNTAX      macAddrFilterEntry
+       MAX-ACCESS  not-accessible
+       STATUS      mandatory
+       DESCRIPTION
+           "mac address filter table entry."
+       INDEX    { FilterMacAddr }
+       ::= { L2macAddrFilterTable 1 }
+
+   macAddrFilterEntry ::= SEQUENCE {
+       FilterMacAddr     MacAddress,
+       VlanId            Integer32,
+	   MacRowStatus      RowStatus
+   }
+
+	FilterMacAddr   OBJECT-TYPE
+	SYNTAX           MacAddress
+	MAX-ACCESS       read-create
+	STATUS           current
+	DESCRIPTION
+	   "filter mac address"
+	::= { macAddrFilterEntry 1 }
+	
+	VlanId   OBJECT-TYPE
+	SYNTAX          Integer32
+	MAX-ACCESS      read-create
+	STATUS          current
+	DESCRIPTION
+		"vlan id"
+	::= { macAddrFilterEntry 2 }
+	
+	MacRowStatus   OBJECT-TYPE
+	SYNTAX          RowStatus
+	MAX-ACCESS      read-create
+	STATUS          current
+	DESCRIPTION
+		"CreateAndGo:(4); destory:(6);"
+	::= { macAddrFilterEntry 3 }
+	
+END
+
+            

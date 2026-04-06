@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "fwd":0,
+    "intf":
+    [
+      { "intf":"loopback" },
+      { "intf":"VLAN1", "stateless":1, "refresh":86400, "minrefresh":86400, "autoconf":1, "dadAttempt":2 },
+      { "intf":"VLAN10", "stateless":1, "refresh":86400, "minrefresh":86400, "autoconf":1, "dadAttempt":2 },
+      { "intf":"VLAN20", "stateless":1, "refresh":86400, "minrefresh":86400, "autoconf":1, "dadAttempt":2 },
+      { "intf":"VLAN30", "stateless":0, "autoconf":1, "dadAttempt":2 },
+      { "intf":"VLAN40", "stateless":0, "autoconf":1, "dadAttempt":2 }
+    ]
+  }
+}

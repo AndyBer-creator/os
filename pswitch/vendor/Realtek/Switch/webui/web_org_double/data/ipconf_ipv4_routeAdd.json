@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+    "metric_min":1,
+    "metric_max":255,
+    "metric_dflt":1
+  }
+}

@@ -1,0 +1,212 @@
+Poe-MIB DEFINITIONS ::= BEGIN
+    IMPORTS
+        Integer32             FROM SNMPv2-SMI                
+        RTLDevice             FROM REALTEK-MIB
+        DisplayString         FROM SNMPv2-TC; 
+
+    PoeMib MODULE-IDENTITY
+        LAST-UPDATED    "202001070000Z"
+        ORGANIZATION    "Realtek"
+        CONTACT-INFO    "Realtek"
+        DESCRIPTION     "Realtek MIB definition."
+        REVISION        "202001070000Z"
+        DESCRIPTION     "Demo Mib module"
+
+        ::= { RTLDevice 4 }           
+
+poePowerSupply	       OBJECT IDENTIFIER ::= { PoeMib 1 } 
+
+poeDevicePowerConsume   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS      read-only
+   STATUS            current
+   DESCRIPTION
+	"power consumption of device.unit is Watt"
+   ::= { poePowerSupply	        1 }
+
+poeDeviceCurrentPowerConsume   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS      read-only
+   STATUS            current
+   DESCRIPTION
+	"current power consumption of device.unit is Watt"
+   ::= { poePowerSupply	        2 }
+   
+poeDeviceTemperature   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS      read-only
+   STATUS            current
+   DESCRIPTION
+	"power Temperature of device.unit is ℃"
+   ::= { poePowerSupply	        3}
+   
+poePortTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF PoePortEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       ::= { PoeMib 2 }
+
+   poePortEntry OBJECT-TYPE
+       SYNTAX      PoePortEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       INDEX    { portIndex }
+       ::= { poePortTable 1 }
+
+   PoePortEntry ::= SEQUENCE {
+       portIndex
+           Integer32,
+       powerStatus
+           DisplayString,
+       powerConsume
+           Integer32,   
+       powerVoltage
+           Integer32,
+       powerCurrent
+           Integer32
+   }
+   
+     portIndex OBJECT-TYPE
+       SYNTAX      Integer32
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION
+           "port index, start from 1 "
+       ::= { poePortEntry 1 }
+
+      powerStatus  OBJECT-TYPE
+       SYNTAX             DisplayString
+       MAX-ACCESS         read-only
+       STATUS             current
+       DESCRIPTION
+        "port power status."
+       ::= { poePortEntry 2 }
+
+      powerConsume  OBJECT-TYPE
+       SYNTAX             Integer32
+       MAX-ACCESS         read-only
+       STATUS             current
+       DESCRIPTION
+        "power consumption of port.unit is mW"
+       ::= { poePortEntry 3 }
+
+      powerVoltage  OBJECT-TYPE
+       SYNTAX             Integer32
+       MAX-ACCESS         read-only
+       STATUS             current
+       DESCRIPTION
+        "power voltage of port.unit is v"
+       ::= { poePortEntry 4 }
+
+      powerCurrent  OBJECT-TYPE
+       SYNTAX             Integer32
+       MAX-ACCESS         read-only
+       STATUS             current
+       DESCRIPTION
+        "power current of port.unit is mA"
+       ::= { poePortEntry 5 }
+
+poeSetTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF PoeSetEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       ::= { PoeMib 3 }
+
+   poeSetEntry OBJECT-TYPE
+       SYNTAX      PoeSetEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       INDEX    { portIndex }
+       ::= { poeSetTable 1 }
+
+   PoeSetEntry ::= SEQUENCE {
+       portIndex
+           Integer32,
+       portEnable
+           Integer32,
+       portWatchDog
+           Integer32
+    }
+   
+     portIndex OBJECT-TYPE
+       SYNTAX      Integer32
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION
+           "port index, start from 1 "
+       ::= { poeSetEntry 1 }
+
+      portEnable  OBJECT-TYPE
+       SYNTAX             Integer32
+       MAX-ACCESS         read-write
+       STATUS             current
+       DESCRIPTION
+        "port poe enable or disable."
+       ::= { poeSetEntry 2 }
+       
+      portWatchDog  OBJECT-TYPE
+       SYNTAX             Integer32
+       MAX-ACCESS         read-write
+       STATUS             current
+       DESCRIPTION
+        "poe watchdog on/off."
+       ::= { poeSetEntry 3 }
+	   
+poeRebootTimerTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF poeRebootTimerEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       ::= { PoeMib 4 }
+
+   poeRebootTimerEntry OBJECT-TYPE
+       SYNTAX      poeRebootTimerEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of poe port."
+       INDEX    { portIndex }
+       ::= { poeRebootTimerTable 1 }
+
+   poeRebootTimerEntry ::= SEQUENCE {
+       portIndex
+           Integer32,
+       rebootTimer
+           DisplayString,
+       delayTimer
+           DisplayString
+    }
+   
+     portIndex OBJECT-TYPE
+       SYNTAX      Integer32
+       MAX-ACCESS  read-only
+       STATUS      current
+       DESCRIPTION
+           "port index, start from 1 "
+       ::= { poeRebootTimerEntry 1 }
+
+       rebootTimer  	  OBJECT-TYPE
+       SYNTAX             DisplayString
+       MAX-ACCESS         read-write
+       STATUS             current
+       DESCRIPTION
+        "poe port close time set; eg:01:02:00."
+       ::= { poeRebootTimerEntry 2 }
+       
+       delayTimer         OBJECT-TYPE
+       SYNTAX             DisplayString
+       MAX-ACCESS         read-write
+       STATUS             current
+       DESCRIPTION
+        "poe port delay open time set; eg:01:02:00."
+       ::= { poeRebootTimerEntry 3 }
+END

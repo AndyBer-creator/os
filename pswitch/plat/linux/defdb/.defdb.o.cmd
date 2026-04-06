@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/defdb/defdb.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o /compile/realtek/pswitch/plat/linux/defdb/defdb.o /compile/realtek/pswitch/plat/linux/defdb/defdb_lkm.o /compile/realtek/pswitch/plat/linux/defdb/defdb_data.o 

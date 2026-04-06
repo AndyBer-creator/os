@@ -1,0 +1,309 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadMainFrame();
+
+var data;
+var ipsection =
+[
+    {"name":"1",   "val":1},
+    {"name":"2",   "val":2},
+    {"name":"3",   "val":3},
+    {"name":"4",   "val":4},
+    {"name":"5",   "val":5},
+    {"name":"6",   "val":6},
+	{"name":"7",   "val":7},
+	{"name":"8",   "val":8},
+];
+var hour =
+[
+    {"name":"00",   "val":0},
+    {"name":"01",   "val":1},
+    {"name":"02",   "val":2},
+    {"name":"03",   "val":3},
+    {"name":"04",   "val":4},
+    {"name":"05",   "val":5},
+    {"name":"06",   "val":6},
+	{"name":"07",   "val":7},
+	{"name":"08",   "val":8},
+	{"name":"09",   "val":9},
+	{"name":"10",   "val":10},
+	{"name":"11",   "val":11},
+	{"name":"12",   "val":12},
+	{"name":"13",   "val":13},
+	{"name":"14",   "val":14},
+	{"name":"15",   "val":15},
+	{"name":"16",   "val":16},
+	{"name":"17",   "val":17},
+	{"name":"18",   "val":18},
+	{"name":"19",   "val":19},
+	{"name":"20",   "val":20},
+	{"name":"21",   "val":21},
+	{"name":"22",   "val":22},
+	{"name":"23",   "val":23}
+];
+var minute =
+[
+    {"name":"00",   "val":0},
+    {"name":"01",   "val":1},
+    {"name":"02",   "val":2},
+    {"name":"03",   "val":3},
+    {"name":"04",   "val":4},
+    {"name":"05",   "val":5},
+    {"name":"06",   "val":6},
+	{"name":"07",   "val":7},
+	{"name":"08",   "val":8},
+	{"name":"09",   "val":9},
+	{"name":"10",   "val":10},
+	{"name":"11",   "val":11},
+	{"name":"12",   "val":12},
+	{"name":"13",   "val":13},
+	{"name":"14",   "val":14},
+	{"name":"15",   "val":15},
+	{"name":"16",   "val":16},
+	{"name":"17",   "val":17},
+	{"name":"18",   "val":18},
+	{"name":"19",   "val":19},
+	{"name":"20",   "val":20},
+	{"name":"21",   "val":21},
+	{"name":"22",   "val":22},
+	{"name":"23",   "val":23},
+	{"name":"24",   "val":24},
+	{"name":"25",   "val":25},
+	{"name":"26",   "val":26},
+	{"name":"27",   "val":27},
+	{"name":"28",   "val":28},
+	{"name":"29",   "val":29},
+	{"name":"30",   "val":30},
+	{"name":"31",   "val":31},
+	{"name":"32",   "val":32},
+	{"name":"33",   "val":33},
+	{"name":"34",   "val":34},
+	{"name":"35",   "val":35},
+	{"name":"36",   "val":36},
+	{"name":"37",   "val":37},
+	{"name":"38",   "val":38},
+	{"name":"39",   "val":39},
+	{"name":"40",   "val":40},
+	{"name":"41",   "val":41},
+	{"name":"42",   "val":42},
+	{"name":"43",   "val":43},
+	{"name":"44",   "val":44},
+	{"name":"45",   "val":45},
+	{"name":"46",   "val":46},
+	{"name":"47",   "val":47},
+	{"name":"48",   "val":48},
+	{"name":"49",   "val":49},
+	{"name":"50",   "val":50},
+	{"name":"51",   "val":51},
+	{"name":"52",   "val":52},
+	{"name":"53",   "val":53},
+	{"name":"54",   "val":54},
+	{"name":"55",   "val":55},
+	{"name":"56",   "val":56},
+	{"name":"57",   "val":57},
+	{"name":"58",   "val":58},
+	{"name":"59",   "val":59}
+];
+var pollname;
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+	pollname = "_src="+urlParamGetByName('idx');
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    dataGet(urlAppend(url('get_dhcpRelayipPoolEdit'), pollname)).fetch({
+      success: function(model, resp){
+       logoutCheck(resp);
+        that.$el.html( that.template(resp) );
+        PagePostInit();
+        data = resp.data;
+		//console.log(data);
+		that.dnsShow();
+      }
+    });
+  },
+  events: {
+    'click #btnApply':'apply',
+    'click #btnClose':'close',
+    'blur input[type=text]':'checkValid',
+	'click #dnsPristate':'dnsShow',
+	'click #dnsSecstat':'dnsShow'
+  },
+  close: function() {
+    CloseDialog();
+  },
+  apply: function() {
+    if (this.checkValid()) {
+	  var setday= $('#day').val();
+	  data.leasedays = setday;
+	  //console.log(formDataGet('setform'));
+      dataSet(url('set_dhcpRelayipPoolEdit'), formDataGet('setform'));
+    }
+  },
+  checkValid:function(){
+    var valid = true;
+    clearAllErrMsg();
+    valid &= validIPv4Addr('addrstart');
+    valid &= validIPv4Mask('addrend');
+    valid &= validIPv4Addr('gateway');
+    valid &= validIPv4Mask('mask');
+	valid &= validIPv4Addr('dnsPri');
+	valid &= validIPv4Addr('dnsSec');
+    return valid;
+  },
+  
+  dnsShow: function()
+  {
+    if (IsChecked('dnsPristate'))
+    {
+      EnableInputText('dnsPri');
+    }
+    else
+    {
+      DisableInputText('dnsPri');
+    }
+	if (IsChecked('dnsSecstat'))
+	{
+	  EnableInputText('dnsSec');
+	}
+	else
+	{
+	  DisableInputText('dnsSec');
+	}
+  }
+});
+mainFrame = new mainView();
+
+EnterKeyEvent('apply');
+}
+</script>
+</head>
+<body onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+
+<script id="main_content" type="text/template">
+
+<form id="setform">
+<%= DialogHead(lang('dr','lblIPPoolTable')) %>
+<table>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tbody>
+    <tr>
+      <th><%= LabelLeft(lang('dr','lblPoolName')) %></th>
+      <td class="formContentTD">
+        <!--<%= InputText('ippool',data.ippool,data.ippoolLen) %>-->
+		<%= data.ippool %> <%= InputHidden('ippool',data.ippool) %>
+      </td>
+    </tr>
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblGateway'),'lblGateway') %></th>
+	  <td class='formContentTD'>
+	    <%= InputTextIPv4('gateway', data.gateway) %>
+	  </td>
+	</tr>
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblGatewayMask'),'lblGatewayMask') %></th>
+	  <td class='formContentTD'>
+	    <%= InputTextIPv4('mask', data.mask) %>
+	  </td>
+	</tr>
+    <tr>
+      <th><%= LabelLeft(lang('dr','lblIPSectionTable')) %></th>
+      <td class="formContentTD">
+        <table>
+          <tr>
+			<td <%= LabelLeft(lang('dr','lblPoolSection'), 'lblPoolSection') %></td>
+			<td class="formContentTD"><%= selectOption('section', ipsection, data.section, 150) %></td>
+          </tr>
+		  <tr>
+		    <td <%= LabelLeft(lang('dr','lblPoolAddrStart'), 'lblPoolAddrStart') %></td>
+		    <td class="formContentTD">
+		      <%= InputTextIPv4('addrstart', data.addrstart) %>
+		    </td>
+		  </tr>
+		  <tr>
+			<td <%= LabelLeft(lang('dr','lblPoolAddrEnd'), 'lblPoolAddrEnd') %></td>
+		    <td class="formContentTD">
+		      <%= InputTextIPv4('addrend', data.addrend) %>
+		    </td>
+		  </tr>
+        </table>
+      </td>
+    </tr>
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblDNSPrimaryIp'),'lblDNSPrimaryIp') %></th>
+	  <td class="formContentTD">
+		  <table>
+		  	<tr>
+				<td><%= Checkbox('dnsPristate',lang('common','txtEnable'), data.dnsPristat) %></td>
+				<td><%= InputTextIPv4('dnsPri', data.dnsPri) %></td>
+			</tr>
+		  </table>
+	  </td>  
+	</tr>
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblDNSSecondIp'),'lblDNSSecondIp') %></th>
+	  <td class="formContentTD">
+		  <table>
+		  	<tr>
+				<td><%= Checkbox('dnsSecstat', lang('common','txtEnable'), data.dnsSecstat) %></td>
+				<td><%= InputTextIPv4('dnsSec', data.dnsSec) %></td>
+			</tr>
+		  </table>
+	  </td>  
+	</tr>
+
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblOption43'),'lblOption43') %></th>
+	  <td class="formContentTD">
+		  <table>
+		  	<tr>
+		  	  <td><%= RadioGroup('format',data.format,['ascii',lang('dr','txtAscii')],['hex',lang('dr','txtHex')]) %></td>
+			  <td><%= InputText('option43Ip', data.option43Ip) %></td>
+			</tr>
+		  </table>
+	  </td>
+	</tr>
+
+	<tr>
+	  <th><%= LabelLeft(lang('dr','lblLeaseTime')) %></th>
+	  <td class="formContentTD">
+		<table>
+			<tr>
+			  <td><%= InputTextHex('leasedays', data.leasedays, 3, 3)%></td>
+			  <td <%= LabelLeft(lang('time','lblDay'), 'lblDay') %></td>
+			  <td><%= selectOption('leasehours', hour, data.leasehours) %></td>
+			  <td><%= LabelLeft(lang('time','lblHour'), 'lblHour') %></td>  
+			  <td><%= selectOption('leaseminutes', minute, data.leaseminutes) %></td>
+			  <td><%= LabelLeft(lang('time','lblMinute'), 'lblMinute') %></td>
+			</tr>
+		</table>
+	  </td>
+	</tr>
+    </table>
+  </td>
+</tr>
+</table>
+<%= DialogFoot(ButtonGroupApplyClose('btnApply', 'btnClose')) %>
+</form>
+</script>
+</body>
+</html>

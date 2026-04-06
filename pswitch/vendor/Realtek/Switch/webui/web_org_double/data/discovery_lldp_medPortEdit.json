@@ -1,0 +1,32 @@
+{
+  "data":
+  {
+    "medStatus":true,
+    "avaiTlvs":
+    [
+      { "val":0, "tlv":"lang('lldp','lblLocation')" },
+      { "val":1, "tlv":"lang('lldp','lblInventory')" }
+    ],
+    "selTlvs":
+    [
+      { "val":2, "tlv":"lang('lldp','lblNetworkPolicy')" }
+    ],
+    "avaiPolicies":
+    [
+      { "policyNum":3, "app":"lang('lldp','lblVoice')" },
+      { "policyNum":5, "app":"lang('lldp','lblVoiceSignaling')" }
+    ],
+    "selPolicies":
+    [
+      { "policyNum":7, "app":"lang('lldp','lblStreamingVideo')" }
+    ],
+    "max_coordinate":16,
+    "coordinate":"00112233445566778899aabbccddee",
+    "min_civic":6,
+    "max_civic":160,
+    "civic":"001122334455",
+    "min_ecs":10,
+    "max_ecs":25,    
+    "ecs":"00112233445566778899"
+  }
+}

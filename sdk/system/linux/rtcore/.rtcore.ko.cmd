@@ -1,0 +1,1 @@
+cmd_drivers/net/switch/rtcore/rtcore.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o drivers/net/switch/rtcore/rtcore.ko drivers/net/switch/rtcore/rtcore.o drivers/net/switch/rtcore/rtcore.mod.o

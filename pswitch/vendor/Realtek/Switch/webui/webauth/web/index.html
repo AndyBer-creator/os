@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Authentication Page</title>
+<script type="text/javascript">
+function gotoIndex()
+{
+  var ver = (new Date().getTime());
+  window.location.href="/cgi/webauth.cgi?_ds=1&cmd=0&ver="+ver+"&_de=1";
+}
+</script>
+</head>
+<body onload="gotoIndex();">
+</body>
+</html>
+

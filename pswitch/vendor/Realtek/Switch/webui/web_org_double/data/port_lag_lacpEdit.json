@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "portPri":1,
+    "min_portPri":1,
+    "max_portPri":65535,
+    "dflt_portPri":1,
+    "timeout":"long"
+  }
+}

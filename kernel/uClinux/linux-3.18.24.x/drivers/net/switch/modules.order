@@ -1,0 +1,2 @@
+kernel/drivers/net/switch/rtcore/rtcore.ko
+kernel/drivers/net/switch/rtk/rtk.ko

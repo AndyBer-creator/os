@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/net/net.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o /compile/realtek/pswitch/plat/linux/net/net.o /compile/realtek/pswitch/plat/linux/net/net_lkm.o /compile/realtek/pswitch/plat/linux/net/net_svi.o 

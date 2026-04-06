@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "intf":
+    [
+      { "intf":"GE2", "type":0, "addr":"10.0.1.254", "mask":"255.255.255.0", "status":1 },
+      { "intf":"GE3", "type":1, "addr":"10.0.2.221", "mask":"255.255.255.0", "status":1 },
+      { "intf":"GE4", "type":1, "addr":"0.0.0.0", "mask":"255.255.255.255", "status":5 },
+      { "intf":"LAG1", "type":0, "addr":"10.1.1.254", "mask":"255.255.255.0", "status":1 },
+      { "intf":"LAG2", "type":1, "addr":"10.1.2.233", "mask":"255.255.255.0", "status":1 },
+      { "intf":"VLAN1", "type":0, "addr":"10.2.1.254", "mask":"255.255.255.0", "status":1 },
+      { "intf":"VLAN100", "type":1, "addr":"10.2.2.100", "mask":"255.255.255.0", "status":1 },
+      { "intf":"VLAN200", "type":1, "addr":"0.0.0.0", "mask":"255.255.255.255", "status":5 },
+      { "intf":"Loopback1", "type":0, "addr":"10.3.1.100", "mask":"255.255.255.0", "status":1 },
+      { "intf":"Loopback2", "type":0, "addr":"10.4.1.200", "mask":"255.255.255.0", "status":1 }
+    ]
+  }
+}

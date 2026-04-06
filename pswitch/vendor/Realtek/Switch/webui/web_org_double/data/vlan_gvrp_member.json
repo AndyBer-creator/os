@@ -1,0 +1,17 @@
+{
+  "data":
+  {
+    "dbvlans":
+    [
+      { "vlan":1, "mbr":"GE1-5,LAG1", "dynMbr":"GE1-2,LAG1", "type": 1},
+      { "vlan":10, "mbr":"GE1-10,LAG1", "dynMbr":"GE1-2,LAG1", "type": 1},
+      { "vlan":100,"mbr":"GE1-2,LAG1", "dynMbr":"GE1-2,LAG1", "type": 1},
+      { "vlan":101,"mbr":"GE1-3,LAG1", "dynMbr":"GE1-2,LAG1", "type": 1},
+      { "vlan":102,"mbr":"GE1-6,LAG1", "dynMbr":"GE1-2,LAG1", "type": 1},
+      { "vlan":103, "mbr":"GE1-5,LAG1", "dynMbr":"GE1-5,LAG1", "type": 2},
+      { "vlan":104, "mbr":"GE1-5,LAG1", "dynMbr":"GE1-5,LAG1",  "type": 2},
+      { "vlan":105, "mbr":"GE1-5,LAG1", "dynMbr":"GE1-5,LAG1", "type": 2},
+      { "vlan":106, "mbr":"GE1-5,LAG1", "dynMbr":"GE1-5,LAG1", "type": 2}
+    ]
+  }
+}

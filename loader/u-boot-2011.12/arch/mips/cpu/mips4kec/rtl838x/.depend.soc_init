@@ -1,0 +1,5 @@
+soc_init.o: soc_init.S \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/platform/current/cpu/mips-generic.h \
+ preloader/platform/current/lplr_sram.H

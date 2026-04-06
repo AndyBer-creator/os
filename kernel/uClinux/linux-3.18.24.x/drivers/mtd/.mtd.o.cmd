@@ -1,0 +1,1 @@
+cmd_drivers/mtd/mtd.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/mtd/mtd.o drivers/mtd/mtdcore.o drivers/mtd/mtdsuper.o drivers/mtd/mtdconcat.o drivers/mtd/mtdpart.o drivers/mtd/mtdchar.o 

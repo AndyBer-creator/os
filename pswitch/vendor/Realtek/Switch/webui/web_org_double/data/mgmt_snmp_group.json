@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "views":["Default","test1","test2","test3","test4"],
+    "groups":
+    [
+      { "idx":0, "groupName":"g1", "secModel":"lang('snmp','lblSNMPv3')", "secLevel":"lang('snmp','lblAuth')", "readView":"Default", "writeView":"Default", "notifyView":"Default"},
+      { "idx":1, "groupName":"g2", "secModel":"lang('snmp','lblSNMPv2')", "secLevel":"lang('snmp','lblNoAuth')", "readView":"test1", "writeView":"test1", "notifyView":"test1"},
+      { "idx":2, "groupName":"g3", "secModel":"lang('snmp','lblSNMPv1')", "secLevel":"lang('snmp','lblNoAuth')", "readView":"test2", "writeView":"test2"},
+      { "idx":3, "groupName":"g4", "secModel":"lang('snmp','lblSNMPv3')", "secLevel":"lang('snmp','lblPriv')", "readView":"test3",  "notifyView":"test3"}
+    ]
+  }
+}

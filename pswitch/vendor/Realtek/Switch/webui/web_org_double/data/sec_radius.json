@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "retry":3,
+    "min_retry":1,
+    "max_retry":10,
+    "dflt_retry":3,
+    "timeout":3,
+    "min_timeout":1,
+    "max_timeout":30,
+    "dflt_timeout":3,
+    "key":"1234",
+    "maxlen_key":32,
+    "srvs":
+    [
+      { "srvHost":"aaa.bbb.ccc","pri":1,"retry":5,"timeout":5,"authPort":1812,"usgType":"lang('radius','lblTypeAll')" },
+      { "srvHost":"192.168.1.111","pri":1,"retry":5,"timeout":5,"authPort":1812,"usgType":"lang('radius','lblTypeAll')" }
+    ]
+  }
+}

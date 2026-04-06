@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "accts":
+    [
+      { "username":"test1" },
+      { "username":"test2","reauth":300 },
+      { "username":"test3","inact":80 },
+      { "username":"~!@#$%^&()_+=<>,./\\","vid":3 },
+      { "username":"test5","reauth":300,"inact":80,"vid":3 }
+    ]
+  }
+}

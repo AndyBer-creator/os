@@ -1,0 +1,38 @@
+{
+  "data":
+  {
+    "name":"cccc",
+    "binding": false,
+    "maxPri":2147483647,
+    "minPri":1,
+    "acls":
+    [
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"dddd", "val":"dddd" },
+      { "name":"eeee", "val":"eeee" }
+    ],
+    "aces":
+    [
+      { "pri":1, "action": 0, "protocol":17, "sip":"2001::33", "smask":64,
+      "dip":"1111:2222:3333:4444:5555:6666:7777:8888", "dmask":128 , "sports":123, "sporte":123,
+      "dports":456, "dporte":789, "tcpflag":"", "dscp":62, "ipp":"Any", "icmpType": "" , "icmpCode": "", "tsname":"test", "tsisOn":1 },
+      { "pri":2, "action": 0, "protocol":58, "sip":"Any", "smask":"Any",
+      "dip":"Any", "dmask":"Any" , "sports":123, "sporte":123, "dports":456, "dporte":789,
+      "tcpflag":"", "dscp":"Any", "ipp":3, "icmpType": 3 , "icmpCode": 5, "tsname":"test", "tsisOn":1 },
+      { "pri":3, "action": 0, "protocol":6, "sip":"Any", "smask":"Any",
+      "dip":"1999::1119", "dmask":32 , "sports":123, "sporte":123, "dports":456, "dporte":789,
+      "tcpflag":"xx0x11", "dscp":"Any", "ipp":"Any", "icmpType": "", "icmpCode": "", "tsname":"test", "tsisOn":1 }
+    ],
+    "ranges":
+    [
+      { "name":"None", "val":"" },
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"test", "val":"test" },
+      { "name":"test2", "val":"test2" }
+    ]
+  }
+}

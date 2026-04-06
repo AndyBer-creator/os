@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+  	"hosts":
+    [
+      {"hostname":"aaa","ip":"192.168.1.99"},
+      {"hostname":"bbb","ip":"192.168.1.98"},
+      {"hostname":"ccc","ip":"2002:db8:0:1:abd:43ff:fe6b:419"}
+    ],
+  	"dhosts":
+  	[
+  	  {"hostname":"a.b.c","total":"300","elapsed":"150","type":1,"ip":"192.168.1.111"},
+      {"hostname":"aaa.bb.ccc","total":"600","elapsed":"33","type":2,"ip":"fe80::222"}
+  	]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+  	"max_groupNum":256,
+  	"min_groupNum":0,
+  	"groupNum":10,
+  	"act":"lang('mcast','lblDeny')"
+  }
+}
+

@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "sessions":
+    [
+      { "sessId":"0000000100009470", "port":3, "mac":"00:11:22:33:44:01", "type":2, "status":3, "operQuiet":321 },
+      { "sessId":"000000030000EEA1", "port":3, "mac":"00:11:22:33:44:02", "type":1, "status":2, "authVid":3, "authReauth":7200, "authInact":300, "operVid":3, "operSess":1234, "operInact":3 }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "maxlen_password":32,
+    "reauth":300,
+    "min_reauth":300,
+    "max_reauth":4294967295,
+    "min_inact":60,
+    "max_inact":65535
+  }
+}

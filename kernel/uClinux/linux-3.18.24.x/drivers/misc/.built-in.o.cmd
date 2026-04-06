@@ -1,0 +1,1 @@
+cmd_drivers/misc/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/misc/built-in.o drivers/misc/eeprom/built-in.o drivers/misc/cb710/built-in.o drivers/misc/ti-st/built-in.o drivers/misc/lis3lv02d/built-in.o drivers/misc/carma/built-in.o drivers/misc/mic/built-in.o 

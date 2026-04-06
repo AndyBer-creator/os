@@ -1,0 +1,11 @@
+string.o: string.c \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/posix_types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/posix_types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/string.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/string.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/ctype.h \
+ /compile/realtek/loader/u-boot-2011.12/include/malloc.h

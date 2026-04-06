@@ -1,0 +1,37 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "porttype":"lang('mvr','lblReceiver')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblSource')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":false},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":false},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblReceiver')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true},
+      { "porttype":"lang('mvr','lblNone')", "immdLeave":true}
+    ]
+  }
+}
+

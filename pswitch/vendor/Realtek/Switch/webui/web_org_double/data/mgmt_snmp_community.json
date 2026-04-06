@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "communities":
+    [
+      {"commStr":"comm1","commType":"lang('snmp','lblBasic')","accessMode":"lang('snmp','lblReadOnly')","viewName":"view1"},
+      {"commStr":"comm2","commType":"lang('snmp','lblAdvanced')", "grpName":"group2"},
+      {"commStr":"comm3","commType":"lang('snmp','lblBasic')","accessMode":"lang('snmp','lblReadWrite')","viewName":"view3"}
+    ]
+  }
+}

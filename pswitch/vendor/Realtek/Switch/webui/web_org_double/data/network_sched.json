@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "maxEntry":20,
+    "maxlen":32,
+    "ranges":
+    [
+      { "name":"a", "start":0, "end": 1381577640, "tsisOn":1, "ref":3 },
+      { "name":"b", "start":1371577640, "end": 1381577640, "tsisOn":1, "ref":2 },
+      { "name":"c", "start":1371577640, "end": 1381577640, "tsisOn":1, "ref":1 },
+      { "name":"d", "start":1371577640, "end": 1381577640, "tsisOn":0, "ref":0 },
+      { "name":"g", "start":0, "end": 0, "tsisOn":0 }
+    ]
+  }
+}

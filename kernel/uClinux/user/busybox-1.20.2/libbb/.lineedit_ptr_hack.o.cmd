@@ -1,0 +1,8 @@
+cmd_libbb/lineedit_ptr_hack.o := rtk-ms-2.0.0-linux-gcc  -Wp,-MD,libbb/.lineedit_ptr_hack.o.d   -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG  -D"BB_VER=KBUILD_STR(1.20.2)" -DBB_BT=AUTOCONF_TIMESTAMP -Os  -mips1 -msoft-float  -fPIC -Dlinux -D__linux__ -Dunix -DEMBED -I/compile/realtek/kernel/uClinux/include -I/compile/realtek/kernel/uClinux/lib/uClibc-0.9.33-485-200/include -I/compile/realtek/kernel/uClinux/lib/libcrypt  -I/compile/realtek/kernel/uClinux/lib/zlib -I/compile/realtek/kernel/uClinux -idirafter /opt/toolchain/bin/../lib/gcc/mips-linux-uclibc/4.8.5/soft-float//include -I/compile/realtek/kernel/uClinux/linux-3.18.24.x/include -I/compile/realtek/kernel/uClinux/../../pswitch/plat/linux/ski -I/compile/realtek/kernel/uClinux/../../sdk/system/include -I/compile/realtek/kernel/uClinux/../../sdk/include -DINET6 -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -Wold-style-definition -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -Os  -I/compile/realtek/kernel/uClinux/../../pswitch/plat -DCONFIG_RTK_PATCH    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(lineedit_ptr_hack)"  -D"KBUILD_MODNAME=KBUILD_STR(lineedit_ptr_hack)" -c -o libbb/.tmp_lineedit_ptr_hack.o libbb/lineedit_ptr_hack.c
+
+deps_libbb/lineedit_ptr_hack.o := \
+  libbb/lineedit_ptr_hack.c \
+
+libbb/lineedit_ptr_hack.o: $(deps_libbb/lineedit_ptr_hack.o)
+
+$(deps_libbb/lineedit_ptr_hack.o):

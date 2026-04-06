@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "maxlen_list":32,
+    "methods":
+    [
+      {"name":"lang('aaa','lblMethodEmpty')","val":0},
+      {"name":"lang('aaa','lblMethodNone')","val":1},
+      {"name":"lang('aaa','lblMethodLocal')","val":2},
+      {"name":"lang('aaa','lblMethodEnable')","val":3},
+      {"name":"lang('aaa','lblMethodRadius')","val":5},
+      {"name":"lang('aaa','lblMethodTacplus')","val":6}
+    ]
+  }
+}

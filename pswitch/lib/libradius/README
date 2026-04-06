@@ -1,0 +1,53 @@
+This is a library to generate RADIUS authentication request.
+
+Please read the copyrights in radlib.c :)
+
+Some parts of the radlib.c I took from http://www.nlc.net.au/~john
+who did the same for an older version of junipers libradius.
+
+many tnx!
+	Martin
+(gremlin AT portal-to-web DOT de)
+
+
+
+Installation:
+
+FreeBSD
+-------
+
+This library is included in all FreeBSD 4.x and higher versions. So, if
+you run one of this operating systems, you don't need this one!
+
+
+NetBSD
+------
+
+It should compile now on NetBSD as well - tnx to Emmanuel Dreyfus ( manu AT netbsd DOT org )
+for submitting the patch. 
+libmd is not needed ( at least up from netbsd 1.6 - need to check older versions ), because
+the MD5 functions are all in libc. comment out the section on 'netbsd' in the Makefile
+to use the libc's MD5 routines 
+
+
+Linux
+-----
+
+You will first need the MD5 library, libmd, installed. 
+You can find it at http://www.portal-to-web.de/tacacs/download.php or
+http://www.nlc.net.au/~john/software/libmd.tar.gz
+
+The default location prefix for installation is /usr/local/
+It also guesses, that libmd has the same install prefix. If you
+want to install this lib somewhere else (like homedir...) modifiy
+the PREFIX statement in the Makefile
+
+Type the following to build...
+
+	make 
+
+Type the following to install..
+
+	make install
+
+

@@ -1,0 +1,240 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadDialog();
+
+var idx = 0;
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    this.render();
+  },
+  render: function() {
+    var pri = urlParamGetByName('pri');
+    for (idx = 0 ; idx < parent.data.mgmtACEs.length; idx++)
+    {
+      if (pri == parent.data.mgmtACEs[idx].pri)
+        break;
+    }
+
+    this.$el.html( this.template() );
+    PagePostInit();
+
+    SelSelectVal('service', parent.data.mgmtACEs[idx].service);
+
+    if ('1' == parent.data.mgmtACEs[idx].ipType)
+    {
+      $('#ipv4').val(parent.data.mgmtACEs[idx].ip);
+      $('#mask').val(parent.data.mgmtACEs[idx].mask);
+    }
+    else if ('2' == parent.data.mgmtACEs[idx].ipType)
+    {
+      $('#ipv6').val(parent.data.mgmtACEs[idx].ip);
+      $('#prefix').val(parent.data.mgmtACEs[idx].mask);
+    }
+
+    this.ipType();
+  },
+  events: {
+    'click #btnApply':'apply',
+    'click #btnClose':'close',
+    'click [name=ipType]':'ipType',
+    'click [name=verifyip]':'verifyip',
+    'change #notMbrs':'mbrSelected',
+    'change #mbrs':'mbrSelected',
+    'click #btnAdd':'mbrSelected',
+    'click #btnRem':'mbrSelected',
+    'blur input[type=text]':'checkValid'
+  },
+  close: function() {
+    CloseDialog();
+  },
+  apply: function() {
+    MultiSelectApplySelect('mbrs');
+    if (IsUndefOrNull(GetSelectVal('mbrs')))
+    {
+      MultiSelectDeselectAll('mbrs', 'notMbrs');
+      ShowStatusWarning("Select ports can not be empty.");
+      return;
+    }
+
+    EnableInputText('name');
+    EnableInputText('pri');
+    dataSet(url('set_secMgmtACEEdit'), formDataGet('setform'));
+    MultiSelectDeselectAll('mbrs', 'notMbrs');
+    DisableInputText('name');
+    DisableInputText('pri');
+  },
+  ipType: function()
+  {
+    var val = GetRadioVal('ipType');
+    if ('1' == val)
+    {
+      EnableInputText('ipv4');
+      EnableInputText('mask');
+      DisableInputText('ipv6');
+      DisableInputText('prefix');
+
+    }
+    else if ('2' == val)
+    {
+      DisableInputText('ipv4');
+      DisableInputText('mask');
+      EnableInputText('ipv6');
+      EnableInputText('prefix');
+    }
+    else
+    {
+      DisableInputText('ipv4');
+      DisableInputText('mask');
+      DisableInputText('ipv6');
+      DisableInputText('prefix');
+    }
+  },
+  mbrSelected: function(e) {
+    MultiSelectTransferUpdate(e.currentTarget.id, 'btnAdd', 'btnRem', 'notMbrs', 'mbrs');
+  },
+  checkValid:function(){
+    clearAllErrMsg();
+    var valid = true;
+    var val = GetRadioVal('ipType');
+
+    valid &= validRange('pri', 1, 65535);
+
+    if ('1' == val)
+    {
+      valid &= validIPv4Addr('ipv4');
+      valid &= validIPv4Mask('mask');
+    }
+    else if ('2' == val)
+    {
+      valid &= validIPv6Addr('ipv6');
+      valid &= validRange('prefix', 1, 128);
+    }
+    return valid;
+  }
+});
+
+mainFrame = new mainView();
+EnterKeyEvent('apply');
+}
+</script>
+</head>
+<body onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+<script id="main_content" type="text/template">
+<form id="setform">
+<%= DialogHead(lang('acl_mgmt','titMgmtACEEdit')) %>
+<%= InputHidden('name', parent.data.name) %>
+<%= InputHidden('pri', parent.data.mgmtACEs[idx].pri) %>
+<table>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tr>
+      <th><%= LabelLeft(lang('acl_mgmt','lblMgmtACLName')) %></th>
+      <td class="formContentTD">
+        <%= show(parent.data.name) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('acl_mgmt','lblMgmtACLPri')) %></th>
+      <td class="formContentTD">
+        <%= parent.data.mgmtACEs[idx].pri %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('acl_mgmt','lblMgmtACLService')) %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('service',parent.data.mgmtACEs[idx].service ,[6, lang('acl_mgmt','lblMgmtACLAll')], [1, lang('acl_mgmt','lblMgmtACLHTTP')],[2,lang('acl_mgmt','lblMgmtACLHTTPS')],[3,lang('acl_mgmt','lblMgmtACLSNMP')],[4,lang('acl_mgmt','lblMgmtACLSSH')],[5,lang('acl_mgmt','lblMgmtACLTelnet')]) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('acl_mgmt','lblMgmtACLAction')) %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('action',parent.data.mgmtACEs[idx].action ,[1, lang('acl_mgmt','lblMgmtACLPermit')], [2, lang('acl_mgmt','lblMgmtACLDeny')]) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblPort')) %></th>
+      <td class="formContentTD">
+        <table>
+        <thead>
+        <tr>
+          <td class='ctrlSpacing'><%= LabelTopMulti(lang('common','lblAvailablePort')) %></td>
+          <td class='ctrlSpacing'></td>
+          <td class='ctrlSpacing right'><%= LabelTopMulti(lang('common','lblSelPort')) %></td>
+        </tr>
+        </thead >
+        <tbody >
+        <tr>
+          <td rowspan="2">
+            <select name="notMbrs" id="notMbrs" style="WIDTH: 90px" multiple size="8">
+            <% _.each(parent.data.mgmtACEs[idx].notMbrs, function(port, index) { %>
+              <option value=<%= port.port %>><%= port.port %></option>
+            <% }); %>
+            </select>
+          </td>
+          <td class=right>
+            <%= ButtonTransferDisabled('btnAdd', 'btnRem') %>
+          </td>
+          <td rowspan="2" class=right>
+            <select name="mbrs" id="mbrs" style="WIDTH: 90px" multiple size="8">
+            <% _.each(parent.data.mgmtACEs[idx].mbrs, function(port, index) { %>
+              <option value=<%= port.port %>><%= port.port %></option>
+            <% }); %>
+            </select>
+          </td>
+        </tr>
+        </tbody >
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblIPVersion')) %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('ipType',parent.data.mgmtACEs[idx].ipType ,[3, lang('acl_mgmt','lblMgmtACLAll')], [1, lang('common','lblIPv4')],[2,lang('common','lblIPv6')]) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblIPv4')) %></th>
+      <td class="formContentTD">
+        <%= InputTextIPv4('ipv4', '', 15, 30) %>
+        &#32;&#47;&#32;
+        <%= InputTextIPv4('mask', '255.255.255.255', 15, 30) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblIPv6')) %></th>
+      <td class="formContentTD">
+        <%= InputTextIPv6('ipv6', '', 40, 30) %>
+        &#32;&#47;&#32;
+        <%= InputTextDigit('prefix', 128, 3, 30) %>
+        (1&#32;-&#32;128)
+      </td>
+    </tr>
+
+    </tbody>
+    </table>
+  </td>
+</tr>
+</table>
+<%= DialogFoot(ButtonGroupApplyClose('btnApply', 'btnClose')) %>
+
+</form>
+</script>
+
+</body>
+</html>

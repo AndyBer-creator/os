@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+  	"state":true,
+  	"addrLimit":3,
+  	"addrLimit_min":1,
+  	"addrLimit_max":256,
+  	"addrLimit_dflt":1,
+  	"violate":2,
+    "sticky":true
+  }
+}

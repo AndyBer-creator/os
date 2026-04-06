@@ -1,0 +1,129 @@
+DEMO-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   enterprises, IpAddress, Integer32, Unsigned32  FROM SNMPv2-SMI
+   TruthValue, DisplayString,
+   TEXTUAL-CONVENTION, MacAddress                 FROM SNMPv2-TC ;
+   
+sysDemoMib MODULE-IDENTITY
+   LAST-UPDATED "2010-10-12"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "The enterprise ID was originally assigned to company Limitied."
+   REVISION     "revision"
+   DESCRIPTION
+      "system Demo MIB module"
+   ::= { enterprises 27282 100 }
+   	
+systemInfo	            OBJECT IDENTIFIER ::= { sysDemoMib 1 } 
+systemConfigControl         OBJECT IDENTIFIER ::= { sysDemoMib 2 }
+
+systemReboot OBJECT-TYPE
+   SYNTAX      TruthValue
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "This object allows the user to restart the Switch
+       (i.e)the entire switch will operationally go down and
+       start again.  Setting  a value of 'true' causes the switch
+       to be restarted.
+       
+       when you exe this function ,you can save the configuration first.
+	
+       Once the switch is restarted, the value of this object reverts
+       to 'false'."
+   DEFVAL { false }
+   ::= { systemConfigControl 1 }
+   
+systemConfigSaveOption OBJECT-TYPE
+   SYNTAX      INTEGER {
+                flashSave(1),
+                remoteSave(2),
+                cleanStartup(3)
+               }
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "The value 'flashSave' specifies that the configurations need
+       to be saved in flash.
+
+       The value 'remoteSave' specifies that the configurations need
+       to be saved in specified remote system.
+       
+       The value 'cleanStartup' specifies that the configurations will
+       be cleaned. "
+   ::= { systemConfigControl 2 }
+   
+systemConfigSaveIpAddr OBJECT-TYPE
+   SYNTAX      IpAddress
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "IP Address of the remote system to which the switch
+       configurations have to be saved."
+   ::= { systemConfigControl 3 }
+
+systemConfigSaveFileName OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "Name of the file in which the switch configurations are
+       to be saved.
+
+       This object is valid only if 'sysConfigSaveOption' is chosen
+       to be 'flashSave' or 'remoteSave'.
+       
+       this object is select the bak system config."
+   ::= { systemConfigControl 4 }
+   
+systemInitConfigSave  OBJECT-TYPE
+   SYNTAX      TruthValue
+   MAX-ACCESS  read-write
+   STATUS      current
+   DESCRIPTION
+      "When set as 'true' switch configurations save operation is
+       start. after the configuration save operation is completed, 
+       the value of this object is back to 'false' immediate."
+   DEFVAL { false }
+   ::= { systemConfigControl 5 }
+   
+systemConfigSaveStatus OBJECT-TYPE
+   SYNTAX      INTEGER {
+                saveInProgress(1),
+                saveSuccessful(2),
+                saveFailed(3),
+                notInitiated(4)
+               }
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "Status of configuration save operation."
+   DEFVAL { notInitiated }
+   ::= { systemConfigControl 6 }
+
+
+sysStpdesc OBJECT-TYPE
+   SYNTAX      DisplayString (SIZE(1..128))
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "Stp port status. only for snmp trap memssage test, can't read."
+   ::= { systemConfigControl 7 }
+   
+topologyChange NOTIFICATION-TYPE
+   	STATUS             current
+    DESCRIPTION
+    "A topologyChange trap is sent by a bridge when
+    any of its configured ports transitions from the
+    Learning state to the Forwarding state, or from
+    the Forwarding state to the Blocking state.  The
+    trap is not sent if a newRoot trap is sent for the
+    same transition.  Implementation of this trap is
+    optional."
+    ::= { systemConfigControl 8 }
+
+END
+
+            

@@ -1,0 +1,3 @@
+0xb1fb6e2b	svi_handler_register	/compile/realtek/pswitch/plat/linux/net/net	EXPORT_SYMBOL
+0x4f475e22	svi_handler_unregister	/compile/realtek/pswitch/plat/linux/net/net	EXPORT_SYMBOL
+0xce7cfb74	svi_create	/compile/realtek/pswitch/plat/linux/net/net	EXPORT_SYMBOL

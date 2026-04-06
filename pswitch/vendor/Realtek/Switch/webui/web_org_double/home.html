@@ -1,0 +1,389 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/jquery.confirmon.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.toastmessage.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.confirmon.min.js" type="text/javascript"></script>
+<script src="js/jquery.toastmessage-min.js" type="text/javascript"></script>
+<script src="js/fileload.js" type="text/javascript"></script>
+<script src="js/spin.js" type="text/javascript"></script>
+<script src="js/ie8.js"></script>
+<script>
+var RootFrame = true;
+var MockupMode = false;
+var DebugMode = false;
+var fileVer = '3.5.0';
+var deviceId = null;
+var country = null;
+var devPortNum = 0;
+var devLagNum = 0;
+var defPage = 'html/status_sysinfo.html';
+var defHelp = null;
+var data;
+var infoMsg = '';
+var treeSelColor = '#F1F1F1';
+var treeSelBackground = '#3c64a0';
+var treeSelDocFontWeight = 'bold';
+var naviColorLevel1 = '#3c64a0';
+var naviColorLevel2 = '#3c64a0';
+var naviColorLevel3 = '#3c64a0';
+var langModech = true;
+
+fileLoad("js/home.js", "js");
+fileLoad("css/home.css", "css");
+fileLoad("js/styling.js", "js");
+fileLoad("js/ie8.js","js");
+fileLoad("js/utility.js", "js");
+fileLoad("lang/defLang.js", "js");
+
+if ('file:' == document.location.protocol)
+  MockupMode = true;
+else
+  MockupMode = false;
+
+if (MockupMode)
+{
+  fileVer = (new Date().getTime());
+  fileLoad("js/url_mockup.js", "js");
+}
+else
+{
+  fileLoad("js/url.js", "js");
+}
+
+var dragObject = null;
+var gripperHeight=0;
+var initProgressShown = false;
+var panelRefresh = false;
+var timeoutHolder;
+var progressID = 0;
+
+function tabShow()
+{
+  var txt = '';
+
+  txt += '<table align="right"><tr>'
+  txt += genActionTab("save",lang('sys','lblSave'), "OpenConfirmBox(lang('sys','msgConfirmSave'), save);");
+  txt += genActionSeparator();
+  txt += genActionTab("logout",lang('sys','lblLogout'), "OpenConfirmBox(lang('sys','msgConfirmLogout'), logout);");
+  txt += genActionSeparator();
+  txt += genActionTab("reboot",lang('sys','btnReboot'), "OpenConfirmBox(lang('sys','msgConfirmReboot'),function(){openLink('html/diag_reboot.html', 'reboot=1');})");
+  
+  txt += genActionSeparator();
+  txt += genActionTab("language",lang('sys','btnLanguage'),"language();");
+  
+  txt += genActionSeparator();
+  txt += genActionTab("debug",lang('sys','btnDebug'), "openLink('html/cgi_debug.html');");
+
+  txt += '</tr></table>'
+
+  $('#tdAction').html(txt);
+}
+
+function treeShow()
+{
+  if (IsUndefOrNull(data.menuTree))
+    return;
+
+  var menuTree = data.menuTree;
+  var i,j,k,m;
+  var leave;
+  var leave2;
+  var leave3;
+
+  function getMenuName(str) {
+    var menuName = str;
+    if (str.substring(0,5) == 'lang(' && str.charAt(str.length - 1) == ')')
+      menuName = str2var(str);
+    return menuName;
+  }
+
+  for (i = 0; i < menuTree.length; i++){
+    genTreeFolder1(getMenuName(menuTree[i].name));
+    for (j = 0; j < menuTree[i].leaves.length; j++) {
+      leave = data.menuTree[i].leaves[j];
+      if (IsUndefOrNull(leave.leaves)) {
+        genTreeDoc1(getMenuName(leave.name), leave.url);
+      } else {
+        genTreeFolder2(getMenuName(leave.name));
+        for (k = 0; k < leave.leaves.length; k++) {
+          leave2 = leave.leaves[k];
+		  if (IsUndefOrNull(leave2.leaves)){
+			genTreeDoc2(getMenuName(leave2.name), leave2.url);
+			} else {
+				genTreeFolder3(getMenuName(leave2.name));
+				for (m = 0; m < leave2.leaves.length; m++) {
+					leave3 = leave2.leaves[m];
+					genTreeDoc3(getMenuName(leave3.name), leave3.url);	
+				}
+			}
+        }
+      }
+    }
+  }
+}
+
+function progressEnable()
+{
+  homeShowProg(true);
+}
+function progressDisable()
+{
+  homeShowProg(false);
+  panelRefresh = false;
+}
+
+function save()
+{
+  if (!MockupMode) {
+    dataGet(url('set_save')).fetch({
+      success: function(model, resp){
+        _resp_status_print(resp);
+      },
+      error: function(model, resp){
+        ShowStatusError(lang('sys','msgSaveFail'));
+      }
+    });
+  }
+  else
+  {
+    ShowStatusSuccess(lang('common','msgSuccess'));
+  }
+}
+
+function logout()
+{
+  if (!MockupMode) {
+    dataGet(url('set_logout')).fetch({
+      success: function(model, resp){
+        _top.location.href = '/login.html?reason=logout';
+      },
+      error: function(model, resp){
+        _top.location.href = '/login.html?reason=logout';
+      }
+    });
+  } else {
+    _top.location.href = 'login.html?reason=logout';
+  }
+}
+
+function language()
+{
+  var selectedLang = get_cookie("cookie_language");
+
+  if ((IsUndefOrNull(selectedLang)) || (selectedLang == "defLang_ch"))
+  {
+	set_cookie("cookie_language", "defLang_en");
+  }
+  else
+  {
+	set_cookie("cookie_language", "defLang_ch");
+  }
+
+  window.location.reload();
+}
+
+function support()
+{
+  _top.progressEnable();
+  if (_top.MockupMode) {
+    ShowStatusSuccess(lang('common','msgSuccess'));
+  }
+  else
+  {
+    setTimeout(checkTechBackupStatus, 4000);
+    var Datas = Backbone.Model.extend({
+    url: url('set_diagTechGen'),
+    parse: function(resp, xhr){
+      if ('fail' == resp.status || 'error' == resp.status) {
+        ShowStatusError(lang('sys', 'msgSupportFail'));
+        _top.progressDisable();
+      }
+
+      return;
+    }
+  });
+  var dataModel = new Datas();
+  dataModel.save(formDataGet('setform'), {});
+  }
+}
+
+function checkTechBackupStatus()
+{
+  dataGet(url('get_diagTechGenStatus')).fetch({
+    success: function(model, resp){
+      data = resp.data;
+      if ('downloading' == data.status)
+      {
+        setTimeout(checkTechBackupStatus, 4000);
+      }
+      else if ('fail' == data.status)
+      {
+        ShowStatusError(lang('sys','msgSupportFail'));
+        _top.progressDisable();
+      }
+      else
+      {
+        window.location.href = data.filename + '?' + Math.random()*Math.random();
+        ShowStatusSuccess(lang('common','msgSuccess'));
+        _top.progressDisable();
+      }
+    }
+  });
+}
+
+function refreshAll()
+{
+  mainFrame.render();
+}
+
+function monitor()
+{
+  dataGet(url('get_monitor')).fetch({
+    success: function(model, resp){
+      logoutCheck(resp);
+
+      setTimeout(monitor, 15000);
+    },
+    error: function(model, resp){
+      setTimeout(monitor, 15000);
+    }
+  });
+}
+
+function init()
+{
+  fileLoadWait();
+
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    if (!(isIE() && isIE() < 9))
+      progressEnable();
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    dataGet(url('get_mainPage')).fetch({
+      success: function(model, resp){
+        logoutCheck(resp);
+        data = resp.data;
+        that.$el.html( that.template(resp));
+        devLagNum = data.lags.length;
+        devPortNum = data.ports.length - devLagNum;
+        ChangePageTitle(data.title);
+
+        treeShow();
+        tabShow();
+
+        setPageArea();
+
+        if (!MockupMode) {
+          monitor();
+        }
+
+        openTreeLink(defPage);
+      }
+    });
+  }
+});
+
+mainFrame = new mainView();
+}
+</script>
+</head>
+<body onload="init();" onresize="setPageArea();">
+<div id="main_container"></div>
+
+<script id="main_content" type="text/template">
+<div id="pageAreaDiv" style="position:absolute; left:0;top:0; width:100%;height:100%;" >
+
+<table id="exteriorTbl" style="HEIGHT: 100%; WIDTH: 100%;" cellspacing=0 cellpadding=0 onresize="setPageArea();">
+<tr id="trTitle" style="height:50px;">
+	<td valign="bottom" style="PADDING-RIGHT: 15px; PADDING-LEFT: 40px; PADDING-TOP: 10px; HEIGHT:50px;" rowspan="2">
+		<table cellpadding=0 cellspacing=0 width=100% ID="titleTable" onresize="setPageArea();">
+			<tr>
+				<td valign="bottom">
+				<%= showlogofunction() %>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr id="trAction" style="height:30px;">
+	<td id="tdAction" style="padding-right: 15px; height:25px;text-align:right;vertical-align:bottom;">
+	</td>
+</tr>
+<tr id="trNavi">
+<td style="padding-right:3px; padding-left:3px;vertical-align:top;height:40px;" colspan="2">
+  <table class=notFixedTable width="100%" height="100%">
+	<tr>
+      <td style="width:210px;"></td>
+      <td style="width:3px;"></td>
+      <td id="tdNavi" style="padding-left:8px;padding-top:5px;background-color:white;font-weight:bold;"></td>
+    </tr>
+  </table>
+</td>
+</tr>
+
+<tr id="middleTr" style="height:100%;">
+<td style="padding-right:3px;padding-left:3px;vertical-align:top;" colspan="2">
+  <div id="mainDiv" style="HEIGHT: 100%">
+  <table class=notFixedTable width="100%" height="100%" id='globTable-' onresize="setPageArea();">
+  <tr>
+    <td id="tdTree" width="210px" align="center">
+      <table class='FixedTable' id='treeTable' onresize="setPageArea();" style="height:100%;">
+      <tr style="HEIGHT: 100%" id="midRow">
+        <td valign=top id=imT style="OVERFLOW: auto;">
+          <div id="divTree" name='divTree'>
+          <table id="bodyTree">
+          <tfoot id="tfootTree">
+          </tfoot>
+          </table>
+          </div>
+        </td>
+      </tr>
+      </table>
+    </td>
+    <td id="tdGutter" style="width:3px;" valign="top"></td>
+    <td id="tdMain">
+      <table id='mainTable' style="height:100%;">
+      <tr style="display: none">
+        <td id='caption'></td>
+      </tr>
+      <tr>
+        <td valign="top" style="background-color:white;">
+          <iframe allowtransparency="true" style="background-color: transparent;" onload="" width="100%" height="100%" frameborder="no" name="mainFrame" id="mainFrame"></iframe>
+          <iframe allowtransparency="true" frameborder="no" name="mainFrame_gw" id="mainFrame_gw" width="0px" height="0px" oclass='frames'></iframe>
+        </td>
+      </tr>
+      </table>
+    </td>
+	
+  </tr>
+  </table>
+  </div>
+</td>
+</tr>
+<tr style="height:10px;" id="bottomTR">
+<td id="bottomTD" style="PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;HEIGHT:10px;" colspan="2">
+</td>
+</tr>
+</table>
+
+</div>
+</script>
+<div class="veil" id="veil" style="position:absolute; z-index:1000000; width:100%; height:100%; background-color:#ffffff; filter:alpha(opacity=0); opacity:0.0; top:0px; display:none; cursor:not-allowed;"></div>
+<div id="dvProgVeil" style="position:absolute; z-index:999998; width:100%; height:100%; background-color:#eddbbe; filter:alpha(opacity=50); opacity:0.50; top:0px; display:none; cursor:progress;">
+</div>
+
+<div id="dvProgBar" style="display:none;position:absolute;z-index:999999; width:100%; height:100%;filter:alpha(opacity=100); opacity:1.00; background-color:transparent; height:300px;width:800px;"><div id="progSpinner" class="progSpinDiv"></div>
+</div>
+<div id="confirmContainer" style="position:absolute; z-index:1000001; width:100%; height:100%; background-color:black; filter:alpha(opacity=60); opacity:0.60; top:0px; display:none;"></div>
+</body>
+</html>

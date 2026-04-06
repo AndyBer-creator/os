@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+  	"maxlen_srvHost":256,
+  	"minlen_engineId":10,
+    "maxlen_engineId":64
+  }
+}

@@ -1,0 +1,6 @@
+kernel/drivers/base/firmware_class.ko
+kernel/drivers/block/loop.ko
+kernel/drivers/mtd/mtd.ko
+kernel/drivers/mtd/chips/chipreg.ko
+kernel/drivers/tty/serial/serial_core.ko
+kernel/drivers/tty/serial/8250/8250.ko

@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "state":true,
+    "mvrVid":2,
+    "vlans":[1,2,3,100,4094],
+    "grpStart":"224.1.1.1",
+    "seqNum":8,
+    "qryTime":1,
+    "max_qryTime":10,
+    "mode":"Compatible",
+    "max_num":128,
+    "cur_num":0
+  }
+}

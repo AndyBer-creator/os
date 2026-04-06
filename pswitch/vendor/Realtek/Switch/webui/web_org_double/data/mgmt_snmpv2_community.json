@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "communities":
+    [
+      { "commStr":"comm1","accessMode":"lang('snmp','lblReadOnly')"},
+      { "commStr":"comm2","accessMode":"lang('snmp','lblReadWrite')"}
+    ]
+  }
+}

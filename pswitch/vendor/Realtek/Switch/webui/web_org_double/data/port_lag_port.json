@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "descp":"Trunk1", "type":"lang('port','txtMediaCopper',[1000])", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":true, "operSpeed":"1000M", "operDuplex":"lang('port','txtDuplexFull')", "operFlowCtrl":true},
+      { "descp":"Trunk2", "type":"lang('port','txtMediaCopper',[1000])", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":true, "operSpeed":"1000M", "operDuplex":"lang('port','txtDuplexHalf')", "operFlowCtrl":false},
+      { "descp":"Trunk3", "type":"lang('port','txtMediaCopper',[1000])", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":true, "operSpeed":"1000M", "operDuplex":"lang('port','txtDuplexFull')", "operFlowCtrl":true},
+      { "descp":"", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":false},
+      { "descp":"", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":false},
+      { "descp":"", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":false},
+      { "descp":"", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":false},
+      { "descp":"", "adminState":true, "adminSpeed":"lang('port','lblAuto')", "adminDuplex":"lang('port','lblAuto')", "adminFlowCtrl":"lang('port','lblAuto')", "operStatus":false}
+    ]
+  }
+}

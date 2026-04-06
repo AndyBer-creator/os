@@ -1,0 +1,28 @@
+{
+  "data":
+  {
+    "maxlen":32,
+    "maxvlans":256,
+    "selVlans":
+    [
+      3, 4, 5
+    ],
+    "adminVlans":
+    [
+      { "vlan":1, "name":"Default", "type": 1, "intfState":true },
+      { "vlan":10, "name":"aaa", "type": 2, "intfState":true },
+      { "vlan":100, "name":"bbb", "type": 2, "intfState":true },
+      { "vlan":101, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":102, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":103, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":104, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":105, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":106, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":107, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":108, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":109, "name":"bbb", "type": 2, "intfState":false },
+      { "vlan":110, "name":"bbb", "type": 2, "intfState":true },
+      { "vlan":1000, "name":"ccc", "type": 3, "intfState":0 }
+    ]
+  }
+}

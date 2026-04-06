@@ -1,0 +1,32 @@
+{
+  "data":
+  {
+    "type":"lang('lag','lblTypeEthArg',[1000,'M'])",
+    "descp":"LAG A",
+    "maxlen_descp":32,
+    "adminStatus":true,
+    "operStatus":"lang('port','txtUp')",
+    "adminAutoNego":true,
+    "operAutoNego":"lang('common','txtEnable')",
+    "adminSpeed":"100",
+    "operSpeed":"100M",
+    "adminDuplex":"full",
+    "operDuplex":"lang('port','txtDuplexFull')",
+    "adminAdvertise":
+    {
+      "all":true,
+      "full10":false,
+      "full100":false,
+      "full1000":false
+    },
+    "operAdvertise":
+    [
+      {"cap":"lang('port','lblAdvSpeedFull',[100])"},
+      {"cap":"lang('port','lblAdvSpeedFull',[100])"}
+    ],
+    "adminBackPressure":true,
+    "adminFlowCtrl":"auto",
+    "operFlowCtrl":"lang('common','txtEnable')",
+    "protect":true
+  }
+}

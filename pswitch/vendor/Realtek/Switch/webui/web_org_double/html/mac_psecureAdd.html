@@ -1,0 +1,95 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadMainFrame();
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    this.render();
+  },
+  render: function() {
+    this.$el.html(this.template());
+    PagePostInit();
+  },
+  events: {
+    'click #btnApply':'apply',
+    'click #btnClose':'close',
+    'blur input':'checkValid'
+  },
+  close: function() {
+    CloseDialog();
+  },
+  apply: function() {
+    if (this.checkValid())
+        dataSet(url('set_macPsecureAdd'), formDataGet('setform'));
+  },
+  checkValid:function(){
+    clearAllErrMsg();
+    var valid = true;
+	  valid &= validRange('vlan',1 ,4094);
+	  valid &= validMacAddr('macAddr', true);
+    return valid;
+  }
+});
+
+mainFrame = new mainView();
+
+EnterKeyEvent('apply');
+}
+</script>
+</head>
+<body onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+
+<script id="main_content" type="text/template">
+<form id="setform">
+<%= DialogHead(lang('psecure','titPsecureMacAdd')) %>
+<table>
+<tbody>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tbody>
+    <tr>
+      <th><%= LabelLeft(lang('mac','lblMac')) %></th>
+      <td class="formContentTD">
+        <%= InputTextMac('macAddr', '', 17, 32) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblVLAN')) %></th>
+      <td class="formContentTD">
+        <%= InputTextDigit('vlan', '', 4) %>
+        <%= LabelHint(lang('common', 'txtRangeArg', [1, 4094])) %>
+      </td>
+    </tr>
+    <tr>
+      <th><%= LabelLeft(lang('common','lblPort')) %></th>
+      <td class="formContentTD">
+        <%= printNormalPortSelectOption('port', '') %>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+  </td>
+</tr>
+</tbody>
+</table>
+<%= DialogFoot(ButtonGroupApplyClose('btnApply', 'btnClose')) %>
+</form>
+</script>
+</body>
+</html>

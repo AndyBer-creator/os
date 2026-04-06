@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "minIdx":1,
+    "maxIdx":2147483647,
+    "groups":
+    [
+      { "gid":1, "mac": "aa:bb:cc:dd:ee:ff", "mask": 48 },
+      { "gid":1, "mac": "bb:bb:cc:dd:ee:ff", "mask": 24 },
+      { "gid":1, "mac": "00:bb:cc:dd:ee:ff", "mask": 16 },
+      { "gid":100, "mac": "32:bb:cc:dd:ee:ff", "mask": 33 },
+      { "gid":999, "mac": "12:bb:cc:dd:ee:ff", "mask": 32 },
+      { "gid":3000, "mac": "88:bb:cc:dd:ee:ff", "mask": 45 },
+      { "gid":777, "mac": "66:bb:cc:dd:ee:ff", "mask": 44 },
+      { "gid":45678, "mac": "22:bb:cc:dd:ee:ff", "mask": 30 }
+    ]
+  }
+}

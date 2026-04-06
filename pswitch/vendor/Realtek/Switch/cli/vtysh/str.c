@@ -1,0 +1,75 @@
+
+#include <zebra.h>
+
+#ifndef HAVE_SNPRINTF
+
+int
+snprintf(char *str, size_t size, const char *format, ...)
+{
+  va_list args;
+
+  va_start (args, format);
+
+  return vsprintf (str, format, args);
+}
+#endif
+
+#ifndef HAVE_STRLCPY
+
+size_t
+strlcpy(char *d, const char *s, size_t bufsize)
+{
+    size_t len = strlen(s);
+    size_t ret = len;
+    if (bufsize > 0) {
+        if (len >= bufsize)
+            len = bufsize-1;
+        memcpy(d, s, len);
+        d[len] = 0;
+    }
+    return ret;
+}
+#endif
+
+#ifndef HAVE_STRLCAT
+
+size_t
+strlcat(char *d, const char *s, size_t bufsize)
+{
+    size_t len1 = strlen(d);
+    size_t len2 = strlen(s);
+    size_t ret = len1 + len2;
+
+    if (len1 < bufsize - 1) {
+        if (len2 >= bufsize - len1)
+            len2 = bufsize - len1 - 1;
+        memcpy(d+len1, s, len2);
+        d[len1+len2] = 0;
+    }
+    return ret;
+}
+#endif
+
+#ifndef HAVE_STRNLEN
+size_t
+strnlen(const char *s, size_t maxlen)
+{
+  const char *p;
+  return (p = (const char *)memchr(s, '\0', maxlen)) ? (size_t)(p-s) : maxlen;
+}
+#endif
+
+#ifndef HAVE_STRNDUP
+char *
+strndup (const char *s, size_t maxlen)
+{
+    size_t len = strnlen (s, maxlen);
+    char *new = (char *) malloc (len + 1);
+
+    if (new == NULL)
+      return NULL;
+
+    new[len] = '\0';
+    return (char *) memcpy (new, s, len);
+}
+#endif

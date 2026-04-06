@@ -1,0 +1,22 @@
+{
+  "data":
+  {
+    "state":false,
+    "ver":2,
+    "reportSup":true,
+    "vlans":
+    [
+      { "vid":1, "operStatus":true, "autoLearn":true, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":false},
+      { "vid":10, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":82, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":83, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":100, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":300, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":500, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":501, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":509, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":3000, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true},
+      { "vid":4094, "operStatus":false, "autoLearn":false, "robust":2, "interval":125, "maxRespInterval":10, "lastMbrCnt":2, "lastMbrInterval":1, "immedLeave":true}
+    ]
+  }
+}

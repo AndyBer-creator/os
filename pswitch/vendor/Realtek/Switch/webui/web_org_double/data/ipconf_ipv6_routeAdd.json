@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+  	"intfs":["VLAN 1", "VLAN 10", "VLAN 20"],
+    "metric_min":1,
+    "metric_max":255,
+    "metric_dflt":1
+  }
+}

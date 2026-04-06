@@ -1,0 +1,2 @@
+/compile/realtek/pswitch/plat/linux/ski/proto/stp/l2g_stp.ko
+/compile/realtek/pswitch/plat/linux/ski/proto/stp/../../../../../proto/stp/proto_stp.o /compile/realtek/pswitch/plat/linux/ski/proto/stp/../../../../../proto/stp/proto_stp_mstp_digest.o /compile/realtek/pswitch/plat/linux/ski/proto/stp/../../../../../proto/stp/proto_stp_mstp.o /compile/realtek/pswitch/plat/linux/ski/proto/stp/ski_stp_lkm.o /compile/realtek/pswitch/plat/linux/ski/proto/stp/ski_stp_lkm_export.o /compile/realtek/pswitch/plat/linux/ski/proto/stp/ski_stp.o

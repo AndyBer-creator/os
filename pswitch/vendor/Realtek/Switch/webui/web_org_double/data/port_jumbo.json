@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "jumbo":1522,
+    "min_jumbo":1518,
+    "max_jumbo":10000,
+    "dflt_jumbo":1522
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "pri":128,
+    "pri_min":0,
+    "pri_max":240,
+    "pri_dflt":128,
+    "pathcost":20000,
+    "pathcost_min":0,
+    "pathcost_max":2000000000,
+    "role":"lang('common','txtDisabled')",
+    "state":"lang('stp','txtForwarding')",
+    "mode":"lang('stp','txtRSTP')",
+    "type":"lang('stp','txtInternal')",
+    "desgBridge":"32768-00:11:22:33:44:55",
+    "desgPortId":"182-2",
+    "desgCost":30000,
+    "remainingHop":20
+  }
+}

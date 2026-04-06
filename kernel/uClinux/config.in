@@ -1,0 +1,58 @@
+mainmenu_name 'SnapGear Embedded Linux Configuration'
+mainmenu_option next_comment
+comment 'Vendor/Product Selection'
+comment 'Select the Vendor you wish to target'
+choice 'Vendor' "Realtek CONFIG_DEFAULTS_REALTEK \
+" Realtek
+comment 'Select the Product you wish to target'
+if [ "$CONFIG_DEFAULTS_REALTEK" = "y" ]; then
+choice 'Realtek Products' "Switch CONFIG_DEFAULTS_REALTEK_SWITCH \
+" Switch
+fi
+if [ "$CONFIG_DEFAULTS_REALTEK" = "y" ]; then
+	if [ "$CONFIG_DEFAULTS_REALTEK_SDK" != "y" -a "$CONFIG_DEFAULTS_REALTEK_8390_SDK_DEMO" != "y" -a "$CONFIG_DEFAULTS_REALTEK_8390_SDK_FPGA" != "y" ]; then
+		define_bool CONFIG_LOADER_PSWITCH y
+		define_bool CONFIG_LOADER_PSWITCH_UBOOT2011_12 y
+	fi
+else
+		define_bool CONFIG_LOADER_PSWITCH y
+		if [ "$CONFIG_DEFAULTS_CISCO_MS200X" = "y" ]; then
+			define_bool CONFIG_LOADER_PSWITCH_UBOOT y
+			define_bool CONFIG_LOADER_PSWITCH_VENDOR y
+		else
+			define_bool CONFIG_LOADER_PSWITCH_UBOOT2011_12 y
+		fi
+fi
+endmenu
+
+mainmenu_option next_comment
+comment 'Kernel/Library/Defaults Selection'
+
+choice 'Compiler' "default CONFIG_COMPILER_DEFAULT debug_pc CONFIG_COMPILER_DEBUG_PC" default
+comment 'Kernel is linux-3.18.24.x'
+define_bool CONFIG_DEFAULTS_KERNEL_3_18_24 y
+
+if [ "$CONFIG_DEFAULTS_KERNEL_2_6" = "y" ]; then
+	choice 'Libc Version' "
+		uClibc-0.9.33 CONFIG_DEFAULTS_LIBC_UCLIBC_0_9_33
+" uClibc-0.9.33
+fi
+if [ "$CONFIG_DEFAULTS_KERNEL_2_6_32" = "y" ]; then
+	choice 'Libc Version' "
+		uClibc-0.9.30 CONFIG_DEFAULTS_LIBC_UCLIBC_0_9_30
+" uClibc-0.9.30
+fi
+if [ "$CONFIG_DEFAULTS_KERNEL_3_18_24" = "y" ]; then
+	choice 'Libc Version' "
+		uClibc-0.9.33-485-200 CONFIG_DEFAULTS_LIBC_UCLIBC_0_9_33_485_200
+" uClibc-0.9.33-485-200
+fi
+
+choice 'Boot Loader' "
+	U-Boot-2011.12 CONFIG_LOADER_UBOOT2011_12
+" U-Boot-2011.12
+bool 'Customize Loader Settings'		CONFIG_DEFAULTS_LOADER
+bool 'Customize Kernel Settings'		CONFIG_DEFAULTS_KERNEL
+bool 'Customize SDK Settings'			CONFIG_DEFAULTS_SDK
+bool 'Customize PSWITCH Settings'		CONFIG_DEFAULTS_PSWITCH
+endmenu

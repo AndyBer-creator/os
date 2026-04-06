@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "comminity":"public community",
+    "desc":"test description",
+    "NotiType":3,
+    "owner":"Realtek",
+    "community_maxlen":127,
+    "desc_maxlen":127,
+    "owner_maxlen":160
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "intf":"VLAN1",
+    "ipaddr":"2001:11::1001",
+    "ethaddr":"00:00:00:00:11:FF",
+    "static":true
+  }
+}

@@ -1,0 +1,39 @@
+#
+# Format of this file: description<nl>variable<nl>  helptext<nl>...<nl><nl>.
+# If the question being documented is of type "choice", we list
+# only the first occurring config variable. The help texts
+# must not contain empty lines. No variable should occur twice; if it
+# does, only the first occurrence will be used by Configure. The lines
+# in a help text should be indented two positions. Lines starting with
+# `#' are ignored. To be nice to menuconfig, limit your lines to 70
+# characters. Use emacs' kfill.el to edit this file or you lose.
+#
+
+CONFIG_SYS_KERNEL_LINUX_COMPRESSED_FS
+  Enable Compressed Filesystem support.
+  Please make sure you have set the following configurations
+  in the Kernel menu.
+
+    CONFIG_BLK_DEV_LOOP
+    CONFIG_SQUASHFS_LZMA 
+
+CONFIG_SYS_DUAL_IMAGE
+  Enable Dual Image support.
+
+  Please make sure you turn on Dual Image in SDK menu.
+
+    CONFIG_DUAL_IMAGE
+
+  Please make sure you turn on Dual Image in Loader-UBoot menu.
+
+    CONFIG_DUAL_IMAGE
+
+CONFIG_SYS_IPV6
+  Enable Ipv6 Support.
+  Please make sure that you had enabled following feature
+  
+    1. Kernel -> network option -> IPv6 
+    2. BusyBox -> ping6
+    3. BusyBox -> Enable IPv6 Support
+    4. Enable uclibc UCLIBC_HAS_IPV6 flag by hand in .config file which locate at kernel/uclibc directory
+

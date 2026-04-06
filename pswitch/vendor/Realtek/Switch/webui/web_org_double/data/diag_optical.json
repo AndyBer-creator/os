@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      {"port":48, "temp":"lang('diag','lblNS')", "volt":"lang('diag','lblNS')", "bias":"lang('diag','lblNS')", "txPwr":"lang('diag','lblNS')", "rxPwr":"lang('diag','lblNS')", "oe":"lang('diag','lblNS')", "los":"lang('diag','lblNS')" },
+      {"port":49, "temp":"lang('diag','lblNS')", "volt":"lang('diag','lblNS')", "bias":"lang('diag','lblNS')", "txPwr":"lang('diag','lblNS')", "rxPwr":"lang('diag','lblNS')", "oe":"lang('diag','lblNS')", "los":"lang('diag','lblNS')" },
+      {"port":50, "temp":"lang('diag','lblNS')", "volt":"lang('diag','lblNS')", "bias":"lang('diag','lblNS')", "txPwr":"lang('diag','lblNS')", "rxPwr":"lang('diag','lblNS')", "oe":"lang('diag','lblNS')", "los":"lang('diag','lblNS')" },
+      {"port":51, "temp":"lang('diag','lblNS')", "volt":"lang('diag','lblNS')", "bias":"lang('diag','lblNS')", "txPwr":"lang('diag','lblNS')", "rxPwr":"lang('diag','lblNS')", "oe":"lang('diag','lblNS')", "los":"lang('diag','lblNS')" }
+    ]
+  }
+}

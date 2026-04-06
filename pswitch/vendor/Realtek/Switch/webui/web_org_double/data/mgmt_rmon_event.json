@@ -1,0 +1,13 @@
+{
+  "data":
+  {
+    "snmpEnable":false,
+  	"entries":
+    [
+      { "idx":2, "community":"public", "desc":"adsjdkljdl", "notifiType": "lang('rmon','lblNotifiTypeNone')", "time": "", "owner":"Realtek"},
+      { "idx":5, "community":"public", "desc":"adsjdkljdl", "notifiType": "lang('rmon','lblNotifiTypeLog')", "time": "", "owner":"Realtek"},
+      { "idx":8, "community":"public", "desc":"adsjdkljdl", "notifiType": "lang('rmon','lblNotifiTypeTrap')", "time": "", "owner":"Realtek"},
+      { "idx":10, "community":"public", "desc":"adsjdkljdl", "notifiType": "lang('rmon','lblNotifiTypeLogTrap')", "time": "", "owner":"Realtek"}
+    ]
+  }
+}

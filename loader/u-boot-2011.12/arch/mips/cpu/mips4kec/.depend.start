@@ -1,0 +1,6 @@
+start.o: start.S \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/regdef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/sgidefs.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/mipsregs.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ soc_init.H

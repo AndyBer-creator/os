@@ -1,0 +1,15 @@
+{
+  "data":
+  {
+    "srcIntf":"GE3",
+    "reqBuckets":50,
+    "reqBuckets_min":1,
+    "reqBuckets_max":50,
+    "reqBuckets_dflt":50,
+    "interval":1800,
+    "interval_min":1,
+    "interval_max":3600,
+    "interval_dflt":1800,
+    "owner_maxlen":160
+  }
+}

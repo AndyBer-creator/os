@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "intf":"VLAN100",
+    "type":1,
+    "addr":"",
+    "mask":"",
+    "status":1
+  }
+}

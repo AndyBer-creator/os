@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "min_rate":16,
+    "max_rate":1000000,
+    "queues":
+    [
+      { "state":false },
+      { "state":false },
+      { "state":false },
+      { "state":false },
+      { "state":false },
+      { "state":false },
+      { "state":false },
+      { "state":true, "rate":3000 }
+    ]
+  }
+}

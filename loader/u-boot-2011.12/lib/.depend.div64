@@ -1,0 +1,7 @@
+div64.o: div64.c \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/posix_types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/posix_types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/types.h

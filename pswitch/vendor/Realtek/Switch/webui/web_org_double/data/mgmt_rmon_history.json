@@ -1,0 +1,19 @@
+{
+  "data":
+  {
+    "snmpEnable":false,
+  	"entries":
+    [
+      { "idx":1, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":2, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":3, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":4, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":5, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":6, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":7, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":8, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":9, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 },
+      { "idx":10, "srcIntf":"GE1", "reqBuckets":50, "interval": 1800, "owner":"Realtek", "currBuckets":50 }
+    ]
+  }
+}

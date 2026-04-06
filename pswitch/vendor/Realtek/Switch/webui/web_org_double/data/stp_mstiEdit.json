@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "availVlans": [1,3,5],
+    "selVlans": [2,4,6],
+    "pri":32768,
+    "pri_min":0,
+    "pri_max":61440,
+    "pri_dflt":32768,
+    "bridgeId":"32768-00:11:22:33:44:55",
+    "rootBridgeId":"300-00:aa:bb:cc:dd:ee",
+    "rootPort":"GE12",
+    "rootCost":200000,
+    "remainingHop":20
+  }
+}

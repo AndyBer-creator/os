@@ -1,0 +1,5 @@
+OLD_VENDOR="Realtek"
+OLD_PRODUCT="Switch"
+OLD_LINUXDIR="linux-3.18.24.x"
+OLD_LOADERDIR="u-boot-2011.12"
+OLD_LIBCDIR="uClibc-0.9.33-485-200"

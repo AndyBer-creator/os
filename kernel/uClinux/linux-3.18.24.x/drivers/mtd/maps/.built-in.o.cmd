@@ -1,0 +1,1 @@
+cmd_drivers/mtd/maps/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/mtd/maps/built-in.o drivers/mtd/maps/rtk_flash_common.o drivers/mtd/maps/rtk_spi_flash_mio.o drivers/mtd/maps/rtk_norsf_g3/built-in.o 

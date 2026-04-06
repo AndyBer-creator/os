@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "logState": true,
+    "aggState": true,
+    "aggAgingTime": 300,
+    "aggAgingTime_min": 15,
+    "aggAgingTime_max": 3600,
+    "aggAgingTime_dflt": 300,
+    "consoleState": true,
+    "ramState": true,
+    "flieState": false,
+
+    "console_sev": 5,
+    "ram_sev": 5,
+    "file_sev": 5
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "host_maxlen":256,
+    "ttl_dflt":30,
+    "ttl_min":2,
+    "ttl_max":255
+  }
+}

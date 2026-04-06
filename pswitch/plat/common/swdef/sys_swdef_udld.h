@@ -1,0 +1,10 @@
+
+#ifndef __SYS_SWDEF_UDLD_H__
+#define __SYS_SWDEF_UDLD_H__
+#define BOND_UDLD_INTERVAL_MIN          1
+#define BOND_UDLD_INTERVAL_MAX          90
+#define DFLT_UDLD_PORT_MODE             DEFDB_VAL(DEF_UDLD_PORT_MODE)
+#define DFLT_UDLD_INTERVAL_TIME         DEFDB_VAL(DEF_UDLD_INTERVAL_TIME)
+
+#endif 
+

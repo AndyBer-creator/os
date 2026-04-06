@@ -1,0 +1,25 @@
+{
+  "data":
+  {
+    "dflt_udpport":162,
+    "dflt_timeout":15,
+    "dflt_retry":3,
+    "min_udpport":1,
+    "max_udpport":65535,
+    "min_timeout":1,
+    "max_timeout":300,
+    "min_retry":1,
+    "max_retry":255,
+    "hasCom":true,
+    "hasUser":true,
+    "sec_comms":["public","comm1","comm2","test1"],
+    "sec_users":["user1", "user2", "user3", "user4"],
+    "users":
+    [
+      {"name":"user1","val":"user1_1"}, 
+      {"name":"user2","val":"user2_2"},
+      {"name":"user3","val":"user3_4"},
+      {"name":"user4","val":"user4_1"}
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "route":
+    [
+      { "dip":"0.0.0.0", "plen":0, "type":0, "nextHop":"192.168.1.100", "metric":2, "adminDistance":1, "intf":"VLAN 1" },
+      { "dip":"10.0.1.0", "plen":24, "type":2, "intf":"GE3" },
+      { "dip":"10.1.1.0", "plen":24, "type":2, "intf":"LAG1" },
+      { "dip":"10.1.2.0", "plen":24, "type":3, "nextHop":"10.1.1.188", "metric":4, "adminDistance":1, "intf":"LAG1" },
+      { "dip":"10.2.1.0", "plen":24, "type":2, "intf":"VLAN1" },
+      { "dip":"10.2.2.0", "plen":24, "type":3, "nextHop":"10.2.1.199", "metric":4, "adminDistance":1, "intf":"VLAN1" },
+      { "dip":"10.3.1.0", "plen":24, "type":12, "intf":"Loopback1" },
+      { "dip":"10.4.1.0", "plen":24, "type":2, "intf":"Loopback2" }
+    ]
+  }
+}

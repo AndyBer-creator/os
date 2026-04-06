@@ -1,0 +1,7 @@
+{
+  "data":
+  {
+    "maxlen_userName":32,
+    "maxlen_password":32
+  }
+}

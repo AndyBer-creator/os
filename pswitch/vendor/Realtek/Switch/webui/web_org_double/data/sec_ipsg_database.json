@@ -1,0 +1,18 @@
+{
+  "data":
+  {
+    "bkdbType":2,
+    "filename":"aaaa",
+    "maxlen":128,
+    "isv4":true,
+    "srvHost":"3.3.3.3",
+    "writeDelay":123,
+    "timeout":456,
+    "defWriteDealy":300,
+    "minWriteDealy":15,
+    "maxWriteDealy":86400,
+    "defTimeout":300,
+    "minTimeout":0,
+    "maxTimeout":86400
+  }
+}

@@ -1,0 +1,1 @@
+cmd_/compile/realtek/pswitch/plat/linux/osal/osal.ko := rtk-ms-2.0.0-linux-ld -r  -m elf32btsmip -T ./scripts/module-common.lds --build-id  -o /compile/realtek/pswitch/plat/linux/osal/osal.ko /compile/realtek/pswitch/plat/linux/osal/osal.o /compile/realtek/pswitch/plat/linux/osal/osal.mod.o

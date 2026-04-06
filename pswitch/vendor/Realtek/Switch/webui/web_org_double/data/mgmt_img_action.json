@@ -1,0 +1,7 @@
+{
+  "data":
+  {
+    "maxlen_srvHost": 256,
+    "maxlen_srcFileName":128
+  }
+}

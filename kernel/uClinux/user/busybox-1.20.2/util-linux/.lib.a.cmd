@@ -1,0 +1,1 @@
+cmd_util-linux/lib.a := rm -f util-linux/lib.a; rtk-ms-2.0.0-linux-ar  rcs util-linux/lib.a util-linux/dmesg.o util-linux/fdisk.o util-linux/hexdump.o util-linux/more.o util-linux/mount.o util-linux/umount.o

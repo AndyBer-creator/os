@@ -1,0 +1,39 @@
+{
+  "data":
+  {
+    "min_timeout":0,
+    "max_timeout":65535,
+    "min_retry":0,
+    "max_retry":120,
+    "min_silent":0,
+    "max_silent":65535,
+    "methods":
+    [
+      {"val":1, "txt":"lang('line','lblTelnet')", "state":true},
+      {"val":2, "txt":"lang('line','lblSsh')", "state":false},
+      {"val":3, "txt":"lang('line','lblHttp')", "state":true},
+      {"val":4, "txt":"lang('line','lblHttps')", "state":true},
+      {"val":100, "txt":"lang('line','lblSnmp')", "state":true}
+    ],
+    "timeouts":
+    [
+      {"val":0, "txt":"lang('line','lblConsole')", "timeout":10, "dflt_timeout":10},
+      {"val":1, "txt":"lang('line','lblTelnet')", "timeout":20, "dflt_timeout":10},
+      {"val":2, "txt":"lang('line','lblSsh')", "timeout":30, "dflt_timeout":10},
+      {"val":3, "txt":"lang('line','lblHttp')", "timeout":5, "dflt_timeout":10},
+      {"val":4, "txt":"lang('line','lblHttps')", "timeout":0, "dflt_timeout":10}
+    ],
+    "retries":
+    [
+      {"val":0, "txt":"lang('line','lblConsole')", "retry":3, "dflt_retry":3},
+      {"val":1, "txt":"lang('line','lblTelnet')", "retry":5, "dflt_retry":3},
+      {"val":2, "txt":"lang('line','lblSsh')", "retry":4, "dflt_retry":3}
+    ],
+    "silents":
+    [
+      {"val":0, "txt":"lang('line','lblConsole')", "silent":0, "dflt_silent":0},
+      {"val":1, "txt":"lang('line','lblTelnet')", "silent":1, "dflt_silent":0},
+      {"val":2, "txt":"lang('line','lblSsh')", "silent":2, "dflt_silent":0}
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "maxlen":8,
+  	"state":1,
+  	"hostname":"realtek",
+  	"dnss":
+  	[
+  	  {"idx":0, "ip":"8.8.8.8", "pref":0},
+      {"idx":2, "ip":"172.21.1.10", "pref":1},
+  	  {"idx":3, "ip":"2001:db8:0:1:abd:43ff:fe6b:419c", "pref":2}
+  	]
+  }
+}

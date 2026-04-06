@@ -1,0 +1,19 @@
+strlcpy.lo: strlcpy.c \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/string.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/features.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_config.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/cdefs.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stddef.h \
+ ../config.h
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/string.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/features.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_config.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/cdefs.h:
+
+/opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stddef.h:
+
+../config.h:

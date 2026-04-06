@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "hasCom":true,
+    "hasUser":true,
+    "notifies":
+    [
+      { "idx":0,"recvIp":"192.168.1.88", "snmpVer":"lang('snmp','lblSNMPv3')", "notifyType":"lang('snmp','lblTraps')", "secLevel":"lang('snmp','lblAuth')", "secStr":"user1", 	"udpPort":162},
+      { "idx":1,"recvIp":"192.168.1.89", "snmpVer":"lang('snmp','lblSNMPv2')", "notifyType":"lang('snmp','lblInforms')", "secLevel":"lang('snmp','lblNoAuth')", "secStr":"comm2", "udpPort":163, "timeout":10,"retries":5 },
+      { "idx":2,"recvIp":"192.168.1.90", "snmpVer":"lang('snmp','lblSNMPv1')", "notifyType":"lang('snmp','lblTraps')", "secLevel":"lang('snmp','lblNoAuth')", "secStr":"comm1", "udpPort":164, "timeout":15,"retries":8},
+      { "idx":3,"recvIp":"www.aa.bb.cc", "snmpVer":"lang('snmp','lblSNMPv3')", "notifyType":"lang('snmp','lblInforms')", "secLevel":"lang('snmp','lblPriv')", "secStr":"user2", "udpPort":163, "timeout":10,"retries":5 }
+    ]
+  }
+}

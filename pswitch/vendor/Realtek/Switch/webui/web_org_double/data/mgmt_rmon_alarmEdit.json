@@ -1,0 +1,57 @@
+{
+  "data":
+  {
+    "counters":
+    [
+        { "val":3, "name": "lang('rmon', 'lblDropEvents')"},
+        { "val":4, "name": "lang('rmon', 'lblBytesRec')"},
+        { "val":5, "name": "lang('rmon', 'lblPktsRec')"},
+        { "val":6, "name": "lang('rmon', 'lblBPktsRec')"},
+        { "val":7, "name": "lang('rmon', 'lblMPktsRec')"},
+        { "val":8, "name": "lang('rmon', 'lblCRCAlignErr')"},
+        { "val":9, "name": "lang('rmon', 'lblUndersizePkts')"},
+        { "val":10, "name": "lang('rmon', 'lblOversizePkts')"},
+        { "val":11, "name": "lang('rmon', 'lblFragments')"},
+        { "val":12, "name": "lang('rmon', 'lblJabbers')"},
+        { "val":13, "name": "lang('rmon', 'lblCollisions')"},
+        { "val":14, "name": "lang('rmon', 'lblFrames64B')"},
+        { "val":15, "name": "lang('rmon', 'lblFrames65127B')"},
+        { "val":16, "name": "lang('rmon', 'lblFrames128255B')"},
+        { "val":17, "name": "lang('rmon', 'lblFrames256511B')"},
+        { "val":18, "name": "lang('rmon', 'lblFrames5121023B')"},
+        { "val":19, "name": "lang('rmon', 'lblFramesOver1024B')"}
+    ],
+
+    "events":
+    [
+        { "val":1, "name": "1 - event 1"},
+        { "val":2, "name": "2 - event 2"},
+        { "val":3, "name": "3 - event 3"},
+        { "val":6, "name": "6 - event 6"},
+        { "val":7, "name": "7 - event 7"},
+        { "val":8, "name": "8 - event 8"}
+    ],
+
+    "intf":"GE3",
+    "cntName":6,
+    "cntValue":777,
+    "sampleType": 1,
+    "risingThreshold":333,
+    "risingThreshold_min":0,
+    "risingThreshold_max":2147483647,
+    "risingThreshold_dflt":100,
+    "risingEvent":6,
+    "fallingThreshold":222,
+    "fallingThreshold_min":0,
+    "fallingThreshold_max":2147483647,
+    "fallingThreshold_dflt":20,
+    "fallingEvent":2,
+    "startupAlarm":2,
+    "interval":111,
+    "interval_max":1,
+    "interval_min":2147483647,
+    "interval_dflt":100,
+    "owner":"Realtek",
+    "owner_maxlen":160
+  }
+}

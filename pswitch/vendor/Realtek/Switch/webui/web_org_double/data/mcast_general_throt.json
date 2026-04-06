@@ -1,0 +1,37 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "maxGrp":0, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":10, "act":"lang('mcast','lblReplace')"},
+      { "maxGrp":20, "act":"lang('mcast','lblReplace')"},
+      { "maxGrp":100, "act":"lang('mcast','lblReplace')"},
+      { "maxGrp":200, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"},
+      { "maxGrp":256, "act":"lang('mcast','lblDeny')"}
+    ]
+  }
+}
+

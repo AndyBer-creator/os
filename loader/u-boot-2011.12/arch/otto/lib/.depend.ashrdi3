@@ -1,0 +1,6 @@
+ashrdi3.o: ashrdi3.c libgcc.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/byteorder.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/types.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/byteorder/big_endian.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/byteorder/swab.h \
+ /compile/realtek/loader/u-boot-2011.12/include/linux/byteorder/generic.h

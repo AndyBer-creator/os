@@ -1,0 +1,65 @@
+{
+  "data":
+  {
+    "localPort":"GE12",
+    "chassisType":"lang('lldp','lblMacAddr')",
+    "chassisId":"68:bc:0c:72:71:ac",
+    "sysName":"switch7271ac",
+    "sysDescp":"48-Port 10/100 Managed Switch",
+    "supportCap": 
+    [
+      {"cap":"lang('lldp','lblBridge')"}
+    ],    
+    "enableCap": 
+    [
+      {"cap":"lang('lldp','lblBridge')"}
+    ], 
+    "portIdType":"lang('lldp','lblIntfName')",
+    "portId":"FE1",
+    "portDescp":"fastethernet1",
+    "addrs":[{"addrType":"lang('common','lblIPv4')", "addr":"192.168.1.254", "intfType":"lang('lldp','lblSysPortNum')", "intfNum":0}],
+    "negoSupport":"lang('lldp','lblTrue')",
+    "negoEnbl":"lang('lldp','lblTrue')",
+    "negoAdvertise":[{"ability":"lang('lldp','lbl100BaseTXFD')"}, {"ability":"lang('lldp','lbl100BaseTX')"}],
+    "operMauType":"lang('lldp','lblMau100BaseFXFD')",
+    "maxFrmSize":"lang('common','txtArg',[10000])",
+    "pvid":1,
+    "vlanName":"vlan1",
+    "aggCap":"lang('lldp','lblCapable')",
+    "aggStatus":"lang('lldp','lblNotAggr')",
+    "capSupport": 
+    [
+      {"cap":"lang('lldp','lblCapabilities')"}, 
+      {"cap":"lang('lldp','lblNetworkPolicy')"},
+      {"cap":"lang('lldp','lblLocation')"},
+      {"cap":"lang('lldp','lblExtPSE')"},
+      {"cap":"lang('lldp','lblInventory')"}
+    ],
+    "currCap": 
+    [
+      {"cap":"lang('lldp','lblCapabilities')"}, 
+      {"cap":"lang('lldp','lblNetworkPolicy')"},
+      {"cap":"lang('lldp','lblLocation')"},
+      {"cap":"lang('lldp','lblExtPSE')"},
+      {"cap":"lang('lldp','lblInventory')"}
+    ],
+    "devCls":"lang('lldp','lblNetCon')",
+    "poeDevType":"lang('lldp','lblPowerSourcingEntity')",
+    "poePwrSrc":"lang('lldp','lblUnknown')",
+    "poePwrPri":"lang('lldp','lblUnknown')",
+    "poePwrVal":"lang('lldp','lblWatts',[0,0])",
+    "hwVer":"V02",
+    "fwVer":"1.0.0.1",
+    "swVer":"v1.1",
+    "sn":"12345",
+    "manufName":"Cisco",
+    "modelName":"SG220",
+    "assetId":"aaa",
+    "civic":"00112233445566778899aabbccddee",
+    "policies":
+    [
+      {"app":"lang('lldp','lblVoice')","vid":2,"vlanType":"lang('lldp','lblTagged')","pri":3,"dscp":20},
+      {"app":"lang('lldp','lblVoiceSignaling')","vid":3,"vlanType":"lang('lldp','lblUntagged')","pri":5,"dscp":30}
+    ]
+  }
+}

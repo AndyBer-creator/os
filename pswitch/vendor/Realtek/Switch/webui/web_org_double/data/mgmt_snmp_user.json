@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+  	"hasv3Grp":true,
+    "users":
+    [
+      { "userName":"user1", "grpName":"g1","privMode":"lang('snmp','lblPriv')","authMethod":"lang('snmp','lblSHA')","privMethod":"lang('snmp','lblDES')"},
+      { "userName":"user2", "grpName":"g2","privMode":"lang('snmp','lblAuth')","authMethod":"lang('snmp','lblMD5')","privMethod":"lang('snmp','lblNone')"},
+      { "userName":"user3", "grpName":"g3","privMode":"lang('snmp','lblNoAuth')","authMethod":"lang('snmp','lblNone')","privMethod":"lang('snmp','lblNone')"}
+    ]
+  }
+}

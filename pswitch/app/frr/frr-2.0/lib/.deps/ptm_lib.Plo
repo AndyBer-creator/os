@@ -1,0 +1,190 @@
+ptm_lib.lo: ptm_lib.c \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/stdio.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/features.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_config.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/cdefs.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stddef.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/types.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/wordsize.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/typesizes.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_stdio.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/wchar.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/wchar.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/pthreadtypes.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/endian.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/endian.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/byteswap.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/byteswap.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/byteswap-common.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sgidefs.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stdarg.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/stdio_lim.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/stdlib.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/types.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/time.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/select.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/select.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/sigset.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/time.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/sysmacros.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/alloca.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stdbool.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/string.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/ctype.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_touplow.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/unistd.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix_opt.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_posix_opt.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/confname.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/getopt.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/errno.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/errno.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/linux/errno.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/errno.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm-generic/errno-base.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/socket.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/uio.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uio.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/socket.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/limits.h \
+ /opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include-fixed/limits.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix1_lim.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/local_lim.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/linux/limits.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_local_lim.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix2_lim.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/socket_type.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/sockaddr.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/socket.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/sockios.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/ioctl.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm-generic/ioctl.h \
+ csv.h \
+ /compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/queue.h \
+ ptm_lib.h
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/stdio.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/features.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_config.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/cdefs.h:
+
+/opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stddef.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/types.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/wordsize.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/typesizes.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_stdio.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/wchar.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/wchar.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/pthreadtypes.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/endian.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/endian.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/byteswap.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/byteswap.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/byteswap-common.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sgidefs.h:
+
+/opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stdarg.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/stdio_lim.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/stdlib.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/types.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/time.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/select.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/select.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/sigset.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/time.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/sysmacros.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/alloca.h:
+
+/opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include/stdbool.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/string.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/ctype.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_touplow.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/unistd.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix_opt.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_posix_opt.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/confname.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/getopt.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/errno.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/errno.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/linux/errno.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/errno.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm-generic/errno-base.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/socket.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/uio.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uio.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/socket.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/limits.h:
+
+/opt/toolchain/lib/gcc/mips-linux-uclibc/4.8.5/include-fixed/limits.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix1_lim.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/local_lim.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/linux/limits.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/uClibc_local_lim.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/posix2_lim.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/socket_type.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/bits/sockaddr.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/socket.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/sockios.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm/ioctl.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/asm-generic/ioctl.h:
+
+csv.h:
+
+/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include/sys/queue.h:
+
+ptm_lib.h:

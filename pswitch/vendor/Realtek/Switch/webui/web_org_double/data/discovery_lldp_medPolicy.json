@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "policy4voice":true,
+    "policies":
+    [
+      { "policyNum":1, "app":"lang('lldp','lblVoice')", "vid":2, "vlanTag":"lang('lldp','lblTagged')", "pri":3, "dscp":3},
+      { "policyNum":3, "app":"lang('lldp','lblGuestVoiceSignaling')", "vid":3, "vlanTag":"lang('lldp','lblUntagged')", "pri":2, "dscp":4},
+      { "policyNum":5, "app":"lang('lldp','lblStreamingVideo')", "vid":4, "vlanTag":"lang('lldp','lblTagged')", "pri":1, "dscp":5}
+    ]
+  }
+}

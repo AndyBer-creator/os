@@ -1,0 +1,14 @@
+{
+  "data":
+  {
+    "maxlen":32,
+    "acls":
+    [
+      { "name":"aaaa", "binding": "GE1", "acenum": 3 },
+      { "name":"bbbb", "binding": "GE2", "acenum": 4 },
+      { "name":"!#$%&'()*+,-./:;<=>@[\\]^_", "binding": "", "acenum": 0 },
+      { "name":"dddd", "binding": "", "acenum": 6 },
+      { "name":"eeee", "binding": "", "acenum": 0 }
+    ]
+  }
+}

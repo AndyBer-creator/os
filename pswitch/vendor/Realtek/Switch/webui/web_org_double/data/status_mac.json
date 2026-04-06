@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "entries":
+    [
+      { "vlan":1,"macAddr":"00:E0:4C:00:00:33","type":"Management","port":"CPU" },
+      { "vlan":2,"macAddr":"00:00:00:11:00:22","type":"Static","port":"GE2" },
+      { "vlan":111,"macAddr":"00:00:00:11:00:0D","type":"Static","port":"GE8" },
+      { "vlan":1,"macAddr":"00:00:07:00:00:0D","type":"Static","port":"GE9" },
+      { "vlan":1,"macAddr":"00:00:00:00:00:01","type":"Dynamic","port":"GE5" },
+      { "vlan":100,"macAddr":"00:11:22:33:44:55","type":"Dynamic","port":"GE2" },
+      { "vlan":3000,"macAddr":"00:00:00:00:00:22","type":"Dynamic","port":"GE23" },
+      { "vlan":1,"macAddr":"00:00:00:00:00:FF","type":"Dynamic","port":"GE1" }
+    ]
+  }
+}

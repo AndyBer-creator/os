@@ -1,0 +1,301 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../js/underscore-1.5.1.min.js" type="text/javascript"></script>
+<script src="../js/backbone-1.0.0.min.js" type="text/javascript"></script>
+<script src="../js/fileload.js" type="text/javascript"></script>
+<script>
+fileLoadMainFrame();
+
+var data;
+var selVal;
+var selIdx;
+var privModeStr = "NoAuth";
+var initFinish = false;
+
+function init(){
+  fileLoadWait();
+var mainView = Backbone.View.extend({
+  el: '#main_container',
+  template: _.template($('#main_content').html()),
+  initialize: function() {
+    selVal = decodeURIComponent(urlParamGetByName('userName'));
+    for (i = 0; i < parent.data.users.length; i++)
+    {
+      if (parent.data.users[i].userName == selVal)
+      {
+        selIdx = i;
+        if (str2var(parent.data.users[i].privMode) == 'Authentication')
+          privModeStr = 'AuthNoPriv';
+        else if (str2var(parent.data.users[i].privMode) == 'Authentication and Privacy')
+          privModeStr = 'AuthPriv';
+
+        break;
+      }
+    }
+    this.render();
+  },
+  render: function() {
+    var that = this;
+    dataGet(url('get_snmpUserEdit'),'userName', encodeURIComponent(selVal)).fetch({
+      success: function(model, resp){
+        logoutCheck(resp, top);
+        that.$el.html( that.template(resp) );
+        data = resp.data;
+        PagePostInit();
+        that.selGrp();
+        initFinish = true;
+      }
+    });
+  },
+  events: {
+    'click #btnApply':'apply',
+    'change #grpName':'selGrp',
+    'click [name=privMode]':'chgMethod',
+    'click #btnClose':'close'
+  },
+  close: function() {
+    CloseDialog();
+  },
+  apply: function() {
+    dataSet(url('set_snmpUserEdit'), formDataGet('setform'));
+  },
+  selGrp: function(){
+    var isSelPriv = false;
+    var selGrp = GetSelectVal('grpName');
+    fromIdx = 0;
+    toIdx = selGrp.lastIndexOf("_");
+    selGrpSec = str2int(selGrp.substr(toIdx+1));
+    selGrpName = selGrp.substr(fromIdx,toIdx);
+    if (IsUndefOrNull(data.grps)) {
+      DisableRadioGroup('authProt');
+      DisableLabel('lblGrpName');
+      DisableLabel('lblAuthMethod');
+      DisableSelect('grpName');
+      return;
+    }
+    for(i = 0; i < data.grps.length; i++) {
+      if (data.grps[i].name == selGrpName) {
+        if (selGrpSec == 1) {
+          if (true == initFinish)
+          {
+            SelectRadio('privMode','NoAuth');
+          }
+          DisableRadio('privMode','NoAuth');
+          DisableRadio('privMode','AuthNoPriv');
+          DisableRadio('privMode','AuthPriv');
+          EnableRadio('authMethod','None');
+          DisableRadio('authMethod','MD5');
+          DisableRadio('authMethod','SHA');
+
+          DisableLabel('lblauthPswd');
+          DisableLabel('lblprivPswd');
+          DisableInputText('authPasswd');
+          DisableInputText('privPasswd');
+        }
+        else
+        {
+          EnableRadioGroup('authProt');
+
+          if ((selGrpSec & 1) != 1)
+            DisableRadio('authMethod','None');
+          else
+            EnableRadio('authMethod','None');
+
+          if (selGrpSec & 0x1)
+          {
+            EnableRadio('privMode','NoAuth');
+            if (!isSelPriv)
+            {
+              if (true == initFinish)
+                SelectRadio('privMode','NoAuth');
+              isSelPriv = true;
+            }
+          }
+          else
+            DisableRadio('privMode','NoAuth');
+
+          if (selGrpSec & 0x2)
+          {
+            EnableLabel('lblauthPswd');
+            EnableRadio('privMode','AuthNoPriv');
+            if (!isSelPriv)
+            {
+              if (true == initFinish)
+                SelectRadio('privMode','AuthNoPriv');
+              isSelPriv = true;
+            }
+          }
+          else
+            DisableRadio('privMode','AuthNoPriv');
+
+          if (selGrpSec & 0x4)
+          {
+            EnableRadio('privMode','AuthPriv');
+            EnableLabel('lblprivPswd');
+            EnableInputText('privPasswd');
+            if (!isSelPriv)
+            {
+              if (true == initFinish)
+                SelectRadio('privMode','AuthPriv');
+              isSelPriv = true;
+            }
+          }
+          else
+          {
+            DisableRadio('privMode','AuthPriv');
+            DisableLabel('lblprivPswd');
+            DisableInputText('privPasswd');
+          }
+
+          EnableRadio('authMethod','MD5');
+          EnableRadio('authMethod','SHA');
+          EnableInputText('authPasswd');
+        }
+        this.chgMethod();
+      }
+    }
+  },
+  chgMethod:function(){
+    var privMode = GetRadioVal('privMode');
+    if('NoAuth' == privMode) {
+      SelectRadio('authMethod','None');
+      SelectRadio('encryMethod','None');
+      EnableLabel('lblAuthMethod');
+      EnableRadio('authMethod','None');
+      DisableLabel('lblauthPswd');
+      DisableLabel('lblEncryMethod');
+      DisableLabel('lblprivPswd');
+      DisableRadio('authMethod',"MD5");
+      DisableRadio('authMethod',"SHA");
+      DisableRadio('encryMethod',"None");
+      DisableRadio('encryMethod',"DES");
+      DisableInputText('authPasswd');
+      DisableInputText('privPasswd');
+    } else {
+      if (true == initFinish)
+      {
+        SelectRadio('authMethod','MD5');
+        SelectRadio('encryMethod','None');
+      }
+      EnableLabel('lblAuthMethod');
+      DisableRadio('authMethod',"None");
+      DisableRadio('encryMethod',"None");
+      DisableRadio('encryMethod',"DES");
+      EnableRadio('authMethod',"MD5");
+      EnableRadio('authMethod',"SHA");
+      EnableLabel('lblauthPswd');
+      EnableInputText('authPasswd');
+      if ('AuthNoPriv' == privMode) {  /*auth*/
+        DisableLabel('lblprivPswd');
+        DisableInputText('privPasswd');
+        }
+        else{ /* priv */
+          EnableLabel('lblEncryMethod');
+          DisableRadio('encryMethod',"None");
+          SelectRadio('encryMethod','DES');
+          EnableRadio('encryMethod',"DES");
+          EnableLabel('lblprivPswd');
+          EnableInputText('privPasswd');
+      }
+    }
+  }
+});
+
+EnterKeyEvent('apply');
+mainFrame = new mainView();
+}
+</script>
+</head>
+<body onload="init();">
+<table id="main_table"><tbody>
+<tr><td id="main_container"></td></tr>
+</tbody></table>
+
+<script id="main_content" type="text/template">
+<form id="setform">
+<%= DialogHead(lang('snmp','titEditSnmpUser')) %>
+<%= InputHidden('userName',selVal) %>
+<table>
+<tbody>
+<tr>
+  <td class="formBody">
+    <table class="formContent">
+    <tbody>
+
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblUserName')) %></th>
+      <td class="formContentTD">
+        <%= show(parent.data.users[selIdx].userName) %>
+      </td>
+    </tr>
+
+     <tr>
+      <th><%= LabelLeft(lang('snmp','lblGroupName'),'lblGrpName') %></th>
+      <td class="formContentTD">
+        <select name="grpName" id="grpName">
+         <% if (!IsUndefOrNull(data.grps)) { %>
+        <% _.each(data.grps, function(entry){ %>
+           <option value="<%= entry.val %>" <%= (entry.name === parent.data.users[selIdx].grpName) ?"selected":"" %>> <%= show(entry.name) %> </option>
+        <% }); } %>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblSecurityLevel'), 'lblprivMode') %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('privMode', privModeStr,['NoAuth',lang('snmp','lblNoAuth')],['AuthNoPriv',lang('snmp','lblAuth')],['AuthPriv',lang('snmp','lblPriv')]) %>
+      </td>
+    </tr>
+
+
+    <%= ShowFormContentGap() %>
+    <%= ShowFormTitle(lang('snmp','lblAuthTitle')) %>
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblAuthProt'), 'lblAuthMethod') %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('authMethod',str2var(parent.data.users[selIdx].authMethod),['None',lang('snmp','lblNone')],['MD5',lang('snmp','lblMD5')],['SHA',lang('snmp','lblSHA')]) %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblAuthPswd'),'lblauthPswd') %></th>
+      <td class="formContentTD">
+        <%= InputText('authPasswd', '', data.maxlen_authPasswd) %>
+      </td>
+    </tr>
+
+    <%= ShowFormContentGap() %>
+    <%= ShowFormTitle(lang('snmp','lblEncryTitle')) %>
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblEncryProt'), 'lblEncryMethod') %></th>
+      <td class="formContentTD">
+        <%= RadioGroup('encryMethod',str2var(parent.data.users[selIdx].privMethod),['None',lang('snmp','lblNone')],['DES',lang('snmp','lblDES')]) %>
+      </td>
+    </tr>
+
+    <tr>
+      <th><%= LabelLeft(lang('snmp','lblEncryPswd'),'lblprivPswd') %></th>
+      <td class="formContentTD">
+        <%= InputText('privPasswd', '', data.maxlen_privPasswd) %>
+      </td>
+    </tr>
+
+
+    </tbody>
+    </table>
+  </td>
+</tr>
+</tbody>
+</table>
+<%= DialogFoot(ButtonGroupApplyClose('btnApply', 'btnClose')) %>
+
+</form>
+</script>
+
+</body>
+</html>

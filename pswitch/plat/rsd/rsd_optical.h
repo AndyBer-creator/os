@@ -1,0 +1,56 @@
+
+#ifndef __RSD_OPTICAL_H__
+#define __RSD_OPTICAL_H__
+
+#include <common/sys_def.h>
+
+#define SYS_OPTICAL_DIAG_NOT_SUPPORTED      (-1)
+
+typedef enum sys_optical_cmd_e
+{
+    OPTICAL_CMD_GET = 0,
+    OPTICAL_CMD_GET_BR_NOMINAL,
+    OPTICAL_CMD_GET_VENDOR_NAME,
+    OPTICAL_CMD_GET_VENDOR_PN,
+    OPTICAL_CMD_GET_CABLE_LENGTH,
+#if defined(CONFIG_SYS_OPTICALMOD_STATUS)
+    OPTICAL_CMD_GET_TRANSCEIVER_TYPE,
+    OPTICAL_CMD_GET_CONNECTOR_TYPE,
+    OPTICAL_CMD_GET_COMPLIANCE_CODE,
+    OPTICAL_CMD_GET_VENDOR_OUI,
+    OPTICAL_CMD_GET_VENDOR_REV,
+    OPTICAL_CMD_GET_VENDOR_SN,
+    OPTICAL_CMD_GET_WAVELENGTH,
+    OPTICAL_CMD_GET_DATE_CODE,
+    OPTICAL_CMD_GET_DM_TYPE,
+    OPTICAL_CMD_GET_ENHANCED_OPTION,
+    OPTICAL_CMD_GET_DDM_TEMP,
+    OPTICAL_CMD_GET_DDM_TEMP_CAL,
+    OPTICAL_CMD_GET_DDM_VOLT,
+    OPTICAL_CMD_GET_DDM_VOLT_CAL,
+    OPTICAL_CMD_GET_DDM_TX_BIAS,
+    OPTICAL_CMD_GET_DDM_TX_BIAS_CAL,
+    OPTICAL_CMD_GET_DDM_TX_PWR,
+    OPTICAL_CMD_GET_DDM_TX_PWR_CAL,
+    OPTICAL_CMD_GET_DDM_RX_PWR,
+    OPTICAL_CMD_GET_DDM_RX_PWR_CAL,
+    OPTICAL_CMD_GET_DDM_OPTINAL_STATUS,
+    OPTICAL_CMD_GET_DDM_ALARM_FLAG,
+    OPTICAL_CMD_GET_DDM_WARNING_FLAG,
+#endif
+    OPTICAL_CMD_END,
+} sys_optical_cmd_t;
+
+typedef struct sys_optical_data_s
+{
+    union
+    {
+        uint8 byte[32];
+        uint32 word[8];
+    };
+} sys_optical_data_t;
+
+extern int32 rsd_optical_data_get(sys_logic_port_t port, sys_optical_cmd_t cmd, sys_optical_data_t *pData);
+
+#endif 
+

@@ -1,0 +1,1 @@
+/compile/realtek/pswitch/lib/libsal/../../plat/common/sys_l2.c

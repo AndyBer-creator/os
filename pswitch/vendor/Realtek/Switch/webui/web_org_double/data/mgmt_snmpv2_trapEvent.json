@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "authFailed":true,
+    "linkUpDown":true,
+    "coldStart":false,
+    "warmStart":false
+  }
+}

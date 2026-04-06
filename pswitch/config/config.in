@@ -1,0 +1,502 @@
+#############################################################################
+#
+# NOTE : it is fairly important that changes to this file consider their
+#        effect on other platforms and default setups.  If you can, only
+#        add to the file,  changing the name of a variable will break
+#        many configurations.
+#
+#############################################################################
+
+mainmenu_name "System Software Configuration"
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: L2'
+
+bool 'Jumbo Frame' CONFIG_SYS_JUMBO_FRAME n
+tristate 'IEEE 802.3ad LACP' CONFIG_SYS_PROTO_LACP n
+
+comment 'Spanning Tree'
+tristate 'IEEE 802.1D STP' CONFIG_SYS_PROTO_STP n
+tristate 'IEEE 802.1w RSTP' CONFIG_SYS_PROTO_STP n
+tristate 'IEEE 802.1s MSTP' CONFIG_SYS_PROTO_STP_MSTP n
+if [ "$CONFIG_SYS_PROTO_STP" = "m" ]; then
+	bool '  Open stp' CONFIG_SYS_PROTO_STP_DEFINE_OPEN n
+fi
+
+bool 'BPDU Filtering' CONFIG_SYS_STP_BPDU_FILTER n
+bool 'Self-Loop Detection' CONFIG_SYS_STP_SELFLOOP_PREVENT n
+tristate 'Loopback proto' CONFIG_SYS_PROTO_LOOPBACK n
+tristate 'ITU-T G.8032' CONFIG_SYS_PROTO_ERPS m
+tristate 'GMRP' CONFIG_SYS_PROTO_GARP n
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: L3'
+choice 'L3 ENTRY CONFIG' "RTL8380 CONFIG_SYS_RTL838x_L3_ENTRY_NUM
+                       RTL8390 CONFIG_SYS_RTL839x_L3_ENTRY_NUM
+                       RTL9300 CONFIG_SYS_RTL9300_L3_ENTRY_NUM
+                       RTL9310 CONFIG_SYS_RTL9310_L3_ENTRY_NUM" 
+
+	if [ "$CONFIG_SYS_RTL9310_L3_ENTRY_NUM" = "y" ]; then
+		define_int CONFIG_SYS_L3_INTFLO_NUM 1
+		define_int CONFIG_SYS_L3_INTFVLAN_NUM 32
+		define_int CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM 4
+		define_int CONFIG_SYS_L3_PREFIX_IPV4_NUM 5000
+		define_int CONFIG_SYS_L3_PREFIX_IPV6_NUM 5000
+		define_int CONFIG_SYS_L3_HOST_ROUTE_NUM 10000
+	fi
+	if [ "$CONFIG_SYS_RTL9300_L3_ENTRY_NUM" = "y" ]; then
+		define_int CONFIG_SYS_L3_INTFLO_NUM 1
+		define_int CONFIG_SYS_L3_INTFVLAN_NUM 32
+		define_int CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM 4
+		define_int CONFIG_SYS_L3_PREFIX_IPV4_NUM 512
+		define_int CONFIG_SYS_L3_PREFIX_IPV6_NUM 512
+		define_int CONFIG_SYS_L3_HOST_ROUTE_NUM 5000
+	fi
+	if [ "$CONFIG_SYS_RTL838x_L3_ENTRY_NUM" = "y" ]; then
+		define_int CONFIG_SYS_L3_INTFLO_NUM 1
+		define_int CONFIG_SYS_L3_INTFVLAN_NUM 15
+		define_int CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM 2
+		define_int CONFIG_SYS_L3_PREFIX_IPV4_NUM 100
+		define_int CONFIG_SYS_L3_PREFIX_IPV6_NUM 100
+		define_int CONFIG_SYS_L3_HOST_ROUTE_NUM 512
+
+	fi
+	if [ "$CONFIG_SYS_RTL839x_L3_ENTRY_NUM" = "y" ]; then
+		define_int CONFIG_SYS_L3_INTFLO_NUM 1
+		define_int CONFIG_SYS_L3_INTFVLAN_NUM 15
+		define_int CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM 2
+		define_int CONFIG_SYS_L3_PREFIX_IPV4_NUM 100
+		define_int CONFIG_SYS_L3_PREFIX_IPV6_NUM 100
+		define_int CONFIG_SYS_L3_HOST_ROUTE_NUM 512		
+	fi
+bool 'Route' CONFIG_SYS_L3_ROUTE n
+if [ "$CONFIG_SYS_L3_ROUTE" = "y" ]; then
+	define_bool CONFIG_SYS_APP_IPROUTE2 y
+fi
+bool 'L3 Architecture' CONFIG_SYS_L3_ARCHITECTURE n
+bool 'Route Rip' CONFIG_SYS_L3_ROUTE_RIP n
+bool 'Route zebra' CONFIG_SYS_L3_ROUTE_ZEBRA n
+bool 'Route ospf' CONFIG_SYS_L3_ROUTE_OSPF n
+bool 'Route bgp' CONFIG_SYS_L3_ROUTE_BGP n
+
+bool 'Vrrp' CONFIG_SYS_L3_VRRP n
+
+tristate 'DHCP server' CONFIG_SYS_DHCP_SERVER n
+endmenu
+
+#############################################################################
+
+
+mainmenu_option next_comment
+
+comment 'FEATURE: VLAN'
+
+int 'VLAN Number' CONFIG_SYS_VLAN_MAX_NUM 64
+tristate 'GVRP' CONFIG_SYS_PROTO_GVRP n
+tristate 'MAC-based VLAN' CONFIG_SYS_MACVLAN n
+bool 'Protocol-based VLAN' CONFIG_SYS_PROTOCOL_VLAN n
+bool 'Q-in-Q' CONFIG_SYS_VLAN_QINQ n
+tristate 'Surveillance VLAN' CONFIG_SYS_SURVEILLANCEVLAN n
+tristate 'Voice VLAN' CONFIG_SYS_VOICEVLAN n
+tristate 'Ip subNet VLAN' CONFIG_SYS_IP_SUBNET n
+choice 'VLAN port mode' "Access CONFIG_SYS_VLAN_PORT_MODE_ACCESS
+			   Hybrid  CONFIG_SYS_VLAN_PORT_MODE_HYBRID
+			   trunk   CONFIG_SYS_VLAN_PORT_MODE_TRUNK" Trunk
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: Multicast'
+
+int 'Multicast Group' CONFIG_SYS_MCAST_GROUP_NUM 256
+tristate 'IGMP Snooping v1/v2/v3' CONFIG_SYS_PROTO_IGMP_SNOOPING n
+if [ "$CONFIG_SYS_PROTO_IGMP_SNOOPING" = "m" ]; then
+	define_bool CONFIG_SYS_PROTO_IGMPV3_BASIC y
+	bool '  Querier' CONFIG_SYS_PROTO_IGMP_SNOOPING_QUERIER n
+	bool '  Static Router Port' CONFIG_SYS_PROTO_IGMP_STATIC_ROUTER n
+	bool '  Static Forward Port' CONFIG_SYS_PROTO_IGMP_STATIC_FORWARD n
+	bool '  Filtering' CONFIG_SYS_PROTO_IGMP_FILTERING n
+	bool '  Throttling' CONFIG_SYS_PROTO_IGMP_THROTTLING n
+	bool 'MLD Snooping v1/v2' CONFIG_SYS_PROTO_MLD_SNOOPING n
+	bool 'MVR' CONFIG_SYS_PROTO_MVR n
+fi
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: QoS'
+
+bool 'Rate Limit: Ingress/Egress Port' CONFIG_SYS_BW_CTRL n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: ACL'
+
+bool 'User-Defined: MAC/IPv4/IPv6 ACL' CONFIG_SYS_USER_DEFINED_ACL n
+bool 'Defined deny all ' CONFIG_SYS_USER_DEFINED_ACL_DENY_ALL n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: Security'
+
+bool 'AAA' CONFIG_SYS_AAA n
+if [ "$CONFIG_SYS_AAA" = "y" ]; then
+	bool '  Authentication' CONFIG_SYS_AAA_AUTHENTICATION n
+fi
+bool '  Enable privilege Authentication' CONFIG_SYS_AAA_ENABLE_AUTHENTICATION y
+
+tristate 'Authentication Manager' CONFIG_SYS_PROTO_AUTHMGR n
+if [ "$CONFIG_SYS_PROTO_AUTHMGR" = "m" ]; then
+	bool '  802.1X' CONFIG_SYS_PROTO_DOT1X y
+	bool '  MAC Authentication' CONFIG_SYS_PROTO_MACAUTH y
+	bool '  WEB Authentication' CONFIG_SYS_PROTO_WEBAUTH y
+	if [ "$CONFIG_SYS_PROTO_WEBAUTH" = "y" ]; then
+		define_bool CONFIG_SYS_APP_IPROUTE2 y
+	fi
+fi
+bool "Delete default username" CONFIG_SYS_DEL_DEF_USERNAME n
+int ' user password mix length' CONFIG_SYS_USER_PS_MIX_LENGTH 3
+bool "console no auth" CONFIG_SYS_CONSOLE_NO_AUTH n
+bool 'Black Hole MAC' CONFIG_SYS_BLACK_HOLE_MAC n
+bool 'Port move MAC' CONFIG_SYS_FLAPPING_MAC n
+bool 'BPDU Guard' CONFIG_SYS_STP_BPDU_GUARD n
+bool 'CPU Defence Engine' CONFIG_SYS_DEFENCE_ENGINE n
+bool 'CPU Queue Utilization' CONFIG_SYS_CPU_QUEUE_UTILIZATION n
+tristate 'DHCP Snooping' CONFIG_SYS_PROTO_DHCPSNOOPING n
+if [ "$CONFIG_SYS_PROTO_DHCPSNOOPING" = "m" ]; then
+	define_bool CONFIG_SYS_PROTO_DHCP m
+	bool '  User define Circuit ID' CONFIG_SYS_PROTO_DHCPSNOOPING_USERDEFINE_CID n
+fi
+
+bool 'DoS Protection: Denial of Service' CONFIG_SYS_DOS_PROTECTION n
+tristate 'Dynamic ARP Inspection' CONFIG_SYS_PROTO_DAI n
+bool 'HTTPS' CONFIG_USER_BOA_WITH_SSL n
+tristate 'IP Source Guard' CONFIG_SYS_PROTO_ISG n
+if [ "$CONFIG_SYS_PROTO_ISG" = "m" ]; then
+	define_bool CONFIG_SYS_PROTO_ISG_NETMASK y
+fi
+bool 'Management VLAN' CONFIG_SYS_MANAGEMENT_VLAN n
+bool 'Management ACL' CONFIG_SYS_MGMT_ACL n
+bool 'Port Security' CONFIG_SYS_PORT_SECURITY n
+bool 'Protected Port' CONFIG_SYS_PORT_ISOLATION n
+bool 'RADIUS' CONFIG_SYS_LIB_RADIUS n
+bool 'SSH client' CONFIG_USER_SSH_SSH n
+bool 'SSH v1/v2' CONFIG_SYS_APP_SSH n
+if [ "$CONFIG_SYS_APP_SSH" = "y" ]; then
+	define_bool CONFIG_USER_SSH_SSHKEYGEN y
+	define_bool CONFIG_USER_SSH_SSHD y
+fi
+bool 'SSL v2/v3 and TLSv1' CONFIG_SYS_LIB_SSL n
+if [ "$CONFIG_SYS_LIB_SSL" = "y" ]; then
+	define_bool CONFIG_SYS_APP_OPENSSL y
+fi
+bool 'Storm Control' CONFIG_SYS_STORM_CTRL n
+bool 'TACACS+' CONFIG_SYS_LIB_TACPLUS n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: Management'
+
+bool 'Backup Configuration File' CONFIG_SYS_BACKUP_CONFIGURATION n
+bool 'Command Line Interface' CONFIG_SYS_UI_CLI n
+if [ "$CONFIG_SYS_UI_CLI" = "y" ]; then
+	int '  Concurrent Session' CONFIG_SYS_UI_CLI_SESSION 8
+fi
+bool 'DHCP Client' CONFIG_SYS_APP_DHCPC n
+bool 'Advanced DNS' CONFIG_SYS_ADVANCE_DNS n
+bool 'Dual Image' CONFIG_SYS_DUAL_IMAGE n
+bool 'EEE' CONFIG_SYS_EEE n
+bool 'Error Disabled Recovery' CONFIG_SYS_PORT_ERR_DISABLED n
+bool 'Friendly Port Name' CONFIG_SYS_PORT_DESCRIPTION n
+bool 'Line Management' CONFIG_SYS_UI_CLI_LINE_MGMT n
+if [ "$CONFIG_SYS_UI_CLI_LINE_MGMT" = "y" ]; then
+	define_bool CONFIG_SYS_UI_CLI_SESSION_TIMEOUT y
+	define_bool CONFIG_SYS_UI_CLI_PASSRETRY_SILENT y
+fi
+int ' User access meth' CONFIG_SYS_USER_ACCESS_METH_VALUE 31
+
+bool 'RMON Management' CONFIG_SYS_MIB_RMON_MGMT_UI n
+bool 'SNMP Management' CONFIG_SYS_SNMP n
+if [ "$CONFIG_SYS_SNMP" = "y" ]; then
+	bool '  Version 1/2c' CONFIG_SYS_UI_SNMP n
+	bool '  Version 3' CONFIG_SYS_SNMPV3 n
+fi
+bool 'SNTP' CONFIG_SYS_APP_MSNTP n
+bool 'Telnet Server' CONFIG_SYS_APP_TELNETD n
+if [ "$CONFIG_SYS_APP_TELNETD" = "y" ]; then
+	define_bool CONFIG_USER_TELNETD_DOES_NOT_USE_OPENPTY y
+fi
+bool 'Telnet client' CONFIG_SYS_APP_TELNET n
+bool 'Web Management' CONFIG_SYS_UI_WEB n
+if [ "$CONFIG_SYS_UI_WEB" = "y" ]; then
+	define_bool CONFIG_SYS_APP_HTTPD y
+	define_bool CONFIG_SYS_UI_WEB_LOGIN_PAGE y
+	define_bool CONFIG_SYS_UI_WEB_SESSION_TIMEOUT y
+	bool  "Three-level tree" CONFIG_SYS_UI_WEB_THREE_LEVEL_TREE y
+fi
+bool 'easyCWMP' CONFIG_SYS_APP_EASYCWMP n
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: Discovery'
+
+tristate 'IEEE 802.1AB LLDP' CONFIG_SYS_PROTO_LLDP n
+bool 'LLDP-MED: LLDP Media Endpoint Discovery' CONFIG_SYS_PROTO_LLDP_MED n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: Diagnotics'
+
+bool 'Bandwidth Utilization' CONFIG_SYS_BW_UTILIZATION n
+bool 'Cable Test' CONFIG_SYS_CABLE_DIAG n
+bool 'CPU Utilization' CONFIG_SYS_CPU_UTILIZATION n
+bool 'Fiber Module Status' CONFIG_SYS_OPTICALMOD_STATUS n
+bool 'Logging' CONFIG_SYS_SYSLOG n
+if [ "$CONFIG_SYS_SYSLOG" = "y" ]; then
+	define_bool CONFIG_USER_SYSLOG_RAM_SIZE_256K y
+	define_bool CONFIG_USER_SYSLOG_FLASH_SIZE_256K y
+        define_int CONFIG_USER_SYSLOG_RAM_SIZE 18
+        define_int CONFIG_USER_SYSLOG_FLASH_SIZE 18
+	int 'Severity Level' CONFIG_SYS_LOG_SEVERITY_LEVEL 5
+fi
+bool 'Memory Statistics' CONFIG_SYS_MEM_UTILIZATION n
+bool 'Ping Test' CONFIG_SYS_PING_TEST n
+bool 'Port Mirroring' CONFIG_SYS_MIRROR n
+bool 'Traceroute' CONFIG_SYS_TRACE_ROUTE n
+bool 'Tech Support' CONFIG_SYS_TECH_SUPPORT n
+tristate 'UDLD' CONFIG_SYS_PROTO_UDLD n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'FEATURE: MIB'
+
+bool 'RFC1213: MIB II' CONFIG_SYS_MIBII n
+bool 'RFC1215: Generic Traps' CONFIG_SYS_MIB_TRAP n
+bool 'RFC1493: Bridge MIB' CONFIG_SYS_MIB_BRIDGE n
+bool 'RFC2674: Extended Bridge MIB' CONFIG_SYS_MIB_EXT_BRIDGE n
+bool 'RFC2737: Entity MIB' CONFIG_SYS_MIB_ENTITY n
+bool 'RFC2819: RMON Groups 1,2,3 and 9' CONFIG_SYS_MIB_RMON n
+bool 'RFC2863: The Interfaces Group MIB' CONFIG_SYS_MIB_INTERFACE_GROUP n
+bool 'RFC3635: Ethernet-Like MIB' CONFIG_SYS_MIB_ETHERLIKE n
+bool 'SNMP Community MIB' CONFIG_SYS_MIB_COMMUNITY n
+bool 'SNMP V3Conf MIB' CONFIG_SYS_MIB_SNMPV3_CONF n
+bool 'LLDP MIB' CONFIG_SYS_MIB_SNMP_LLDP_CONF n
+bool 'Private MIB' CONFIG_PRIVATE_MIB n
+bool 'poe MIB'  CONFIG_SYS_MIB_POE_CONF n
+bool 'hardware MIB'   CONFIG_SYS_MIB_HARDWAREINFO_CONF y
+bool 'portCtrl MIB'   CONFIG_SYS_MIB_PORTCTRL_CONF y
+bool 'dhcp snooping MIB'   CONFIG_SYS_MIB_DHCPSNOOPING_CONF y
+	
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'SYSTEM : Hardware Board'
+
+comment 'Switch Chip'
+choice 'Switch Chip model' "RTL8380 CONFIG_SYS_RTL8380
+				   RTL8390 CONFIG_SYS_RTL8390
+				   RTL9300 CONFIG_SYS_RTL9300
+				   RTL9310 CONFIG_SYS_RTL9310" CONFIG_SYS_RTL9300
+
+bool 'Button' CONFIG_SYS_BUTTON n
+if [ "$CONFIG_SYS_BUTTON" = "y" ]; then
+	if [ "$CONFIG_SYS_BUTTON_RESET" = "y" ]; then
+		choice 'Reset Mode' " Interrupt CONFIG_SYS_BUTTON_RESET_INTERRUPT \
+				      Polling CONFIG_SYS_BUTTON_RESET_POLLING \
+				    " Polling
+	fi
+	bool '  Reset Button' CONFIG_SYS_BUTTON_RESET n
+fi
+
+bool 'Dying Gasp' CONFIG_SYS_DYING_GASP n
+
+bool 'Fiber' CONFIG_SYS_FIBER y
+if [ "$CONFIG_SYS_FIBER" = "y" ]; then
+	if [ "$CONFIG_SYS_FIBER_PREFERENCE" = "y" ]; then
+		choice 'Detection Mode' " Interrupt CONFIG_SYS_FIBER_PREFERENCE_INTERRUPT \
+				          Polling CONFIG_SYS_FIBER_PREFERENCE_POLLING \
+			                " Polling
+	fi
+	bool '  Fiber Preference' CONFIG_SYS_FIBER_PREFERENCE n
+	bool '  Fiber TxDisable' CONFIG_SYS_FIBER_TXDISABLE n
+fi
+
+bool 'system LED' CONFIG_SYS_LED y
+	if [ "$CONFIG_SYS_LED" == "y" ]; then
+		choice 'mode' "BlinkingContinue CONFIG_SYS_LED_BLINKING_CONTINUE
+						   Blinking32MS CONFIG_SYS_LED_BLINKING_32MS
+						   Blinking128MS CONFIG_SYS_LED_BLINKING_128MS
+						   Blinking512MS CONFIG_SYS_LED_BLINKING_512MS
+						   systemLedOff   CONFIG_SYS_LED_MODE_OFF" BlinkingContinue
+	fi
+	
+bool 'Reset' CONFIG_SYS_RESET y
+bool 'Watchdog' CONFIG_SYS_WATCHDOG y
+bool 'test software check' CONFIG_SYS_TEST_SW_CHECK n
+if [ "$CONFIG_SYS_TEST_SW_CHECK" = "y" ]; then
+	int '  reboot times (hour)' CONFIG_SYS_TESTSW_REBOOT_TIMES 3
+fi
+bool 'uart1' CONFIG_SYS_UART1 n
+bool 'USB' CONFIG_SYS_HW_USB n
+bool 'encrypt' CONFIG_SYS_ENCRYPT N
+	if [ "$CONFIG_SYS_ENCRYPT" = "y" ]; then
+		bool '  flash encrypt' CONFIG_SYS_ENCRYPT_FLASH N
+	fi
+
+bool 'POE' CONFIG_SYS_POE y
+	if [ "$CONFIG_SYS_POE" = "y" ]; then
+		bool ' POE SWDOG' CONFIG_SYS_POE_SWDOG n
+		bool ' POE LED' CONFIG_SYS_POE_LED n
+		choice 'POE chip' "TPS23861 CONFIG_SYS_POE_CHIP_TPS23861
+                       TPS23880 CONFIG_SYS_POE_CHIP_TPS23880
+                       TPS23882 CONFIG_SYS_POE_CHIP_TPS23882
+                       RTL8238  CONFIG_SYS_POE_CHIP_RTL8238
+                       RTL8238B CONFIG_SYS_POE_CHIP_RTL8238B
+                       RTL8239 CONFIG_SYS_POE_CHIP_RTL8239
+                       MP3924  CONFIG_SYS_POE_CHIP_MP3924
+                       IP808AR CONFIG_SYS_POE_CHIP_IP808" TPS23861
+	fi
+
+bool 'Board init debug info' CONFIG_SYS_BOARD_DEBUG_INFO n
+
+bool 'HO Board' CONFIG_SYS_HO_BOARD n
+
+endmenu
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'SYSTEM : Software Platform'
+
+choice 'Build Type' " DEVEL CONFIG_SYS_BUILD_DEVEL     \
+		      RELEASE CONFIG_SYS_BUILD_RELEASE \
+		    " RELEASE
+
+choice 'Operating System' "Linux CONFIG_SYS_KERNEL_LINUX" Linux
+if [ "$CONFIG_SYS_KERNEL_LINUX" = "y" ]; then
+	define_bool CONFIG_SYS_KERNEL_LINUX_MODULE_LOADABLE y
+	define_tristate CONFIG_SYS_PLAT_LXBOARD m
+	define_tristate CONFIG_SYS_PLAT_LXDEFDB m
+	define_tristate CONFIG_SYS_PLAT_LXKSI m
+	define_tristate CONFIG_SYS_PLAT_LXSKI m
+	define_tristate CONFIG_SYS_PLAT_LXVLAN m
+	define_bool CONFIG_SYS_PLAT_FW y
+	define_bool CONFIG_SYS_APP y
+	define_bool CONFIG_SYS_LIB y
+fi
+
+bool 'Auto Reboot Module' CONFIG_SYS_PLAT_AUTOREBOOT n
+if [ "$CONFIG_SYS_PLAT_AUTOREBOOT" = "y" ]; then
+	define_bool CONFIG_SYS_AUTOREBOOT_CONFIG y
+	define_bool CONFIG_SYS_AUTOREBOOT_IMAGE y
+	define_bool CONFIG_SYS_AUTOREBOOT_DEFAULT y
+fi
+
+bool 'Compressed File System' CONFIG_SYS_KERNEL_LINUX_COMPRESSED_FS n
+tristate 'Custom Module' CONFIG_SYS_PLAT_CUSMOD n
+bool 'Debug Module' CONFIG_SYS_PLAT_DBGMOD y
+
+bool 'IPv4/IPv6 Dual Stack' CONFIG_SYS_IPV6 n
+if [ "$CONFIG_SYS_IPV6" = "y" ]; then
+	define_bool CONFIG_SYS_APP_DHCP6C y
+	define_bool CONFIG_SYS_APP_DHCP6C_STATELESS y
+fi
+
+if [ "$CONFIG_SYS_PLAT_FW" = "y" ]; then
+	define_bool CONFIG_SYS_FW_SIGNATURE_CHECK y
+	define_bool CONFIG_SYS_FW_UPGRADE_CHECKMEM y
+	define_bool CONFIG_SYS_FW_UPGRADE_SAVEMEM y
+	define_int CONFIG_SYS_FW_UPGRADE_SAVEMEM_SIZE 10000
+fi
+
+if [ "$CONFIG_SYS_LIB" = "y" ]; then
+	define_bool CONFIG_SYS_LIB_CFG y
+	define_bool CONFIG_SYS_LIB_CMD y
+	define_bool CONFIG_SYS_LIB_CUSTOM y
+	define_bool CONFIG_SYS_LIB_FDS y
+	define_bool CONFIG_SYS_LIB_GCC y
+	define_bool CONFIG_SYS_LIB_GLUE y
+	define_bool CONFIG_SYS_LIB_NCURSES y
+	define_bool CONFIG_SYS_LIB_READLINE y
+	define_bool CONFIG_SYS_LIB_SAL y
+	define_bool CONFIG_SYS_LIB_VTY y
+	define_bool CONFIG_SYS_LIB_IPC y
+fi
+
+if [ "$CONFIG_SYS_APP_EASYCWMP" = "y" ]; then
+	define_bool CONFIG_SYS_LIB_MICROXML y
+	define_bool CONFIG_SYS_LIB_CURL y
+	define_bool CONFIG_SYS_LIB_UCI y
+	define_bool CONFIG_SYS_LIB_UBOX y
+	define_bool CONFIG_SYS_LIB_UBUS y
+fi
+
+if [ "$CONFIG_SYS_APP" = "y" ]; then
+	define_bool CONFIG_SYS_APP_INETD y
+	define_bool CONFIG_SYS_APP_INITD y
+	define_bool CONFIG_SYS_APP_KSID y
+	define_bool CONFIG_SYS_APP_POLLD y
+fi
+
+endmenu
+
+#############################################################################
+
+#############################################################################
+
+mainmenu_option next_comment
+
+comment 'OEM    : Factory Settings'
+string 'system username' SYS_OEM_USERNAME "admin"
+string 'system password' SYS_OEM_PASSWORD "admin"
+string 'system name' SYS_OEM_NAME "Switch"
+string 'system location ' SYS_OEM_LOCATION "Default"
+string 'system contact' SYS_OEM_CONTACT "Default"
+string 'system manufacturer' SYS_OEM_MANUFACTURER "Default"
+string 'system support info' SYS_OEM_SUPPORT_INFO "Default"
+string 'system contact tele' SYS_OEM_CONTACT_TELE "Default"
+string 'system login logname' SYS_OEM_LOGIN_LOG_NAME "logo_login_en.png"
+string 'system home logname' SYS_OEM_HOME_LOG_NAME "logo_ch.png"
+int    'system time zone' SYS_OEM_TIME_ZONE 480
+endmenu
+
+#############################################################################

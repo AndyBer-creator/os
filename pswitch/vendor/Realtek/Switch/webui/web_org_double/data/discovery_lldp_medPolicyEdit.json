@@ -1,0 +1,24 @@
+{
+  "data":
+  {
+    "max_policiesNum":32,
+    "vid":4,
+    "min_vid":0,
+    "max_vid":4095,
+    "vlanTag":"untag",
+    "pri":3,
+    "dscp":20,
+    "selApp":5,
+    "apps":
+    [
+      { "val":0, "app":"lang('lldp','lblVoice')" },
+      { "val":1, "app":"lang('lldp','lblVoiceSignaling')" },
+      { "val":2, "app":"lang('lldp','lblGuestVoice')" },
+      { "val":3, "app":"lang('lldp','lblGuestVoiceSignaling')" },
+      { "val":4, "app":"lang('lldp','lblSoftphoneVoice')" },
+      { "val":5, "app":"lang('lldp','lblVideoConferencing')" },
+      { "val":6, "app":"lang('lldp','lblStreamingVideo')" },
+      { "val":7, "app":"lang('lldp','lblVideoSignaling')" }
+    ]
+  }
+}

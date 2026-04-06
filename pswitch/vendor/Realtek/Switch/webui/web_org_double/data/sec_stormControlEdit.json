@@ -1,0 +1,17 @@
+{
+  "data":
+  {
+    "unit":1,
+    "state":false,
+    "min_rate":16,
+    "max_rate":100000,
+    "dflt_rate":10000,
+    "bcEnable":false,
+    "broadcast":10000,
+    "umcEnable":false,
+    "unknownMC":10000,
+    "uncEnable":false,
+    "unknownUC":10000,
+    "action":false
+  }
+}

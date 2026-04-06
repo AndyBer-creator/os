@@ -1,0 +1,24 @@
+{
+  "data":
+  {
+    "oe":"lang('diag','lblNS')",
+    "los":"lang('diag','lblNS')",
+    "trxType":"lang('diag','lblNS')",
+    "connectorType":"lang('diag','lblNS')",
+    "ethComplianceCode":"lang('diag','lblNS')",
+    "transMedia":"lang('diag','lblNS')",
+    "wavelength":"lang('diag','lblNS')",
+    "bitrate":"lang('diag','lblNS')",
+    "vendor_oui":"lang('diag','lblNS')",
+    "vendor_name":"lang('diag','lblNS')",
+    "vendor_pn":"lang('diag','lblNS')",
+    "vendor_rev":"lang('diag','lblNS')",
+    "vendor_sn":"lang('diag','lblNS')",
+    "datecode":"lang('diag','lblNS')",
+    "temp":"lang('diag','lblNS')",
+    "volt":"lang('diag','lblNS')",
+    "bias":"lang('diag','lblNS')",
+    "txPwr":"lang('diag','lblNS')",
+    "rxPwr":"lang('diag','lblNS')"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "data":
+  {
+    "neighbors":
+    [
+      {"localPort":"GE12","index":"0", "chassisType":"lang('lldp','lblMacAddr')", "chassisId":"00:00:00:72:71:80", "portIdType":"lang('lldp','lblIntfName')", "portId":"gi1", "sysName":"switch727180", "ttl":90},
+      {"localPort":"GE13","index":"0", "chassisType":"lang('lldp','lblMacAddr')", "chassisId":"00:00:00:72:71:70", "portIdType":"lang('lldp','lblIntfName')", "portId":"gi1", "sysName":"switch727170", "ttl":100}
+    ]
+  }
+}

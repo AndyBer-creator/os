@@ -1,0 +1,1 @@
+cmd_drivers/mtd/maps/rtk_norsf_g3/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/mtd/maps/rtk_norsf_g3/built-in.o drivers/mtd/maps/rtk_norsf_g3/rtk_norsf_g3.o drivers/mtd/maps/rtk_norsf_g3/spi_probe.o drivers/mtd/maps/rtk_norsf_g3/spi_cmd.o drivers/mtd/maps/rtk_norsf_g3/nor_spi/built-in.o 

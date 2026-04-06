@@ -1,0 +1,22 @@
+{
+  "data":
+  {
+    "bytesRec":"0",
+    "dropEvents":"1",
+    "pktsRec":"2",
+    "bPktsRec":"3",
+    "mPktsRec":"4",
+    "CRCAlignErr":"5",
+    "undersizePkts":"6",
+    "oversizePkts":"7",
+    "fragments":"8",
+    "jabbers":"9",
+    "collisions":"10",
+    "frames64B":"11",
+    "frames65127B":"12",
+    "frames128255B":"13",
+    "frames256511B":"14",
+    "frames5121023B":"15",
+    "framesOver1024B":"16"
+  }
+}

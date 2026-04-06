@@ -1,0 +1,123 @@
+HW-INFO-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32                                    	            FROM SNMPv2-SMI
+   RTLDevice                                                          FROM REALTEK-MIB
+   DisplayString,                                                     FROM SNMPv2-TC ;
+   
+sysHWMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system Demo MIB module"
+   ::= { RTLDevice 1 }
+   	
+sysMemoryInfo	         		OBJECT IDENTIFIER ::= { sysHWMib 1 } 
+sysCPUInfo                      OBJECT IDENTIFIER ::= { sysHWMib 2 }
+
+memoryTotal   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS  read-only
+   STATUS            current
+   DESCRIPTION
+	"systerm memory Total info."
+   ::= { sysMemoryInfo	        1 }
+   
+memoryUsed   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS      read-only
+   STATUS          current
+   DESCRIPTION
+	"systerm memory used info."
+   ::= { sysMemoryInfo	        2 }
+   
+memoryFree   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS  read-only
+   STATUS            current
+   DESCRIPTION
+	"systerm memory free info."
+   ::= { sysMemoryInfo	        3 }
+
+
+cpuName           OBJECT-TYPE
+   SYNTAX          DisplayString
+   MAX-ACCESS  read-only
+   STATUS            current
+   DESCRIPTION
+	"systerm cpu  modle info."
+   ::= { sysCPUInfo                             1 }
+   
+cpuUsed            OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS  read-only
+   STATUS            current
+   DESCRIPTION
+	"systern  cpu used info, unit %"
+   ::= { sysCPUInfo                             2 }
+
+   
+cpuTemperature   OBJECT-TYPE
+   SYNTAX          Integer32
+   MAX-ACCESS  read-only
+   STATUS            current
+   DESCRIPTION
+	"systerm cpu temperature info"
+   ::= { sysCPUInfo                             3 }
+
+
+InterfaceTypeInfoTable OBJECT-TYPE
+       SYNTAX      SEQUENCE OF InterfaceTypeEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table of Interface Type info."
+       ::= { sysHWMib 3 }
+
+   InterfaceTypeEntry OBJECT-TYPE
+       SYNTAX      InterfaceTypeEntry
+       MAX-ACCESS  not-accessible
+       STATUS      current
+       DESCRIPTION
+           "A table Interface Type info."
+       INDEX    { interfaceindex }
+       ::= { InterfaceTypeInfoTable 1 }
+
+   InterfaceTypeEntry ::= SEQUENCE {
+       interfaceindex             Integer32,
+       portType                   Integer32
+   }
+   
+	interfaceindex   OBJECT-TYPE
+	SYNTAX           Integer32
+	MAX-ACCESS       read-only
+	STATUS           current
+	DESCRIPTION
+	   "unit index, start from 1 "
+	::= { InterfaceTypeEntry 1 }
+
+	portType       OBJECT-TYPE
+	SYNTAX         Integer32
+	MAX-ACCESS     read-only
+	STATUS         current
+	DESCRIPTION
+		"interfece  type info. 
+		1 express: copper; 
+		2 express: fiber;
+		3 express: stack;"
+	::= { InterfaceTypeEntry 2 }
+
+sysPoeFunction OBJECT-TYPE
+   SYNTAX      Integer32
+   MAX-ACCESS  read-only
+   STATUS      current
+   DESCRIPTION
+      "Whether to support POE function."
+   ::= { sysHWMib 4 }	
+END
+
+            

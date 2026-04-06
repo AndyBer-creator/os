@@ -1,0 +1,6 @@
+plr_flash.o: plr_flash.c \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/preloader.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/stddef.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/pblr.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_spare.h

@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "vlans":
+    [
+      { "vid":1, "qryState":true, "querierStatus":true, "querierVer":2, "querierIp":"192.168.111.111"},
+      { "vid":100, "qryState":true, "querierStatus":false, "querierVer":2, "querierIp":"111.111.111.111"},
+      { "vid":200, "qryState":true, "querierStatus":false, "querierVer":2},
+      { "vid":300, "qryState":false, "querierStatus":false}
+    ]
+  }
+}

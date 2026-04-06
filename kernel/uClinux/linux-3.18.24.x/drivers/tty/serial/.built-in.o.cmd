@@ -1,0 +1,1 @@
+cmd_drivers/tty/serial/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/tty/serial/built-in.o drivers/tty/serial/serial_core.o drivers/tty/serial/earlycon.o drivers/tty/serial/8250/built-in.o 

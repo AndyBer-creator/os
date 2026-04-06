@@ -1,0 +1,101 @@
+
+#ifndef __SYS_SWDEF_L3_H__
+#define __SYS_SWDEF_L3_H__
+#define CAPA_L3_INTFNAME_LEN                        16
+#define CAPA_L3_INTFLO_NUM                          CONFIG_SYS_L3_INTFLO_NUM 
+#define CAPA_L3_INTFLO_NUM_MAX                      CONFIG_SYS_L3_INTFLO_NUM 
+#define CAPA_L3_INTFVLAN_NUM                        CONFIG_SYS_L3_INTFVLAN_NUM
+#define CAPA_L3_INTFVLAN_NUM_MAX                    CONFIG_SYS_L3_INTFVLAN_NUM
+#define CAPA_L3_INTF_NUM                            (CAPA_L3_INTFLO_NUM + CAPA_L3_INTFVLAN_NUM)
+#define CAPA_L3_INTF_NUM_MAX                        (CAPA_L3_INTFLO_NUM_MAX + CAPA_L3_INTFVLAN_NUM_MAX)
+#define CAPA_L3_INTFVRRP_NUM                        5
+#define CAPA_L3_INTFVRRP_NUM_MAX                    5	
+#define CAPA_L3_INTF_IPV4ADDR_SUB_NUM               CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM
+#define CAPA_L3_INTF_IPV6ADDR_SUB_NUM               CONFIG_SYS_L3_INTFVLAN_IP_SUB_NUM
+#define CAPA_L3_IPV4ADDR_NUM                        (CAPA_L3_INTFVLAN_NUM * CAPA_L3_INTF_IPV4ADDR_SUB_NUM)
+#define CAPA_L3_IPV4POOL_NUM                        (CAPA_L3_IPV4ADDR_NUM + 1) 
+#define CAPA_L3_IPV6ADDR_NUM                        (CAPA_L3_INTFVLAN_NUM * CAPA_L3_INTF_IPV6ADDR_SUB_NUM)
+#define CAPA_L3_IPV6POOL_NUM                        (CAPA_L3_IPV6ADDR_NUM + CAPA_L3_INTF_NUM_MAX) 
+#define CAPA_L3_INTFM_IPV6ADMIN_NUM                 4
+#define CAPA_L3_INTFM_IPV6STATUS_NUM                6
+#define CAPA_L3_INTF_STATIC_IPV6_NUM                4
+
+#define CAPA_L3_STATICROUTE_IPV4_DESCP_LEN          31
+#if defined(CONFIG_SYS_RTL838x_L3_ENTRY_NUM) || defined(CONFIG_SYS_RTL839x_L3_ENTRY_NUM)
+#define CAPA_L3_STATICROUTE_IPV4_ENTRY_NUM_MAX      (CONFIG_SYS_L3_PREFIX_IPV4_NUM)
+#define CAPA_L3_STATICROUTE_IPV6_ENTRY_NUM_MAX      (CONFIG_SYS_L3_PREFIX_IPV6_NUM)
+#else
+#define CAPA_L3_STATICROUTE_IPV4_ENTRY_NUM_MAX      (CAPA_L3_IPV4POOL_NUM+CAPA_L3_INTFLO_NUM_MAX)
+#define CAPA_L3_STATICROUTE_IPV6_ENTRY_NUM_MAX      (CAPA_L3_IPV6ADDR_NUM + CAPA_L3_INTFLO_NUM_MAX)
+#endif
+
+#define CAPA_L3_DYNAMICROUTE_IPV4_ENTRY_NUM_MAX      (CONFIG_SYS_L3_PREFIX_IPV4_NUM - CAPA_L3_STATICROUTE_IPV4_ENTRY_NUM_MAX)
+#define CAPA_L3_DYNAMICROUTE_IPV6_ENTRY_NUM_MAX      (CONFIG_SYS_L3_PREFIX_IPV6_NUM - CAPA_L3_STATICROUTE_IPV6_ENTRY_NUM_MAX)
+#define CAPA_L3_ROUTE_IPV4_ENTRY_NUM                (CONFIG_SYS_L3_PREFIX_IPV4_NUM)
+
+#define CAPA_L3_ROUTE_IPV6_ENTRY_NUM                (CONFIG_SYS_L3_PREFIX_IPV6_NUM)
+#define CAPA_L3_IPV6_MADDR_ENTRY_NUM                32
+#define CAPA_L3_HOST_ROUTE_ENTRY_NUM                CONFIG_SYS_L3_HOST_ROUTE_NUM
+#define BOND_L3_IPV6_DADATTEMPT_MIN                 0
+#define BOND_L3_IPV6_DADATTEMPT_MAX                 600
+#define BOND_L3_IPV6_STATELESS_REFRESH_MIN          86400
+#define BOND_L3_IPV6_STATELESS_REFRESH_MAX          0xFFFFFFFE 
+#define BOND_L3_IPV6_STATELESS_MINREFRESH_MIN       600
+#define BOND_L3_IPV6_STATELESS_MINREFRESH_MAX       0xFFFFFFFE 
+
+#define BOND_L3_STATICROUTE_METRIC_MIN              1
+#define BOND_L3_STATICROUTE_METRIC_MAX              255
+
+#ifdef CONFIG_SYS_L3_ROUTE
+#define BOND_L3_NEIGH_AGE_TIME_MIN                  15
+#define BOND_L3_NEIGH_AGE_TIME_MAX                  21600
+#define BOND_L3_NEIGH_RESP_TIME_MIN                 1
+#define BOND_L3_NEIGH_RESP_TIME_MAX                 10
+#define BOND_L3_NEIGH_RETRY_TIMES_MIN               0
+#define BOND_L3_NEIGH_RETRY_TIMES_MAX               10
+#define BOND_L3_NEIGH_CACHE_MIN                     79
+#define BOND_L3_NEIGH_CACHE_MAX                     CAPA_L3_HOST_ROUTE_ENTRY_NUM
+#endif
+
+#define CAPA_L3_VRRPID_NUM                          5
+#define DFLT_L3_INTFV_ENBL                          ENABLED
+#define DFLT_L3_INTFV_EXIST                         DISABLED
+#define DFLT_L3_STATICROUTE_METRIC                  1
+
+#ifdef CONFIG_SYS_L3_ROUTE
+#define DFLT_L3_NEIGH_AGE_TIME                      1200
+#define DFLT_L3_NEIGH_RESP_TIME                     1
+#define DFLT_L3_NEIGH_RETRY_TIMES                   4
+#define DFLT_L3_NEIGH_CACHE_SIZE                    CAPA_L3_HOST_ROUTE_ENTRY_NUM
+#define DFLT_L3_NEIGH_RENEW                         ENABLED
+#define DFLT_L3_NEIGH_RENEW_COUNT                   100000
+#endif
+
+#define DFLT_L3_INTF_MTU                            1500
+#define DFLT_L3_INTF_IPV6_ENBL                      DISABLED
+
+#define DFLT_L3_IPV4_ADDR                           DEFDB_STR(DEF_L3_IPV4_ADDR)
+#define DFLT_L3_IPV4_NETMASK                        DEFDB_STR(DEF_L3_IPV4_NETMASK)
+#define DFLT_L3_IPV4_PREFIXLEN                      DEFDB_VAL(DEF_L3_IPV4_PREFIXLEN)
+#define DFLT_L3_IPV4_GW                             DEFDB_STR(DEF_L3_IPV4_GW)
+#define DFLT_L3_IPV4_DHCPC_EBL                      DEFDB_VAL(DEF_L3_IPV4_DHCPC_EBL)
+#define DFLT_L3_IPV4_DHCP_TYPE                      SYS_L3_DHCPTYPE_DISABLE                     
+#define DFLT_L3_IPV4_FORWARDING_EBL                 ENABLED
+#define DFLT_L3_IPV6_FORWARDING_EBL                 DEFDB_VAL(DEF_L3_IPV6_FORWARDING_EBL)
+#define DFLT_L3_IPV6_ADDR                           DEFDB_STR(DEF_L3_IPV6_ADDR)
+#define DFLT_L3_IPV6_PREFIX_LEN                     DEFDB_VAL(DEF_L3_IPV6_PREFIX_LEN)
+#define DFLT_L3_IPV6_GW                             DEFDB_STR(DEF_L3_IPV6_GW)
+#define DFLT_L3_IPV6_ADMIN_EBL                      ENABLED
+#define DFLT_L3_IPV6_AUTOCONF_EBL                   DEFDB_VAL(DEF_L3_IPV6_AUTOCONF_EBL)
+#define DFLT_L3_IPV6_DADATTEMPT                     DEFDB_VAL(DEF_L3_IPV6_DADATTEMPT)
+#define DFLT_L3_IPV6_DESTINATION_UNREACHABLE        ENABLED
+#define DFLT_L3_IPV6_DHCPC_EBL                      DEFDB_VAL(DEF_L3_IPV6_DHCPC_EBL)
+#define DFLT_L3_IPV6_DHCPC_STATELESS_EBL            DISABLED
+#define DFLT_L3_IPV6_DHCPC_STATELESS_REFRESH        86400
+#define DFLT_L3_IPV6_DHCPC_STATELESS_REFRESH_MIN    600
+#define DFLT_L3_IPV6_HOPLIMIT                       64
+#define DFLT_L3_IPV6_ICMP_RATE_INTVL                1000
+#define DFLT_L3_IPV6_ICMP_RATE_BURST                100
+#define DFLT_L3_IPV6_ROUTE_PREFER                   1
+#endif 
+

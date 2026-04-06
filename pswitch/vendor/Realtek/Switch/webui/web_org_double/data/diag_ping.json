@@ -1,0 +1,9 @@
+{
+  "data":
+  {
+    "host_maxlen":256,
+    "count_dflt":4,
+    "count_min":1,
+    "count_max":65535
+  }
+}

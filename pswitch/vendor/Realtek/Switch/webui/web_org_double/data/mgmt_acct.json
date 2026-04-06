@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "users":
+    [
+      { "user":"rtk", "priv":15 },
+      { "user":"test1", "priv":1 },
+      { "user":"rtk1", "priv":15 },
+      { "user":"test2", "priv":1 },
+      { "user":"rtk2", "priv":15 },
+      { "user":"test3", "priv":1 },
+      { "user":"rtk3", "priv":15 },
+      { "user":"test4", "priv":1 },
+      { "user":"rtk4", "priv":15 },
+      { "user":"test5", "priv":1 },
+      { "user":"rtk5", "priv":15 },
+      { "user":"test6", "priv":1 }
+    ]
+  }
+}

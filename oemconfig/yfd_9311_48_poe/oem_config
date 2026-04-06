@@ -1,0 +1,11 @@
+!!!9301 oem
+username:admin
+password:admin
+ipaddr:192.168.0.1
+ipmask:255.255.255.0
+gateway:192.168.0.254
+sysname:Switch
+location:default
+contact:default
+timezone:480
+

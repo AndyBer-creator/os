@@ -1,0 +1,28 @@
+REALTEK-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, enterprises              FROM SNMPv2-SMI;
+
+    Realtek MODULE-IDENTITY
+        LAST-UPDATED    "202001070000Z"
+        ORGANIZATION    "Realtek"
+        CONTACT-INFO    "Realtek"
+        DESCRIPTION     "Realtek MIB OID defines and documentation."
+        REVISION        "202001070000Z"
+        DESCRIPTION     "Demo MIB module"
+        ::= { enterprises 27282 }
+    
+-- Realtek Products--------------------------
+switch     OBJECT IDENTIFIER ::= {Realtek 1} 
+
+-- Switch  Products--------------------------
+RTL8382M   OBJECT IDENTIFIER ::= {switch 1}   
+
+-- RTL MIB Categories------------------------
+    RTLDevice      OBJECT IDENTIFIER ::= { RTL8382M 1 }     
+    RTLLog         OBJECT IDENTIFIER ::= { RTL8382M 2 }   
+--
+-- END of REALTEK-MIB
+--
+
+END

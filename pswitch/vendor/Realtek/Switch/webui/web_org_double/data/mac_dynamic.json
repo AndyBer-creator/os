@@ -1,0 +1,16 @@
+{
+  "data":
+  {
+    "aging_time":300,
+    "aging_time_min":10,
+    "aging_time_max":630,
+    "aging_time_dflt":300,
+    "entries":
+    [
+      { "macAddr":"00:00:00:00:00:01","vlan":1,"port":"GE5" },
+      { "macAddr":"00:00:00:00:00:FF","vlan":1,"port":"GE1" },
+      { "macAddr":"00:11:22:33:44:55","vlan":100,"port":"GE2" },
+      { "macAddr":"00:00:00:00:00:22","vlan":3000,"port":"GE23" }
+    ]
+  }
+}

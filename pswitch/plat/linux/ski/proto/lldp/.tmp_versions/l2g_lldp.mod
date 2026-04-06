@@ -1,0 +1,2 @@
+/compile/realtek/pswitch/plat/linux/ski/proto/lldp/l2g_lldp.ko
+/compile/realtek/pswitch/plat/linux/ski/proto/lldp/ski_lldp_med.o /compile/realtek/pswitch/plat/linux/ski/proto/lldp/../../../../../proto/lldp/proto_lldp.o /compile/realtek/pswitch/plat/linux/ski/proto/lldp/ski_lldp_lkm.o /compile/realtek/pswitch/plat/linux/ski/proto/lldp/ski_lldp_lkm_export.o /compile/realtek/pswitch/plat/linux/ski/proto/lldp/ski_lldp.o

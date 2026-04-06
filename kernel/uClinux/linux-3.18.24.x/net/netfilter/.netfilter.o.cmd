@@ -1,0 +1,1 @@
+cmd_net/netfilter/netfilter.o := rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o net/netfilter/netfilter.o net/netfilter/core.o net/netfilter/nf_log.o net/netfilter/nf_queue.o net/netfilter/nf_sockopt.o 

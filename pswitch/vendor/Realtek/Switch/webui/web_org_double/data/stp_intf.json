@@ -1,0 +1,32 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "p2p_oper":false, "role":"lang('common','txtDisabled')", "state":"lang('stp','txtForwarding')", "desgBridge":"32768-00:11:22:33:44:55", "desgPortId":"182-2", "desgCost":30000 },
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "p2p_oper":false, "role":"lang('common','txtDisabled')", "state":"lang('stp','txtForwarding')", "desgBridge":"32768-00:11:22:33:44:55", "desgPortId":"182-2", "desgCost":30000 },
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000},
+      { "enable":true, "pri":128, "pathcost":200000, "edge_oper":false, "bpduGuard":false, "bpduFilter":false, "role":"lang('common','txtDisabled')", "state":"lang('common','txtDisable')", "desgCost": 200000}
+    ]
+  }
+}

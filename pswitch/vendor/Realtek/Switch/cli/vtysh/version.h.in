@@ -1,0 +1,21 @@
+
+#ifndef _ZEBRA_VERSION_H
+#define _ZEBRA_VERSION_H
+
+#define QUAGGA_PROGNAME   "@PACKAGE_NAME@"
+
+#define QUAGGA_VERSION     "@PACKAGE_VERSION@"
+
+#define ZEBRA_BUG_ADDRESS "@PACKAGE_BUGREPORT@"
+
+#define QUAGGA_URL "http://www.quagga.net"
+
+#define QUAGGA_COPYRIGHT "Copyright 1996-2005 Kunihiro Ishiguro, et al."
+
+pid_t pid_output (const char *);
+
+#ifndef HAVE_DAEMON
+int daemon(int, int);
+#endif
+
+#endif 

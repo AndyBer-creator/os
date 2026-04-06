@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "maxlen_authPasswd":32,
+    "maxlen_privPasswd":32,
+    "grps":
+    [
+    	{"name":"g1","val":"g1_7"},
+    	{"name":"g2","val":"g2_2"},
+    	{"name":"g3","val":"g3_1"},
+      {"name":"g31","val":"g32_1"},
+      {"name":"g32","val":"g32_2"},
+      {"name":"g33","val":"g33_4"},
+      {"name":"g312","val":"g312_3"},
+      {"name":"g313","val":"g313_5"},
+      {"name":"g323","val":"g323_6"},
+      {"name":"g3123","val":"g3123_7"}
+    ]
+  }
+}

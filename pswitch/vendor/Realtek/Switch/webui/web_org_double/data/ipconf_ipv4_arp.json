@@ -1,0 +1,19 @@
+{
+  "data":
+  {
+    "aging":30000,
+    "aging_min":1,
+    "aging_max":40000000,
+    "aging_dflt":60000,
+
+    "entries":
+    [
+      { "intf":"VLAN 1", "vlan": 1, "ip":"10.2.1.200", "mac":"00:00:00:00:11:CC", "static":1 },
+      { "intf":"VLAN 1", "vlan": 1, "ip":"10.2.1.66", "mac":"00:00:00:00:11:FF", "static":0 },
+      { "intf":"VLAN 1", "vlan": 1, "ip":"10.2.1.88", "mac":"00:00:00:00:11:EE", "static":0 },
+      { "intf":"VLAN 100", "vlan": 100, "ip":"10.2.2.200", "mac":"00:00:00:00:CC:C0", "static":1 },
+      { "intf":"VLAN 100", "vlan": 100, "ip":"10.2.2.22", "mac":"00:00:00:00:CC:0E", "static":0 },
+      { "intf":"VLAN 100", "vlan": 100, "ip":"10.2.2.33", "mac":"00:00:00:00:BB:E0", "static":0 }
+    ]
+  }
+}

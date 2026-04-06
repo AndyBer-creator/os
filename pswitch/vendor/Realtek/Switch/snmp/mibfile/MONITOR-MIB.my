@@ -1,0 +1,86 @@
+MONITOR-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+   MODULE-IDENTITY, OBJECT-TYPE,
+   Integer32, Counter64                                    	     FROM SNMPv2-SMI
+   RTLDevice                                                     FROM REALTEK-MIB
+   DisplayString                                                 FROM SNMPv2-TC;
+   
+sysMonitorMib MODULE-IDENTITY
+   LAST-UPDATED "202001110000Z"
+   ORGANIZATION "realtek"
+   CONTACT-INFO "realtek"
+   DESCRIPTION  "Realtek MIB definition."
+   REVISION     "202001110000Z"
+   DESCRIPTION
+      "system interfece control MIB module"
+   ::= { RTLDevice 3 }
+
+
+monitorPort5minRareTable OBJECT-TYPE
+        SYNTAX      SEQUENCE OF MonitorPort5minRareEntry
+        MAX-ACCESS  not-accessible
+        STATUS      current
+        DESCRIPTION
+            "A table that contains port 5 min rate."
+        ::= { sysMonitorMib 1 }
+
+MonitorPort5minRareEntry OBJECT-TYPE
+        SYNTAX      MonitorPort5minRareEntry
+        MAX-ACCESS  not-accessible
+        STATUS      current
+        DESCRIPTION
+            "Port 5 min rate. This is indexed
+            by the port number."
+        INDEX { portIndex }
+        ::= { monitorPort5minRareTable 1 }
+		
+MonitorPort5minRareEntry ::=
+    SEQUENCE {
+        portIndex       INTEGER,
+        portInFrame    Counter64,
+		portInOctet    Counter64,
+        portOutFrame   Counter64,
+		portOutOctet   Counter64
+    }
+    portIndex OBJECT-TYPE
+        SYNTAX       INTEGER
+        MAX-ACCESS   read-only
+        STATUS       current
+        DESCRIPTION
+            "The Index of the port."
+        ::= { MonitorPort5minRareEntry 1 }
+	
+	portInFrame OBJECT-TYPE
+	SYNTAX       Counter64 
+    MAX-ACCESS   read-only
+    STATUS       current
+    DESCRIPTION
+        "port 5 min recv pkt rate."
+		::= { MonitorPort5minRareEntry 2 }
+	
+	portInOctet OBJECT-TYPE
+		SYNTAX Counter64 
+        MAX-ACCESS read-only
+        STATUS current
+        DESCRIPTION
+            "port 5 min recv byte rate "
+        ::= { MonitorPort5minRareEntry 3 }
+		
+	portOutFrame OBJECT-TYPE
+        SYNTAX       Counter64
+        MAX-ACCESS   read-only
+        STATUS       current
+        DESCRIPTION
+            "port 5 min send pkt rate."
+        ::= { MonitorPort5minRareEntry 4 }
+		
+	portOutOctet OBJECT-TYPE
+        SYNTAX       Counter64
+        MAX-ACCESS   read-only
+        STATUS       current
+        DESCRIPTION
+            "port 5 min send byte rate."
+        ::= { MonitorPort5minRareEntry 5 }
+END
+

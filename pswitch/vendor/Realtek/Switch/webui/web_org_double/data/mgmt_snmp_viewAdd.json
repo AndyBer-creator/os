@@ -1,0 +1,8 @@
+{
+  "data":
+  {
+  	"dflt_view": "all",
+    "maxlen_viewName":32,
+    "included":true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data":
+  {
+    "interval":350,
+    "min_interval":30,
+    "max_interval":86400,
+    "reasons":
+    [
+        {"name":"acl","txt":"lang('port','lblACL')","enable":true},
+        {"name":"arpRate","txt":"lang('port','lblARPRateLimit')","enable":true},
+        {"name":"bpduGuard","txt":"lang('port','lblBPDUGuard')","enable":true},
+        {"name":"bcastFlood","txt":"lang('port','lblBcastFlood')","enable":true},
+        {"name":"dhcpRate","txt":"lang('port','lblDHCPRateLimit')","enable":true},
+        {"name":"portSec","txt":"lang('port','lblPortSecurity')","enable":true},
+        {"name":"selfLoop","txt":"lang('port','lblSelfLoop')","enable":true},
+        {"name":"ucastFlood","txt":"lang('port','lblUnicastFlood')","enable":true},
+        {"name":"mcastFlood","txt":"lang('port','lblUnknownMcastFlood')","enable":true}
+    ]
+  }
+}

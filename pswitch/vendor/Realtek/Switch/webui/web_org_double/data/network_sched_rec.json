@@ -1,0 +1,22 @@
+{
+  "data":
+  {
+    "name":"cccc",
+    "ranges":
+    [
+      { "name":"aaaa", "val":"aaaa" },
+      { "name":"bbbb", "val":"bbbb" },
+      { "name":"cccc", "val":"cccc" },
+      { "name":"dddd", "val":"dddd" },
+      { "name":"eeee", "val":"eeee" }
+    ],
+    "recs":
+    [
+      { "rectype":1, "wdays":3, "hours":"12", "mins":"30", "wdaye":5, "houre":"17", "mine":"00" },
+      { "rectype":1, "wdays":4, "hours":"12", "mins":"00", "wdaye":6, "houre":"23", "mine":"00" },
+      { "rectype":1, "wdays":2, "hours":"08", "mins":"00", "wdaye":0, "houre":"19", "mine":"00" },
+      { "rectype":2, "wday":[2,3,4], "hours":"08", "mins":"00", "houre":"19", "mine":"00" },
+      { "rectype":2, "wday":[0,3,6], "hours":"08", "mins":"00", "houre":"19", "mine":"00" }
+    ]
+  }
+}

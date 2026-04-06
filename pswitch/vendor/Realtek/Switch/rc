@@ -1,0 +1,112 @@
+#!/bin/sh
+
+mkdir /var/empty
+mkdir /dev/pts
+
+bootklogd
+mountfs
+
+echo 1 > /proc/sys/net/ipv6/conf/default/disable_ipv6
+echo 1 > /proc/sys/net/ipv4/conf/default/arp_accept
+echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+echo 1 > /proc/sys/net/ipv6/neigh/default/gc_thresh1
+echo 512 > /proc/sys/net/ipv6/neigh/default/gc_thresh2
+echo 576 > /proc/sys/net/ipv6/neigh/default/gc_thresh3
+echo 1 > /proc/sys/net/ipv4/neigh/default/gc_thresh1
+echo 512 > /proc/sys/net/ipv4/neigh/default/gc_thresh2
+echo 576 > /proc/sys/net/ipv4/neigh/default/gc_thresh3
+
+cd /
+test -d "/lib/modules/3.18.24/kernel"   && KPATH=/lib/modules/3.18.24
+test -d "/lib/modules/2.6.19/kernel"    && KPATH=/lib/modules/2.6.19
+EKPATH=$KPATH/extra
+KPATH=$KPATH/kernel
+
+test -f $KPATH"/drivers/net/switch/rtcore/rtcore.ko" && insmod $KPATH/drivers/net/switch/rtcore/rtcore.ko
+test -f $KPATH"/drivers/net/switch/rtk/rtk.ko"       && insmod $KPATH/drivers/net/switch/rtk/rtk.ko
+test -f $KPATH"/net/switch/rtdrv/rtdrv.ko"           && insmod $KPATH/net/switch/rtdrv/rtdrv.ko
+
+#test -f $EKPATH"/rtcore.ko"      && insmod $EKPATH/rtcore.ko
+#test -f $EKPATH"/rtk.ko"        && insmod $EKPATH/rtk.ko
+#test -f $EKPATH"/rtdrv.ko"      && insmod $EKPATH/rtdrv.ko
+test -f $EKPATH"/board_conf.ko" && insmod $EKPATH/board_conf.ko
+test -f $EKPATH"/net.ko"        && insmod $EKPATH/net.ko
+test -f $EKPATH"/defdb.ko"      && insmod $EKPATH/defdb.ko
+test -f $EKPATH"/ksi.ko"        && insmod $EKPATH/ksi.ko
+test -f $EKPATH"/osal.ko"        && insmod $EKPATH/osal.ko
+
+if test -f $EKPATH"/ski.ko"; then
+	if test -f "/mnt/ski_param"; then
+		insmod $EKPATH/ski.ko `cat /mnt/ski_param`
+	else
+		insmod $EKPATH/ski.ko
+	fi
+fi
+test -f $EKPATH"/board.ko"                && insmod $EKPATH/board.ko
+test -f $EKPATH"/l2g_voice_vlan.ko"       && insmod $EKPATH/l2g_voice_vlan.ko
+test -f $EKPATH"/l2g_surveillancevlan.ko" && insmod $EKPATH/l2g_surveillancevlan.ko
+test -f $EKPATH"/l2g_gvrp.ko"    && insmod $EKPATH/l2g_gvrp.ko
+test -f $EKPATH"/l2g_stp.ko"     && insmod $EKPATH/l2g_stp.ko
+test -f $EKPATH"/l2g_acl.ko"     && insmod $EKPATH/l2g_acl.ko
+test -f $EKPATH"/l2g_authmgr.ko" && insmod $EKPATH/l2g_authmgr.ko
+test -f $EKPATH"/l2g_lacp.ko"    && insmod $EKPATH/l2g_lacp.ko
+test -f $EKPATH"/l2g_igmp.ko"    && insmod $EKPATH/l2g_igmp.ko
+test -f $EKPATH"/l2g_isg.ko"     && insmod $EKPATH/l2g_isg.ko
+test -f $EKPATH"/l2g_garp.ko"    && insmod $EKPATH/l2g_garp.ko
+test -f $EKPATH"/l2g_dhcp.ko"    && insmod $EKPATH/l2g_dhcp.ko
+test -f $EKPATH"/l2g_dai.ko"     && insmod $EKPATH/l2g_dai.ko
+test -f $EKPATH"/l2g_lldp.ko"    && insmod $EKPATH/l2g_lldp.ko
+test -f $EKPATH"/l2g_udld.ko"    && insmod $EKPATH/l2g_udld.ko
+test -f $EKPATH"/l2g_macvlan.ko" && insmod $EKPATH/l2g_macvlan.ko
+test -f $EKPATH"/l2g_rldp.ko"    && insmod $EKPATH/l2g_rldp.ko
+test -f $EKPATH"/l2g_rlpp.ko"    && insmod $EKPATH/l2g_rlpp.ko
+test -f $EKPATH"/l2g_erps.ko"    && insmod $EKPATH/l2g_erps.ko
+test -f $EKPATH"/l2g_loopback.ko" && insmod $EKPATH/l2g_loopback.ko
+test -f $EKPATH"/custom.ko"      && insmod $EKPATH/custom.ko
+
+# Remove ko from file system
+if test -f "/modsqfs.img"; then
+	umount /modsqfs
+	rm -f /modsqfs.img
+else
+	rm -rf /lib/modules
+fi
+
+# OEM INFORMATION.
+#将web连接到一个可以访问的位置
+cp -rf /sqfs/home/web/web_org /webtmp/web
+#用flash中的logo替换image中的logo
+files=$(ls /oeminfo/*.png 2> /dev/null | wc -l)
+if [ "$files" != "0" ] ; then
+	cp -rf /oeminfo/*.png /webtmp/web/images/logo/
+fi
+files=$(ls /oeminfo/usr_defconfig 2> /dev/null | wc -l)
+if [ "$files" != "0" ] ; then
+	cp -rf /oeminfo/usr_defconfig /mnt/usr-default
+fi
+echo "Init OEM_INFOR ....OK"
+
+
+echo 300 > /proc/sys/net/ipv4/tcp_keepalive_time
+echo 10 > /proc/sys/net/ipv4/tcp_keepalive_intvl
+echo 6 > /proc/sys/net/ipv4/tcp_keepalive_probes
+
+ifconfig lo 127.0.0.1
+#route add -net 127.0.0.0 netmask 255.255.255.0 lo
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 0 > /proc/sys/net/ipv6/conf/default/disable_ipv6
+
+echo 5 > /proc/sys/kernel/printk
+
+initd
+inetd &
+polld &
+timed &
+
+if test -f "/bin/cli"; then
+	if test -f "/bin/login"; then
+		ln -s /bin/cli /bin/login
+	fi
+fi
+
+

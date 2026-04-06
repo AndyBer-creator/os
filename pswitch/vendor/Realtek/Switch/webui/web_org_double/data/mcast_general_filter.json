@@ -1,0 +1,36 @@
+{
+  "data":
+  {
+    "ports":
+    [
+      { "filter":true, "idx":1 },
+      { "filter":true, "idx":1 },
+      { "filter":true, "idx":2 },
+      { "filter":true, "idx":2 },
+      { "filter":true, "idx":3 },
+      { "filter":true, "idx":1 },
+      { "filter":true, "idx":1 },
+      { "filter":true, "idx":2 },
+      { "filter":true, "idx":2 },
+      { "filter":true, "idx":3 },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false },
+      { "filter":false }
+    ]
+  }
+}

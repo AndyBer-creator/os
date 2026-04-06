@@ -1,0 +1,27 @@
+{
+  "data":
+  {
+    "lldpStatus":true,
+    "frmHandle":"filter",
+    "tlvAdvIntv":31,
+    "min_tlvAdvIntv":5,
+    "max_tlvAdvIntv":32768,
+    "dflt_tlvAdvIntv":30,
+    "holdMulti":3,
+    "min_holdMulti":2,
+    "max_holdMulti":10,
+    "dflt_holdMulti":4,
+    "reinitDelay":3,
+    "min_reinitDelay":1,
+    "max_reinitDelay":10,
+    "dflt_reinitDelay":2,
+    "transDelay":5,
+    "min_transDelay":1,
+    "max_transDelay":8192,
+    "dflt_transDelay":2,
+    "startCnt":2,
+    "min_startCnt":1,
+    "max_startCnt":10,
+    "dflt_startCnt":3
+  }
+}

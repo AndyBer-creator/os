@@ -1,0 +1,14 @@
+soc_init_parameters.o: soc_init_parameters.c \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_cmd_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/config_defaults.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/rtl838xS.h \
+ /compile/realtek/loader/u-boot-2011.12/include/configs/autoconf.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/arch/soc.h \
+ /compile/realtek/loader/u-boot-2011.12/board/Realtek/include/rtk_flash_common.h \
+ /compile/realtek/loader/u-boot-2011.12/include/asm/config.h \
+ /compile/realtek/loader/u-boot-2011.12/arch/mips/cpu/mips4kec/rtl838x/preloader/include/plr_pll_gen3.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/DRAM_GEN2_SAMSUNG_K4B1G0846G_838x_DEMO_300MHZ.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/NOR_SPI_F_MXIC_MX25L25635F_32MB_4BCMD_DIO.h \
+ /compile/realtek/loader/u-boot-2011.12/model_info/NOR_SPI_F_MXIC_MX25L12835F_DIO.h

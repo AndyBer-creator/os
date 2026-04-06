@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/built-in.o :=  rtk-ms-2.0.0-linux-ld  -m elf32btsmip   -r -o drivers/gpu/drm/built-in.o drivers/gpu/drm/i2c/built-in.o drivers/gpu/drm/panel/built-in.o drivers/gpu/drm/bridge/built-in.o 

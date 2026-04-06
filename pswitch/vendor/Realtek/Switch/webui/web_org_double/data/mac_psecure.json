@@ -1,0 +1,12 @@
+{
+  "data":
+  {
+    "entries":
+    [
+      { "macAddr":"00:00:07:00:00:0D","vlan":1,"type":"lang('mac', 'lblMacTypeSecureDynamic')","port":"GE9" },
+      { "macAddr":"00:00:00:11:00:22","vlan":2,"type":"lang('mac', 'lblMacTypeSecureSticky')","port":"GE2" },
+      { "macAddr":"00:00:00:11:00:0D","vlan":111,"type":"lang('mac', 'lblMacTypeSecureConfigured')","port":"GE8" }
+    ]
+  }
+}
+

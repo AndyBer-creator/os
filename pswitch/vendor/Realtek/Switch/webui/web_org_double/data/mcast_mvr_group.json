@@ -1,0 +1,11 @@
+{
+  "data":
+  {
+    "groups":
+    [
+      { "idx":1, "vid":2, "addr":"224.0.1.1", "mbrPort":"GE1-3,GE10", "typeStatic":1, "type":"lang('mcast','lblStatic')"},
+      { "idx":5, "vid":2, "addr":"224.0.1.5", "mbrPort":"GE1,GE5,LAG1", "typeStatic":1, "type":"lang('mcast','lblStatic')"},
+      { "idx":10, "vid":2, "addr":"225.1.2.3", "mbrPort":"GE1,GE10,LAG1", "typeStatic":0, "type":"lang('mcast','lblDynamic')", "lifeTime":110}
+    ]
+  }
+}
