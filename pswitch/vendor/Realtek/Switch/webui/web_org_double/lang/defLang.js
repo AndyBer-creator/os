@@ -149,9 +149,9 @@ lang_authmgr: {
   lblLoginAttempt: "Maximum number of failed login attempts",
   lblInfinite: "Infinite",
 
-  errTypeOrderEmpty: "At least one authentication type must be selected."
-  errTypeOrderWebNotLast: "Web-Based must be the last authentication type."
-  errMethodEmpty: "At least one authentication method must be selected."
+  errTypeOrderEmpty: "At least one authentication type must be selected.",
+  errTypeOrderWebNotLast: "Web-Based must be the last authentication type.",
+  errMethodEmpty: "At least one authentication method must be selected.",
 
   titMacLocalAcctTable: "MAC-Based Local Account List",
   titAddMacLocalAcct: "Add a MAC-Based Local Account",
@@ -219,7 +219,7 @@ lang_common: {
   btnEdit:"Modify&nbsp;&nbsp;&nbsp;",
   btnDelete:"Delete",
   tipOnlyOneCanbeEdited:"Only one entry can be processed at a time.",
-  tipNoEntrySelected: "No entry selected."
+  tipNoEntrySelected: "No entry selected.",
   btnDetail: "Details",
   btnRefresh: "Refresh",
   btnPreview: "Preview",
@@ -401,7 +401,7 @@ lang_ds: {
   lblChaddrErr: "Client Address Check <br> Discard",
   lblUntrustedErr: "Untrusted Port <br> Discard",
   lblUntrustedOption82Err: "Untrusted Port <br> Option82 Check <br> Discard",
-  lblInvalidErr: "Validity Check" <br> Discard",
+  lblInvalidErr: "Validity Check <br> Discard",
   lblRemoteId: "Remote ID",
   lblCircuitIdHint: "(Leave blank for no VLAN)",
   lblOption82Status: "Status",
@@ -473,35 +473,35 @@ lang_dns: {
 
 /* Common Error Message */
 lang_error: {
-  errEmptyValue: "Empty value is invalid."
-  errOutOfRange: "Out of valid value range."
-  errOutOfRangeArg: "Out of valid value range. Valid range is $1-$2."
-  errStrOutOfRange: "The length of the input string has reached the maximum allowed."
-  errInvalidValue: "Invalid value."
-  errInvalidChar: "Contains illegal characters."
-  errInvalidMacAddr: "Invalid MAC address."
-  errInvalidUnicastMacAddr: "Invalid unicast MAC address."
-  errInvalidIpAddr: "Invalid IP address."
-  errInvalidIpMask: "Invalid network mask."
-  errInvalidUnicastIpAddr: "Invalid unicast IP address."
-  errInvalidMulticastIpv4Addr: "Invalid IPv4 multicast address."
-  errInvalidMulticastIpv4FirstGroup: "The first group value is out of range. The valid range is 224 - 239."
-  errInvalidMulticastIpv6Addr: "Invalid IPv6 multicast address."
-  errInvalidIpv6GroupNum: "Invalid IPv6 address group number."
-  errInvalidIpv6Addr: "Invalid IPv6 format."
-  errInvalidMulticastIpv6FirstGroup: "The value of group 1 should be \"ff00\" or higher."
-  errInvalidDnsName: "Invalid DNS name. Valid order: tag#1.tag#2...tag#n. Each tag must be between $1 and $2 in length. Each tag must start and end with a letter or number."
-  errInvalidVlanRangeArg: "The target VLAN is not in the currently displayed range. Valid range: [$1]-[$2]."
-  errValMustBePairToPairHexChars: "The value must be $1..$2 pairs of hexadecimal characters."
-  errValMustBePairHexChars: "The value must be $1 pairs of hexadecimal characters."
-  errAddEntryFailBecauseTableFull: "Cannot create a new entry in table $1. The table is full."
-  errEntryAlreadyExists: "The entry already exists."
-  errPortBlng2Trunk: "Port $1 belongs to a trunk group."
-  errDNSLookupFailed: 'DNS lookup failed.'
-  errDnsResolveError: "DNS domain name resolution failed. Please check the DNS server settings or the host name."
-  errDNSDomainErr: "Error! Invalid domain name. In the domain name, each substring must be less than 64 characters long, separated by dots, and the total string must not exceed 255 characters."
-  errDNSServerMax: "Error! The maximum number of DNS server entries has been reached."
-  errDNSIPaddr: "Error! Invalid IPv4 or IPv6 address."
+  errEmptyValue: "Empty value is invalid.",
+  errOutOfRange: "Out of valid value range.",
+  errOutOfRangeArg: "Out of valid value range. Valid range is $1-$2.",
+  errStrOutOfRange: "The length of the input string has reached the maximum allowed.",
+  errInvalidValue: "Invalid value.",
+  errInvalidChar: "Contains illegal characters.",
+  errInvalidMacAddr: "Invalid MAC address.",
+  errInvalidUnicastMacAddr: "Invalid unicast MAC address.",
+  errInvalidIpAddr: "Invalid IP address.",
+  errInvalidIpMask: "Invalid network mask.",
+  errInvalidUnicastIpAddr: "Invalid unicast IP address.",
+  errInvalidMulticastIpv4Addr: "Invalid IPv4 multicast address.",
+  errInvalidMulticastIpv4FirstGroup: "The first group value is out of range. The valid range is 224 - 239.",
+  errInvalidMulticastIpv6Addr: "Invalid IPv6 multicast address.",
+  errInvalidIpv6GroupNum: "Invalid IPv6 address group number.",
+  errInvalidIpv6Addr: "Invalid IPv6 format.",
+  errInvalidMulticastIpv6FirstGroup: "The value of group 1 should be \"ff00\" or higher.",
+  errInvalidDnsName: "Invalid DNS name. Valid order: tag#1.tag#2...tag#n. Each tag must be between $1 and $2 in length. Each tag must start and end with a letter or number.",
+  errInvalidVlanRangeArg: "The target VLAN is not in the currently displayed range. Valid range: [$1]-[$2].",
+  errValMustBePairToPairHexChars: "The value must be $1..$2 pairs of hexadecimal characters.",
+  errValMustBePairHexChars: "The value must be $1 pairs of hexadecimal characters.",
+  errAddEntryFailBecauseTableFull: "Cannot create a new entry in table $1. The table is full.",
+  errEntryAlreadyExists: "The entry already exists.",
+  errPortBlng2Trunk: "Port $1 belongs to a trunk group.",
+  errDNSLookupFailed: 'DNS lookup failed.',
+  errDnsResolveError: "DNS domain name resolution failed. Please check the DNS server settings or the host name.",
+  errDNSDomainErr: "Error! Invalid domain name. In the domain name, each substring must be less than 64 characters long, separated by dots, and the total string must not exceed 255 characters.",
+  errDNSServerMax: "Error! The maximum number of DNS server entries has been reached.",
+  errDNSIPaddr: "Error! Invalid IPv4 or IPv6 address.",
   errDNSIPaddrUcast: "Error! Invalid IPv4 or IPv6 address, must be a unicast address."
 },
 
@@ -530,10 +530,10 @@ lang_file:{
   txtBackupOK: "Backup $1 Completed",
   txtBackupFail: "Backup $1 Failed",
   txtDownloadInProgress: "Downloading...",
-  txtUpgradeOK: "Upgrade $1 Completed, The new image will take effect after the system is restarted."
+  txtUpgradeOK: "Upgrade $1 Completed, The new image will take effect after the system is restarted.",
   txtUpgradeFail:"Upgrade $1 failed",
   txtUploadInProgress:"Upgrading...",
-  txtUpgradeImgSelActive:"The new image will take effect after setting it as the active image and restarting the system."
+  txtUpgradeImgSelActive:"The new image will take effect after setting it as the active image and restarting the system.",
 
   lblActImg:"Active image",
   lblActImgAfterReboot:"Prompt: Select this image for the next boot",
@@ -612,9 +612,9 @@ lang_gmrp:{
   lblTxCnt: "Sent Packets",
   lblErrCnt: "Error Packets",
 
-  errGmrpGlobal: "GMRP is not enabled globally."
-  errGmrpPortmode: "GMRP can only be enabled on trunk ports."
-  errGmrpPortMirror: "GMRP cannot be enabled on the mirrored destination port."
+  errGmrpGlobal: "GMRP is not enabled globally.",
+  errGmrpPortmode: "GMRP can only be enabled on trunk ports.",
+  errGmrpPortMirror: "GMRP cannot be enabled on the mirrored destination port.",
   errGmrpPortType: "GMRP can only be enabled on trunk ports."
 },
 <!--#endif-->
@@ -2247,9 +2247,9 @@ lang_stp:{
   lblInternalRootCost: "Internal Cost",
   lblRemainingHop: "Remaining Hop",
   lblTcCnt: "Topology Change Count",
-  lblTcLastTime: "Time of the most recent topology change"
+  lblTcLastTime: "Time of the most recent topology change",
 
-  msgStpModeChange: "Changing the STP mode may cause connection interruption. Do you want to continue?"
+  msgStpModeChange: "Changing the STP mode may cause connection interruption. Do you want to continue?",
 
 lblPortAdminStatus: Status,
 lblPortPathCost: Path Cost,
@@ -2693,16 +2693,16 @@ lblPoePortWatchDog: "Watchdog Status",
 <!--#endif-->
 lang_sysError:{
 	<!--port err start-->
-errPortAuto: "The port cannot be configured for auto-negotiation."
-errFiberDuplex: "The optical port duplex mode configuration is invalid."
-errPortAutoSpeed: "The port auto-negotiation rate is invalid."
-errPortSpeed: "The port rate is invalid."
-errPortDuplex: "The port duplex mode is invalid."
-errPort1000NO: "The Fast Ethernet port does not support 1000M speed."
-errPort1000HalfNO: "Gigabit Ethernet does not support 1000M half-duplex mode."
-errFiberSpeed: "The optical port rate is invalid."
-errPortNoVlan: "The port does not belong to a VLAN member."
-errFiberNoEEE: "The optical port does not support EEE function."
+errPortAuto: "The port cannot be configured for auto-negotiation.",
+errFiberDuplex: "The optical port duplex mode configuration is invalid.",
+errPortAutoSpeed: "The port auto-negotiation rate is invalid.",
+errPortSpeed: "The port rate is invalid.",
+errPortDuplex: "The port duplex mode is invalid.",
+errPort1000NO: "The Fast Ethernet port does not support 1000M speed.",
+errPort1000HalfNO: "Gigabit Ethernet does not support 1000M half-duplex mode.",
+errFiberSpeed: "The optical port rate is invalid.",
+errPortNoVlan: "The port does not belong to a VLAN member.",
+errFiberNoEEE: "The optical port does not support EEE function.",
 errPortNoFlowCtrl: "The optical port and multiplexed port do not support flow control function."
 	<!--port err end-->
 	<!--trunk err start-->
@@ -2719,12 +2719,12 @@ errTrunkAnother: "Port already belongs to another trunk",
 errTrunkVlan: "Trunk member port has different joining VLAN/tag",
 errTrunkMirror: "Mirror port cannot be a trunk member port",
 errTrunkRate: "Port should not be subject to ingress/egress rate limits",
-errTrunkNego: "Trunk member ports must all have the same negotiation mode."
-errTrunkSpeed: "Trunk member ports must all have the same negotiation mode."
-errTrunkDuplex: "Trunk member ports must all be full-duplex."
-errTrunkNoExist: "The trunk does not exist."
-errTrunkBackupPort: "The port is already a trunk member."
-errTrunkSecurity: "Port security should not be enabled on the port."
+errTrunkNego: "Trunk member ports must all have the same negotiation mode.",
+errTrunkSpeed: "Trunk member ports must all have the same negotiation mode.",
+errTrunkDuplex: "Trunk member ports must all be full-duplex.",
+errTrunkNoExist: "The trunk does not exist.",
+errTrunkBackupPort: "The port is already a trunk member.",
+errTrunkSecurity: "Port security should not be enabled on the port.",
 errTrunkEmpty: "There are no members in the trunk."
 	<!--port err end-->
 	<!--vlan err start-->
@@ -2743,48 +2743,48 @@ errVlanNotStatic: "Not a static VLAN",
 errVlanNotCreated: "Cannot be created by the user",
 errVlanTrunk: "Port is a member of an aggregation group",
 errVlanuplink: "Port mode is not an uplink port",
-errVlanMVRDel: "MVR VLAN cannot be deleted."
-errVlanNotSupport: "The maximum size in the VLAN specification table has been exceeded."
-errVoiceID: "Voice VLAN cannot be created as the default VLAN."
-errVoiceOUIexist: "The Voice VLAN OUI entry already exists."
-errVoiceOUImcast: "The OUI MAC must be a unicast address."
-errVoiceOUIzero: "The Voice VLAN OUI cannot be all zeros."
-errVoiceauto: "Cannot edit a Voice VLAN auto-mode port in the Voice VLAN."
-errVoiceOUIport: "The Voice VLAN state does not enable the OUI."
-errVoiceportMode: "The port must be in hybrid or trunk mode."
-errVoicePortStaic: "A static member cannot be a candidate member in the VoiceVLAN."
-errVoiceOUIenable: "Voice VLAN is enabled on the port."
-errVoiceOUIdef: "The default VLAN cannot be configured as a voice VLAN in OUI mode."
-errVoiceVidDel: "Voice VLAN cannot be deleted."
-errVoiceGustVlan: "Guest VLAN cannot be configured as a voice VLAN."
-errVoiceSurveillance: "Surveillance VLAN cannot be configured as a voice VLAN."
-errVoiceVidNotExist: "Voice VLAN cannot be enabled because no voice VLAN ID has been assigned."
-errVoiceVidEnable: "The voice VLAN ID cannot be restored to None because the voice VLAN is enabled."
-errProvlanPort: "Protocol VLAN: A protocol VLAN is configured on the port."
-errProvlanPortMode: "The port must be in promiscuous mode."
-errProvlanEnablePort: "The port is bound to a protocol VLAN."
-errVlanMac: "The maximum value has been exceeded."
-errVlanMacNotUni: "The range contains a multicast address."
-errVlanMacOverlap: "The range or part of the range is already defined in the database."
-errVlanMacLastDel: "Cannot delete the last range from the mapping group."
-errVlanMacNoResource: "No resources for this range."
-errVlanMacNoGid: "Attempted to map an illegal group number."
-errVlanMacGeneral: "The port mode is not promiscuous."
-errVlanMacPortMode: "A MAC VLAN-enabled port must be in promiscuous mode."
-errSVOUIMcast: "The OUI MAC must be unicast."
-errSVOUIExist: "A monitoring VLAN OUI entry exists in the database."
-errSVOUIzero: "The monitoring VLAN OUI cannot be all zeros."
-errSVGuest: "Guest VLAN cannot be configured as a monitoring VLAN."
-errSVVoice: "Voice VLAN cannot be configured as a monitoring VLAN."
-errSVDefailt: "The default VLAN cannot be configured as a monitoring VLAN."
-errSVNotExist: "Cannot enable monitoring VLAN because no monitoring VLAN ID has been assigned."
-errSVVidEnable: "Cannot enable monitoring VLAN ID because monitoring VLAN is already enabled."
-errSVEnablePort: "Monitoring VLAN is already enabled on the port."
-errSVPortMode: "The port must be in hybrid or mid-trunk mode."
-errSVPortStatic: "The port cannot be a static member port of the Surveillance VLAN."
-errSVGlobalDisable: "Monitoring VLAN global status is not enabled."
-errVidSV: "Monitoring VLAN cannot be configured as the default VLAN."
-errSVVidDel: "Monitoring VLAN destruction is not allowed."
+errVlanMVRDel: "MVR VLAN cannot be deleted.",
+errVlanNotSupport: "The maximum size in the VLAN specification table has been exceeded.",
+errVoiceID: "Voice VLAN cannot be created as the default VLAN.",
+errVoiceOUIexist: "The Voice VLAN OUI entry already exists.",
+errVoiceOUImcast: "The OUI MAC must be a unicast address.",
+errVoiceOUIzero: "The Voice VLAN OUI cannot be all zeros.",
+errVoiceauto: "Cannot edit a Voice VLAN auto-mode port in the Voice VLAN.",
+errVoiceOUIport: "The Voice VLAN state does not enable the OUI.",
+errVoiceportMode: "The port must be in hybrid or trunk mode.",
+errVoicePortStaic: "A static member cannot be a candidate member in the VoiceVLAN.",
+errVoiceOUIenable: "Voice VLAN is enabled on the port.",
+errVoiceOUIdef: "The default VLAN cannot be configured as a voice VLAN in OUI mode.",
+errVoiceVidDel: "Voice VLAN cannot be deleted.",
+errVoiceGustVlan: "Guest VLAN cannot be configured as a voice VLAN.",
+errVoiceSurveillance: "Surveillance VLAN cannot be configured as a voice VLAN.",
+errVoiceVidNotExist: "Voice VLAN cannot be enabled because no voice VLAN ID has been assigned.",
+errVoiceVidEnable: "The voice VLAN ID cannot be restored to None because the voice VLAN is enabled.",
+errProvlanPort: "Protocol VLAN: A protocol VLAN is configured on the port.",
+errProvlanPortMode: "The port must be in promiscuous mode.",
+errProvlanEnablePort: "The port is bound to a protocol VLAN.",
+errVlanMac: "The maximum value has been exceeded.",
+errVlanMacNotUni: "The range contains a multicast address.",
+errVlanMacOverlap: "The range or part of the range is already defined in the database.",
+errVlanMacLastDel: "Cannot delete the last range from the mapping group.",
+errVlanMacNoResource: "No resources for this range.",
+errVlanMacNoGid: "Attempted to map an illegal group number.",
+errVlanMacGeneral: "The port mode is not promiscuous.",
+errVlanMacPortMode: "A MAC VLAN-enabled port must be in promiscuous mode.",
+errSVOUIMcast: "The OUI MAC must be unicast.",
+errSVOUIExist: "A monitoring VLAN OUI entry exists in the database.",
+errSVOUIzero: "The monitoring VLAN OUI cannot be all zeros.",
+errSVGuest: "Guest VLAN cannot be configured as a monitoring VLAN.",
+errSVVoice: "Voice VLAN cannot be configured as a monitoring VLAN.",
+errSVDefailt: "The default VLAN cannot be configured as a monitoring VLAN.",
+errSVNotExist: "Cannot enable monitoring VLAN because no monitoring VLAN ID has been assigned.",
+errSVVidEnable: "Cannot enable monitoring VLAN ID because monitoring VLAN is already enabled.",
+errSVEnablePort: "Monitoring VLAN is already enabled on the port.",
+errSVPortMode: "The port must be in hybrid or mid-trunk mode.",
+errSVPortStatic: "The port cannot be a static member port of the Surveillance VLAN.",
+errSVGlobalDisable: "Monitoring VLAN global status is not enabled.",
+errVidSV: "Monitoring VLAN cannot be configured as the default VLAN.",
+errSVVidDel: "Monitoring VLAN destruction is not allowed.",
 errSVUsedPort: "A port in monitoring VLAN auto mode cannot be edited in the VLAN."
 	<!--vlan err end-->
 	<!--MGMT ACL start-->
@@ -2804,14 +2804,14 @@ errMGMTACLconsole: "Input profile rule name cannot be console-only, console-only
 errMGMTACLname: "Please specify a list name",
 	<!--MGMT ACL end-->
 	<!--GVRP err start-->
-errGvrpNoenable: "GVRP is not enabled globally."
-errGvrpDB: "GVRP VLAN database is full."
-errGvrpportNoTrunk: "Port mode is not trunk, GVRP cannot be enabled."
-errGvrpMirror: "GVRP cannot be enabled on the mirrored destination port."
-errGvrpPortmode: "GVRP port must be in trunk mode to enable."
-errGvrpTimerDIV: "GVRP timer value must be 5."
-errGvrpTimerJoin: "GVRP join timer must be less than half of leave timer."
-errGvrpTimerLeave: "GVRP leave timer must be greater than twice the join time and less than the leave all time."
+errGvrpNoenable: "GVRP is not enabled globally.",
+errGvrpDB: "GVRP VLAN database is full.",
+errGvrpportNoTrunk: "Port mode is not trunk, GVRP cannot be enabled.",
+errGvrpMirror: "GVRP cannot be enabled on the mirrored destination port.",
+errGvrpPortmode: "GVRP port must be in trunk mode to enable.",
+errGvrpTimerDIV: "GVRP timer value must be 5.",
+errGvrpTimerJoin: "GVRP join timer must be less than half of leave timer.",
+errGvrpTimerLeave: "GVRP leave timer must be greater than twice the join time and less than the leave all time.",
 errGvrpTimerLeaveall: "GVRP leave timer must be greater than the leave time."
 	<!--GVRP err end-->
 	<!--stp err start-->
@@ -2827,16 +2827,16 @@ errstpMstpLldp: "Enabling LLDP PDU flooding prevents MSTP from being enabled",
 errstpshort: "The current pathcost method is short. The maximum effective cost value is 65535."
 <!--stp err end-->
 <!--lacp err start-->
-errLacpPri: "Invalid LACP system priority."
-errLacpActive: "Invalid LACP active port."
-errLacpNotMember: "Some ports are not LACP member ports."
+errLacpPri: "Invalid LACP system priority.",
+errLacpActive: "Invalid LACP active port.",
+errLacpNotMember: "Some ports are not LACP member ports.",
 errLacpStatic: "Unable to add LACP trunk members to a static aggregation group."
 <!--lacp err end>
 <!--port security err start-->
-errSecurityLess: "The maximum value is less than the number of currently protected MAC addresses."
-errSecurityMAC: "The secure MAC address does not exist."
-errSecurityMACFull: "The maximum number of secure MAC addresses on the port has been reached."
-errSecuritTrunk: "The port belongs to a LAG."
+errSecurityLess: "The maximum value is less than the number of currently protected MAC addresses.",
+errSecurityMAC: "The secure MAC address does not exist.",
+errSecurityMACFull: "The maximum number of secure MAC addresses on the port has been reached.",
+errSecuritTrunk: "The port belongs to a LAG.",
 errSecurityType: "Invalid port security MAC address type",
 errSecurityAzero: "Security MAC address cannot be an all-zero MAC address",
 errSecuritySYSMAC: "Security MAC address cannot be a system MAC address",
@@ -2850,30 +2850,30 @@ errACLEmpty: "ACE does not exist",
 errACLExists: "ACE already exists.",
 errACLPri: "MIB index out of range. Index must be greater than 0 and an existing ifindex.",
 errACLlistEmpty: "ACL does not exist",
-errACLlistexists: "Another ACL of the same type already exists."
-errACLlistbinding: "ACL list binding."
-errACLemptybind: "Empty ACL cannot be attached to a class map or interface."
-errACLillegalEmpty: "Illegal ACL type."
-errACLinsuff: "Insufficient PIE entries."
-errACDscp: "Invalid DSCP value, DSCP value should be 0-63."
-errACLTCPFlag: "Illegal TCP flag character."
-errACLPrecedence: "Invalid IP-Precedence value, IP-Precedence value should be 0-7."
-errACLrange: "Invalid port range value."
-errACLPortType: "Cannot apply ACL because another ACL of the same type is already applied."
-errACLPortAcl: "Cannot apply ACL because another ACL is already applied."
-errACLPortTRUNK: "Port channel member ports are not allowed to bind/unbind ACLs."
-errACLEntryFULl: "Cannot create a new entry in the ACL table because the table is full."
+errACLlistexists: "Another ACL of the same type already exists.",
+errACLlistbinding: "ACL list binding.",
+errACLemptybind: "Empty ACL cannot be attached to a class map or interface.",
+errACLillegalEmpty: "Illegal ACL type.",
+errACLinsuff: "Insufficient PIE entries.",
+errACDscp: "Invalid DSCP value, DSCP value should be 0-63.",
+errACLTCPFlag: "Illegal TCP flag character.",
+errACLPrecedence: "Invalid IP-Precedence value, IP-Precedence value should be 0-7.",
+errACLrange: "Invalid port range value.",
+errACLPortType: "Cannot apply ACL because another ACL of the same type is already applied.",
+errACLPortAcl: "Cannot apply ACL because another ACL is already applied.",
+errACLPortTRUNK: "Port channel member ports are not allowed to bind/unbind ACLs.",
+errACLEntryFULl: "Cannot create a new entry in the ACL table because the table is full.",
 errACLEntryPOOLFULL: "Cannot create a new ACE entry because the table is full."
 <!--user acl err end-->
 <!--igmp snooping err start -->
-errIgmpPort: "Multicast port deleted successfully."
-errIgmpAddr: "Invalid multicast address, reserved."
-errIgmpgroup: "Invalid IGMP maximum group operation."
-errIgmpQuerierChange: "The querier is not self, cannot modify."
-errIgmpQuerierVersion: "The querier version cannot be greater than the IGMP version."
-errIgmpQuery: "Invalid IGMP query interval."
-errIgmpResponse: "Invalid IGMP response time."
-errIgmpRouter: "Invalid IGMP router timeout."
+errIgmpPort: "Multicast port deleted successfully.",
+errIgmpAddr: "Invalid multicast address, reserved.",
+errIgmpgroup: "Invalid IGMP maximum group operation.",
+errIgmpQuerierChange: "The querier is not self, cannot modify.",
+errIgmpQuerierVersion: "The querier version cannot be greater than the IGMP version.",
+errIgmpQuery: "Invalid IGMP query interval.",
+errIgmpResponse: "Invalid IGMP response time.",
+errIgmpRouter: "Invalid IGMP router timeout.",
 errIgmpINTVl: "Invalid IGMP Last Member Query Interval",
 errIgmpVar: "Invalid IGMP Robustness Variable",
 errIgmpstaticEntry: "IGMP static group exists",
@@ -2897,18 +2897,18 @@ errMVRVlanPortType: "VLAN membership cannot be configured with MVR port type (so
 errMVRVlanPortSource: "MVR source port must be in MVR VLAN",
 errMVRVlanPortReceiver: "MVR receiver port cannot be a member of MVR VLAN",
 errMVRStaticGroupConflict: "MVR static group conflicts with MVR group range",
-errMVRStaticGroupPortType: "MVR static group port member, in compatibility mode, applies only to receiver ports. In dynamic mode, it applies to both receiver ports and source ports."
-errMVRVlanStaticSet: "MVR static group VLAN ID is not an MVR VLAN ID."
-errMVRigmpStaticSet: "IGMP Snooping static group cannot use MVR."
+errMVRStaticGroupPortType: "MVR static group port member, in compatibility mode, applies only to receiver ports. In dynamic mode, it applies to both receiver ports and source ports.",
+errMVRVlanStaticSet: "MVR static group VLAN ID is not an MVR VLAN ID.",
+errMVRigmpStaticSet: "IGMP Snooping static group cannot use MVR.",
 errStaticGroup: "MVR is enabled, and the static group VLAN is an MVR VLAN."
 <!--igmp snooping err end-->
 <!--dhcp server err start -->
-errLMT: "Lease time cannot exceed 999 days."
-errLTE: "Lease time cannot be 0."
-errLTER: "Time input error."
-errDSSI: "Start address is invalid."
-errDEI: "End address is invalid."
-errDSSH: "Start address cannot be greater than end address."
+errLMT: "Lease time cannot exceed 999 days.",
+errLTE: "Lease time cannot be 0.",
+errLTER: "Time input error.",
+errDSSI: "Start address is invalid.",
+errDEI: "End address is invalid.",
+errDSSH: "Start address cannot be greater than end address.",
 errDSLT: "A maximum of 1024 addresses can be configured in an address segment",
 errDSO: "Address conflict with other address segments",
 errDSNF: "The index of the address segment cannot exceed 256",
@@ -2964,7 +2964,7 @@ errInvlaidPri: "Invalid priority",
 errInvalidQueueId: "Invalid queue id",
 errSNTPUpFail: "SNTP update failed",
 errInvlaidStr: "Invalid string",
-errTimeErr: "Error! Start time is greater than end time"
+errTimeErr: "Error! Start time is greater than end time",
 errSystemNameInvalid: "The image extension is invalid",
 errSystemAllowIErr: "The image is being processed. Processing other images is not allowed",
 errDnsFailed: "DNS resolution failed. Please check the DNS server settings or host name",
@@ -2993,16 +2993,16 @@ errACLTempIdInvalid: "Template id is invalid",
 errACLFieldNOExist: "Field does not exist in template",
 errACLRateRnIdErr: "Rate entry id is invalid",
 errACLPoleFull: "Policer entry is full",
-errACLVlanEnOccupie: "All VLAN range entries are occupied."
-errACLEnRangeFull: "Cannot create a new entry in the port range table because the port range table is full."
-errACLLogTableFull: "The log table is full."
+errACLVlanEnOccupie: "All VLAN range entries are occupied.",
+errACLEnRangeFull: "Cannot create a new entry in the port range table because the port range table is full.",
+errACLLogTableFull: "The log table is full.",
 errACEEntryTaFull: "Cannot create a new ACE entry in the ACL table because the table is full."
 <!--acl err end-->
 <!--isg err start -->
-errIsgEntryReached: "The maximum number of entries for the port has been reached."
-errIsgBindingNumber: "The maximum value cannot be less than the current number of bindings."
-errIsgDataFull: "IP Source Guard database is full."
-errIsgIpSourceEx: "IP Source Guard table entry exists."
+errIsgEntryReached: "The maximum number of entries for the port has been reached.",
+errIsgBindingNumber: "The maximum value cannot be less than the current number of bindings.",
+errIsgDataFull: "IP Source Guard database is full.",
+errIsgIpSourceEx: "IP Source Guard table entry exists.",
 errIsgMacAddr: "MAC address cannot be a multicast address."
 <!--isg err end-->
 <!--mac err start -->
@@ -3018,7 +3018,7 @@ errStaticNoEmPort: "Static ingress port cannot be an empty trunk port",
 errDataIsBusy: "MAC address database busy. Please try again later",
 errBlackEntryEx: "Mac entry exists in the filter table",
 errBlackZebroAddr: "Filter entry cannot be all zero MAC addresses",
-errBlackSysMac: "Filter entries cannot be system MAC addresses."
+errBlackSysMac: "Filter entries cannot be system MAC addresses.",
 errBlackEntrMuMac: "Filter entries cannot be multicast MAC addresses."
 	<!--mac err end-->
 	<!--mirror err start -->
@@ -3046,31 +3046,31 @@ errL3IpPriIsExist: "IP address already exists. This address is the current prima
 errL3IpSubIsExist: "Error: Please delete the sub-IP address first",
 errL3IpIsPri: "Error: Cannot delete. This IP address is the primary IP address",
 errL3IpIsSub: "Error: Cannot delete. This IP address is a sub-IP address",
-errL3IpNumInterface: "The interface has more IP addresses than the maximum."
-errL3RouteInterface: "Not an L3 routing interface."
-errL3NoIpv6InterSet: "Cannot disable IPv6 processing on an interface configured with an explicit IPv6 address."
-errL3SameSubnet: "Duplicate IP on the same subnet."
-errL3IpTheSubnet: "Duplicate IP on the subnet."
-errL3InvaliIpAddr: "Invalid IP address."
-errL3InvalidIpMaskErr: "Invalid IP address mask."
-errL3Ipv6NoValid: "Invalid IPv6 prefix."
-errL3GWAddrNoDevi: "Gateway cannot be one of the addresses configured on this device."
-errL3RouterDefGW: "Only one directly connected router can be defined as a gateway."
-errL3GWDHCPInter: "Gateway cannot be on a DHCP-enabled interface."
-errL3GWSameVlan: "The gateway cannot be the same subnet as the management VLAN."
-errL3RouteViaInter: "IP static routes cannot be defined through a loopback interface."
-errL3HopsNetExceed: "The maximum number of configured down-hops for this network has been exceeded."
-errL3StaticFull: "The static route database is full."
-errL3StaticExist: "The static route does not exist."
-errL3StaticMustAddr: "The ARP MAC address must be a unicast address."
-errL3MacAddrNoErr: "The MAC address cannot be the same as the device MAC."
-errL3ArpNoMatch: "The ARP interface does not match the IP interface port."
-errL3ArpNwDir: "The ARP IP must be from a directly connected network."
-errL3ArpDefDevice: "The ARP IP cannot be an IP interface defined on this device."
-errL3NoSuchExist: "No such instance exists."
-errL3SetARPOverBy: "Setting ARP static configuration on an IP interface obtained by DHCP is not allowed."
-errL3Ipv6NoEnableInter: "IPv6 is not enabled on the interface."
-errL3NeighNoCreate: "Unable to create neighbor entry - no subnet defined on the device."
+errL3IpNumInterface: "The interface has more IP addresses than the maximum.",
+errL3RouteInterface: "Not an L3 routing interface.",
+errL3NoIpv6InterSet: "Cannot disable IPv6 processing on an interface configured with an explicit IPv6 address.",
+errL3SameSubnet: "Duplicate IP on the same subnet.",
+errL3IpTheSubnet: "Duplicate IP on the subnet.",
+errL3InvaliIpAddr: "Invalid IP address.",
+errL3InvalidIpMaskErr: "Invalid IP address mask.",
+errL3Ipv6NoValid: "Invalid IPv6 prefix.",
+errL3GWAddrNoDevi: "Gateway cannot be one of the addresses configured on this device.",
+errL3RouterDefGW: "Only one directly connected router can be defined as a gateway.",
+errL3GWDHCPInter: "Gateway cannot be on a DHCP-enabled interface.",
+errL3GWSameVlan: "The gateway cannot be the same subnet as the management VLAN.",
+errL3RouteViaInter: "IP static routes cannot be defined through a loopback interface.",
+errL3HopsNetExceed: "The maximum number of configured down-hops for this network has been exceeded.",
+errL3StaticFull: "The static route database is full.",
+errL3StaticExist: "The static route does not exist.",
+errL3StaticMustAddr: "The ARP MAC address must be a unicast address.",
+errL3MacAddrNoErr: "The MAC address cannot be the same as the device MAC.",
+errL3ArpNoMatch: "The ARP interface does not match the IP interface port.",
+errL3ArpNwDir: "The ARP IP must be from a directly connected network.",
+errL3ArpDefDevice: "The ARP IP cannot be an IP interface defined on this device.",
+errL3NoSuchExist: "No such instance exists.",
+errL3SetARPOverBy: "Setting ARP static configuration on an IP interface obtained by DHCP is not allowed.",
+errL3Ipv6NoEnableInter: "IPv6 is not enabled on the interface.",
+errL3NeighNoCreate: "Unable to create neighbor entry - no subnet defined on the device.",
 errL3VlanRelay: "The VLAN cannot be deleted because an IP interface or DHCP relay is defined on the VLAN."
 	<!--l3 err end-->
 	<!--igmp err start -->
@@ -3137,14 +3137,14 @@ errSnmpV3AuthProNo: "No authentication protocol",
 errSnmpV3EncryProhf: "No encryption protocol."
 <!--snmp err end-->
 <!--mstp err start -->
-errMstpActiFldWhe: "The LLDP flooding action cannot be configured because MSTP is running."
-errMstpInterMul: "The LLDP transmission interval should be less than 65535."
-errMstpDelayThan: "The LLDP transmission delay should not be greater than the LLDP transmission interval * 0.25."
-errMstpNetExi: "The network policy does not exist."
-errMstpTypeDup: "The network policy application type is duplicated."
-errMstpBindInter: "The network policy bound to the interface cannot be modified or deleted."
-errMstpNetConBec: "The voice-type network policy cannot be configured because the voice VLAN is in automatic update mode."
-errMstpVoiceAu: "Voice VLAN cannot be in auto-update mode because a voice-type network policy exists."
+errMstpActiFldWhe: "The LLDP flooding action cannot be configured because MSTP is running.",
+errMstpInterMul: "The LLDP transmission interval should be less than 65535.",
+errMstpDelayThan: "The LLDP transmission delay should not be greater than the LLDP transmission interval * 0.25.",
+errMstpNetExi: "The network policy does not exist.",
+errMstpTypeDup: "The network policy application type is duplicated.",
+errMstpBindInter: "The network policy bound to the interface cannot be modified or deleted.",
+errMstpNetConBec: "The voice-type network policy cannot be configured because the voice VLAN is in automatic update mode.",
+errMstpVoiceAu: "Voice VLAN cannot be in auto-update mode because a voice-type network policy exists.",
 errMstpParisHex: "Invalid input. Input should be in hexadecimal without ":", for example: 1122AB."
 	<!--mstp err end-->
 	<!--radius err start -->
@@ -3183,24 +3183,24 @@ errVrrpMacvip: "The maximum number of virtual IPs has been reached"
 <!--vrrp err end-->
 },
 lang_warning:{
-warningAclNotMod: "An activated ACL cannot be modified."
-warningAclunderBind: "Unable to delete a bound management ACL."
-warningAclName: "Name $1 already exists."
-warningAclsequence: "Sequence already exists."
-warningSelectEntry: "Please select only one entry to view."
-warningLoopback: "The loopback interface cannot be edited."
-warningAcldelate: "Unable to delete an active management ACL."
-warningSelectActive: "Please select only one entry to activate."
-warningSelectDeactive: "Please select only one entry to deactivate."
-warningPriExist: "Priority already exists."
-warningSelectEdit: "Please select only one entry to edit."
-warningProtocolGroup: "Protocol group settings are the same as group ID $1."
-warningVlanName: "Name already used by VLAN $1."
-warningTrunkPort: "Trunk ports must be assigned a native VLAN."
-warningAccessPort: "Access ports must be assigned an access VLAN."
-warningHybridPort: "Hybrid ports must be assigned a PVID."
-warningOnlyUntag: "Only an untagged VLAN can be selected."
-warningOnlyPVID: "Only a PVID can be selected."
+warningAclNotMod: "An activated ACL cannot be modified.",
+warningAclunderBind: "Unable to delete a bound management ACL.",
+warningAclName: "Name $1 already exists.",
+warningAclsequence: "Sequence already exists.",
+warningSelectEntry: "Please select only one entry to view.",
+warningLoopback: "The loopback interface cannot be edited.",
+warningAcldelate: "Unable to delete an active management ACL.",
+warningSelectActive: "Please select only one entry to activate.",
+warningSelectDeactive: "Please select only one entry to deactivate.",
+warningPriExist: "Priority already exists.",
+warningSelectEdit: "Please select only one entry to edit.",
+warningProtocolGroup: "Protocol group settings are the same as group ID $1.",
+warningVlanName: "Name already used by VLAN $1.",
+warningTrunkPort: "Trunk ports must be assigned a native VLAN.",
+warningAccessPort: "Access ports must be assigned an access VLAN.",
+warningHybridPort: "Hybrid ports must be assigned a PVID.",
+warningOnlyUntag: "Only an untagged VLAN can be selected.",
+warningOnlyPVID: "Only a PVID can be selected.",
 warningIpSubnetGroup: "The IP subnet group already exists."
 },
 
@@ -5705,7 +5705,7 @@ lang_sys:{
   btnReboot:"Reboot",
   btnRestore:"Restore Factory Default",
   btnSupport:"Support",
-  btnLanguage:"Chinese",
+  btnLanguage:"Russian",
   btnDebug:"Debug",
   msgConfirmRestore:"Restore to factory defaults. You need to reboot the device to take effect. Do you want to continue?",
   msgConfirmRestoreReboot:"Reboot the device to take effect now. Do you want to continue?"
@@ -9017,7 +9017,7 @@ lang_sys:{
   btnReboot:"Перезагрузить",
   btnRestore:"Восстановить заводские настройки по умолчанию",
   btnSupport:"Поддерживать",
-  btnLanguage:"китайский",
+  btnLanguage:"English",
   btnDebug:"Отлаживать",
   msgConfirmRestore:"Восстановите заводские настройки. Чтобы изменения вступили в силу, необходимо перезагрузить устройство. Хотите продолжить?",
   msgConfirmRestoreReboot:"Перезагрузите устройство, чтобы изменения вступили в силу. Хотите продолжить?"

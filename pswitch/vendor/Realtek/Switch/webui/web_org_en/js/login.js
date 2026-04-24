@@ -83,7 +83,7 @@ function languageSelect()
   $(document).ready(function(){
     $('#language_select').change(function(){
       var p1 = $(this).children('option:selected').val();
-      if (p1 == "defLang_en" || p1 == "defLang_ch" || p1 == "defLang_ru")
+      if (p1 == "defLang_en" || p1 == "defLang_ru")
         set_cookie("cookie_language", p1);
       else
         set_cookie("cookie_language", "defLang_ru");
@@ -107,10 +107,9 @@ function languageInitShow(langMode)
   var txt = '';
   var labels = {
     "defLang_ru": "Русский",
-    "defLang_en": "English",
-    "defLang_ch": "简体中文"
+    "defLang_en": "English"
   };
-  var order = ["defLang_ru", "defLang_en", "defLang_ch"];
+  var order = ["defLang_ru", "defLang_en"];
 
   if (labels[langMode]) {
     txt += '<option value ="' + langMode + '">' + labels[langMode] + '</option>';

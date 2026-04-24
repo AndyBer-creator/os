@@ -153,7 +153,7 @@ function lang(category, item, args1, args2)
   {
 	selectedLang = "defLang_ru";
   }
-  else if (selectedLang != "defLang_en" && selectedLang != "defLang_ch" && selectedLang != "defLang_ru")
+  else if (selectedLang != "defLang_en" && selectedLang != "defLang_ru")
   {
 	selectedLang = "defLang_en";
   }
