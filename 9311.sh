@@ -13,7 +13,7 @@
 ###########################################################################
 
 echo "   build product files "
-make webenglishonly
+make webnormal
 
 make distclean
 make yfd_9311_48

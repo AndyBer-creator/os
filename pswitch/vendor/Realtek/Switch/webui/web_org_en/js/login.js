@@ -78,6 +78,20 @@ function ShowStatusError(msg, isStick)
     _opener._showStatusDialog("error", msg, _isStick);
 }
 
+function languageSelect()
+{
+  $(document).ready(function(){
+    $('#language_select').change(function(){
+      var p1 = $(this).children('option:selected').val();
+      if (p1 == "defLang_en" || p1 == "defLang_ch" || p1 == "defLang_ru")
+        set_cookie("cookie_language", p1);
+      else
+        set_cookie("cookie_language", "defLang_ru");
+      window.location.reload();
+    })
+  })
+}
+
 function showLoginlogofunction(logo_name)
 {
   var txt = '';
@@ -85,6 +99,29 @@ function showLoginlogofunction(logo_name)
   txt += '<img style="padding-left:10px;"'
   txt += 'src="./images/logo/' + logo_name + '"'
   txt += '>'
+  return txt;
+}
+
+function languageInitShow(langMode)
+{
+  var txt = '';
+  var labels = {
+    "defLang_ru": "Русский",
+    "defLang_en": "English",
+    "defLang_ch": "简体中文"
+  };
+  var order = ["defLang_ru", "defLang_en", "defLang_ch"];
+
+  if (labels[langMode]) {
+    txt += '<option value ="' + langMode + '">' + labels[langMode] + '</option>';
+  }
+
+  for (var i = 0; i < order.length; i++) {
+    if (order[i] == langMode)
+      continue;
+    txt += '<option value ="' + order[i] + '">' + labels[order[i]] + '</option>';
+  }
+
   return txt;
 }
 

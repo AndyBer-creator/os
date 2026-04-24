@@ -38,7 +38,7 @@ fileLoad("css/home.css", "css");
 fileLoad("js/styling.js", "js");
 fileLoad("js/ie8.js","js");
 fileLoad("js/utility.js", "js");
-fileLoad("../web_org_double/lang/defLang.js", "js");
+fileLoad("lang/defLang.js", "js");
 
 if ('file:' == document.location.protocol)
   MockupMode = true;
@@ -256,7 +256,7 @@ var mainView = Backbone.View.extend({
         that.$el.html( that.template(resp));
         devLagNum = data.lags.length;
         devPortNum = data.ports.length - devLagNum;
-        ChangePageTitle(data.title);
+        ChangePageTitle(data.title + ' [RU-WEB]');
 
         treeShow();
         tabShow();

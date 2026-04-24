@@ -27,7 +27,7 @@
 			var langMode = "defLang_ru";
 			var TimeoutVal = 0;
 
-			fileLoad("../web_org_double/lang/defLoginLang.js", "js");
+			fileLoad("lang/defLoginLang.js", "js");
 			if (MockupMode)
 			  fileLoad("js/url_mockup.js", "js");
 			else
@@ -103,9 +103,21 @@
 				}
 			  });
 			}
+			function onLanguageChange(value)
+			{
+				var setLang = get_cookie("cookie_language");
+				if(setLang != value){
+					set_cookie("cookie_language", value);
+					window.location.reload();
+				}
+			}
 			function init() {
 			  fileLoginLoadWait();
-			  set_cookie("cookie_language", langMode);
+			  var selectedLang = get_cookie("cookie_language");
+			  if(IsUndefOrNull(selectedLang))
+				set_cookie("cookie_language", langMode);
+			  else
+				langMode = selectedLang;
 			 
 				var mainView = Backbone.View.extend({
 				  el: '#main_container',
@@ -128,7 +140,7 @@
 							infoMsg = lang("login", "msgSessionTimeout");
 						}
 
-						$(document).attr('title', show(data.title));
+						$(document).attr('title', show(data.title) + ' [RU-WEB]');
 
 						showInfo();
 
@@ -216,6 +228,16 @@
 						<font><%= lang('login','lblPassword') %></font>
 					</td>
 					<td><input name="password" id="password" type="password" title="<%= lang('login','lblPassword') %>" value="" size="30" maxlength="32" /></td>
+				  </tr>
+				  <tr>
+					<td>
+						<font><%= lang('login','lblLanguage') %></font>
+					</td>
+					<td>
+					  <select id="language_select" onchange="onLanguageChange(this.value)" maxlength="32" >
+						<%= languageInitShow(langMode) %>
+					  </select>
+					</td>
 				  </tr>
 				</table>
 				<img src="images/empty.gif" style="width:10px;"></img>
