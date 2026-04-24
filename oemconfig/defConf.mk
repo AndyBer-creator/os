@@ -129,7 +129,7 @@ yfd_9301_24: defconfig
 	cp -rf $(ABS_ROOT_DIR)/image/u-boot.bin $(ABS_ROOT_DIR)/image_$@/u-boot.bin
 	cp -rf $(ABS_ROOT_DIR)/image/vmlinux.bix $(ABS_ROOT_DIR)/image_$@/vmlinux.bix
 
-$(PUBLIC_PROJECTS): defconfig 
+$(PUBLIC_PROJECTS): webnormal defconfig 
 	cp -rf $(ABS_ROOT_DIR)/$(OEM_DIR)/$@/* $(ABS_ROOT_DIR)/$(PSWITCH_DIR)/vendor/$(CONFIG_VENDOR_DEFAULT)/Switch/
 
 	if [ ! -e $(KERNEL_DIR)/$(OS_TYPE)/vendors/$(CONFIG_VENDOR_DEFAULT)/Switch ]; then \

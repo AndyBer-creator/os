@@ -659,10 +659,10 @@ lang_line: {
   <!--#ifdef CONFIG_SYS_UI_SNMP-->
   lblSnmp:"SNMP",
   <!--#endif-->
-  lblMgmtService: Management and Maintenance
-  lblSessTimeout: Session Timeout
-  lblPassRetryCnt: Password Retry Times
-  lblSilentTime: Silent Time
+  lblMgmtService: "Management and Maintenance",
+  lblSessTimeout: "Session Timeout",
+  lblPassRetryCnt: "Password Retry Times",
+  lblSilentTime: "Silent Time"
 },
 
 <!--#ifdef CONFIG_SYS_PROTO_LLDP-->
@@ -2068,22 +2068,22 @@ lang_ipconf:{
   tblRefresh: "Information Refresh Time",
   lblRefresh: "Information Refresh Time",
   tblRefreshMin: "Minimum Information Refresh Time",
-  lblRefreshMin: Minimum information refresh time
-  lblAutoConf: Automatic configuration
-  lblDadAttemps: DAD attempts
-  tblSendICMPUnreachMsg: Send ICMPv6 Unreachable
-  lblSendICMPUnreachMsg: Send ICMPv6 Unreachable
-  lblGlobal: Global
-  lblLinkLocal: Link local
-  lblMcast: Multicast
-  lblIPv6RouteTable: IPv6 routing table
-  lblIPv6Prefix: IPv6 prefix
-  lblIPv6PrefixLen: IPv6 prefix length
-  lblNextHopType: Next hop type
-  lblIPv6AddrTable: IPv6 address table
-  lblIPv6AddrType: IPv6 address type
-  lblIPv6Addr: IPv6 address
-  lblDADStatus: DAD status
+  lblRefreshMin: "Minimum information refresh time",
+  lblAutoConf: "Automatic configuration",
+  lblDadAttemps: "DAD attempts",
+  tblSendICMPUnreachMsg: "Send ICMPv6 Unreachable",
+  lblSendICMPUnreachMsg: "Send ICMPv6 Unreachable",
+  lblGlobal: "Global",
+  lblLinkLocal: "Link local",
+  lblMcast: "Multicast",
+  lblIPv6RouteTable: "IPv6 routing table",
+  lblIPv6Prefix: "IPv6 prefix",
+  lblIPv6PrefixLen: "IPv6 prefix length",
+  lblNextHopType: "Next hop type",
+  lblIPv6AddrTable: "IPv6 address table",
+  lblIPv6AddrType: "IPv6 address type",
+  lblIPv6Addr: "IPv6 address",
+  lblDADStatus: "DAD status",
 
   lblTentative: "Verify",
   lblDuplicate: "Duplicate",
@@ -2251,22 +2251,22 @@ lang_stp:{
 
   msgStpModeChange: "Changing the STP mode may cause connection interruption. Do you want to continue?",
 
-lblPortAdminStatus: Status,
-lblPortPathCost: Path Cost,
-lblPortPriority: Priority,
-lblPortEdge: Edge Port,
-lblPortEdgeOper: Edge Port Status,
-lblPortBpduFilter: BPDU Filter,
-lblPortBpduGuard: BPDU Guard,
-lblPortP2P: Point-to-Point Configuration,
-lblPortP2POper: Point-to-Point Status,
-lblPortMode: Mode,
-lblPortType: Type,
-lblPortRole: Port Role,
-lblPortState: Port Status,
-lblPortDesignatedBridge: Designated Bridge ID,
-lblPortDesignatedPortId: Designated Port ID,
-lblPortDesignatedCost: Port Cost,
+lblPortAdminStatus: "Status",
+lblPortPathCost: "Path Cost",
+lblPortPriority: "Priority",
+lblPortEdge: "Edge Port",
+lblPortEdgeOper: "Edge Port Status",
+lblPortBpduFilter: "BPDU Filter",
+lblPortBpduGuard: "BPDU Guard",
+lblPortP2P: "Point-to-Point Configuration",
+lblPortP2POper: "Point-to-Point Status",
+lblPortMode: "Mode",
+lblPortType: "Type",
+lblPortRole: "Port Role",
+lblPortState: "Port Status",
+lblPortDesignatedBridge: "Designated Bridge ID",
+lblPortDesignatedPortId: "Designated Port ID",
+lblPortDesignatedCost: "Port Cost",
 
 lblRxCnt: "Receive BPDU",
 lblTxCnt: "Send BPDU",
@@ -2703,7 +2703,7 @@ errPort1000HalfNO: "Gigabit Ethernet does not support 1000M half-duplex mode.",
 errFiberSpeed: "The optical port rate is invalid.",
 errPortNoVlan: "The port does not belong to a VLAN member.",
 errFiberNoEEE: "The optical port does not support EEE function.",
-errPortNoFlowCtrl: "The optical port and multiplexed port do not support flow control function."
+errPortNoFlowCtrl: "The optical port and multiplexed port do not support flow control function.",
 	<!--port err end-->
 	<!--trunk err start-->
 errTrunkid: "Invalid trunk ID",
@@ -2725,7 +2725,7 @@ errTrunkDuplex: "Trunk member ports must all be full-duplex.",
 errTrunkNoExist: "The trunk does not exist.",
 errTrunkBackupPort: "The port is already a trunk member.",
 errTrunkSecurity: "Port security should not be enabled on the port.",
-errTrunkEmpty: "There are no members in the trunk."
+errTrunkEmpty: "There are no members in the trunk.",
 	<!--port err end-->
 	<!--vlan err start-->
 errVlanDef: "Default VLAN deletion is not allowed",
@@ -2785,7 +2785,7 @@ errSVPortStatic: "The port cannot be a static member port of the Surveillance VL
 errSVGlobalDisable: "Monitoring VLAN global status is not enabled.",
 errVidSV: "Monitoring VLAN cannot be configured as the default VLAN.",
 errSVVidDel: "Monitoring VLAN destruction is not allowed.",
-errSVUsedPort: "A port in monitoring VLAN auto mode cannot be edited in the VLAN."
+errSVUsedPort: "A port in monitoring VLAN auto mode cannot be edited in the VLAN.",
 	<!--vlan err end-->
 	<!--MGMT ACL start-->
 errMGMTACLNodorm: "Cannot modify/delete active management access list",
@@ -2812,7 +2812,7 @@ errGvrpPortmode: "GVRP port must be in trunk mode to enable.",
 errGvrpTimerDIV: "GVRP timer value must be 5.",
 errGvrpTimerJoin: "GVRP join timer must be less than half of leave timer.",
 errGvrpTimerLeave: "GVRP leave timer must be greater than twice the join time and less than the leave all time.",
-errGvrpTimerLeaveall: "GVRP leave timer must be greater than the leave time."
+errGvrpTimerLeaveall: "GVRP leave timer must be greater than the leave time.",
 	<!--GVRP err end-->
 	<!--stp err start-->
 errstpHello: "Invalid STP parameter for hello-time",
@@ -2824,13 +2824,13 @@ errstpPortpri: "Invalid STP parameter for port priority, must be a multiple of 1
 errstpCst: "CST deletion is not allowed",
 errstpCstVlan: "VLAN deletion from CST is not allowed",
 errstpMstpLldp: "Enabling LLDP PDU flooding prevents MSTP from being enabled",
-errstpshort: "The current pathcost method is short. The maximum effective cost value is 65535."
+errstpshort: "The current pathcost method is short. The maximum effective cost value is 65535.",
 <!--stp err end-->
 <!--lacp err start-->
 errLacpPri: "Invalid LACP system priority.",
 errLacpActive: "Invalid LACP active port.",
 errLacpNotMember: "Some ports are not LACP member ports.",
-errLacpStatic: "Unable to add LACP trunk members to a static aggregation group."
+errLacpStatic: "Unable to add LACP trunk members to a static aggregation group.",
 <!--lacp err end>
 <!--port security err start-->
 errSecurityLess: "The maximum value is less than the number of currently protected MAC addresses.",
@@ -2863,7 +2863,7 @@ errACLPortType: "Cannot apply ACL because another ACL of the same type is alread
 errACLPortAcl: "Cannot apply ACL because another ACL is already applied.",
 errACLPortTRUNK: "Port channel member ports are not allowed to bind/unbind ACLs.",
 errACLEntryFULl: "Cannot create a new entry in the ACL table because the table is full.",
-errACLEntryPOOLFULL: "Cannot create a new ACE entry because the table is full."
+errACLEntryPOOLFULL: "Cannot create a new ACE entry because the table is full.",
 <!--user acl err end-->
 <!--igmp snooping err start -->
 errIgmpPort: "Multicast port deleted successfully.",
@@ -2900,7 +2900,7 @@ errMVRStaticGroupConflict: "MVR static group conflicts with MVR group range",
 errMVRStaticGroupPortType: "MVR static group port member, in compatibility mode, applies only to receiver ports. In dynamic mode, it applies to both receiver ports and source ports.",
 errMVRVlanStaticSet: "MVR static group VLAN ID is not an MVR VLAN ID.",
 errMVRigmpStaticSet: "IGMP Snooping static group cannot use MVR.",
-errStaticGroup: "MVR is enabled, and the static group VLAN is an MVR VLAN."
+errStaticGroup: "MVR is enabled, and the static group VLAN is an MVR VLAN.",
 <!--igmp snooping err end-->
 <!--dhcp server err start -->
 errLMT: "Lease time cannot exceed 999 days.",
@@ -2996,14 +2996,14 @@ errACLPoleFull: "Policer entry is full",
 errACLVlanEnOccupie: "All VLAN range entries are occupied.",
 errACLEnRangeFull: "Cannot create a new entry in the port range table because the port range table is full.",
 errACLLogTableFull: "The log table is full.",
-errACEEntryTaFull: "Cannot create a new ACE entry in the ACL table because the table is full."
+errACEEntryTaFull: "Cannot create a new ACE entry in the ACL table because the table is full.",
 <!--acl err end-->
 <!--isg err start -->
 errIsgEntryReached: "The maximum number of entries for the port has been reached.",
 errIsgBindingNumber: "The maximum value cannot be less than the current number of bindings.",
 errIsgDataFull: "IP Source Guard database is full.",
 errIsgIpSourceEx: "IP Source Guard table entry exists.",
-errIsgMacAddr: "MAC address cannot be a multicast address."
+errIsgMacAddr: "MAC address cannot be a multicast address.",
 <!--isg err end-->
 <!--mac err start -->
 errMacEntryCl: "Mac entry clear error type",
@@ -3019,7 +3019,7 @@ errDataIsBusy: "MAC address database busy. Please try again later",
 errBlackEntryEx: "Mac entry exists in the filter table",
 errBlackZebroAddr: "Filter entry cannot be all zero MAC addresses",
 errBlackSysMac: "Filter entries cannot be system MAC addresses.",
-errBlackEntrMuMac: "Filter entries cannot be multicast MAC addresses."
+errBlackEntrMuMac: "Filter entries cannot be multicast MAC addresses.",
 	<!--mac err end-->
 	<!--mirror err start -->
 errMirrorNoSession: "Invalid mirror group ID",
@@ -3071,7 +3071,7 @@ errL3NoSuchExist: "No such instance exists.",
 errL3SetARPOverBy: "Setting ARP static configuration on an IP interface obtained by DHCP is not allowed.",
 errL3Ipv6NoEnableInter: "IPv6 is not enabled on the interface.",
 errL3NeighNoCreate: "Unable to create neighbor entry - no subnet defined on the device.",
-errL3VlanRelay: "The VLAN cannot be deleted because an IP interface or DHCP relay is defined on the VLAN."
+errL3VlanRelay: "The VLAN cannot be deleted because an IP interface or DHCP relay is defined on the VLAN.",
 	<!--l3 err end-->
 	<!--igmp err start -->
 errIgmpProGroup: "Invalid MLD max-group operation",
@@ -3134,7 +3134,7 @@ errSnmpV3UsNameNoFind: "Username not found",
 errSnmpV3UserPLErr: "Incorrect username",
 errSnmpV3PassWokErr: "Incorrect password",
 errSnmpV3AuthProNo: "No authentication protocol",
-errSnmpV3EncryProhf: "No encryption protocol."
+errSnmpV3EncryProhf: "No encryption protocol.",
 <!--snmp err end-->
 <!--mstp err start -->
 errMstpActiFldWhe: "The LLDP flooding action cannot be configured because MSTP is running.",
@@ -3145,7 +3145,7 @@ errMstpTypeDup: "The network policy application type is duplicated.",
 errMstpBindInter: "The network policy bound to the interface cannot be modified or deleted.",
 errMstpNetConBec: "The voice-type network policy cannot be configured because the voice VLAN is in automatic update mode.",
 errMstpVoiceAu: "Voice VLAN cannot be in auto-update mode because a voice-type network policy exists.",
-errMstpParisHex: "Invalid input. Input should be in hexadecimal without ":", for example: 1122AB."
+errMstpParisHex: "Invalid input. Input should be in hexadecimal without \":\", for example: 1122AB.",
 	<!--mstp err end-->
 	<!--radius err start -->
 errRadiusSerErr: "Radius server error",
