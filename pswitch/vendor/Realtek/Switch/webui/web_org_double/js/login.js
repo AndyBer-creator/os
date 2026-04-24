@@ -85,13 +85,13 @@ function languageSelect()
 
 　　　　　　var p1=$(this).children('option:selected').val();
 　　　　　　//alert(p1); 
-		  if (p1 == "defLang_en")
+		  if (p1 == "defLang_en" || p1 == "defLang_ch" || p1 == "defLang_ru")
 		  {
-			 set_cookie("cookie_language", "defLang_en");
+			 set_cookie("cookie_language", p1);
 		  }
 		  else
 		  {
-			  set_cookie("cookie_language", "defLang_ch");
+			  set_cookie("cookie_language", "defLang_ru");
 		  }
 		  window.location.reload();
 　　　　})  
@@ -111,15 +111,22 @@ function showLoginlogofunction(logo_name)
 function languageInitShow(langMode)
 {
   var txt = '';
-  if(langMode =="defLang_en")
-  {
-    txt += '<option value ="defLang_en">English</option>'
-    txt += '<option value ="defLang_ch">简体中文</option>'
+  var labels = {
+    "defLang_ru": "Русский",
+    "defLang_en": "English",
+    "defLang_ch": "简体中文"
+  };
+  var order = ["defLang_ru", "defLang_en", "defLang_ch"];
+
+  if (labels[langMode]) {
+    txt += '<option value ="' + langMode + '">' + labels[langMode] + '</option>';
   }
-  else
-  {
-    txt += '<option value ="defLang_ch">简体中文</option>'
-    txt += '<option value ="defLang_en">English</option>'
-  } 
+
+  for (var i = 0; i < order.length; i++) {
+    if (order[i] == langMode)
+      continue;
+    txt += '<option value ="' + order[i] + '">' + labels[order[i]] + '</option>';
+  }
+
   return txt;
 }

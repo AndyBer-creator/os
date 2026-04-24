@@ -149,13 +149,13 @@ function lang(category, item, args1, args2)
   //if (!IsUndefOrNull(args))
   //  console.log(args);
 
-  if ((IsUndefOrNull(selectedLang)) || (selectedLang == "defLang_en"))
+  if (IsUndefOrNull(selectedLang))
+  {
+	selectedLang = "defLang_ru";
+  }
+  else if (selectedLang != "defLang_en" && selectedLang != "defLang_ch" && selectedLang != "defLang_ru")
   {
 	selectedLang = "defLang_en";
-  }
-  else
-  {
-	selectedLang = "defLang_ch";
   }
 
   langKey += selectedLang;

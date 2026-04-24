@@ -174,14 +174,17 @@ function logout()
 function language()
 {
   var selectedLang = get_cookie("cookie_language");
-
-  if ((IsUndefOrNull(selectedLang)) || (selectedLang == "defLang_ch"))
+  if (IsUndefOrNull(selectedLang) || selectedLang == "defLang_ru")
   {
 	set_cookie("cookie_language", "defLang_en");
   }
-  else
+  else if (selectedLang == "defLang_en")
   {
 	set_cookie("cookie_language", "defLang_ch");
+  }
+  else
+  {
+	set_cookie("cookie_language", "defLang_ru");
   }
 
   window.location.reload();
