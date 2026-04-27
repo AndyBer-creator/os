@@ -308,7 +308,7 @@
 #define SYS_OEM_TIME_ZONE 480
 #define CONFIG_SYS_KERNEL_LINUX_3_18_24_X 1
 #define CONFIG_SYS_LOADER_UBOOT2011 1
-#define PRODUCT_VERSION "1.0.0.7"
-#define PLATFORM_NAME ""
+#define PRODUCT_VERSION "1.0.0.9"
+#define PLATFORM_NAME "SWGP-42GSFP"
 #define COPYRIGHT "Copyright (C) 2025"
-#define VENDOR_URL ""
+#define VENDOR_URL "http://symanitron.ru"

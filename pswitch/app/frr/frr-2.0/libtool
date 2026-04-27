@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (frr) 2.0
-# Libtool was configured on host cfe97b23d626:
+# Libtool was configured on host d4ee20ae0029:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

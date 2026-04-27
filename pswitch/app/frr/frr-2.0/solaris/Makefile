@@ -131,7 +131,7 @@ CFG_SBIN = /usr/local/sbin
 CFG_STATE = /var/run
 CFG_SYSCONF = /usr/local/etc
 CFLAGS = -Os  -mips1 -msoft-float  -fPIC -Dlinux -D__linux__ -Dunix -DEMBED -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/libcrypt  -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/zlib -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux -idirafter /opt/toolchain/bin/../lib/gcc/mips-linux-uclibc/4.8.5/soft-float//include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/linux-3.18.24.x/include -I/compile/realtek/pswitch/app/frr/../../plat/linux/ski -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/../../sdk/system/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/../../sdk/include -I/compile/realtek/pswitch/app/frr/../../lib/ -g -fno-omit-frame-pointer -Wall -Wextra -Wmissing-prototypes -Wmissing-declarations -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers
-CONFDATE = 20251003
+CONFDATE = 20260424
 CONFIG_ARGS =  '--host=mips-linux' '--disable-doc' '--disable-largefile' '--disable-shared' '--disable-ripngd' '--disable-bgpd' '--disable-irdp' '--disable-ospf6d' '--disable-ospfapi' '--disable-ospfclient' '--disable-bgp-announce' '--disable-backtrace' '--disable-time-check' '--disable-rusage' '--disable-pimd' '--disable-vtysh' '--enable-multipath=8' '--disable-ripd' '--disable-ospfd' '--enable-static' '--enable-user=root' '--enable-group=root' '--enable-fpm' 'host_alias=mips-linux' 'CC=rtk-ms-2.0.0-linux-gcc ' 'CFLAGS=-Os  -mips1 -msoft-float  -fPIC -Dlinux -D__linux__ -Dunix -DEMBED -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/uClibc-0.9.33-485-200/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/libcrypt  -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/lib/zlib -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux -idirafter /opt/toolchain/bin/../lib/gcc/mips-linux-uclibc/4.8.5/soft-float//include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/linux-3.18.24.x/include -I/compile/realtek/pswitch/app/frr/../../plat/linux/ski -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/../../sdk/system/include -I/compile/realtek/pswitch/app/frr/../../../kernel/uClinux/../../sdk/include -I/compile/realtek/pswitch/app/frr/../../lib/ -g' 'LDFLAGS= -L/compile/realtek/pswitch/app/frr/../../lib/readline -L/compile/realtek/pswitch/app/frr/../../lib/ncurses/lib -L/compile/realtek/pswitch/app/frr/../../lib/json-c -ljson-c -L/compile/realtek/pswitch/app/frr/../../lib/libipc -lipc'
 CPP = rtk-ms-2.0.0-linux-gcc  -E
 CPPFLAGS = 
@@ -295,7 +295,7 @@ top_srcdir = ..
 # derived variables.
 pkg_names = daemons dev doc libs smf
 pkg_frr_daemons = zebra bgpd ospfd ospf6d ripd ripngd
-pkg_name_rev = 2.0-20251003-linux-gnu-mips
+pkg_name_rev = 2.0-20260424-linux-gnu-mips
 pkg_depends = $(pkg_names:%=depend.%)
 pkg_packages = $(pkg_names:%=frr-%-$(pkg_name_rev).pkg)
 pkg_pkginfos = $(pkg_names:%=pkginfo.%.full)
@@ -327,7 +327,7 @@ edit = $(SED) \
  	-e 's,[@]PACKAGE_TARNAME[@],frr,g' \
  	-e 's,[@]PACKAGE_VERSION[@],2.0,g' \
  	-e 's,[@]PACKAGE_BUGREPORT[@],https://github.com/frrouting/frr/issues,g' \
-  	-e 's,[@]CONFDATE[@],20251003,g' \
+  	-e 's,[@]CONFDATE[@],20260424,g' \
  	-e 's,[@]target_cpu[@],$(target_cpu),g' \
  	-e 's,[@]target_host[@],$(target_host),g' \
  	-e 's,[@]target_os[@],$(target_os),g'

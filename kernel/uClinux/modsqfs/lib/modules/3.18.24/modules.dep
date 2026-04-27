@@ -1,25 +1,24 @@
 kernel/drivers/net/switch/rtcore/rtcore.ko:
 kernel/drivers/net/switch/rtk/rtk.ko: kernel/drivers/net/switch/rtcore/rtcore.ko
 kernel/net/switch/rtdrv/rtdrv.ko: kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_igmp.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_igmp.ko: extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
 extra/net.ko: kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/custom.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/ski.ko: extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_macvlan.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_udld.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/custom.ko: kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_macvlan.ko: extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_udld.ko: extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
 extra/defdb.ko:
-extra/l2g_voice_vlan.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_surveillancevlan.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_voice_vlan.ko: extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_surveillancevlan.ko: extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
 extra/osal.ko:
-extra/l2g_lldp.ko: extra/l2g_voice_vlan.ko extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_isg.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_authmgr.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_gvrp.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_erps.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_lacp.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_dhcp.ko: extra/l2g_isg.ko extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_lldp.ko: extra/l2g_voice_vlan.ko extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_isg.ko: extra/ksi.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_authmgr.ko: extra/net.ko extra/ksi.ko extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_gvrp.ko: extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_erps.ko: extra/osal.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_lacp.ko: extra/osal.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_dhcp.ko: extra/l2g_isg.ko extra/ksi.ko extra/defdb.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
 extra/board.ko:
 extra/ksi.ko: kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_stp.ko: extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_stp.ko: extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
 extra/board_conf.ko: kernel/drivers/net/switch/rtcore/rtcore.ko
-extra/l2g_dai.ko: extra/l2g_isg.ko extra/ski.ko extra/net.ko extra/defdb.ko extra/osal.ko extra/board_conf.ko extra/ksi.ko kernel/drivers/net/switch/rtk/rtk.ko kernel/drivers/net/switch/rtcore/rtcore.ko
+extra/l2g_dai.ko: extra/l2g_isg.ko extra/ksi.ko extra/defdb.ko kernel/drivers/net/switch/rtcore/rtcore.ko
